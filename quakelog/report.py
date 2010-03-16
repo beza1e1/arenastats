@@ -62,12 +62,15 @@ _WEAPONS = [
 	('railgun', 'Railgun', 40),
 	('bfg', 'Big&nbsp;F***ing&nbsp;Gun', 1),
 ]
+_WEAPON_NAMES = dict()
+for w, name, x in _WEAPONS:
+	_WEAPON_NAMES[w] = name
 def player_info(player):
 	html = '<div class="player_stats" id="%s">\n' % player.slug_nick
 	html += '<table class="player_info">\n'
 	html += '<tr><td colspan="2" class="name team_%s"><strong>%s</strong></td></tr>\n' % (player.team_color, player.nick)
-	awards = ", ".join(_award_html(a) for a in player.awards)
-	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)
+	html += '<tr><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
+			(_WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
 	html += '<tr class="odd"><th>Frags</th><td>%d &nbsp; (%s, %s, %s)</td></tr>\n' % (player.kill_count, pluralize(player.flag_carrier_kills, "carrier"), pluralize(player.team_kills, "mate"), pluralize(player.flag_assist_kills, "flag assist"))
 	html += '<tr><th>Damage given</th><td>%d &nbsp; (%.0f per frag)</td></tr>\n' % (getattr(player, 'damage_given', -1), 100 * player.dmg_kill_ratio)
 	html += '<tr class="odd"><th>Team damage given</th><td>%d (%s)</td></tr>\n' % (getattr(player, 'team_damage_given', -1), pluralize(player.team_kills, "frag"))
@@ -79,6 +82,8 @@ def player_info(player):
 	html += '<tr class="odd"><th>Defends</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.flag_defends, "flag"), pluralize(player.base_defends, "base"), pluralize(player.carrier_defends, "carrier"))
 	html += '<tr><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag"), pluralize(player.death_streak, "death"), pluralize(player.cap_streak, "cap"))
 	html += '<tr class="odd"><th>Score</th><td>%d</td></tr>\n' % (player.score)
+	awards = ", ".join(_award_html(a) for a in player.awards)
+	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)
 	html += "</table>\n"
 	html += '<table class="weapon_info">\n'
 	html += "<tr><th>Weapon</th><th>Hitrate</th><th>Fragrate</th></tr>\n"

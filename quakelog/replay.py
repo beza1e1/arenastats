@@ -126,6 +126,19 @@ _TEAM_COLORS = {
 	3: "green",
 }
 
+_WEAPON_RELOAD_TIMES = { # in seconds
+	"gauntlet": 0.4, 
+	"rocketlauncher": 0.8, 
+	"shotgun": 1.0, 
+	"plasmagun": 0.1, 
+	"railgun": 1.5, 
+	"grenadelauncher": 0.8, 
+	"lightninggun": 0.05, 
+	"machinegun": 0.1,
+	'environment': 0.01,
+	'bfg': 0.2,
+}
+
 _ZERO_PROPERTIES = ['quad_count', 'regen_count', 'haste_count', 'mega_health_count', 'invis_count', 'medkit_count', 'flag_returns', 'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides', 'kill_count', 'death_count', 'team_kills', 'flag_defends', 'base_defends', 'carrier_defends', 'flag_carrier_kills', 'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak', 'current_death_streak', 'cap_streak', 'current_cap_streak', 'score']
 class Player:
 	def initFromToken(self, tok):
@@ -185,14 +198,23 @@ class Player:
 		self.current_cap_streak += 1
 	def finalize(self):
 		self.gauntlet['shots'] = max(self.gauntlet['shots'], self.gauntlet['hits']) # Gauntlet does not record shots it seems
+		max_shots = (0, None)
+		max_kills = (0, None)
 		for weapon in _STAT_WEAPONS.values():
 			sattr = getattr(self, weapon)
 			kills = float(sattr['kills'])
+			if kills > max_kills[0]:
+				max_kills = (kills, weapon)
+			relative_shots = sattr['shots'] * _WEAPON_RELOAD_TIMES[weapon]
+			if relative_shots > max_shots[0]:
+				max_shots = (relative_shots, weapon)
 			deaths = float(sattr['deaths'])
 			if deaths == 0:
 				sattr['killrate'] = 0.0
 			else:
 				sattr['killrate'] = kills / deaths
+		self.weapon_most_shots = max_shots[1]
+		self.weapon_most_kills = max_kills[1]
 	def setStats(self, stats):
 		self.damage_given = int(stats['Given'][0])
 		self.damage_received = int(stats['Recvd'][0])
