@@ -215,6 +215,11 @@ class Player:
 				sattr['killrate'] = kills / deaths
 		self.weapon_most_shots = max_shots[1]
 		self.weapon_most_kills = max_kills[1]
+		max_kills = (0, None)
+		for player, kills in self.player_kill_count.items():
+			if kills > max_kills[0]:
+				max_kills = (kills, player)
+		self.easiest_prey = max_kills[1]
 	def setStats(self, stats):
 		self.damage_given = int(stats['Given'][0])
 		self.damage_received = int(stats['Recvd'][0])
