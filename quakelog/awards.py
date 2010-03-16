@@ -11,7 +11,7 @@ class Award:
 _MAX_AWARDS = [
 	(40, 'kill_count', Award("Death Eater", None, "most kills")),
 	(1400, 'health', Award("Workout Warrior", None, "most health collected")),
-	(2000, 'armor', Award("The Tank", None, "Most armor collected")),
+	(1400, 'armor', Award("The Tank", None, "Most armor collected")),
 	(6000, 'damage_received', Award("Punching Bag", None, "most damage received")),
 	(6000, 'damage_given', Award("Berserker", None, "most damage given")),
 	(2, 'invis_count', Award("Hollow Man", None, "most often picked up Invisibility")),
