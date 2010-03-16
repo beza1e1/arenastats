@@ -77,7 +77,7 @@ def player_info(player):
 	html += '<tr class="odd"><th>Team damage given</th><td>%d (%s)</td></tr>\n' % (getattr(player, 'team_damage_given', -1), pluralize(player.team_kills, "frag"))
 	html += '<tr><th>Damage received</th><td>%d &nbsp; (collected %d health %d armor)</td></tr>\n' % (getattr(player, 'damage_received', -1), player.health, player.armor)
 	html += '<tr class="odd"><th>Damage rate</th><td>%s</td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110))
-	html += '<tr><th>Flag caps</th><td>%d</td></tr>\n' % (player.flag_caps)
+	html += '<tr><th>Flag caps</th><td>%d (%d touches, %.1f%% caprate)</td></tr>\n' % (player.flag_caps, player.flag_touches, player.caprate * 100)
 	html += '<tr class="odd"><th>Flag returns</th><td>%d &nbsp; (%s)</td></tr>\n' % (player.flag_returns, pluralize(player.flag_assist_returns, "assist"))
 	html += '<tr><th>Suicides</th><td>%d</td></tr>\n' % (player.suicides)
 	html += '<tr class="odd"><th>Defends</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.flag_defends, "flag"), pluralize(player.base_defends, "base"), pluralize(player.carrier_defends, "carrier"))

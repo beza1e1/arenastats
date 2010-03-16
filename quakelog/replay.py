@@ -57,9 +57,14 @@ class Medkit(Item):
 		player.medkit_count += 1
 
 class Flag(Item):
+	def __init__(self, name, team_id):
+		self.name = name
+		self.team_id = team_id
 	def use(self, player):
-		player.flag = self.name
-# TODO this may be a flag return or pickup!
+		if player.team_id == self.team_id:
+			pass # flag return, accounted by FlagReturn event
+		else:
+			player.flag_touches += 1
 
 _WEAPONS = {
 	"weapon_gauntlet": Weapon("Gauntlet"),
@@ -84,8 +89,8 @@ _WEAPONS = {
 	"item_armor_shard": Armor("Armor", 25),
 	"item_armor_combat": Armor("Armor", 50),
 	"item_armor_body": Armor("Armor", 100),
-	"team_CTF_blueflag": Flag("Blue flag"),
-	"team_CTF_redflag": Flag("Red flag"),
+	"team_CTF_redflag": Flag("Red flag", 1),
+	"team_CTF_blueflag": Flag("Blue flag", 2),
 	"item_regen": Regen("Regen"),
 	"holdable_medkit": Medkit("Medkit"),
 	"item_quad": Quad("Quad"),
@@ -141,7 +146,7 @@ _WEAPON_RELOAD_TIMES = { # in seconds
 	'bfg': 0.2,
 }
 
-_ZERO_PROPERTIES = ['quad_count', 'regen_count', 'haste_count', 'mega_health_count', 'invis_count', 'medkit_count', 'flag_returns', 'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides', 'kill_count', 'death_count', 'team_kills', 'flag_defends', 'base_defends', 'carrier_defends', 'flag_carrier_kills', 'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak', 'current_death_streak', 'cap_streak', 'current_cap_streak', 'score']
+_ZERO_PROPERTIES = ['quad_count', 'regen_count', 'haste_count', 'mega_health_count', 'invis_count', 'medkit_count', 'flag_returns', 'flag_touches', 'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides', 'kill_count', 'death_count', 'team_kills', 'flag_defends', 'base_defends', 'carrier_defends', 'flag_carrier_kills', 'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak', 'current_death_streak', 'cap_streak', 'current_cap_streak', 'score']
 class Player:
 	def initFromToken(self, tok):
 		assert isinstance(tok, NewClient), tok
@@ -253,6 +258,12 @@ class Player:
 			w = getattr(self, weapon)
 			strings.append("%s:%s:%s:%s:%s" % (weapon, w.get('shots',0), w.get('hits',0), w['kills'], w['deaths']))
 		return " ".join(strings)
+	def _get_caprate(self):
+		if self.flag_touches < 1:
+			return float("infinity")
+		else:
+			return float(self.flag_caps) / float(self.flag_touches)
+	caprate = property(_get_caprate)
 
 class World(Player):
 	def __init__(self):
