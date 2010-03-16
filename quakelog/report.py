@@ -51,15 +51,16 @@ def emph_percentage(hitrate, lower_bound):
 
 _ODD_CLASS = {True: ' class="odd"', False: ''}
 _WEAPONS = [
-	('gauntlet', 'Gauntlet'),
-	('machinegun', "Machine&nbsp;gun"),
-	('shotgun', 'Shotgun'),
-	('rocketlauncher', 'Rocket&nbsp;launcher'),
-	('plasmagun', 'Plasma&nbsp;gun'),
-	('grenadelauncher', 'Grenade&nbsp;launcher'),
-	('lightninggun', 'Lightning&nbsp;gun'),
-	('railgun', 'Railgun'),
-	('bfg', 'Big&nbsp;F***ing&nbsp;Gun'),
+# internal key, descriptive name, hitrate emphasize
+	('gauntlet', 'Gauntlet', 1),
+	('machinegun', "Machine&nbsp;gun", 30),
+	('shotgun', 'Shotgun', 20),
+	('rocketlauncher', 'Rocket&nbsp;launcher', 30),
+	('plasmagun', 'Plasma&nbsp;gun', 20),
+	('grenadelauncher', 'Grenade&nbsp;launcher', 10),
+	('lightninggun', 'Lightning&nbsp;gun', 30),
+	('railgun', 'Railgun', 40),
+	('bfg', 'Big&nbsp;F***ing&nbsp;Gun', 1),
 ]
 def player_info(player):
 	html = '<div class="player_stats" id="%s">\n' % player.slug_nick
@@ -82,7 +83,7 @@ def player_info(player):
 	html += '<table class="weapon_info">\n'
 	html += "<tr><th>Weapon</th><th>Hitrate</th><th>Fragrate</th></tr>\n"
 	odd = True
-	for w, wname in _WEAPONS:
+	for w, wname, emph_rate in _WEAPONS:
 		stats = getattr(player, w, None)
 		if not stats:
 			continue
@@ -90,8 +91,10 @@ def player_info(player):
 			continue
 		odd_class = _ODD_CLASS[odd]
 		html += "<tr%s><td>%s</td>" % (odd_class, wname)
-		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' % (stats['hits'], stats['shots'], emph_percentage(stats['hitrate']*100, 30))
-		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' % (stats['kills'], stats['deaths'], emph_percentage(stats['killrate']*100, 100))
+		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
+						(stats['hits'], stats['shots'], emph_percentage(stats['hitrate']*100, emph_rate))
+		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
+						(stats['kills'], stats['deaths'], emph_percentage(stats['killrate']*100, 100))
 		html += "</tr>\n"
 		odd = not odd
 	html += "</table>\n"
