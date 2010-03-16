@@ -1,0 +1,59 @@
+#!/usr/bin/env python
+from quakelog.tokenizer import tokenize
+from quakelog.replay import replay_games
+from quakelog.report import html_report
+from quakelog.nicklog import player_line, merge_player_lines, player_profile
+import sys
+import os
+from optparse import OptionParser
+
+_CURDIR = os.path.abspath(os.curdir)
+
+_OPTS = OptionParser(version="%prog 0.1", usage="%prog [options]")
+_OPTS.add_option("-l", "--logfile", dest="logfile",
+                  help="read quake 3 log file from FILE", metavar="FILE")
+_OPTS.add_option("-n", "--nicklog", dest="nicklog",
+                  help="use FILE as the nick log", metavar="FILE")
+_OPTS.add_option("-c", "--game-count", dest="game_count", default=10, type="int",
+                  help="Generate game reports for the last COUNT games", metavar="COUNT")
+_OPTS.add_option("-d", "--directory", dest="directory", default=_CURDIR,
+                  help="Write reports to directory DIR", metavar="DIR")
+_OPTS.add_option("-s", "--level-shots", dest="level_shots", default="media",
+                  help="link to URL/<mapname>.jpg for levelshot images ", metavar="URL")
+
+def main(options, args):
+	games = list()
+	if options.logfile:
+		for game in replay_games(tokenize(open(options.logfile))):
+			games.append(game)
+			games = games[-options.game_count:]
+	if options.nicklog:
+		fh = open(options.nicklog, "a")
+		for game in games:
+			for player in game.players.values():
+				if not hasattr(player, 'team_id'):
+					continue
+				fh.write("%s\n" % player_line(player))
+		fh.close()
+		fh = open(options.nicklog)
+		for player in merge_player_lines(fh):
+			fname = os.path.join(options.directory, player.slug_nick+".html")
+			pfh = open(fname, 'w')
+			pfh.write(player_profile(player))
+			pfh.close()
+		fh.close()
+	for g in games:
+		fname = os.path.join(options.directory, g.name+".html")
+		fh = open(fname, 'w')
+		fh.write(html_report(g, options.level_shots))
+		fh.close()
+	if options.directory != _CURDIR:
+		os.system("cp -r media "+options.directory)
+
+if __name__ == "__main__":
+	options, args = _OPTS.parse_args()
+	if not (options.logfile or options.nicklog):
+		_OPTS.print_usage()
+		print "use -h for help"
+	else:
+		main(options, args)
