@@ -212,7 +212,7 @@ class Player:
 				max_shots = (relative_shots, weapon)
 			deaths = float(sattr['deaths'])
 			if deaths == 0:
-				sattr['killrate'] = 0.0
+				sattr['killrate'] = float("infinity")
 			else:
 				sattr['killrate'] = kills / deaths
 		self.weapon_most_shots = max_shots[1]
