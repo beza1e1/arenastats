@@ -61,6 +61,7 @@ _WEAPONS = [
 	('lightninggun', 'Lightning&nbsp;gun', 30),
 	('railgun', 'Railgun', 40),
 	('bfg', 'Big&nbsp;F***ing&nbsp;Gun', 1),
+	('teleport', 'Teleport', 100.0),
 ]
 _WEAPON_NAMES = dict()
 for w, name, x in _WEAPONS:
@@ -93,7 +94,7 @@ def player_info(player):
 		stats = getattr(player, w, None)
 		if not stats:
 			continue
-		if int(stats['shots']) < 1:
+		if int(stats['shots']) < 1 and w != 'teleport':
 			continue
 		odd_class = _ODD_CLASS[odd]
 		html += "<tr%s><td>%s</td>" % (odd_class, wname)

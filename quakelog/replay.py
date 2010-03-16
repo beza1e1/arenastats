@@ -105,6 +105,7 @@ _STAT_WEAPONS = {
 	'MachineGun': "machinegun",
 	'World aka Suicides': 'environment',
 	'BFG': 'bfg',
+	'Telefrag': 'teleport',
 }
 def statdict(weapon_stats):
 	ws = weapon_stats
@@ -136,6 +137,7 @@ _WEAPON_RELOAD_TIMES = { # in seconds
 	"lightninggun": 0.05, 
 	"machinegun": 0.1,
 	'environment': 0.01,
+	'teleport': 0.01,
 	'bfg': 0.2,
 }
 
@@ -292,7 +294,7 @@ _WEAPON_DESC = {
 	'MOD_SUICIDE': 'environment',
 	'MOD_BFG': 'bfg',
 	'MOD_BFG_SPLASH': 'bfg',
-	'MOD_TELEFRAG': 'environment', # TODO
+	'MOD_TELEFRAG': 'teleport', 
 }
 class Game:
 	def __init__(self, token):

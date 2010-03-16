@@ -62,6 +62,7 @@ _MAX_WEAPONS = [
 	(10, 'railgun', 'kills', Award("Sniper", None, "most kills with railgun")),
 	(50, 'railgun', 'shots', Award("Railfreak", None, "most shots with railgun")),
 	(0.4, 'railgun', 'hitrate', Award("Railmaster", None, "best hitrate with railgun")),
+	(0, 'teleport', 'kills', Award("Telefragger", None, "most kills by teleport")),
 ]
 _META_AWARDS = [
 	(('Sniper', 'Railfreak', 'Railmaster'), Award("Mr RAIL", None, "Highest hitrate and most kills and shots with railgun")),
