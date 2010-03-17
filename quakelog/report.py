@@ -96,7 +96,7 @@ def player_info(player):
 		stats = getattr(player, w, None)
 		if not stats:
 			continue
-		if int(stats['shots']) < 1 and w != 'teleport':
+		if int(stats['shots']) < 1:
 			continue
 		odd_class = _ODD_CLASS[odd]
 		html += "<tr%s><td>%s</td>" % (odd_class, wname)

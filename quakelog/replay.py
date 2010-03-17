@@ -207,6 +207,7 @@ class Player:
 		self.current_cap_streak += 1
 	def finalize(self):
 		self.gauntlet['shots'] = max(self.gauntlet['shots'], self.gauntlet['hits']) # Gauntlet does not record shots it seems
+		self.teleport['shots'] = self.teleport['kills']
 		max_shots = (0, None)
 		max_kills = (0, None)
 		for weapon in _STAT_WEAPONS.values():
