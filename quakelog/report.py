@@ -1,5 +1,7 @@
 # -!- encoding: utf-8 -!-
 
+infinity = float("infinity")
+
 def gen_player_links(players, team_id):
 	ps = list()
 	for p in players:
@@ -44,7 +46,7 @@ def _player_html(player):
 			(player.team_color, player.slug_nick, player.nick)
 
 def emph_percentage(hitrate, lower_bound):
-	if hitrate > lower_bound:
+	if hitrate > lower_bound and hitrate != infinity:
 		return "<strong>%.1f%%</strong>" % hitrate
 	else:
 		return "%.1f%%" % hitrate

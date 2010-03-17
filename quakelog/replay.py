@@ -3,6 +3,8 @@ from awards import give_awards
 from utils import slugify
 import re
 
+infinity = float("infinity")
+
 class Item:
 	def __init__(self, name):
 		self.name = name
@@ -217,7 +219,7 @@ class Player:
 				max_shots = (relative_shots, weapon)
 			deaths = float(sattr['deaths'])
 			if deaths == 0:
-				sattr['killrate'] = float("infinity")
+				sattr['killrate'] = infinity
 			else:
 				sattr['killrate'] = kills / deaths
 		self.weapon_most_shots = max_shots[1]
@@ -230,10 +232,6 @@ class Player:
 	def setStats(self, stats):
 		self.damage_given = int(stats['Given'][0])
 		self.damage_received = int(stats['Recvd'][0])
-		try:
-			self.damage_rate = float(self.damage_given) / float(self.damage_received)
-		except ZeroDivisionError:
-		 	self.damage_rate = 0.0
 		self.team_damage_given = stats['TeamDmg'][0]
 		self.health = int(stats['Health'][0])
 		for weapon, wattr in _STAT_WEAPONS.items():
@@ -244,10 +242,6 @@ class Player:
 					sattr[key] = val
 				else:
 					print "ignore weapon stats", key, val
-		try:
-			self.dmg_kill_ratio = (float(self.damage_given) / 100.0) / float(self.kill_count)
-		except ZeroDivisionError:
-			self.dmg_kill_ratio = 10000.0
 		self.finalize() # seems right at this point?
 	def serialize(self):
 		strings = list()
@@ -259,11 +253,23 @@ class Player:
 			strings.append("%s:%s:%s:%s:%s" % (weapon, w.get('shots',0), w.get('hits',0), w['kills'], w['deaths']))
 		return " ".join(strings)
 	def _get_caprate(self):
-		if self.flag_touches < 1:
-			return float("infinity")
+		if self.flag_touches == 0:
+			return infinity
 		else:
 			return float(self.flag_caps) / float(self.flag_touches)
 	caprate = property(_get_caprate)
+	def _get_dmgrate(self):
+		if self.damage_received == 0:
+			return infinity
+		else:
+			return float(self.damage_given) / float(self.damage_received)
+	damage_rate = property(_get_dmgrate)
+	def _get_dmg_kill_ratio(self):
+		if self.kill_count == 0:
+			return infinity
+		else:
+			return (float(self.damage_given) / 100) / float(self.kill_count)
+	dmg_kill_ratio = property(_get_dmg_kill_ratio)
 
 class World(Player):
 	def __init__(self):
