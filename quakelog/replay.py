@@ -160,6 +160,7 @@ class Player:
 		self.health = 0
 		self.armor = 0
 		self.player_kill_count = dict()
+		self.player_death_count = dict()
 		for weapon in _STAT_WEAPONS.values():
 			setattr(self, weapon, dict(kills=0, deaths=0))
 		self.awards = list()
@@ -184,6 +185,9 @@ class Player:
 		if not victim in self.player_kill_count:
 			self.player_kill_count[victim] = 0
 		self.player_kill_count[victim] += 1
+		if not self in victim.player_death_count:
+			victim.player_death_count[self] = 0
+		victim.player_death_count[self] += 1
 		getattr(self, weapon)['kills'] += 1
 		getattr(victim, weapon)['deaths'] += 1
 		self.current_kill_streak += 1
@@ -230,6 +234,11 @@ class Player:
 			if kills > max_kills[0]:
 				max_kills = (kills, player)
 		self.easiest_prey = max_kills[1]
+		max_deaths = (0, None)
+		for player, deaths in self.player_death_count.items():
+			if deaths > max_deaths[0]:
+				max_deaths = (deaths, player)
+		self.worst_enemy = max_deaths[1]
 	def setStats(self, stats):
 		self.damage_given = int(stats['Given'][0])
 		self.damage_received = int(stats['Recvd'][0])

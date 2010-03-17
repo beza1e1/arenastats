@@ -87,7 +87,7 @@ def player_info(player):
 	html += '<tr class="odd"><th>Score</th><td>%d</td></tr>\n' % (player.score)
 	awards = ", ".join(_award_html(a) for a in player.awards)
 	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)
-	html += '<tr class="odd"><th>Easiest Prey</th><td>%s</td></tr>\n' % (player.easiest_prey.nick)
+	html += '<tr class="odd"><th>Player mostly</th><td>killed by %s / killing %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
 	html += "</table>\n"
 	html += '<table class="weapon_info">\n'
 	html += "<tr><th>Weapon</th><th>Hitrate</th><th>Fragrate</th></tr>\n"
