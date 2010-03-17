@@ -9,13 +9,14 @@ def gen_player_links(players, team_id):
 			ps.append('<a href="#%s">%s</a>' % (p.slug_nick, p.nick))
 	return ", ".join(ps)
 
-def pluralize(number, unit, zero=True):
-	if 0 == number and not zero:
-		return ""
-	elif 1 == number:
+def pluralize(number, unit, emph_bound=0):
+	if 1 == number:
 		return "%d %s" % (number, unit)
 	else: # plural
-		return "%d %ss" % (number, unit)
+		if emph_bound > 0 and number > emph_bound:
+			return "<strong>%d %ss</strong>" % (number, unit)
+		else:
+			return "%d %ss" % (number, unit)
 
 def general_game_info(game, levelshots):
 	html = '<div class="game_stats"\n'
@@ -53,6 +54,12 @@ def emph_percentage(hitrate, lower_bound):
 	else:
 		return "%.1f%%" % hitrate
 
+def emph_int(value, lower_bound):
+	if value > lower_bound:
+		return "<strong>%d</strong>" % value
+	else:
+		return "%d" % value
+
 _ODD_CLASS = {True: ' class="odd"', False: ''}
 _WEAPONS = [
 # internal key, descriptive name, hitrate emphasize
@@ -78,10 +85,10 @@ def player_info(player):
 	html += '<tr><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
 			(_WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
 	html += '<tr class="odd"><th>Player mostly</th><td>killed by %s / killing %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
-	html += '<tr><th>Frags</th><td>%d &nbsp; (%s, %s, %s)</td></tr>\n' % (player.kill_count, pluralize(player.flag_carrier_kills, "carrier"), pluralize(player.team_kills, "mate"), pluralize(player.flag_assist_kills, "flag assist"))
+	html += '<tr><th>Frags</th><td>%s &nbsp; (%s, %s, %s)</td></tr>\n' % (emph_int(player.kill_count, 20), pluralize(player.flag_carrier_kills, "carrier", 10), pluralize(player.team_kills, "mate", 10), pluralize(player.flag_assist_kills, "flag assist", 10))
 	html += '<tr class="odd"><th>Damage rate</th><td>%s &nbsp; (%d / %d)</td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
-	html += '<tr><th>Flag caps</th><td>%d (%d touches, %.1f%% caprate)</td></tr>\n' % (player.flag_caps, player.flag_touches, player.caprate * 100)
-	html += '<tr class="odd"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag"), pluralize(player.death_streak, "death"), pluralize(player.cap_streak, "cap"))
+	html += '<tr><th>Flag caps</th><td>%s (%s touches, %s caprate)</td></tr>\n' % (emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2), emph_percentage(player.caprate * 100, 40))
+	html += '<tr class="odd"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag", 6), pluralize(player.death_streak, "death", 6), pluralize(player.cap_streak, "cap", 6))
 	awards = ", ".join(_award_html(a) for a in player.awards)
 	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)
 	html += "</table>\n"
