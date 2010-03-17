@@ -119,9 +119,11 @@ def player_info(player):
 
 def kill_matrix(game):
 	html = "<table>\n"
+	def compare(p1, p2):
+		return cmp(p1.team_id, p2.team_id) or cmp(p1.kill_count, p2.kill_count)
 	def filter(p):
 		return hasattr(p, 'player_kill_count')
-	ps = game.sortedPlayers(include=filter)
+	ps = game.sortedPlayers(compare=compare, include=filter)
 	html += "<tr><th>Frags</th>"
 	for p in ps:
 		html += '<th class="team_%s">%s</th>' % (p.team_color, p.nick)

@@ -417,7 +417,7 @@ class Game:
 	def sortedPlayers(self, compare=None, include=None):
 		if not compare:
 			compare = lambda x,y: cmp(x.nick.lower(), y.nick.lower())
-		return filter(include, sorted(self.players.values(), compare))
+		return sorted(filter(include, self.players.values()), compare)
 
 def replay_games(game_events):
 	g = None
