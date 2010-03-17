@@ -1,3 +1,6 @@
+
+/* POSITION */
+
 body { padding: 10px; }
 a,
 a:visited,
@@ -14,11 +17,14 @@ div.game_stats img { max-width: 200px; }
 div.player_stats { clear: left; padding-top: 1em; }
 div.game_stats .game_result { font-size: 4em; }
 div.game_stats .game_result .team_red { text-align: right; }
+div.debug_stats { margin: 1em; }
+div.debug_stats,
 div.game_stats img,
 div.game_stats table,
 div.player_stats table { float: left; margin-left: 1em; }
 #kill_matrix table,
 div.player_stats table { border: 1px solid black; border-width: 1px 0; }
+div.debug_stats { width: 450px; }
 div.player_stats .player_info { width: 400px; }
 div.player_stats .player_info th { font-weight: normal; text-align: left; width: 8em; }
 div.player_stats .player_info .name { font-size: 1.3em; font-family: sans-serif; }
@@ -47,6 +53,10 @@ div.player_stats .weapon_info { width: 430px; }
 #award_table .name { font-size: 1.2em; }
 #award_table .winner { padding-bottom: 0.6em; }
 #footer { clear: both; padding: 4em; }
+
+/* TEXT */
+
+div.debug_stats { font-size: 0.8em; }
 
 /* FONTS */
 body { font-family: Baskerville, "Times New Roman", Times, serif; }

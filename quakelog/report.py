@@ -46,7 +46,9 @@ def _player_html(player):
 			(player.team_color, player.slug_nick, player.nick)
 
 def emph_percentage(hitrate, lower_bound):
-	if hitrate > lower_bound and hitrate != infinity:
+	if hitrate == infinity:
+		return "-"
+	elif hitrate > lower_bound and hitrate != infinity:
 		return "<strong>%.1f%%</strong>" % hitrate
 	else:
 		return "%.1f%%" % hitrate
@@ -68,26 +70,20 @@ _WEAPONS = [
 _WEAPON_NAMES = dict()
 for w, name, x in _WEAPONS:
 	_WEAPON_NAMES[w] = name
+_BORING_STATS = "team_damage_given team_kills flag_returns flag_assist_returns score suicides dmg_kill_ratio health armor base_defends carrier_defends flag_defends".split(" ")
 def player_info(player):
 	html = '<div class="player_stats" id="%s">\n' % player.slug_nick
 	html += '<table class="player_info">\n'
 	html += '<tr><td colspan="2" class="name team_%s"><strong>%s</strong></td></tr>\n' % (player.team_color, player.nick)
 	html += '<tr><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
 			(_WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
-	html += '<tr class="odd"><th>Frags</th><td>%d &nbsp; (%s, %s, %s)</td></tr>\n' % (player.kill_count, pluralize(player.flag_carrier_kills, "carrier"), pluralize(player.team_kills, "mate"), pluralize(player.flag_assist_kills, "flag assist"))
-	html += '<tr><th>Damage given</th><td>%d &nbsp; (%.0f per frag)</td></tr>\n' % (getattr(player, 'damage_given', -1), 100 * player.dmg_kill_ratio)
-	html += '<tr class="odd"><th>Team damage given</th><td>%d (%s)</td></tr>\n' % (getattr(player, 'team_damage_given', -1), pluralize(player.team_kills, "frag"))
-	html += '<tr><th>Damage received</th><td>%d &nbsp; (collected %d health %d armor)</td></tr>\n' % (getattr(player, 'damage_received', -1), player.health, player.armor)
-	html += '<tr class="odd"><th>Damage rate</th><td>%s</td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110))
+	html += '<tr class="odd"><th>Player mostly</th><td>killed by %s / killing %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
+	html += '<tr><th>Frags</th><td>%d &nbsp; (%s, %s, %s)</td></tr>\n' % (player.kill_count, pluralize(player.flag_carrier_kills, "carrier"), pluralize(player.team_kills, "mate"), pluralize(player.flag_assist_kills, "flag assist"))
+	html += '<tr class="odd"><th>Damage rate</th><td>%s &nbsp; (%d / %d)</td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
 	html += '<tr><th>Flag caps</th><td>%d (%d touches, %.1f%% caprate)</td></tr>\n' % (player.flag_caps, player.flag_touches, player.caprate * 100)
-	html += '<tr class="odd"><th>Flag returns</th><td>%d &nbsp; (%s)</td></tr>\n' % (player.flag_returns, pluralize(player.flag_assist_returns, "assist"))
-	html += '<tr><th>Suicides</th><td>%d</td></tr>\n' % (player.suicides)
-	html += '<tr class="odd"><th>Defends</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.flag_defends, "flag"), pluralize(player.base_defends, "base"), pluralize(player.carrier_defends, "carrier"))
-	html += '<tr><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag"), pluralize(player.death_streak, "death"), pluralize(player.cap_streak, "cap"))
-	html += '<tr class="odd"><th>Score</th><td>%d</td></tr>\n' % (player.score)
+	html += '<tr class="odd"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag"), pluralize(player.death_streak, "death"), pluralize(player.cap_streak, "cap"))
 	awards = ", ".join(_award_html(a) for a in player.awards)
 	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)
-	html += '<tr class="odd"><th>Player mostly</th><td>killed by %s / killing %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
 	html += "</table>\n"
 	html += '<table class="weapon_info">\n'
 	html += "<tr><th>Weapon</th><th>Hitrate</th><th>Fragrate</th></tr>\n"
@@ -107,6 +103,10 @@ def player_info(player):
 		html += "</tr>\n"
 		odd = not odd
 	html += "</table>\n"
+	html += '<div class="debug_stats">\n'
+	for attr in _BORING_STATS:
+		html += '<span>%s=%s</span>; \n' % (attr, getattr(player, attr))
+	html += "</div>\n"
 	html += "</div>\n"
 	return html
 
