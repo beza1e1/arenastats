@@ -35,6 +35,7 @@ _MAX_AWARDS = [
 	(7, 'death_streak', Award("Frustrated Dead", None, "highest death streak")),
 	(2, 'cap_streak', Award("Capture King", None, "highest cap streak")),
 	(1.5, 'dmg_kill_ratio', Award("Hard Worker", None, "Most damage per kill")),
+	(0, 'sudden_death_decider', Award("Sudden Death Decider", None, "Final cap in sudden death overtime")),
 ]
 ## maximum, attribute name, award
 _ULTIMATE_MAX = 1000000

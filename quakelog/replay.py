@@ -148,7 +148,7 @@ _WEAPON_RELOAD_TIMES = { # in seconds
 	'bfg': 0.2,
 }
 
-_ZERO_PROPERTIES = ['quad_count', 'regen_count', 'haste_count', 'mega_health_count', 'invis_count', 'medkit_count', 'flag_returns', 'flag_touches', 'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides', 'kill_count', 'death_count', 'team_kills', 'flag_defends', 'base_defends', 'carrier_defends', 'flag_carrier_kills', 'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak', 'current_death_streak', 'cap_streak', 'current_cap_streak', 'score']
+_ZERO_PROPERTIES = ['quad_count', 'regen_count', 'haste_count', 'mega_health_count', 'invis_count', 'medkit_count', 'flag_returns', 'flag_touches', 'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides', 'kill_count', 'death_count', 'team_kills', 'flag_defends', 'base_defends', 'carrier_defends', 'flag_carrier_kills', 'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak', 'current_death_streak', 'cap_streak', 'current_cap_streak', 'score', 'health', 'armor', 'sudden_death_decider']
 class Player:
 	def initFromToken(self, tok):
 		assert isinstance(tok, NewClient), tok
@@ -157,8 +157,6 @@ class Player:
 		self.disconnected = False
 		self.nick = "no_nick_yet"
 		self.chats = list()
-		self.health = 0
-		self.armor = 0
 		self.player_kill_count = dict()
 		self.player_death_count = dict()
 		for weapon in _STAT_WEAPONS.values():
@@ -336,6 +334,9 @@ class Game:
 		self.players_eternal = list() # still alive after disconnect
 		self.teams = dict()
 		self.teams[3] = Team(3, "Observers")
+		self.start_time = token.time
+		self.game_duration = float(token.timelimit) * 60.0
+		self.end_time = self.start_time + self.game_duration
 	def nextStep(self, token):
 		if isinstance(token, NewClient):
 			p = Player()
@@ -385,6 +386,8 @@ class Game:
 		elif isinstance(token, FlagCapture):
 			p = self.players[token.client_id]
 			p.captureFlag()
+			if token.time > self.end_time:
+				p.sudden_death_decider += 1
 		elif isinstance(token, FlagReturn):
 			p = self.players[token.client_id]
 			p.flag_returns += 1
