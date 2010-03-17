@@ -156,12 +156,21 @@ def award_table(players):
 		for a in p.awards:
 			awards.append((p,a))
 	awards.sort(cmp=lambda (p,a), (p2,a2): cmp(a.name,a2.name))
-	for p, a in awards:
-		winner = _player_html(p)
+	# merge same awards
+	awards_copy = awards[:]
+	awards = []
+	for p, a in awards_copy:
+		if awards and a.name == awards[-1][1].name:
+			awards[-1][0].append(p)
+		else:
+			awards.append(([p], a))
+	# output
+	for ps, a in awards:
+		winners = " ".join(_player_html(p) for p in ps)
 		award = _award_html(a)
 		img = a.img_url or "media/award.png"
 		html += u'<div class="award"><div class="symbol"><img src="%s" alt="Award" /></div><div class="name">%s</div>\
-		<div class="winner">%s</div></div>\n' % (img, award, winner)
+		<div class="winner">%s</div></div>\n' % (img, award, winners)
 	return html.encode('utf-8')
 
 _HTML = """\

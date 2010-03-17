@@ -50,6 +50,7 @@ div.player_stats .weapon_info { width: 430px; }
 }
 #award_table .name,
 #award_table .winner { width: 100%%; text-align: center; }
+#award_table .winner a { padding: 1px 0.2em; }
 #award_table .name { font-size: 1.2em; }
 #award_table .winner { padding-bottom: 0.6em; }
 #footer { clear: both; padding: 4em; }
