@@ -91,6 +91,12 @@ def player_info(player):
 	html += '<tr class="odd"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag", 6), pluralize(player.death_streak, "death", 6), pluralize(player.cap_streak, "cap", 6))
 	awards = ", ".join(_award_html(a) for a in player.awards)
 	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)
+	html += '<tr><td colspan="2">'
+	html += '<div class="debug_stats">\n'
+	for attr in _BORING_STATS:
+		html += '<span>%s=%s</span>; \n' % (attr, getattr(player, attr))
+	html += "</div>\n"
+	html += '</tr></td>'
 	html += "</table>\n"
 	html += '<table class="weapon_info">\n'
 	html += "<tr><th>Weapon</th><th>Hitrate</th><th>Fragrate</th></tr>\n"
@@ -110,10 +116,6 @@ def player_info(player):
 		html += "</tr>\n"
 		odd = not odd
 	html += "</table>\n"
-	html += '<div class="debug_stats">\n'
-	for attr in _BORING_STATS:
-		html += '<span>%s=%s</span>; \n' % (attr, getattr(player, attr))
-	html += "</div>\n"
 	html += "</div>\n"
 	return html
 

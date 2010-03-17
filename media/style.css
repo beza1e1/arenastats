@@ -17,20 +17,17 @@ div.game_stats img { max-width: 200px; }
 div.player_stats { clear: left; padding-top: 1em; }
 div.game_stats .game_result { font-size: 4em; }
 div.game_stats .game_result .team_red { text-align: right; }
-div.debug_stats { margin: 1em; }
-div.debug_stats,
 div.game_stats img,
 div.game_stats table,
 div.player_stats table { float: left; margin-left: 1em; }
 #kill_matrix table,
 div.player_stats table { border: 1px solid black; border-width: 1px 0; }
-div.debug_stats { width: 450px; }
 div.player_stats .player_info { width: 400px; }
 div.player_stats .player_info th { font-weight: normal; text-align: left; width: 8em; }
 div.player_stats .player_info .name { font-size: 1.3em; font-family: sans-serif; }
 .team_red { background-color: #fbb; }
 .team_blue { background-color: #bbf; }
-div.player_stats .weapon_info { width: 430px; }
+div.player_stats .weapon_info { width: 450px; }
 #award_table,
 #kill_matrix { width: 98%%; padding: 2em; }
 #award_table table,
