@@ -162,7 +162,6 @@ class Player:
 	def update(self, tok):
 		assert isinstance(tok, PlayerinfoChange), tok
 		self.nick = tok.nick
-		self.slug_nick = slugify(self.nick)
 		self.team_id = int(tok.team_id)
 		self.team_color = _TEAM_COLORS[self.team_id]
 	def pickupItem(self, item_name):
@@ -272,6 +271,9 @@ class Player:
 		else:
 			return (float(self.damage_given) / 100) / float(self.kill_count)
 	dmg_kill_ratio = property(_get_dmg_kill_ratio)
+	def _get_slug_nick(self):
+		return slugify(self.nick)
+	slug_nick = property(_get_slug_nick)
 
 class World(Player):
 	def __init__(self):
