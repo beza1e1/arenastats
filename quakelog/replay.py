@@ -1,7 +1,6 @@
 from tokenizer import GameEvent, NewClient, PlayerinfoChange, KillClient, ItemPickup, Kill, InitGame, TeamName, Chat, WeaponStats, EndGame, ServerTime, TeamScore, FlagCapture, FlagReturn, FlagAssistReturn, FlagCarrierKill, FlagDefend, BaseDefend, FlagAssistFrag, CarrierDefend, Score
 from awards import give_awards
 from utils import slugify
-import re
 
 infinity = float("infinity")
 
@@ -123,11 +122,6 @@ def statdict(weapon_stats):
 		sd['hitrate'] = 0.0
 	return sd
 
-_RE_COLOR_CODE = re.compile("\^[0-9]")
-def clean_player_nick(nick):
-	new_nick, n = _RE_COLOR_CODE.subn("", nick)
-	return new_nick
-
 _TEAM_COLORS = {
 	1: "red",
 	2: "blue",
@@ -167,7 +161,7 @@ class Player:
 		self.respawn()
 	def update(self, tok):
 		assert isinstance(tok, PlayerinfoChange), tok
-		self.nick = clean_player_nick(tok.nick)
+		self.nick = tok.nick
 		self.slug_nick = slugify(self.nick)
 		self.team_id = int(tok.team_id)
 		self.team_color = _TEAM_COLORS[self.team_id]

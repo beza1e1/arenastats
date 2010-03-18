@@ -1,4 +1,5 @@
 from datetime import datetime
+import re
 
 class GameEvent:
 	game_start = False
@@ -44,11 +45,18 @@ _PLAYER_KEY_EXPAND = {
 	't': 'team_id',
 	'hmodel': 'head_model',
 }
+
+_RE_COLOR_CODE = re.compile("\^[0-9]")
+def clean_player_nick(nick):
+	new_nick, n = _RE_COLOR_CODE.subn("", nick)
+	return new_nick
+
 class PlayerinfoChange(GameEvent):
 	def __init__(self, sline):
 		self.client_id = int(sline[0])
 		infostr = " ".join(sline[1:])
 		self._parse_backslash_info(infostr, _PLAYER_KEY_EXPAND)
+		self.nick = clean_player_nick(self.nick)
 
 class NewClient(GameEvent):
 	def __init__(self, sline):
