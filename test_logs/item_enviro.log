@@ -1,0 +1,903 @@
+319.4 ------------------------------------------------------------
+319.4 InitGame: \capturelimit\10\sv_floodProtect\0\sv_maxPing\0\sv_minPing\0\sv_maxRate\0\sv_minRate\0\sv_maxclients\10\sv_hostname\ipd\timelimit\13\fraglimit\30\dmflags\0\version\ioQ3 1.34-rc4 linux-i386 Jan 19 2009\g_gametype\4\protocol\68\mapname\q3dm17ctf\sv_privateClients\0\sv_allowDownload\1\server_ospauth\1\gamename\osp\gameversion\OSP v1.03a\Players_Red\1 2 4 \Players_Blue\3 5 \Score_Time\Waiting for Players\server_promode\0\g_needpass\0\server_freezetag\0
+319.4 ServerTime:	20100316170721	17:07:21 (16 Mar 2010)
+319.4 Game_Start:
+319.4 TeamName: 1 RED
+319.4 TeamName: 2 BLUE
+319.6 ClientConnect: 0
+319.6 ClientUserinfoChanged: 0 n\^3beza^71^3e^71\t\1\model\bones/red\hmodel\bones/red\c1\7\c2\5\hc\100\w\0\l\0\rt\1\st\0
+319.6 ClientBegin: 0
+319.6 ClientConnect: 1
+319.6 ClientUserinfoChanged: 1 n\^2Snake\t\1\model\stb/red\hmodel\stb/red\c1\1\c2\5\hc\100\w\0\l\0\rt\1\st\0
+319.6 ClientBegin: 1
+319.6 ClientConnect: 2
+319.6 ClientUserinfoChanged: 2 n\et al^1.\t\2\model\bender/blue\hmodel\bender/blue\c1\1\c2\5\hc\100\w\0\l\0\rt\2\st\0
+319.6 ClientBegin: 2
+319.6 ClientConnect: 3
+319.6 ClientUserinfoChanged: 3 n\Cici\t\1\model\flic/red\hmodel\flic/red\c1\1\c2\5\hc\100\w\0\l\0\rt\1\st\0
+319.6 ClientBegin: 3
+319.6 ClientConnect: 4
+319.6 ClientUserinfoChanged: 4 n\heckerQ\t\2\model\sarge/blue\hmodel\sarge/blue\c1\1\c2\5\hc\100\w\0\l\0\rt\2\st\0
+319.6 ClientBegin: 4
+319.9 say: heckerQ: viel spass
+321.4 Item: 0 weapon_rocketlauncher
+321.6 Item: 0 ammo_rockets
+321.7 Item: 1 weapon_rocketlauncher
+322.0 Item: 4 weapon_rocketlauncher
+322.0 Item: 1 ammo_rockets
+322.2 Item: 4 ammo_rockets
+322.3 Item: 2 weapon_rocketlauncher
+322.6 Item: 2 ammo_rockets
+324.0 Item: 4 item_armor_body
+328.3 Item: 2 item_health_mega
+329.6 Item: 0 weapon_rocketlauncher
+329.8 Item: 3 item_armor_body
+330.7 Item: 0 ammo_bullets
+331.7 Item: 3 weapon_rocketlauncher
+336.7 Item: 1 team_CTF_blueflag
+336.7 Flag_Pickup: 1
+338.0 Item: 0 weapon_shotgun
+338.9 Item: 0 ammo_shells
+339.0 Kill: 0 0 7: ^3beza^71^3e^71 killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+339.5 Item: 4 weapon_shotgun
+340.3 Kill: 1022 3 22: <world> killed Cici by MOD_TRIGGER_HURT 5
+341.5 Item: 4 item_health_large
+342.7 Item: 2 item_armor_shard
+342.7 Item: 2 ammo_rockets
+342.8 Item: 2 item_health_small
+343.8 Item: 3 weapon_rocketlauncher
+346.9 Item: 4 item_armor_shard
+347.0 Item: 4 item_armor_shard
+348.3 Item: 3 item_armor_shard
+348.4 Item: 3 item_armor_combat
+350.4 Kill: 4 4 7: heckerQ killed heckerQ by MOD_ROCKET_SPLASH 5
+351.0 Item: 0 weapon_rocketlauncher
+351.8 Item: 1 team_CTF_redflag
+351.8 Flag_Capture: 1
+351.8 TeamScore: 1 1 RED
+351.8 TeamScore: 2 0 BLUE
+352.4 Item: 3 weapon_rocketlauncher
+352.5 Kill: 1022 2 22: <world> killed et al^1. by MOD_TRIGGER_HURT 5
+354.5 Item: 3 item_armor_shard
+354.6 Item: 3 item_armor_shard
+354.7 Item: 3 item_armor_shard
+354.9 Item: 0 ammo_shells
+355.3 Item: 4 weapon_shotgun
+355.4 Item: 0 weapon_shotgun
+355.5 Item: 2 weapon_rocketlauncher
+357.1 Item: 4 item_armor_shard
+357.2 Item: 4 item_armor_shard
+357.4 Item: 4 item_armor_shard
+357.5 Item: 4 item_armor_combat
+358.2 Item: 2 item_armor_body
+358.5 Item: 3 weapon_rocketlauncher
+360.1 Item: 4 weapon_rocketlauncher
+360.4 Item: 1 item_health_mega
+360.7 Item: 3 item_armor_body
+360.8 Item: 2 weapon_rocketlauncher
+361.3 Item: 0 weapon_rocketlauncher
+362.8 Item: 3 item_health_large
+363.0 Item: 0 item_armor_shard
+363.1 Item: 0 ammo_shells
+363.2 Item: 0 item_health_small
+363.5 Item: 0 item_armor_shard
+366.3 Item: 3 ammo_rockets
+366.6 Item: 0 ammo_bullets
+368.9 Item: 4 ammo_rockets
+369.0 Item: 3 item_enviro
+371.6 Kill: 1022 2 22: <world> killed et al^1. by MOD_TRIGGER_HURT 5
+374.1 Item: 0 team_CTF_blueflag
+374.1 Flag_Pickup: 0
+374.2 Item: 2 ammo_rockets
+374.6 Item: 2 weapon_rocketlauncher
+378.3 Kill: 2 0 7: et al^1. killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+378.3 Kill_Carrier: 2
+378.6 Item: 2 team_CTF_blueflag
+378.6 Flag_Return: 2
+380.5 Item: 4 item_health_large
+380.5 Item: 1 team_CTF_blueflag
+380.5 Flag_Pickup: 1
+383.5 Item: 4 item_armor_shard
+383.6 Item: 4 item_armor_shard
+383.7 Item: 4 item_armor_shard
+383.9 Item: 4 item_armor_combat
+386.5 Item: 0 weapon_rocketlauncher
+387.2 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 5
+387.2 Item: 0 ammo_rockets
+387.6 Item: 3 team_CTF_blueflag
+387.6 Flag_Pickup: 3
+388.4 Item: 2 item_health_mega
+390.1 Item: 2 item_armor_body
+393.0 Item: 4 team_CTF_redflag
+393.0 Flag_Pickup: 4
+393.8 Item: 4 item_armor_body
+395.7 Item: 0 ammo_rockets
+396.9 Kill: 4 0 7: heckerQ killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+396.9 Hurt_Carrier_Defend: 4
+399.0 Item: 1 weapon_rocketlauncher
+399.3 Item: 1 ammo_rockets
+403.2 Item: 2 item_health_large
+405.8 Item: 4 weapon_rocketlauncher
+405.9 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 5
+406.7 Item: 2 ammo_shells
+408.3 Kill: 0 4 3: ^3beza^71^3e^71 killed heckerQ by MOD_MACHINEGUN 5
+408.3 Kill_Carrier: 0
+409.3 Item: 2 ammo_shells
+410.9 Item: 0 weapon_rocketlauncher
+411.0 Item: 0 team_CTF_redflag
+411.0 Flag_Return: 0
+411.7 Item: 0 weapon_rocketlauncher
+412.3 Item: 2 weapon_rocketlauncher
+415.5 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 2
+417.5 Item: 3 team_CTF_redflag
+417.5 Flag_Capture: 3
+417.5 TeamScore: 1 2 RED
+417.5 TeamScore: 2 0 BLUE
+417.5 Flag_Assist_Return: 0
+417.8 Kill: 4 0 3: heckerQ killed ^3beza^71^3e^71 by MOD_MACHINEGUN 5
+418.0 Kill: 0 4 6: ^3beza^71^3e^71 killed heckerQ by MOD_ROCKET 2
+418.8 Item: 3 item_armor_body
+419.5 Kill: 1022 2 22: <world> killed et al^1. by MOD_TRIGGER_HURT 5
+421.1 Item: 4 weapon_rocketlauncher
+421.4 Item: 1 weapon_rocketlauncher
+425.0 Item: 1 ammo_shells
+425.4 Item: 4 item_armor_shard
+425.6 Item: 4 item_armor_shard
+425.7 Item: 4 item_armor_shard
+425.9 Item: 4 item_armor_combat
+427.6 Item: 0 weapon_rocketlauncher
+428.5 Item: 3 item_health_large
+430.5 Item: 4 item_armor_body
+431.4 Item: 3 item_armor_shard
+431.5 Item: 3 item_armor_shard
+431.6 Item: 3 item_armor_shard
+431.8 Item: 3 item_armor_combat
+431.9 Item: 2 weapon_rocketlauncher
+434.4 Item: 3 item_armor_shard
+434.5 Item: 3 item_armor_shard
+434.6 Item: 3 item_armor_shard
+435.3 Kill: 1022 0 22: <world> killed ^3beza^71^3e^71 by MOD_TRIGGER_HURT 5
+436.5 Item: 1 team_CTF_blueflag
+436.5 Flag_Pickup: 1
+437.9 Item: 3 weapon_rocketlauncher
+438.2 Item: 3 ammo_rockets
+441.6 Item: 4 item_health_mega
+442.1 Item: 0 weapon_rocketlauncher
+442.4 Item: 0 ammo_rockets
+450.2 Item: 1 team_CTF_redflag
+450.2 Flag_Capture: 1
+450.2 TeamScore: 1 3 RED
+450.2 TeamScore: 2 0 BLUE
+451.9 Kill: 2 1 7: et al^1. killed ^2Snake by MOD_ROCKET_SPLASH 5
+452.0 Kill: 1022 4 22: <world> killed heckerQ by MOD_TRIGGER_HURT 5
+452.2 Item: 2 team_CTF_redflag
+452.2 Flag_Pickup: 2
+452.4 Item: 2 weapon_rocketlauncher
+454.2 Item: 4 ammo_rockets
+454.4 Item: 3 item_armor_body
+454.6 Item: 4 weapon_rocketlauncher
+455.4 Item: 1 weapon_rocketlauncher
+457.4 Item: 2 item_armor_shard
+457.4 Item: 2 ammo_shells
+457.6 Item: 2 item_health_small
+458.2 Item: 2 ammo_rockets
+458.3 Item: 2 item_health_small
+459.1 Item: 4 item_health_mega
+461.7 Kill: 0 2 7: ^3beza^71^3e^71 killed et al^1. by MOD_ROCKET_SPLASH 5
+461.7 Kill_Carrier: 0
+461.7 Item: 3 ammo_rockets
+462.4 Item: 4 ammo_rockets
+462.7 Item: 0 ammo_shells
+464.9 Item: 3 weapon_rocketlauncher
+465.1 Item: 2 weapon_rocketlauncher
+465.5 Item: 2 ammo_rockets
+465.9 Item: 0 weapon_rocketlauncher
+466.3 Kill: 1022 4 22: <world> killed heckerQ by MOD_TRIGGER_HURT 5
+467.5 Item: 3 item_armor_body
+467.9 Item: 0 item_armor_shard
+469.4 Kill: 2 3 7: et al^1. killed Cici by MOD_ROCKET_SPLASH 5
+469.4 Kill: 1022 2 19: <world> killed et al^1. by MOD_FALLING 5
+469.4 Item: 0 team_CTF_redflag
+469.4 Flag_Return: 0
+469.8 Item: 0 weapon_rocketlauncher
+472.9 Item: 2 weapon_rocketlauncher
+473.1 Item: 4 weapon_rocketlauncher
+473.2 Item: 3 weapon_rocketlauncher
+473.2 Item: 1 team_CTF_blueflag
+473.2 Flag_Pickup: 1
+476.0 Item: 0 item_health_large
+477.4 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 5
+482.2 Item: 3 item_armor_shard
+482.3 Item: 3 item_armor_shard
+482.4 Item: 3 item_armor_shard
+482.6 Item: 3 item_armor_combat
+483.2 Item: 1 weapon_rocketlauncher
+483.5 Item: 0 weapon_rocketlauncher
+483.6 Kill: 3 4 7: Cici killed heckerQ by MOD_ROCKET_SPLASH 5
+483.6 Defend_Hurt_Carrier: 3
+483.6 Item: 1 ammo_rockets
+485.2 Item: 1 item_armor_shard
+485.8 Item: 3 weapon_rocketlauncher
+486.2 say: Cici: ^1!BAM!
+487.1 Item: 2 team_CTF_redflag
+487.1 Flag_Pickup: 2
+487.4 Item: 0 item_armor_shard
+487.5 Item: 0 item_armor_shard
+487.6 Item: 0 item_armor_shard
+487.8 Item: 0 item_armor_combat
+488.4 Item: 2 item_armor_body
+492.5 Item: 2 item_regen
+496.6 Kill: 1022 0 22: <world> killed ^3beza^71^3e^71 by MOD_TRIGGER_HURT 5
+497.2 Kill: 1022 3 22: <world> killed Cici by MOD_TRIGGER_HURT 5
+499.6 Kill: 1 4 7: ^2Snake killed heckerQ by MOD_ROCKET_SPLASH 2
+500.2 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 5
+502.4 Item: 0 weapon_rocketlauncher
+502.7 Item: 0 ammo_rockets
+503.0 Item: 2 team_CTF_blueflag
+503.0 Flag_Capture: 2
+503.0 TeamScore: 1 3 RED
+503.0 TeamScore: 2 1 BLUE
+503.4 Item: 1 weapon_rocketlauncher
+503.8 Item: 2 item_armor_body
+507.6 Item: 3 weapon_rocketlauncher
+507.8 Item: 4 weapon_shotgun
+510.8 Kill: 1022 2 22: <world> killed et al^1. by MOD_TRIGGER_HURT 5
+511.0 Item: 3 item_health_mega
+511.6 Kill: 4 0 1: heckerQ killed ^3beza^71^3e^71 by MOD_SHOTGUN 5
+512.7 Item: 4 weapon_rocketlauncher
+514.3 Item: 4 item_armor_shard
+514.4 Item: 4 item_armor_shard
+514.5 Item: 4 item_armor_shard
+516.5 Item: 0 weapon_rocketlauncher
+517.1 Item: 2 weapon_rocketlauncher
+517.1 Item: 1 team_CTF_blueflag
+517.1 Flag_Pickup: 1
+517.5 Item: 2 ammo_rockets
+518.3 Item: 4 weapon_rocketlauncher
+518.7 Item: 4 ammo_rockets
+521.0 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 5
+523.4 Item: 4 ammo_shells
+523.6 Item: 1 ammo_rockets
+523.8 Item: 2 weapon_shotgun
+523.9 Item: 1 weapon_rocketlauncher
+526.0 Item: 1 item_armor_shard
+526.0 Item: 1 ammo_shells
+526.2 Item: 1 item_health_small
+527.6 Item: 0 item_armor_shard
+527.8 Item: 0 item_armor_shard
+527.9 Item: 0 item_armor_shard
+528.0 Item: 0 item_armor_combat
+528.8 Item: 4 item_armor_body
+530.7 Item: 3 item_health_large
+531.0 Kill: 3 2 3: Cici killed et al^1. by MOD_MACHINEGUN 5
+532.6 Item: 3 weapon_rocketlauncher
+535.8 Item: 0 weapon_rocketlauncher
+535.8 Item: 1 team_CTF_blueflag
+535.8 Flag_Pickup: 1
+536.8 Item: 3 item_armor_combat
+536.9 Item: 2 weapon_rocketlauncher
+538.8 Item: 1 item_armor_shard
+539.0 Item: 0 item_armor_shard
+539.1 Item: 0 item_armor_shard
+539.2 Item: 0 item_armor_shard
+539.2 Item: 2 item_armor_body
+541.0 Item: 4 team_CTF_redflag
+541.0 Flag_Pickup: 4
+543.3 Item: 0 weapon_rocketlauncher
+547.8 Kill: 4 1 6: heckerQ killed ^2Snake by MOD_ROCKET 5
+547.8 Kill_Carrier: 4
+549.3 Item: 4 team_CTF_blueflag
+549.3 Flag_Return: 4
+549.9 Item: 4 weapon_rocketlauncher
+553.8 Item: 2 item_armor_body
+554.4 Kill: 2 0 7: et al^1. killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+554.4 Defend_Hurt_Carrier: 2
+555.3 Item: 1 weapon_rocketlauncher
+556.5 Item: 1 ammo_shells
+557.5 Kill: 2 1 6: et al^1. killed ^2Snake by MOD_ROCKET 2
+557.5 Defend_Hurt_Carrier: 2
+557.8 Kill: 3 4 6: Cici killed heckerQ by MOD_ROCKET 2
+557.8 Kill_Carrier: 3
+558.9 Kill: 2 3 7: et al^1. killed Cici by MOD_ROCKET_SPLASH 5
+560.1 Item: 1 ammo_rockets
+560.4 Item: 1 weapon_rocketlauncher
+562.0 Item: 4 weapon_shotgun
+562.4 Item: 0 team_CTF_redflag
+562.4 Flag_Return: 0
+563.4 Item: 0 weapon_rocketlauncher
+565.2 Item: 0 ammo_rockets
+565.4 Item: 3 weapon_rocketlauncher
+565.6 Item: 4 weapon_rocketlauncher
+565.8 Item: 4 ammo_rockets
+566.1 Item: 2 ammo_rockets
+566.7 Item: 2 weapon_rocketlauncher
+567.5 Item: 4 item_armor_body
+570.3 Kill: 2 0 6: et al^1. killed ^3beza^71^3e^71 by MOD_ROCKET 5
+570.3 Defend_Flag: 2
+572.8 Item: 2 item_health_large
+572.8 Item: 0 ammo_rockets
+573.1 Item: 0 weapon_rocketlauncher
+575.6 Item: 0 item_armor_shard
+575.6 Item: 0 ammo_shells
+575.8 Item: 0 item_health_small
+576.2 Item: 0 item_armor_shard
+576.2 Item: 3 item_health_mega
+577.2 Item: 1 team_CTF_blueflag
+577.2 Flag_Pickup: 1
+580.0 Item: 2 weapon_rocketlauncher
+580.0 Item: 1 item_armor_shard
+580.2 Item: 1 item_health_small
+581.6 Item: 0 item_armor_shard
+581.7 Item: 0 item_armor_shard
+581.9 Item: 0 item_armor_shard
+582.0 Item: 0 item_armor_combat
+582.7 Item: 4 item_health_large
+586.3 Kill: 3 4 7: Cici killed heckerQ by MOD_ROCKET_SPLASH 5
+586.3 Kill: 3 3 7: Cici killed Cici by MOD_ROCKET_SPLASH 5
+586.7 Item: 0 ammo_rockets
+589.6 Item: 1 team_CTF_redflag
+589.6 Flag_Capture: 1
+589.6 TeamScore: 1 4 RED
+589.6 TeamScore: 2 1 BLUE
+590.2 Item: 4 weapon_rocketlauncher
+593.5 Item: 2 team_CTF_redflag
+593.5 Flag_Pickup: 2
+595.1 Item: 4 item_health_small
+595.1 Item: 4 ammo_shells
+595.2 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 5
+595.3 Item: 4 item_armor_shard
+595.9 Item: 2 item_armor_body
+602.4 Item: 4 item_health_mega
+603.2 Kill: 1022 0 22: <world> killed ^3beza^71^3e^71 by MOD_TRIGGER_HURT 5
+604.8 Kill: 1022 3 19: <world> killed Cici by MOD_FALLING 2
+606.8 Item: 0 weapon_rocketlauncher
+606.8 say: Cici: aua
+608.2 Item: 3 ammo_rockets
+608.6 Item: 3 weapon_rocketlauncher
+609.8 Kill: 4 3 6: heckerQ killed Cici by MOD_ROCKET 2
+609.8 Defend_Hurt_Carrier: 4
+611.6 Item: 2 team_CTF_blueflag
+611.6 Flag_Capture: 2
+611.6 TeamScore: 1 4 RED
+611.6 TeamScore: 2 2 BLUE
+613.3 Item: 1 weapon_rocketlauncher
+613.7 Item: 1 ammo_rockets
+615.5 Item: 4 weapon_rocketlauncher
+619.9 Kill: 1 2 7: ^2Snake killed et al^1. by MOD_ROCKET_SPLASH 5
+621.1 Item: 1 team_CTF_blueflag
+621.1 Flag_Pickup: 1
+622.9 Item: 4 item_health_large
+623.0 Kill: 4 0 7: heckerQ killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+623.3 Item: 2 weapon_rocketlauncher
+623.9 Item: 1 item_armor_shard
+624.5 Item: 4 weapon_rocketlauncher
+625.4 Item: 2 item_armor_body
+625.6 Item: 0 ammo_rockets
+626.0 Item: 0 weapon_rocketlauncher
+626.2 Item: 4 item_armor_shard
+626.3 Item: 4 item_armor_shard
+626.4 Item: 4 item_armor_shard
+626.6 Item: 4 item_armor_combat
+629.4 Item: 2 item_enviro
+632.9 Kill: 4 1 6: heckerQ killed ^2Snake by MOD_ROCKET 5
+632.9 Kill_Carrier: 4
+635.9 say: heckerQ: pwned
+636.1 Kill: 1022 4 22: <world> killed heckerQ by MOD_TRIGGER_HURT 5
+636.7 Item: 3 team_CTF_blueflag
+636.7 Flag_Pickup: 3
+638.2 Kill: 2 0 7: et al^1. killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+639.5 Item: 2 weapon_rocketlauncher
+639.5 say: heckerQ: oops
+639.6 Item: 1 weapon_rocketlauncher
+640.6 Item: 2 item_health_large
+641.2 say: heckerQ: kacke
+641.2 Item: 1 item_armor_shard
+642.4 Item: 0 weapon_rocketlauncher
+642.6 Item: 3 team_CTF_redflag
+642.6 Flag_Capture: 3
+642.6 TeamScore: 1 5 RED
+642.6 TeamScore: 2 2 BLUE
+643.4 Item: 3 item_armor_body
+647.0 Item: 3 weapon_rocketlauncher
+649.0 Item: 0 item_armor_shard
+649.2 Item: 0 item_armor_shard
+649.3 Item: 0 item_armor_shard
+649.5 Item: 4 weapon_rocketlauncher
+650.1 Item: 2 team_CTF_redflag
+650.1 Flag_Pickup: 2
+650.5 Kill: 4 1 6: heckerQ killed ^2Snake by MOD_ROCKET 5
+650.5 Defend_Flag: 4
+652.4 say: heckerQ: haha
+653.4 Item: 2 ammo_shells
+653.6 Item: 2 item_health_small
+655.4 Item: 4 item_health_large
+657.3 Item: 1 weapon_rocketlauncher
+657.7 Item: 1 ammo_rockets
+658.6 Item: 4 ammo_rockets
+659.5 Item: 4 ammo_shells
+662.7 Item: 2 team_CTF_blueflag
+662.7 Flag_Capture: 2
+662.7 TeamScore: 1 5 RED
+662.7 TeamScore: 2 3 BLUE
+663.1 Item: 2 weapon_rocketlauncher
+663.6 Item: 0 item_armor_shard
+663.7 Item: 0 item_armor_shard
+663.9 Item: 0 item_armor_shard
+664.0 Item: 0 item_armor_combat
+669.5 Kill: 1022 0 22: <world> killed ^3beza^71^3e^71 by MOD_TRIGGER_HURT 5
+670.2 Item: 4 item_health_large
+670.9 Item: 3 weapon_rocketlauncher
+672.8 Kill: 3 4 6: Cici killed heckerQ by MOD_ROCKET 2
+673.2 Kill: 2 1 6: et al^1. killed ^2Snake by MOD_ROCKET 5
+673.2 Defend_Flag: 2
+675.8 Item: 0 weapon_rocketlauncher
+677.9 Item: 0 item_armor_body
+680.8 Item: 1 weapon_rocketlauncher
+683.3 Item: 3 item_health_large
+684.3 Item: 0 weapon_rocketlauncher
+685.7 Item: 1 item_armor_shard
+687.4 Item: 0 ammo_bullets
+687.4 Item: 4 weapon_rocketlauncher
+687.7 Item: 4 ammo_rockets
+689.9 Item: 3 ammo_rockets
+690.1 Item: 3 weapon_rocketlauncher
+693.1 Item: 4 item_health_mega
+694.9 Item: 3 weapon_rocketlauncher
+695.1 Item: 3 ammo_rockets
+695.4 Item: 1 team_CTF_blueflag
+695.4 Flag_Pickup: 1
+695.5 Item: 0 item_armor_shard
+695.6 Kill: 2 1 6: et al^1. killed ^2Snake by MOD_ROCKET 5
+695.6 Kill_Carrier: 2
+695.6 Item: 0 item_armor_shard
+695.8 Item: 0 item_armor_shard
+695.9 Item: 0 item_armor_combat
+698.4 Item: 3 item_health_large
+699.7 Item: 1 weapon_rocketlauncher
+701.3 Item: 1 ammo_shells
+701.5 Item: 1 item_health_small
+701.5 Item: 3 item_armor_body
+702.8 Kill: 2 2 7: et al^1. killed et al^1. by MOD_ROCKET_SPLASH 5
+703.0 Item: 4 team_CTF_redflag
+703.0 Flag_Pickup: 4
+705.7 Item: 0 team_CTF_blueflag
+705.7 Flag_Pickup: 0
+705.7 Item: 0 weapon_rocketlauncher
+714.9 Item: 4 item_armor_body
+717.7 Item: 4 weapon_rocketlauncher
+718.5 Item: 0 item_health_large
+721.4 Kill: 4 0 7: heckerQ killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+721.4 Kill_Carrier: 4
+722.2 Item: 2 team_CTF_blueflag
+722.2 Flag_Return: 2
+722.4 Item: 2 weapon_rocketlauncher
+725.5 Item: 2 weapon_rocketlauncher
+726.5 Kill: 2 0 7: et al^1. killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 2
+726.5 Defend_Hurt_Carrier: 2
+728.7 Kill: 3 4 6: Cici killed heckerQ by MOD_ROCKET 5
+728.7 Kill_Carrier: 3
+729.7 say: Cici: ^1!BAM!
+730.7 Item: 3 team_CTF_blueflag
+730.7 Flag_Pickup: 3
+731.5 Item: 3 item_armor_body
+733.2 Item: 0 weapon_rocketlauncher
+733.4 Item: 2 team_CTF_redflag
+733.4 Flag_Pickup: 2
+733.5 Item: 0 ammo_rockets
+733.5 Item: 2 weapon_rocketlauncher
+734.7 Item: 4 ammo_rockets
+735.0 Item: 0 item_armor_shard
+736.7 Item: 2 weapon_rocketlauncher
+736.7 Kill: 1022 2 19: <world> killed et al^1. by MOD_FALLING 5
+740.7 Item: 1 weapon_rocketlauncher
+740.7 Item: 1 team_CTF_redflag
+740.7 Flag_Return: 1
+742.8 Item: 0 ammo_rockets
+743.7 Kill: 1 0 6: ^2Snake killed ^3beza^71^3e^71 by MOD_ROCKET 5
+743.9 Item: 1 weapon_rocketlauncher
+746.1 Item: 2 item_health_large
+747.6 Item: 3 team_CTF_redflag
+747.6 Flag_Capture: 3
+747.6 TeamScore: 1 6 RED
+747.6 TeamScore: 2 3 BLUE
+747.6 Flag_Assist_Return: 1
+747.7 Kill: 2 1 3: et al^1. killed ^2Snake by MOD_MACHINEGUN 5
+747.7 Defend_Flag: 2
+749.9 Item: 0 weapon_rocketlauncher
+750.0 Item: 3 ammo_bullets
+750.2 Item: 0 ammo_rockets
+750.6 Kill: 1022 4 19: <world> killed heckerQ by MOD_FALLING 1
+751.3 Item: 2 weapon_rocketlauncher
+751.7 Item: 2 weapon_rocketlauncher
+751.7 Item: 3 weapon_rocketlauncher
+753.1 Kill: 1022 0 22: <world> killed ^3beza^71^3e^71 by MOD_TRIGGER_HURT 2
+754.9 Item: 3 item_health_large
+755.3 Item: 1 weapon_rocketlauncher
+755.6 Item: 2 item_health_large
+757.4 Item: 1 item_armor_body
+757.9 Item: 4 item_regen
+758.8 Item: 4 ammo_shells
+759.6 Item: 1 ammo_shells
+759.8 Item: 1 item_health_small
+760.3 Item: 0 weapon_rocketlauncher
+761.8 Item: 2 item_armor_shard
+761.9 Item: 2 item_armor_shard
+762.0 Item: 2 item_armor_shard
+762.2 Item: 2 item_armor_combat
+766.7 Item: 3 ammo_rockets
+767.1 Item: 4 weapon_rocketlauncher
+769.7 Item: 1 team_CTF_blueflag
+769.7 Flag_Pickup: 1
+771.2 Item: 4 item_armor_shard
+771.3 Item: 4 item_armor_shard
+771.5 Item: 4 item_armor_shard
+771.6 Item: 2 item_health_mega
+771.6 Item: 4 item_armor_combat
+772.1 Item: 0 item_armor_body
+772.6 Item: 1 item_armor_shard
+772.6 Item: 1 ammo_rockets
+772.8 Item: 1 item_health_small
+778.3 Item: 4 item_armor_shard
+778.4 Item: 4 item_armor_shard
+778.6 Item: 4 item_armor_shard
+779.4 Item: 3 item_health_large
+782.7 Item: 1 team_CTF_redflag
+782.7 Flag_Capture: 1
+782.7 TeamScore: 1 7 RED
+782.7 TeamScore: 2 3 BLUE
+784.3 Item: 3 weapon_rocketlauncher
+784.6 Item: 3 ammo_rockets
+785.7 Item: 1 item_armor_shard
+786.0 Item: 2 team_CTF_redflag
+786.0 Flag_Pickup: 2
+787.3 Item: 2 item_armor_body
+789.8 Item: 3 item_armor_shard
+789.9 Item: 3 item_armor_shard
+790.1 Item: 3 item_armor_shard
+790.2 Kill: 1022 4 22: <world> killed heckerQ by MOD_TRIGGER_HURT 5
+793.0 Item: 3 item_health_large
+793.5 Kill: 2 0 7: et al^1. killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+793.5 Hurt_Carrier_Defend: 2
+796.1 Item: 3 item_armor_shard
+796.2 Kill: 1022 2 22: <world> killed et al^1. by MOD_TRIGGER_HURT 5
+796.3 Item: 3 item_armor_shard
+796.4 Item: 3 item_armor_shard
+796.6 Item: 3 item_armor_combat
+797.2 Item: 1 team_CTF_blueflag
+797.2 Flag_Pickup: 1
+799.6 Item: 0 weapon_rocketlauncher
+799.9 Item: 0 ammo_rockets
+800.0 Item: 1 item_armor_shard
+800.4 Item: 1 item_armor_shard
+803.0 Kill: 0 4 6: ^3beza^71^3e^71 killed heckerQ by MOD_ROCKET 2
+804.8 Kill: 1022 2 22: <world> killed et al^1. by MOD_TRIGGER_HURT 2
+805.3 Item: 4 ammo_rockets
+805.6 Item: 4 weapon_rocketlauncher
+807.0 Item: 0 ammo_shells
+807.1 Item: 0 item_health_small
+807.5 Item: 0 item_armor_shard
+807.7 Item: 2 weapon_rocketlauncher
+807.9 Item: 0 ammo_rockets
+809.4 Item: 1 team_CTF_redflag
+809.4 Flag_Capture: 1
+809.4 TeamScore: 1 8 RED
+809.4 TeamScore: 2 3 BLUE
+809.7 Item: 4 item_armor_body
+811.9 Item: 3 team_CTF_blueflag
+811.9 Flag_Pickup: 3
+812.1 Item: 1 item_armor_shard
+816.1 Item: 0 item_health_large
+817.8 Item: 0 weapon_rocketlauncher
+819.2 Item: 4 item_armor_shard
+819.3 Item: 4 item_armor_shard
+819.4 Item: 4 item_armor_shard
+819.6 Item: 4 item_armor_combat
+820.0 Kill: 1022 2 22: <world> killed et al^1. by MOD_TRIGGER_HURT 5
+821.0 Item: 0 item_armor_shard
+821.1 Item: 0 item_armor_shard
+821.2 Item: 0 item_armor_shard
+825.1 Item: 0 item_armor_shard
+825.1 Item: 0 ammo_rockets
+825.3 Item: 0 item_health_small
+828.1 Item: 1 team_CTF_blueflag
+828.1 Flag_Pickup: 1
+828.1 Item: 2 weapon_rocketlauncher
+828.2 Kill: 1022 3 22: <world> killed Cici by MOD_TRIGGER_HURT 5
+828.7 Item: 4 team_CTF_redflag
+828.7 Flag_Pickup: 4
+829.4 Item: 4 item_armor_body
+831.1 Item: 3 weapon_rocketlauncher
+834.2 Item: 4 ammo_rockets
+840.6 Kill: 1022 2 22: <world> killed et al^1. by MOD_TRIGGER_HURT 5
+841.8 Kill: 4 3 7: heckerQ killed Cici by MOD_ROCKET_SPLASH 5
+841.8 Hurt_Carrier_Defend: 4
+843.0 Item: 2 ammo_rockets
+843.3 Item: 2 weapon_rocketlauncher
+845.0 Kill: 4 0 7: heckerQ killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 5
+845.0 Hurt_Carrier_Defend: 4
+845.9 Item: 4 weapon_rocketlauncher
+847.4 Item: 4 item_health_large
+847.5 Item: 0 ammo_rockets
+847.7 Item: 2 item_armor_shard
+847.8 Item: 2 item_armor_shard
+847.9 Item: 0 weapon_rocketlauncher
+847.9 Item: 2 item_armor_shard
+848.1 Item: 2 item_armor_combat
+850.9 Item: 2 weapon_rocketlauncher
+851.2 Item: 2 ammo_rockets
+852.9 Item: 2 item_armor_shard
+853.1 Item: 3 weapon_rocketlauncher
+853.3 Item: 4 item_armor_body
+855.1 Item: 4 weapon_rocketlauncher
+855.9 Item: 3 item_armor_body
+856.9 Item: 4 ammo_bullets
+860.4 Item: 0 item_armor_shard
+860.5 Item: 0 item_armor_shard
+860.7 Item: 0 item_armor_shard
+862.7 Item: 4 weapon_rocketlauncher
+865.9 Item: 2 item_health_large
+866.6 Kill: 4 0 3: heckerQ killed ^3beza^71^3e^71 by MOD_MACHINEGUN 5
+866.6 Hurt_Carrier_Defend: 4
+867.7 Item: 4 weapon_rocketlauncher
+869.6 Kill: 4 3 6: heckerQ killed Cici by MOD_ROCKET 5
+870.6 Item: 4 weapon_rocketlauncher
+872.3 Item: 4 item_health_large
+872.9 Item: 3 weapon_rocketlauncher
+873.1 Item: 3 ammo_rockets
+873.3 Item: 1 item_health_mega
+873.6 Item: 2 item_health_large
+878.0 Item: 4 item_health_mega
+878.5 Item: 3 ammo_rockets
+879.8 Item: 2 item_armor_shard
+879.8 Item: 0 weapon_rocketlauncher
+881.8 Item: 0 item_armor_shard
+883.3 Item: 4 weapon_rocketlauncher
+883.4 Item: 3 item_armor_body
+885.8 Item: 0 weapon_rocketlauncher
+886.2 Kill: 1 2 3: ^2Snake killed et al^1. by MOD_MACHINEGUN 5
+886.2 Defend_Base: 1
+888.8 Item: 1 weapon_rocketlauncher
+890.6 Item: 4 weapon_rocketlauncher
+891.2 Item: 0 item_armor_shard
+891.3 Item: 0 item_armor_shard
+891.4 Item: 0 item_armor_shard
+891.6 Kill: 4 3 7: heckerQ killed Cici by MOD_ROCKET_SPLASH 5
+891.6 Hurt_Carrier_Defend: 4
+891.6 Item: 0 item_armor_combat
+891.7 Item: 1 item_armor_body
+893.1 Item: 2 weapon_rocketlauncher
+893.4 Item: 2 ammo_rockets
+893.8 Item: 4 ammo_rockets
+894.3 Item: 0 item_health_large
+895.8 Item: 3 weapon_rocketlauncher
+899.1 Item: 2 item_enviro
+899.6 Item: 0 item_armor_shard
+899.7 Item: 0 item_armor_shard
+899.8 Item: 0 item_armor_shard
+901.2 Item: 4 item_health_large
+914.3 Item: 0 ammo_shells
+914.5 Item: 4 weapon_rocketlauncher
+915.4 Item: 4 weapon_rocketlauncher
+915.8 Item: 1 ammo_rockets
+915.8 Item: 0 weapon_shotgun
+916.0 Item: 1 weapon_rocketlauncher
+917.1 Item: 4 item_armor_body
+919.6 Item: 4 weapon_rocketlauncher
+923.5 Item: 0 item_health_large
+925.1 Kill: 4 0 7: heckerQ killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 3
+925.1 Hurt_Carrier_Defend: 4
+926.3 Item: 1 item_health_mega
+926.7 Kill: 4 3 7: heckerQ killed Cici by MOD_ROCKET_SPLASH 2
+927.4 Item: 4 weapon_shotgun
+928.1 Item: 4 ammo_shells
+928.5 Item: 4 weapon_shotgun
+930.2 Item: 3 weapon_rocketlauncher
+933.3 Item: 4 item_health_mega
+933.4 Kill: 1022 2 19: <world> killed et al^1. by MOD_FALLING 5
+935.0 Item: 3 weapon_rocketlauncher
+936.7 Item: 2 weapon_rocketlauncher
+937.0 Item: 2 ammo_rockets
+938.1 Item: 3 item_health_large
+938.3 Item: 4 item_armor_shard
+938.4 Item: 4 item_armor_shard
+938.5 Item: 4 item_armor_shard
+938.7 Item: 4 item_armor_combat
+942.7 Kill: 4 0 7: heckerQ killed ^3beza^71^3e^71 by MOD_ROCKET_SPLASH 2
+945.1 Item: 2 item_health_large
+946.3 Item: 0 weapon_rocketlauncher
+946.5 Item: 0 ammo_rockets
+948.7 Kill: 4 3 7: heckerQ killed Cici by MOD_ROCKET_SPLASH 5
+948.7 Hurt_Carrier_Defend: 4
+949.9 Item: 2 item_armor_shard
+950.6 Item: 4 weapon_rocketlauncher
+951.5 Item: 0 item_armor_body
+952.7 Kill: 2 1 6: et al^1. killed ^2Snake by MOD_ROCKET 5
+952.7 Kill_Carrier: 2
+957.6 Item: 3 weapon_rocketlauncher
+958.1 Item: 0 weapon_rocketlauncher
+960.2 Item: 1 weapon_rocketlauncher
+961.6 Item: 2 weapon_rocketlauncher
+961.8 Item: 2 team_CTF_blueflag
+961.8 Flag_Return: 2
+961.8 Item: 4 team_CTF_blueflag
+961.8 Flag_Capture: 4
+961.8 TeamScore: 1 8 RED
+961.8 TeamScore: 2 4 BLUE
+961.8 Flag_Assist_Return: 2
+963.0 Item: 2 team_CTF_redflag
+963.0 Flag_Pickup: 2
+964.3 Item: 1 item_armor_shard
+964.3 Item: 1 ammo_shells
+964.5 Item: 1 item_health_small
+968.1 Item: 2 item_armor_shard
+969.5 Item: 0 team_CTF_blueflag
+969.5 Flag_Pickup: 0
+970.0 Item: 4 item_armor_body
+970.1 Item: 3 item_armor_shard
+970.2 Item: 3 item_armor_shard
+970.3 Item: 3 item_armor_shard
+970.5 Item: 3 item_armor_combat
+973.5 Item: 0 ammo_rockets
+973.6 Item: 0 item_health_small
+974.8 Item: 2 ammo_rockets
+977.3 Item: 0 weapon_rocketlauncher
+977.7 Item: 0 ammo_rockets
+981.7 Item: 0 item_armor_shard
+981.8 Item: 0 item_armor_shard
+982.0 Item: 0 item_armor_shard
+982.1 Item: 0 item_armor_combat
+982.2 Item: 2 item_health_large
+982.3 Kill: 1022 3 19: <world> killed Cici by MOD_FALLING 5
+983.2 Item: 4 item_armor_body
+984.8 Item: 0 item_health_large
+985.3 Item: 3 weapon_rocketlauncher
+985.4 Item: 4 weapon_rocketlauncher
+994.6 Item: 0 item_armor_shard
+994.7 Item: 0 item_armor_shard
+994.9 Item: 0 item_armor_shard
+998.3 Item: 3 item_armor_shard
+998.4 Item: 2 item_health_mega
+998.4 Item: 3 item_armor_shard
+998.5 Item: 3 item_armor_shard
+999.5 Item: 0 item_health_large
+1000.2 Item: 2 item_armor_body
+1001.9 Item: 3 weapon_rocketlauncher
+1002.9 Item: 4 item_health_mega
+1003.0 Item: 2 weapon_rocketlauncher
+1004.7 Item: 1 item_armor_shard
+1004.8 Item: 1 item_armor_shard
+1004.9 Item: 1 item_armor_shard
+1005.1 Item: 1 item_armor_combat
+1006.0 say: heckerQ: lol
+1006.4 Kill: 1022 4 22: <world> killed heckerQ by MOD_TRIGGER_HURT 5
+1007.2 Item: 0 item_armor_shard
+1007.3 Item: 0 item_armor_shard
+1007.5 Item: 0 item_armor_shard
+1008.6 Kill: 2 1 7: et al^1. killed ^2Snake by MOD_ROCKET_SPLASH 5
+1009.7 Item: 0 weapon_shotgun
+1010.0 Item: 0 ammo_shells
+1010.7 Item: 2 weapon_rocketlauncher
+1011.2 Item: 1 ammo_rockets
+1011.5 Item: 1 weapon_rocketlauncher
+1013.3 Item: 1 item_armor_shard
+1013.9 Item: 3 item_health_large
+1015.4 Item: 0 item_armor_combat
+1016.4 Item: 1 ammo_bullets
+1017.4 Kill: 1 4 7: ^2Snake killed heckerQ by MOD_ROCKET_SPLASH 2
+1019.1 Item: 0 ammo_rockets
+1020.8 Item: 0 item_armor_body
+1023.1 Item: 0 weapon_rocketlauncher
+1026.2 Item: 2 item_armor_body
+1026.5 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 5
+1026.7 Item: 0 item_health_large
+1027.9 Item: 3 weapon_rocketlauncher
+1029.0 Item: 3 ammo_rockets
+1029.2 Item: 0 item_armor_shard
+1029.3 Item: 0 item_armor_shard
+1029.4 Item: 0 item_armor_shard
+1030.3 Kill: 4 3 3: heckerQ killed Cici by MOD_MACHINEGUN 5
+1032.6 Item: 4 weapon_rocketlauncher
+1033.0 Item: 2 item_health_large
+1033.3 Item: 3 weapon_rocketlauncher
+1033.4 Item: 4 weapon_rocketlauncher
+1036.5 Item: 0 weapon_shotgun
+1036.7 Item: 0 ammo_shells
+1038.3 Item: 1 weapon_rocketlauncher
+1038.7 Item: 4 ammo_rockets
+1038.7 Item: 4 item_armor_shard
+1038.7 Item: 0 item_health_large
+1038.9 Item: 4 item_health_small
+1039.1 Item: 2 item_armor_shard
+1039.2 Item: 2 item_armor_shard
+1039.4 Item: 2 item_armor_shard
+1039.4 Item: 4 item_armor_shard
+1039.4 Item: 4 ammo_shells
+1039.5 Item: 2 item_armor_combat
+1040.1 Item: 3 item_enviro
+1041.6 Item: 4 item_health_small
+1045.3 Item: 2 item_armor_shard
+1045.5 Item: 2 item_armor_shard
+1045.6 Item: 2 item_armor_shard
+1048.1 Item: 4 item_armor_shard
+1048.2 Item: 4 item_armor_shard
+1048.3 Item: 4 item_armor_shard
+1048.5 Item: 4 item_armor_combat
+1050.8 Item: 0 weapon_rocketlauncher
+1052.7 Item: 0 item_armor_body
+1052.9 Item: 3 weapon_rocketlauncher
+1054.9 Item: 4 ammo_rockets
+1056.1 Item: 2 item_health_mega
+1056.4 Item: 4 weapon_rocketlauncher
+1058.7 Kill: 1022 3 22: <world> killed Cici by MOD_TRIGGER_HURT 5
+1059.4 Item: 1 weapon_rocketlauncher
+1060.4 Item: 0 weapon_rocketlauncher
+1060.5 Item: 0 ammo_rockets
+1061.0 Item: 4 item_health_mega
+1062.6 Kill: 2 1 7: et al^1. killed ^2Snake by MOD_ROCKET_SPLASH 5
+1065.2 Item: 2 item_armor_shard
+1065.4 Item: 2 item_armor_shard
+1065.5 Item: 2 item_armor_shard
+1066.5 Item: 1 weapon_rocketlauncher
+1067.1 Kill: 4 0 6: heckerQ killed ^3beza^71^3e^71 by MOD_ROCKET 5
+1067.1 Kill_Carrier: 4
+1068.3 Item: 4 weapon_rocketlauncher
+1068.5 Item: 4 team_CTF_blueflag
+1068.5 Flag_Return: 4
+1069.0 Item: 2 ammo_rockets
+1069.4 Kill: 4 3 7: heckerQ killed Cici by MOD_ROCKET_SPLASH 2
+1070.8 Item: 2 item_armor_body
+1074.7 Item: 4 item_health_large
+1076.6 Item: 4 weapon_rocketlauncher
+1077.5 Item: 0 weapon_rocketlauncher
+1077.5 Kill: 1022 1 22: <world> killed ^2Snake by MOD_TRIGGER_HURT 5
+1078.2 Item: 2 team_CTF_blueflag
+1078.2 Flag_Capture: 2
+1078.2 TeamScore: 1 8 RED
+1078.2 TeamScore: 2 5 BLUE
+1078.2 Flag_Assist_Return: 4
+1079.3 Item: 3 ammo_rockets
+1082.1 Item: 4 weapon_rocketlauncher
+1082.5 Item: 1 weapon_rocketlauncher
+1083.0 Item: 3 weapon_rocketlauncher
+1084.1 Kill: 1 4 3: ^2Snake killed heckerQ by MOD_MACHINEGUN 5
+1086.0 Item: 3 item_armor_shard
+1086.1 Item: 3 item_armor_shard
+1086.2 Item: 1 item_armor_body
+1086.3 Item: 3 item_armor_shard
+1086.4 Item: 1 weapon_rocketlauncher
+1086.4 Item: 3 item_armor_combat
+1088.4 Item: 1 item_armor_shard
+1088.4 Item: 1 ammo_shells
+1088.6 Item: 1 item_health_small
+1088.9 Item: 0 item_health_large
+1091.5 Item: 0 item_armor_shard
+1091.6 Item: 0 item_armor_shard
+1091.7 Item: 0 item_armor_shard
+1091.9 Item: 0 item_armor_combat
+1095.1 Item: 0 weapon_rocketlauncher
+1095.8 Item: 2 item_armor_body
+1096.1 Item: 3 team_CTF_blueflag
+1096.1 Flag_Pickup: 3
+1098.7 Kill: 0 4 6: ^3beza^71^3e^71 killed heckerQ by MOD_ROCKET 2
+1098.7 Defend_Flag: 0
+1099.4 Game_End: Timelimit
+1099.4 Exit: Timelimit hit.
+1099.4 red:8  blue:5
+1099.4 score: 47  ping: 9  client: 4 heckerQ
+1099.4 score: 45  ping: 9  client: 2 et al^1.
+1099.4 score: 23  ping: 0  client: 1 ^2Snake
+1099.4 score: 20  ping: 6  client: 3 Cici
+1099.4 score: 8  ping: 3  client: 0 ^3beza^71^3e^71
+1101.6 Weapon_Stats: 0 MachineGun:386:78:0:0 Shotgun:22:5:5:1 R.Launcher:162:38:40:19 Given:2441 Recvd:3186 Armor:1235 Health:525 TeamDmg:192
+1101.6 Weapon_Stats: 1 MachineGun:368:52:0:0 R.Launcher:122:16:26:18 Given:1257 Recvd:1700 Armor:440 Health:335 TeamDmg:197
+1101.6 Weapon_Stats: 2 MachineGun:366:66:0:0 Shotgun:0:0:1:0 R.Launcher:168:48:31:15 Given:3192 Recvd:2541 Armor:1555 Health:1020 TeamDmg:21
+1101.6 Weapon_Stats: 3 MachineGun:150:17:0:0 R.Launcher:142:31:31:12 Given:1959 Recvd:2603 Armor:1490 Health:700 TeamDmg:42
+1101.6 Weapon_Stats: 4 MachineGun:667:151:0:0 Shotgun:11:6:6:0 R.Launcher:137:50:36:11 Given:4297 Recvd:3116 Armor:1775 Health:1315 TeamDmg:27
+1103.1 say: heckerQ: OK
+1103.9 say: ^2Snake: lames level
+1104.6 ClientDisconnect: 0
+1107.5 say: ^2Snake: ich muss los bis dann
+1109.9 ClientDisconnect: 1
+1110.6 say: heckerQ: cu
+1114.0 ShutdownGame:
+1114.0 ------------------------------------------------------------
