@@ -317,6 +317,7 @@ _WEAPON_DESC = {
 	'MOD_BFG': 'bfg',
 	'MOD_BFG_SPLASH': 'bfg',
 	'MOD_TELEFRAG': 'teleport', 
+	'MOD_SWITCHTEAM': 'environment',
 }
 class Game:
 	def __init__(self, token):
