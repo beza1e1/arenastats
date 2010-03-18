@@ -123,6 +123,7 @@ def statdict(weapon_stats):
 	return sd
 
 _TEAM_COLORS = {
+	0: "white",
 	1: "red",
 	2: "blue",
 	3: "green",
