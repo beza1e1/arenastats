@@ -1,0 +1,1268 @@
+614.5 ------------------------------------------------------------
+614.5 InitGame: \dmflags\0\fraglimit\0\timelimit\20\sv_hostname\noname\sv_maxclients\10\sv_minRate\0\sv_maxRate\0\sv_minPing\0\sv_maxPing\0\sv_floodProtect\0\capturelimit\0\version\ioQ3 1.33 linux-i386 Apr  5 2007\g_gametype\4\protocol\68\mapname\ump1ctf3\sv_privateClients\0\sv_allowDownload\1\server_ospauth\0\gamename\osp\gameversion\OSP v1.03a\Players_Red\1 3 \Players_Blue\2 4 5 \Score_Time\Waiting for Players\server_promode\0\g_needpass\0\server_freezetag\0
+614.5 ServerTime:	20070417155605	15:56:05 (17 Apr 2007)
+614.5 Game_Start:
+614.5 TeamName: 1 RED
+614.5 TeamName: 2 BLUE
+614.7 ClientConnect: 0
+614.7 ClientUserinfoChanged: 0 n\Snake\t\1\model\major/red\hmodel\major/red\c1\3\c2\5\hc\100\w\0\l\0\rt\1\st\0
+614.7 ClientBegin: 0
+614.7 ClientConnect: 1
+614.7 ClientUserinfoChanged: 1 n\BlaFasel\t\2\model\major/blue\hmodel\major/blue\c1\4\c2\5\hc\100\w\0\l\0\rt\2\st\0
+614.7 ClientBegin: 1
+614.7 ClientConnect: 2
+614.7 ClientUserinfoChanged: 2 n\Defender\t\1\model\brandon/red\hmodel\brandon/red\c1\4\c2\5\hc\100\w\0\l\0\rt\1\st\0
+614.7 ClientBegin: 2
+614.7 ClientConnect: 3
+614.7 ClientUserinfoChanged: 3 n\Tron\t\2\model\visor/blue\hmodel\visor/blue\c1\2\c2\5\hc\100\w\0\l\0\rt\2\st\0
+614.7 ClientBegin: 3
+614.7 ClientConnect: 4
+614.7 ClientUserinfoChanged: 4 n\Nudelbrotsuppe\t\2\model\sarge/blue\hmodel\sarge/blue\c1\4\c2\5\hc\100\w\0\l\0\rt\2\st\0
+614.7 ClientBegin: 4
+616.2 Item: 2 ammo_shells
+616.4 Item: 4 item_armor_body
+616.9 Item: 0 item_armor_body
+620.2 Item: 2 ammo_shells
+620.2 Item: 4 weapon_rocketlauncher
+622.4 Item: 0 ammo_slugs
+623.1 Item: 2 ammo_slugs
+625.8 Item: 0 weapon_shotgun
+627.6 Item: 0 item_health_mega
+628.0 Item: 4 ammo_bullets
+628.1 Item: 4 weapon_plasmagun
+628.3 Item: 4 ammo_bullets
+628.8 Item: 2 ammo_lightning
+631.0 Item: 2 weapon_railgun
+632.5 Item: 0 weapon_lightning
+633.1 Item: 4 ammo_lightning
+634.0 Kill: 4 2 6: Nudelbrotsuppe killed Defender by MOD_ROCKET 2
+635.0 Item: 3 weapon_rocketlauncher
+635.6 Item: 0 item_armor_shard
+635.9 Item: 0 item_armor_shard
+636.1 Item: 0 item_armor_shard
+636.3 Item: 0 item_armor_shard
+636.6 Item: 0 item_armor_shard
+637.3 Item: 4 weapon_railgun
+637.9 Item: 4 item_health_large
+642.6 Item: 2 ammo_bullets
+642.7 Item: 2 weapon_plasmagun
+642.9 Item: 2 ammo_bullets
+643.9 Kill: 3 0 6: Tron killed Snake by MOD_ROCKET 6
+643.9 Defend_Flag: 3
+643.9 Kill: 3 3 7: Tron killed Tron by MOD_ROCKET_SPLASH 5
+650.4 Kill: 1 1 24: BlaFasel killed BlaFasel by MOD_SWITCHTEAM 2
+650.4 ClientUserinfoChanged: 1 n\BlaFasel\t\1\model\major/red\hmodel\major/red\c1\4\c2\5\hc\100\w\0\l\0\rt\1\st\0
+650.4 ClientBegin: 1
+650.6 Kill: 4 0 7: Nudelbrotsuppe killed Snake by MOD_ROCKET_SPLASH 2
+653.0 Kill: 3 2 3: Tron killed Defender by MOD_MACHINEGUN 2
+655.0 Item: 3 weapon_shotgun
+655.4 Item: 4 item_armor_body
+655.6 Item: 0 weapon_plasmagun
+658.1 Item: 1 weapon_lightning
+661.2 Item: 0 weapon_shotgun
+662.8 Item: 4 team_CTF_redflag
+662.8 Flag_Pickup: 4
+663.3 Kill: 3 1 1: Tron killed BlaFasel by MOD_SHOTGUN 6
+664.2 Item: 3 weapon_lightning
+665.0 Item: 3 item_health_mega
+666.4 Item: 0 weapon_plasmagun
+667.2 Item: 2 weapon_railgun
+668.7 Item: 3 weapon_lightning
+668.8 Item: 4 item_health
+669.7 Item: 0 weapon_rocketlauncher
+670.0 Item: 1 ammo_slugs
+670.8 Item: 2 ammo_lightning
+671.4 Item: 1 item_haste
+671.6 Item: 3 item_armor_shard
+671.6 Item: 0 team_CTF_blueflag
+671.6 Flag_Pickup: 0
+671.9 Item: 3 item_armor_shard
+672.1 Item: 3 item_armor_shard
+672.4 Item: 3 item_armor_shard
+672.6 Item: 3 item_armor_shard
+673.3 Item: 4 item_quad
+674.5 Item: 1 item_armor_body
+680.6 Item: 4 weapon_shotgun
+681.2 Item: 1 weapon_rocketlauncher
+681.6 Item: 0 ammo_shells
+682.3 Item: 3 weapon_rocketlauncher
+682.5 Kill: 4 2 7: Nudelbrotsuppe killed Defender by MOD_ROCKET_SPLASH 7
+685.8 Item: 3 item_armor_body
+687.3 Item: 4 ammo_rockets
+688.3 Item: 0 ammo_lightning
+689.1 Item: 1 weapon_plasmagun
+689.1 Item: 1 ammo_bullets
+689.3 Item: 1 ammo_bullets
+689.9 Item: 2 ammo_shells
+690.5 Item: 0 ammo_lightning
+690.9 Item: 3 item_regen
+691.9 Item: 3 ammo_shells
+695.1 Item: 1 weapon_rocketlauncher
+695.7 Item: 3 ammo_slugs
+697.7 Item: 3 ammo_slugs
+701.2 Item: 1 ammo_slugs
+701.9 Item: 4 weapon_lightning
+702.8 Item: 3 ammo_shells
+704.4 Item: 1 item_health
+706.8 Kill: 4 2 6: Nudelbrotsuppe killed Defender by MOD_ROCKET 2
+706.8 Hurt_Carrier_Defend: 4
+707.0 Item: 4 item_armor_shard
+707.3 Item: 4 item_armor_shard
+707.5 Item: 4 item_armor_shard
+707.8 Item: 4 item_armor_shard
+708.0 Item: 4 item_armor_shard
+712.8 Item: 4 item_armor_body
+713.6 Kill: 3 0 7: Tron killed Snake by MOD_ROCKET_SPLASH 5
+713.6 Kill_Carrier: 3
+714.2 Item: 3 team_CTF_blueflag
+714.2 Flag_Return: 3
+714.8 Item: 3 weapon_rocketlauncher
+715.7 Item: 1 weapon_shotgun
+717.1 Item: 1 item_health
+719.8 Item: 0 weapon_plasmagun
+720.4 Item: 4 team_CTF_blueflag
+720.4 Flag_Capture: 4
+720.4 TeamScore: 1 0 RED
+720.4 TeamScore: 2 1 BLUE
+720.4 Flag_Assist_Return: 3
+723.6 Item: 1 weapon_railgun
+724.4 Item: 0 team_CTF_blueflag
+724.4 Flag_Pickup: 0
+731.2 Item: 2 ammo_lightning
+731.9 Item: 0 weapon_rocketlauncher
+732.8 Item: 3 ammo_slugs
+732.9 Item: 1 ammo_lightning
+733.3 Kill: 4 0 8: Nudelbrotsuppe killed Snake by MOD_PLASMA 5
+733.3 Kill_Carrier: 4
+734.2 Item: 4 team_CTF_blueflag
+734.2 Flag_Return: 4
+734.6 Item: 4 weapon_rocketlauncher
+734.6 Item: 2 weapon_railgun
+736.3 Item: 3 weapon_shotgun
+736.9 Item: 2 ammo_lightning
+738.7 Item: 1 ammo_bullets
+738.8 Item: 1 weapon_plasmagun
+743.5 Item: 0 item_health_mega
+744.1 Item: 4 weapon_plasmagun
+746.8 Item: 0 weapon_lightning
+749.7 Item: 0 item_armor_shard
+750.0 Item: 0 item_armor_shard
+750.2 Item: 0 item_armor_shard
+750.4 Item: 0 item_armor_shard
+750.7 Item: 0 item_armor_shard
+752.0 Item: 3 team_CTF_redflag
+752.0 Flag_Pickup: 3
+753.0 Item: 1 item_health_large
+755.6 Kill: 4 2 10: Nudelbrotsuppe killed Defender by MOD_RAILGUN 7
+755.9 Item: 0 team_CTF_blueflag
+755.9 Flag_Pickup: 0
+758.1 Item: 4 ammo_lightning
+758.8 Item: 3 item_armor_body
+759.0 Item: 1 weapon_lightning
+759.1 Item: 0 item_armor_body
+760.4 Item: 2 weapon_rocketlauncher
+761.3 Item: 4 item_health
+761.9 Item: 1 item_armor_shard
+762.2 Item: 1 item_armor_shard
+762.4 Item: 1 item_armor_shard
+762.7 Item: 1 item_armor_shard
+762.9 Item: 1 item_armor_shard
+763.3 Item: 3 ammo_shells
+763.7 Item: 0 ammo_shells
+765.0 Item: 3 ammo_slugs
+765.8 Item: 4 item_health
+765.8 Item: 3 ammo_slugs
+768.6 Item: 2 weapon_plasmagun
+768.8 Item: 2 ammo_bullets
+769.3 Item: 4 item_health
+770.5 Item: 0 weapon_railgun
+772.8 Kill: 3 2 11: Tron killed Defender by MOD_LIGHTNING 5
+773.2 Item: 3 weapon_rocketlauncher
+774.8 Item: 3 ammo_lightning
+777.0 Item: 3 weapon_railgun
+778.6 Item: 2 weapon_plasmagun
+780.6 Item: 1 item_health
+781.5 Item: 4 ammo_lightning
+781.8 Kill: 0 4 10: Snake killed Nudelbrotsuppe by MOD_RAILGUN 7
+782.0 Item: 1 weapon_shotgun
+782.7 Item: 3 ammo_slugs
+788.4 Item: 1 weapon_railgun
+792.3 Item: 1 weapon_railgun
+792.6 Kill: 0 4 11: Snake killed Nudelbrotsuppe by MOD_LIGHTNING 2
+792.6 Hurt_Carrier_Defend: 0
+793.6 Item: 0 ammo_shells
+796.8 Item: 3 ammo_slugs
+797.4 Item: 4 weapon_rocketlauncher
+798.8 Item: 1 weapon_plasmagun
+799.1 Kill: 1022 2 19: <world> killed Defender by MOD_FALLING 2
+801.8 Item: 3 item_armor_body
+804.7 Item: 2 weapon_rocketlauncher
+805.1 Item: 1 ammo_lightning
+806.5 Item: 0 ammo_shells
+807.4 Item: 3 item_haste
+808.1 Item: 4 item_quad
+809.3 Item: 2 item_armor_body
+811.0 Item: 0 ammo_slugs
+813.7 Item: 2 item_haste
+813.8 Item: 0 ammo_slugs
+816.2 Item: 1 weapon_rocketlauncher
+817.4 Kill: 4 1 6: Nudelbrotsuppe killed BlaFasel by MOD_ROCKET 5
+817.4 Defend_Base: 4
+818.0 Item: 4 weapon_rocketlauncher
+819.9 Item: 3 item_health
+822.0 Item: 3 ammo_bullets
+822.1 Item: 3 weapon_plasmagun
+822.2 Item: 3 ammo_bullets
+828.0 Item: 1 ammo_lightning
+828.1 Item: 3 item_armor_body
+828.1 Item: 4 ammo_lightning
+830.6 Item: 2 ammo_lightning
+832.8 Kill: 3 0 10: Tron killed Snake by MOD_RAILGUN 7
+832.8 Kill_Carrier: 3
+834.8 Item: 3 ammo_slugs
+835.4 Item: 4 ammo_bullets
+835.4 Kill: 4 1 7: Nudelbrotsuppe killed BlaFasel by MOD_ROCKET_SPLASH 2
+835.6 Item: 4 weapon_plasmagun
+836.3 Item: 4 ammo_bullets
+837.7 Item: 2 weapon_plasmagun
+838.5 Item: 1 weapon_railgun
+838.7 Item: 1 team_CTF_blueflag
+838.7 Flag_Pickup: 1
+839.8 Item: 0 ammo_slugs
+840.0 Item: 4 item_health
+840.3 Item: 3 weapon_railgun
+841.7 Item: 3 item_health_large
+842.5 Item: 2 weapon_rocketlauncher
+843.4 Item: 0 ammo_shells
+843.6 Item: 4 weapon_shotgun
+844.2 Item: 1 item_armor_body
+845.5 Item: 4 item_health_mega
+847.4 Item: 4 weapon_shotgun
+849.3 Item: 0 weapon_plasmagun
+850.5 Item: 3 ammo_shells
+858.0 Item: 2 weapon_lightning
+858.0 Item: 1 weapon_rocketlauncher
+860.1 Item: 3 item_health_large
+860.8 Item: 2 item_armor_shard
+861.1 Item: 2 item_armor_shard
+861.3 Item: 2 item_armor_shard
+861.6 Item: 2 item_armor_shard
+861.8 Item: 2 item_armor_shard
+866.0 Item: 2 item_armor_body
+866.2 Kill: 3 1 7: Tron killed BlaFasel by MOD_ROCKET_SPLASH 5
+866.2 Kill_Carrier: 3
+868.1 Item: 3 weapon_rocketlauncher
+868.3 Item: 3 team_CTF_blueflag
+868.3 Flag_Return: 3
+868.7 Item: 4 weapon_rocketlauncher
+870.7 Item: 2 team_CTF_blueflag
+870.7 Flag_Pickup: 2
+871.3 Item: 1 weapon_railgun
+873.1 Item: 4 item_armor_body
+873.4 Item: 1 ammo_lightning
+876.3 Kill: 3 1 6: Tron killed BlaFasel by MOD_ROCKET 7
+878.5 Item: 3 item_health
+878.8 Item: 4 ammo_shells
+879.0 Item: 0 ammo_slugs
+880.9 Item: 2 weapon_railgun
+881.0 Item: 4 ammo_slugs
+882.4 Item: 4 ammo_slugs
+884.4 Item: 0 item_health
+884.4 Kill: 4 1 7: Nudelbrotsuppe killed BlaFasel by MOD_ROCKET_SPLASH 2
+884.4 Defend_Hurt_Carrier: 4
+887.6 Item: 4 item_health
+889.6 Item: 1 weapon_railgun
+892.1 Kill: 3 0 7: Tron killed Snake by MOD_ROCKET_SPLASH 2
+892.1 Hurt_Carrier_Defend: 3
+892.1 Item: 1 ammo_lightning
+893.2 Item: 4 weapon_railgun
+895.0 Item: 3 item_health
+896.8 Item: 0 weapon_rocketlauncher
+898.5 Item: 3 ammo_bullets
+898.6 Item: 3 weapon_plasmagun
+898.8 Item: 3 ammo_bullets
+899.1 Item: 1 item_health_mega
+900.9 Item: 1 weapon_shotgun
+904.7 Item: 3 weapon_rocketlauncher
+905.7 Item: 2 ammo_shells
+908.2 Item: 3 item_armor_body
+910.2 Item: 0 weapon_shotgun
+911.7 Item: 1 ammo_lightning
+912.2 Item: 2 ammo_bullets
+912.3 Item: 2 weapon_plasmagun
+912.5 Item: 2 ammo_bullets
+916.2 Item: 3 ammo_slugs
+916.4 Item: 0 ammo_lightning
+918.1 Item: 3 ammo_shells
+918.6 Item: 0 weapon_railgun
+919.7 Item: 4 ammo_shells
+920.7 Item: 2 weapon_rocketlauncher
+921.2 Item: 3 item_health
+922.1 Item: 1 weapon_plasmagun
+925.4 Item: 2 item_armor_body
+926.3 Item: 3 item_health
+927.4 Item: 0 weapon_railgun
+929.0 Item: 4 ammo_slugs
+930.0 Item: 1 item_quad
+930.6 Kill: 3 1 11: Tron killed BlaFasel by MOD_LIGHTNING 8
+930.6 Hurt_Carrier_Defend: 3
+931.3 Kill: 2 4 10: Defender killed Nudelbrotsuppe by MOD_RAILGUN 8
+931.5 Item: 3 item_quad
+931.7 Item: 3 weapon_plasmagun
+933.6 Item: 3 item_health
+934.1 Item: 2 item_haste
+937.4 Item: 4 ammo_slugs
+938.0 Kill: 1 3 3: BlaFasel killed Tron by MOD_MACHINEGUN 6
+938.0 Kill_Carrier: 1
+939.5 Item: 1 weapon_lightning
+939.5 Item: 1 item_quad
+939.6 Kill: 4 0 3: Nudelbrotsuppe killed Snake by MOD_MACHINEGUN 7
+939.6 Item: 4 weapon_railgun
+939.7 Item: 1 team_CTF_redflag
+939.7 Flag_Return: 1
+941.9 Item: 3 weapon_plasmagun
+942.0 Item: 3 ammo_bullets
+942.5 Kill: 3 1 3: Tron killed BlaFasel by MOD_MACHINEGUN 2
+942.8 Item: 3 ammo_bullets
+942.9 Item: 3 item_quad
+943.0 Kill: 4 2 3: Nudelbrotsuppe killed Defender by MOD_MACHINEGUN 7
+943.0 Kill_Carrier: 4
+943.6 Item: 4 weapon_railgun
+943.7 Item: 4 item_haste
+943.8 Item: 4 team_CTF_blueflag
+943.8 Flag_Return: 4
+947.2 Item: 1 weapon_railgun
+950.0 Item: 2 item_haste
+950.5 Item: 3 weapon_rocketlauncher
+951.6 Item: 0 weapon_rocketlauncher
+953.1 Item: 2 item_armor_body
+953.5 Item: 1 item_health_mega
+956.8 Item: 4 team_CTF_redflag
+956.8 Flag_Pickup: 4
+957.2 Item: 1 weapon_lightning
+959.1 Kill: 0 4 7: Snake killed Nudelbrotsuppe by MOD_ROCKET_SPLASH 7
+959.1 Kill_Carrier: 0
+960.6 Item: 2 team_CTF_blueflag
+960.6 Flag_Pickup: 2
+961.0 Item: 1 item_armor_shard
+961.2 Item: 0 weapon_railgun
+961.2 Item: 1 item_armor_shard
+961.5 Item: 1 item_armor_shard
+961.5 Item: 0 item_haste
+961.6 Item: 0 team_CTF_redflag
+961.6 Flag_Return: 0
+961.7 Item: 1 item_armor_shard
+961.9 Kill: 3 2 7: Tron killed Defender by MOD_ROCKET_SPLASH 2
+961.9 Kill_Carrier: 3
+962.0 Item: 1 item_armor_shard
+964.4 Item: 0 item_health
+964.7 Item: 2 ammo_shells
+965.0 Item: 3 item_haste
+965.7 Item: 3 team_CTF_blueflag
+965.7 Flag_Return: 3
+966.1 Item: 1 item_armor_body
+966.5 Item: 2 ammo_shells
+967.4 Item: 3 item_health_large
+970.5 Kill: 4 2 3: Nudelbrotsuppe killed Defender by MOD_MACHINEGUN 2
+971.0 Item: 3 weapon_lightning
+971.7 Item: 3 ammo_rockets
+973.0 Item: 3 ammo_rockets
+976.5 Item: 4 team_CTF_redflag
+976.5 Flag_Pickup: 4
+977.7 Item: 0 weapon_railgun
+978.3 Item: 3 weapon_shotgun
+979.5 Item: 3 item_health
+980.6 Item: 4 item_health_large
+981.7 Kill: 1 4 11: BlaFasel killed Nudelbrotsuppe by MOD_LIGHTNING 2
+981.7 Kill_Carrier: 1
+982.6 Item: 1 team_CTF_redflag
+982.6 Flag_Return: 1
+984.3 Item: 3 ammo_bullets
+984.3 Item: 3 weapon_plasmagun
+988.6 Item: 0 item_armor_body
+989.2 Item: 2 weapon_lightning
+990.2 Item: 3 ammo_lightning
+992.3 Item: 0 team_CTF_blueflag
+992.3 Flag_Pickup: 0
+992.6 Item: 2 item_health_mega
+992.6 Item: 4 ammo_lightning
+993.8 Item: 1 item_armor_shard
+994.0 Item: 1 item_armor_shard
+994.3 Item: 1 item_armor_shard
+994.5 Item: 1 item_armor_shard
+994.8 Item: 1 item_armor_shard
+994.8 Item: 4 weapon_railgun
+995.9 Item: 2 weapon_lightning
+998.9 Item: 1 item_armor_body
+999.5 Item: 3 team_CTF_redflag
+999.5 Flag_Pickup: 3
+1000.2 Item: 2 item_armor_shard
+1000.5 Item: 2 item_armor_shard
+1000.7 Item: 2 item_armor_shard
+1001.0 Item: 2 item_armor_shard
+1001.2 Item: 2 item_armor_shard
+1003.8 Item: 0 ammo_shells
+1004.4 Item: 4 ammo_slugs
+1005.4 Kill: 3 1 6: Tron killed BlaFasel by MOD_ROCKET 7
+1006.2 Item: 3 weapon_railgun
+1010.9 Item: 0 weapon_railgun
+1011.9 Item: 2 ammo_slugs
+1013.3 Item: 3 ammo_shells
+1015.4 Item: 3 item_health
+1015.8 Item: 1 ammo_shells
+1018.4 Item: 3 weapon_plasmagun
+1021.2 Item: 1 weapon_shotgun
+1021.4 Item: 3 item_health
+1021.9 Item: 2 ammo_lightning
+1022.2 Kill: 4 0 10: Nudelbrotsuppe killed Snake by MOD_RAILGUN 5
+1022.2 Kill_Carrier: 4
+1023.1 Item: 4 weapon_rocketlauncher
+1023.3 Item: 4 team_CTF_blueflag
+1023.3 Flag_Return: 4
+1025.9 Item: 3 weapon_railgun
+1026.5 Item: 1 weapon_lightning
+1026.8 Item: 3 item_health_large
+1028.0 Item: 0 weapon_plasmagun
+1028.0 Item: 0 ammo_bullets
+1028.2 Item: 4 item_armor_body
+1028.2 Item: 0 ammo_bullets
+1029.3 Item: 1 item_armor_shard
+1029.6 Item: 1 item_armor_shard
+1029.9 Item: 1 item_armor_shard
+1030.1 Item: 1 item_armor_shard
+1030.4 Item: 1 item_armor_shard
+1032.7 Item: 0 team_CTF_blueflag
+1032.7 Flag_Pickup: 0
+1034.4 Kill: 4 2 10: Nudelbrotsuppe killed Defender by MOD_RAILGUN 6
+1035.3 Item: 4 weapon_lightning
+1035.9 Item: 0 item_armor_body
+1037.9 Item: 2 ammo_bullets
+1038.0 Item: 2 weapon_plasmagun
+1038.2 Item: 2 ammo_bullets
+1042.0 Item: 4 weapon_rocketlauncher
+1042.5 Item: 2 ammo_lightning
+1043.0 Item: 1 item_health_mega
+1044.1 Item: 0 item_health
+1047.4 Item: 1 weapon_shotgun
+1048.4 Item: 0 weapon_railgun
+1049.0 Item: 2 ammo_slugs
+1049.7 Item: 4 ammo_shells
+1050.3 Item: 3 ammo_lightning
+1053.3 Kill: 4 2 10: Nudelbrotsuppe killed Defender by MOD_RAILGUN 8
+1054.8 Kill: 0 3 10: Snake killed Tron by MOD_RAILGUN 2
+1054.8 Kill_Carrier: 0
+1055.1 Item: 4 item_haste
+1055.8 Item: 4 weapon_plasmagun
+1056.3 Item: 0 team_CTF_redflag
+1056.3 Flag_Return: 0
+1056.3 Item: 4 ammo_slugs
+1057.9 Item: 2 weapon_rocketlauncher
+1059.3 Item: 3 item_quad
+1059.9 Item: 1 weapon_railgun
+1060.2 Kill: 0 4 10: Snake killed Nudelbrotsuppe by MOD_RAILGUN 7
+1061.1 Item: 0 item_haste
+1061.2 Item: 0 weapon_railgun
+1063.8 Item: 2 weapon_rocketlauncher
+1063.9 Item: 0 item_armor_body
+1063.9 Item: 4 weapon_plasmagun
+1066.4 Item: 1 ammo_shells
+1066.8 Item: 2 item_armor_shard
+1067.1 Item: 2 item_armor_shard
+1067.2 Item: 0 team_CTF_redflag
+1067.2 Flag_Capture: 0
+1067.2 TeamScore: 1 1 RED
+1067.2 TeamScore: 2 1 BLUE
+1067.3 Item: 2 item_armor_shard
+1067.5 Item: 2 item_armor_shard
+1067.8 Item: 2 item_armor_shard
+1068.9 Item: 3 team_CTF_redflag
+1068.9 Flag_Pickup: 3
+1069.2 Kill: 3 0 3: Tron killed Snake by MOD_MACHINEGUN 7
+1070.3 Item: 3 item_haste
+1070.6 Item: 2 weapon_lightning
+1070.8 Item: 3 weapon_railgun
+1072.9 Item: 1 weapon_rocketlauncher
+1074.8 Item: 3 weapon_plasmagun
+1075.2 Item: 2 weapon_shotgun
+1077.0 Item: 3 item_health
+1077.8 Item: 0 weapon_railgun
+1080.2 Item: 3 ammo_lightning
+1081.6 Kill: 1 4 7: BlaFasel killed Nudelbrotsuppe by MOD_ROCKET_SPLASH 8
+1081.6 Defend_Base: 1
+1082.5 Item: 1 weapon_plasmagun
+1083.1 Kill: 3 2 8: Tron killed Defender by MOD_PLASMA 6
+1083.1 Hurt_Carrier_Defend: 3
+1084.1 Item: 0 item_regen
+1084.4 Item: 4 ammo_shells
+1084.9 Item: 3 weapon_lightning
+1085.6 Item: 3 item_health
+1088.9 Item: 1 weapon_lightning
+1089.0 Item: 0 item_armor_body
+1089.4 Item: 3 ammo_bullets
+1089.5 Item: 3 weapon_plasmagun
+1089.7 Item: 2 ammo_slugs
+1089.7 Item: 3 ammo_bullets
+1092.1 Item: 0 weapon_rocketlauncher
+1092.3 Item: 1 item_health_mega
+1092.3 Item: 3 item_health
+1092.3 Item: 2 ammo_shells
+1094.1 Item: 1 weapon_shotgun
+1095.7 Item: 0 team_CTF_blueflag
+1095.7 Flag_Pickup: 0
+1100.4 Item: 0 weapon_rocketlauncher
+1102.3 Kill: 2 3 3: Defender killed Tron by MOD_MACHINEGUN 7
+1102.3 Kill_Carrier: 2
+1104.3 Item: 4 item_health_large
+1104.7 Item: 2 item_health_large
+1104.7 Item: 1 ammo_lightning
+1106.0 Kill: 0 4 6: Snake killed Nudelbrotsuppe by MOD_ROCKET 1
+1106.0 Hurt_Carrier_Defend: 0
+1106.0 Kill: 0 0 7: Snake killed Snake by MOD_ROCKET_SPLASH 5
+1109.7 Item: 4 weapon_plasmagun
+1110.0 Item: 2 team_CTF_redflag
+1110.0 Flag_Return: 2
+1110.1 Item: 2 weapon_railgun
+1112.3 Item: 3 weapon_shotgun
+1116.5 Kill: 2 4 10: Defender killed Nudelbrotsuppe by MOD_RAILGUN 2
+1116.9 Item: 1 item_armor_body
+1120.5 Item: 3 weapon_railgun
+1122.9 Item: 0 weapon_rocketlauncher
+1125.8 Item: 3 ammo_slugs
+1125.8 Item: 4 weapon_plasmagun
+1127.6 Item: 0 weapon_rocketlauncher
+1127.8 Item: 0 item_regen
+1128.4 Item: 0 team_CTF_blueflag
+1128.4 Flag_Pickup: 0
+1131.8 Item: 2 ammo_shells
+1132.8 Item: 0 weapon_lightning
+1136.2 Item: 0 item_health_mega
+1137.6 Item: 3 item_armor_body
+1137.9 Item: 0 weapon_shotgun
+1140.7 Item: 4 weapon_rocketlauncher
+1140.7 Item: 3 team_CTF_redflag
+1140.7 Flag_Pickup: 3
+1144.1 Item: 0 ammo_lightning
+1145.1 Item: 4 item_armor_shard
+1145.1 Kill: 1022 4 19: <world> killed Nudelbrotsuppe by MOD_FALLING 5
+1145.5 Item: 3 weapon_plasmagun
+1145.5 Item: 3 ammo_bullets
+1145.7 Item: 3 ammo_bullets
+1146.1 Item: 0 weapon_railgun
+1146.8 Item: 2 item_armor_shard
+1147.1 Item: 2 item_armor_shard
+1147.3 Item: 2 item_armor_shard
+1147.6 Item: 2 item_armor_shard
+1147.8 Item: 2 item_armor_shard
+1149.1 Item: 1 weapon_rocketlauncher
+1150.7 Item: 2 weapon_lightning
+1152.1 Kill: 4 1 3: Nudelbrotsuppe killed BlaFasel by MOD_MACHINEGUN 6
+1152.1 Defend_Base: 4
+1152.2 Item: 4 weapon_lightning
+1153.2 Item: 3 weapon_railgun
+1154.0 Item: 2 item_armor_shard
+1154.1 Item: 4 weapon_rocketlauncher
+1154.2 Item: 2 item_armor_shard
+1154.5 Item: 2 item_armor_shard
+1154.7 Item: 2 item_armor_shard
+1154.8 Item: 2 weapon_rocketlauncher
+1159.1 Kill: 2 4 10: Defender killed Nudelbrotsuppe by MOD_RAILGUN 2
+1160.2 Item: 1 weapon_shotgun
+1160.3 Item: 3 ammo_shells
+1164.7 Item: 4 weapon_plasmagun
+1164.8 Item: 0 ammo_slugs
+1164.9 Item: 1 weapon_shotgun
+1166.8 Item: 2 weapon_rocketlauncher
+1167.5 Item: 3 item_health
+1170.6 Item: 2 item_armor_body
+1170.9 Item: 4 weapon_rocketlauncher
+1172.1 Item: 3 weapon_plasmagun
+1173.1 Item: 0 ammo_shells
+1174.5 Item: 4 item_armor_body
+1174.7 Kill: 1 3 1: BlaFasel killed Tron by MOD_SHOTGUN 7
+1174.7 Kill_Carrier: 1
+1175.1 Item: 2 ammo_shells
+1175.6 Item: 0 ammo_slugs
+1175.6 Item: 1 team_CTF_redflag
+1175.6 Flag_Return: 1
+1176.1 Item: 1 weapon_railgun
+1179.0 Item: 0 item_regen
+1179.1 Item: 2 ammo_slugs
+1180.8 Item: 2 ammo_slugs
+1185.7 Item: 1 weapon_rocketlauncher
+1186.4 Item: 2 item_health
+1189.3 Item: 0 team_CTF_redflag
+1189.3 Flag_Capture: 0
+1189.3 TeamScore: 1 2 RED
+1189.3 TeamScore: 2 1 BLUE
+1189.4 Item: 2 ammo_lightning
+1189.8 Item: 1 team_CTF_blueflag
+1189.8 Flag_Pickup: 1
+1189.9 Item: 3 team_CTF_redflag
+1189.9 Flag_Pickup: 3
+1191.6 Item: 2 weapon_railgun
+1191.9 Kill: 4 0 7: Nudelbrotsuppe killed Snake by MOD_ROCKET_SPLASH 7
+1191.9 Defend_Carrier: 4
+1192.9 Item: 4 weapon_railgun
+1193.1 Item: 4 item_regen
+1193.6 Item: 2 ammo_lightning
+1195.8 Item: 0 ammo_shells
+1196.3 Item: 2 item_health
+1198.2 Item: 3 weapon_plasmagun
+1198.2 Item: 3 ammo_bullets
+1198.3 Item: 3 ammo_bullets
+1200.6 Item: 1 ammo_lightning
+1201.0 Item: 3 item_health
+1201.5 Kill: 3 2 8: Tron killed Defender by MOD_PLASMA 7
+1202.2 Item: 0 item_quad
+1202.7 Item: 4 weapon_railgun
+1203.1 Kill: 1 3 6: BlaFasel killed Tron by MOD_ROCKET 8
+1203.1 Kill_Carrier: 1
+1204.0 Item: 1 weapon_plasmagun
+1204.2 Item: 1 team_CTF_redflag
+1204.2 Flag_Return: 1
+1207.7 Item: 4 team_CTF_redflag
+1207.7 Flag_Pickup: 4
+1210.2 Item: 0 weapon_railgun
+1210.6 Kill: 4 1 8: Nudelbrotsuppe killed BlaFasel by MOD_PLASMA 5
+1210.6 Kill_Carrier: 4
+1214.0 Item: 3 weapon_plasmagun
+1216.9 Item: 4 team_CTF_blueflag
+1216.9 Flag_Return: 4
+1217.1 Item: 4 weapon_rocketlauncher
+1218.0 Item: 1 item_haste
+1221.1 Item: 1 item_armor_body
+1221.3 Item: 4 item_armor_body
+1222.4 Item: 3 weapon_rocketlauncher
+1223.3 Item: 0 ammo_slugs
+1223.6 Item: 1 team_CTF_blueflag
+1223.6 Flag_Pickup: 1
+1225.7 Item: 4 ammo_shells
+1227.2 Item: 1 ammo_bullets
+1227.2 Item: 1 weapon_plasmagun
+1227.4 Item: 1 ammo_bullets
+1228.3 Item: 4 ammo_slugs
+1229.8 Kill: 3 2 7: Tron killed Defender by MOD_ROCKET_SPLASH 1
+1232.4 Item: 3 item_health_large
+1233.5 Item: 2 weapon_plasmagun
+1234.7 Item: 0 ammo_slugs
+1236.6 Item: 4 weapon_railgun
+1238.1 Kill: 1 3 8: BlaFasel killed Tron by MOD_PLASMA 5
+1238.1 Hurt_Carrier_Defend: 1
+1239.7 Item: 2 weapon_rocketlauncher
+1243.1 Item: 3 weapon_rocketlauncher
+1244.2 Item: 4 weapon_plasmagun
+1244.4 Item: 0 ammo_shells
+1244.6 Item: 2 weapon_rocketlauncher
+1246.1 Item: 1 weapon_rocketlauncher
+1247.6 Item: 2 item_armor_shard
+1247.8 Item: 2 item_armor_shard
+1248.1 Item: 2 item_armor_shard
+1248.3 Item: 2 item_armor_shard
+1248.6 Item: 2 item_armor_shard
+1250.5 Kill: 3 0 7: Tron killed Snake by MOD_ROCKET_SPLASH 7
+1251.3 Item: 3 weapon_railgun
+1251.4 Item: 2 weapon_lightning
+1254.3 Item: 2 item_armor_shard
+1254.6 Item: 2 item_armor_shard
+1254.8 Item: 2 item_armor_shard
+1255.1 Item: 2 item_armor_shard
+1255.3 Item: 2 item_armor_shard
+1257.5 Item: 4 ammo_shells
+1259.7 Item: 2 item_armor_body
+1260.1 Item: 0 weapon_railgun
+1261.4 Item: 1 weapon_rocketlauncher
+1266.3 Kill: 0 3 10: Snake killed Tron by MOD_RAILGUN 7
+1267.1 Item: 0 ammo_slugs
+1272.3 Kill: 4 0 10: Nudelbrotsuppe killed Snake by MOD_RAILGUN 7
+1272.3 Hurt_Carrier_Defend: 4
+1272.8 Item: 4 weapon_railgun
+1275.2 Kill: 2 3 6: Defender killed Tron by MOD_ROCKET 2
+1275.2 Item: 2 ammo_shells
+1275.9 Item: 0 ammo_bullets
+1275.9 Item: 0 weapon_plasmagun
+1276.1 Item: 0 ammo_bullets
+1277.5 Item: 2 ammo_shells
+1279.0 Kill: 4 2 10: Nudelbrotsuppe killed Defender by MOD_RAILGUN 5
+1280.5 Item: 3 ammo_slugs
+1280.6 Item: 4 ammo_slugs
+1281.1 Item: 3 weapon_rocketlauncher
+1282.9 Item: 3 ammo_slugs
+1285.7 Item: 4 ammo_shells
+1285.8 Item: 1 item_armor_body
+1286.6 Item: 0 weapon_railgun
+1291.0 Item: 2 ammo_bullets
+1291.1 Item: 2 weapon_plasmagun
+1291.3 Item: 2 ammo_bullets
+1291.3 Item: 4 item_health
+1301.7 Item: 0 ammo_lightning
+1302.1 Item: 3 weapon_railgun
+1303.8 Kill: 3 0 6: Tron killed Snake by MOD_ROCKET 7
+1303.8 Item: 3 weapon_railgun
+1310.1 Kill: 0 3 3: Snake killed Tron by MOD_MACHINEGUN 2
+1311.9 Item: 0 ammo_shells
+1313.0 Item: 4 item_armor_shard
+1313.5 Item: 4 item_armor_shard
+1313.7 Item: 4 item_armor_shard
+1313.9 Item: 2 weapon_plasmagun
+1313.9 Item: 4 item_armor_shard
+1314.1 Item: 1 weapon_rocketlauncher
+1314.2 Item: 4 item_armor_shard
+1317.0 Item: 4 weapon_lightning
+1319.6 Kill: 3 0 3: Tron killed Snake by MOD_MACHINEGUN 2
+1320.9 Item: 1 weapon_rocketlauncher
+1321.0 Item: 2 weapon_rocketlauncher
+1321.1 Item: 4 item_health_mega
+1322.1 Item: 0 ammo_shells
+1324.2 Item: 0 ammo_shells
+1324.4 Item: 4 weapon_lightning
+1325.7 Item: 3 item_armor_body
+1326.2 Item: 2 weapon_rocketlauncher
+1327.3 Item: 4 item_armor_shard
+1327.6 Item: 4 item_armor_shard
+1327.8 Item: 4 item_armor_shard
+1328.1 Item: 4 item_armor_shard
+1328.3 Item: 4 item_armor_shard
+1331.1 Item: 0 item_quad
+1333.7 Item: 3 item_health
+1338.7 Item: 3 ammo_bullets
+1338.7 Item: 3 weapon_plasmagun
+1339.0 Item: 3 ammo_bullets
+1340.5 Item: 0 weapon_railgun
+1341.2 Kill: 3 2 8: Tron killed Defender by MOD_PLASMA 5
+1342.5 Item: 3 weapon_rocketlauncher
+1343.1 Item: 1 item_armor_body
+1345.0 Item: 2 item_haste
+1346.3 Item: 3 item_health
+1346.3 Item: 2 ammo_slugs
+1347.1 Item: 2 ammo_slugs
+1347.1 Item: 0 item_haste
+1349.1 Item: 3 ammo_lightning
+1351.4 Item: 0 weapon_rocketlauncher
+1353.7 Item: 3 item_health
+1354.1 Item: 0 item_armor_body
+1355.2 Kill: 3 2 8: Tron killed Defender by MOD_PLASMA 2
+1356.9 Item: 3 item_haste
+1357.2 Item: 4 weapon_lightning
+1358.8 Item: 0 ammo_slugs
+1359.8 Item: 3 ammo_bullets
+1359.8 Item: 3 weapon_plasmagun
+1360.1 Item: 3 ammo_bullets
+1360.4 Item: 4 item_armor_shard
+1360.5 Item: 4 item_armor_shard
+1360.8 Item: 4 item_armor_shard
+1361.0 Item: 0 ammo_slugs
+1361.0 Item: 4 item_armor_shard
+1361.3 Item: 4 item_armor_shard
+1365.0 Item: 0 ammo_shells
+1368.8 Item: 2 ammo_lightning
+1370.6 Kill: 4 1 10: Nudelbrotsuppe killed BlaFasel by MOD_RAILGUN 8
+1370.6 Kill_Carrier: 4
+1371.0 Item: 3 weapon_rocketlauncher
+1372.1 Item: 2 weapon_railgun
+1373.6 Item: 4 team_CTF_blueflag
+1373.6 Flag_Return: 4
+1373.6 Item: 4 weapon_plasmagun
+1376.7 Item: 4 item_health_large
+1378.5 Item: 3 item_health_large
+1379.9 Item: 1 weapon_shotgun
+1380.2 Item: 2 ammo_shells
+1380.7 Item: 0 team_CTF_blueflag
+1380.7 Flag_Pickup: 0
+1381.8 Item: 1 item_health_mega
+1384.3 Kill: 4 1 10: Nudelbrotsuppe killed BlaFasel by MOD_RAILGUN 3
+1384.3 Hurt_Carrier_Defend: 4
+1384.7 Item: 4 ammo_rockets
+1385.7 Item: 4 weapon_shotgun
+1386.8 Item: 3 weapon_lightning
+1388.1 Item: 2 item_armor_body
+1388.4 Item: 0 item_health
+1389.7 Item: 0 weapon_shotgun
+1391.5 Item: 4 weapon_lightning
+1391.6 Item: 2 weapon_rocketlauncher
+1394.6 Item: 4 item_armor_shard
+1394.8 Item: 4 item_armor_shard
+1395.1 Item: 4 item_armor_shard
+1395.3 Item: 4 item_armor_shard
+1396.2 Item: 3 item_health
+1399.2 Item: 3 weapon_plasmagun
+1399.9 Item: 0 item_armor_body
+1400.9 Kill: 2 4 10: Defender killed Nudelbrotsuppe by MOD_RAILGUN 7
+1400.9 Kill_Carrier: 2
+1401.8 Item: 2 weapon_railgun
+1402.1 Item: 2 team_CTF_redflag
+1402.1 Flag_Return: 2
+1404.9 Item: 0 ammo_shells
+1405.8 Item: 2 weapon_lightning
+1408.6 Item: 1 weapon_rocketlauncher
+1410.6 Item: 2 weapon_shotgun
+1412.1 Item: 2 item_health
+1412.2 Item: 3 ammo_slugs
+1413.1 Item: 1 item_armor_body
+1414.3 Item: 2 item_health
+1415.2 Item: 0 ammo_shells
+1417.6 Item: 4 team_CTF_redflag
+1417.6 Flag_Pickup: 4
+1418.6 Item: 3 ammo_slugs
+1422.1 Item: 3 ammo_lightning
+1422.2 Item: 4 ammo_bullets
+1422.2 Item: 4 weapon_plasmagun
+1422.4 Item: 4 ammo_bullets
+1423.9 Item: 1 ammo_shells
+1425.4 Item: 4 item_health
+1426.9 Item: 0 ammo_slugs
+1430.9 Item: 4 ammo_lightning
+1431.0 Item: 3 weapon_plasmagun
+1433.2 Item: 4 weapon_railgun
+1433.3 Item: 0 item_armor_body
+1433.6 Item: 4 item_health_large
+1434.5 Item: 2 item_health_mega
+1435.2 Item: 1 item_health
+1436.5 Item: 4 ammo_lightning
+1437.9 Item: 2 weapon_lightning
+1439.3 Item: 4 item_health
+1440.9 Item: 2 item_armor_shard
+1441.1 Item: 2 item_armor_shard
+1441.4 Item: 2 item_armor_shard
+1441.7 Item: 2 item_armor_shard
+1441.9 Item: 2 item_armor_shard
+1442.0 Item: 4 ammo_bullets
+1442.1 Item: 4 weapon_plasmagun
+1443.1 Item: 0 ammo_slugs
+1444.4 Item: 3 weapon_railgun
+1451.7 Item: 1 ammo_shells
+1453.8 Item: 2 item_quad
+1456.5 Item: 0 item_health
+1457.7 Item: 3 ammo_slugs
+1458.4 Kill: 1 4 6: BlaFasel killed Nudelbrotsuppe by MOD_ROCKET 7
+1458.4 Kill_Carrier: 1
+1459.1 Item: 1 team_CTF_redflag
+1459.1 Flag_Return: 1
+1460.2 Item: 1 weapon_railgun
+1460.4 Item: 3 ammo_shells
+1461.5 Item: 2 weapon_railgun
+1462.1 Item: 4 weapon_plasmagun
+1462.3 Item: 4 ammo_bullets
+1463.5 Item: 0 team_CTF_redflag
+1463.5 Flag_Capture: 0
+1463.5 TeamScore: 1 3 RED
+1463.5 TeamScore: 2 1 BLUE
+1463.5 Flag_Assist_Return: 1
+1464.7 Item: 3 ammo_slugs
+1466.9 Item: 1 item_haste
+1467.0 Item: 0 item_armor_body
+1467.3 Item: 3 item_haste
+1468.3 Item: 1 ammo_shells
+1468.9 Item: 3 ammo_shells
+1473.5 Item: 4 ammo_bullets
+1473.7 Item: 4 weapon_plasmagun
+1473.9 Item: 1 item_health_mega
+1475.2 Item: 1 weapon_shotgun
+1478.1 Item: 0 weapon_railgun
+1478.4 Item: 4 team_CTF_redflag
+1478.4 Flag_Pickup: 4
+1479.0 Item: 3 ammo_lightning
+1483.7 Item: 1 weapon_railgun
+1484.9 Item: 3 item_health
+1488.0 Item: 3 weapon_plasmagun
+1488.2 Item: 4 ammo_slugs
+1488.9 Item: 0 item_armor_body
+1489.1 Item: 4 ammo_slugs
+1490.3 Item: 3 item_health
+1492.0 Item: 0 team_CTF_blueflag
+1492.0 Flag_Pickup: 0
+1492.9 Item: 4 ammo_shells
+1495.9 Item: 4 item_health
+1499.3 Item: 3 ammo_slugs
+1499.4 Item: 4 ammo_lightning
+1499.5 Item: 1 weapon_rocketlauncher
+1502.5 Item: 0 weapon_railgun
+1504.3 Item: 4 weapon_railgun
+1506.9 Item: 3 ammo_slugs
+1507.4 Item: 1 weapon_rocketlauncher
+1511.8 Kill: 0 4 10: Snake killed Nudelbrotsuppe by MOD_RAILGUN 7
+1511.8 Kill_Carrier: 0
+1512.1 Item: 0 weapon_railgun
+1512.2 Item: 0 team_CTF_redflag
+1512.2 Flag_Return: 0
+1513.2 Item: 0 ammo_shells
+1514.2 Kill: 3 0 10: Tron killed Snake by MOD_RAILGUN 7
+1514.2 Kill_Carrier: 3
+1516.3 Item: 1 ammo_lightning
+1517.7 Item: 3 item_health
+1518.6 Item: 2 ammo_lightning
+1518.8 Item: 3 weapon_shotgun
+1519.1 Item: 4 item_health
+1520.8 Item: 2 weapon_railgun
+1521.4 Kill: 1 4 6: BlaFasel killed Nudelbrotsuppe by MOD_ROCKET 2
+1521.4 Kill: 1 1 7: BlaFasel killed BlaFasel by MOD_ROCKET_SPLASH 5
+1522.0 Item: 3 weapon_rocketlauncher
+1524.6 Item: 0 weapon_lightning
+1526.0 Item: 4 weapon_rocketlauncher
+1526.4 Item: 1 weapon_shotgun
+1528.0 Item: 0 item_health_mega
+1528.1 Item: 3 team_CTF_redflag
+1528.1 Flag_Pickup: 3
+1528.5 Item: 2 ammo_shells
+1529.6 Item: 0 weapon_shotgun
+1531.2 Item: 3 item_armor_body
+1531.9 Item: 4 ammo_bullets
+1531.9 Item: 1 weapon_lightning
+1532.1 Item: 4 weapon_plasmagun
+1532.3 Item: 4 ammo_bullets
+1533.0 Item: 2 ammo_shells
+1534.7 Item: 3 weapon_railgun
+1534.7 Item: 1 item_armor_shard
+1534.8 Item: 3 team_CTF_blueflag
+1534.8 Flag_Return: 3
+1534.9 Item: 1 item_armor_shard
+1535.2 Item: 1 item_armor_shard
+1535.4 Item: 1 item_armor_shard
+1535.7 Item: 1 item_armor_shard
+1537.2 Item: 3 ammo_slugs
+1538.3 Kill: 4 0 6: Nudelbrotsuppe killed Snake by MOD_ROCKET 3
+1539.9 Item: 1 item_armor_body
+1543.0 Item: 1 team_CTF_blueflag
+1543.0 Flag_Pickup: 1
+1543.4 Kill: 3 2 8: Tron killed Defender by MOD_PLASMA 7
+1543.9 Item: 3 weapon_railgun
+1544.7 Kill: 3 0 8: Tron killed Snake by MOD_PLASMA 2
+1544.7 Defend_Base: 3
+1549.6 Item: 1 weapon_plasmagun
+1553.6 Kill: 4 1 8: Nudelbrotsuppe killed BlaFasel by MOD_PLASMA 8
+1553.6 Kill_Carrier: 4
+1554.3 Item: 3 item_health
+1554.9 Item: 4 weapon_plasmagun
+1555.1 Item: 3 team_CTF_blueflag
+1555.1 Flag_Return: 3
+1555.2 Item: 0 weapon_railgun
+1555.8 Item: 0 weapon_shotgun
+1556.2 Kill: 4 4 9: Nudelbrotsuppe killed Nudelbrotsuppe by MOD_PLASMA_SPLASH 8
+1556.2 Item: 2 weapon_plasmagun
+1560.1 Item: 3 team_CTF_blueflag
+1560.1 Flag_Capture: 3
+1560.1 TeamScore: 1 3 RED
+1560.1 TeamScore: 2 2 BLUE
+1560.1 Flag_Assist_Return: 3
+1560.1 Flag_Assist_Frag: 4
+1563.4 Item: 1 team_CTF_blueflag
+1563.4 Flag_Pickup: 1
+1563.7 Kill: 3 2 3: Tron killed Defender by MOD_MACHINEGUN 2
+1563.7 Defend_Base: 3
+1565.2 Item: 0 item_armor_body
+1566.4 Item: 4 item_armor_body
+1567.6 Kill: 0 3 10: Snake killed Tron by MOD_RAILGUN 3
+1567.6 Defend_Hurt_Carrier: 0
+1567.6 Item: 1 weapon_shotgun
+1569.3 Item: 4 team_CTF_redflag
+1569.3 Flag_Pickup: 4
+1574.1 Item: 3 ammo_lightning
+1574.4 Item: 2 ammo_bullets
+1574.5 Item: 2 weapon_plasmagun
+1574.5 Item: 4 weapon_rocketlauncher
+1574.7 Item: 2 ammo_bullets
+1576.0 Item: 1 item_health
+1576.5 Item: 3 item_quad
+1579.8 Kill: 0 3 10: Snake killed Tron by MOD_RAILGUN 2
+1583.4 Item: 0 item_quad
+1587.3 Kill: 0 3 10: Snake killed Tron by MOD_RAILGUN 2
+1587.9 Item: 4 ammo_lightning
+1589.3 Item: 2 item_regen
+1590.1 Item: 4 weapon_railgun
+1590.2 Item: 1 ammo_lightning
+1591.4 Item: 3 ammo_slugs
+1591.5 Item: 2 ammo_slugs
+1593.4 Kill: 4 1 6: Nudelbrotsuppe killed BlaFasel by MOD_ROCKET 3
+1593.4 Kill_Carrier: 4
+1594.1 Item: 4 weapon_shotgun
+1594.3 Item: 4 team_CTF_blueflag
+1594.3 Flag_Return: 4
+1595.8 Item: 1 ammo_shells
+1595.8 Item: 0 item_health
+1596.4 Item: 3 item_health
+1598.2 Item: 1 ammo_slugs
+1602.3 Kill: 3 0 3: Tron killed Snake by MOD_MACHINEGUN 7
+1603.7 Item: 3 weapon_railgun
+1603.7 Item: 4 team_CTF_blueflag
+1603.7 Flag_Capture: 4
+1603.7 TeamScore: 1 3 RED
+1603.7 TeamScore: 2 3 BLUE
+1603.7 Flag_Assist_Return: 4
+1603.7 Item: 3 item_quad
+1604.6 Item: 1 weapon_shotgun
+1605.7 Item: 3 team_CTF_redflag
+1605.7 Flag_Pickup: 3
+1609.6 Item: 0 item_haste
+1610.7 Kill: 2 3 3: Defender killed Tron by MOD_MACHINEGUN 7
+1610.7 Kill_Carrier: 2
+1611.5 Item: 2 item_armor_body
+1611.8 Item: 2 weapon_railgun
+1612.2 Item: 1 weapon_plasmagun
+1612.2 Item: 1 ammo_bullets
+1612.7 Item: 0 item_armor_body
+1613.1 Item: 2 team_CTF_redflag
+1613.1 Flag_Return: 2
+1613.4 Kill: 4 1 6: Nudelbrotsuppe killed BlaFasel by MOD_ROCKET 3
+1615.1 Item: 0 team_CTF_blueflag
+1615.1 Flag_Pickup: 0
+1615.2 Item: 4 weapon_shotgun
+1615.4 Item: 3 weapon_rocketlauncher
+1620.2 Item: 0 item_health
+1620.6 Kill: 0 4 3: Snake killed Nudelbrotsuppe by MOD_MACHINEGUN 7
+1620.6 Hurt_Carrier_Defend: 0
+1622.7 Item: 3 weapon_railgun
+1623.6 Item: 0 weapon_railgun
+1625.5 Item: 2 weapon_rocketlauncher
+1629.8 Item: 1 weapon_rocketlauncher
+1631.7 Item: 4 ammo_bullets
+1631.8 Item: 4 weapon_plasmagun
+1632.0 Item: 2 weapon_rocketlauncher
+1632.0 Item: 4 ammo_bullets
+1634.3 Item: 3 team_CTF_redflag
+1634.3 Flag_Pickup: 3
+1634.9 Kill: 3 0 6: Tron killed Snake by MOD_ROCKET 7
+1634.9 Kill_Carrier: 3
+1636.6 Item: 3 team_CTF_blueflag
+1636.6 Flag_Return: 3
+1636.8 Item: 3 item_haste
+1636.8 Item: 1 ammo_shells
+1637.0 Item: 3 weapon_railgun
+1638.9 Kill: 3 3 7: Tron killed Tron by MOD_ROCKET_SPLASH 5
+1642.3 Item: 4 weapon_rocketlauncher
+1642.3 Item: 4 item_haste
+1642.6 Item: 3 ammo_bullets
+1642.7 Item: 3 weapon_plasmagun
+1644.1 Item: 4 team_CTF_redflag
+1644.1 Flag_Pickup: 4
+1644.4 Item: 1 team_CTF_blueflag
+1644.4 Flag_Pickup: 1
+1646.4 Item: 4 weapon_rocketlauncher
+1646.4 Item: 0 item_armor_body
+1649.5 Item: 4 item_armor_shard
+1649.8 Item: 0 weapon_rocketlauncher
+1650.0 Item: 4 item_armor_shard
+1650.2 Item: 4 item_armor_shard
+1650.5 Item: 4 item_armor_shard
+1650.7 Item: 4 item_armor_shard
+1653.4 Item: 4 weapon_lightning
+1654.3 Item: 1 item_health
+1655.7 Item: 4 ammo_rockets
+1657.0 Item: 4 ammo_rockets
+1658.4 Item: 2 weapon_lightning
+1659.6 Kill: 3 1 9: Tron killed BlaFasel by MOD_PLASMA_SPLASH 5
+1659.6 Kill_Carrier: 3
+1660.5 Item: 3 team_CTF_blueflag
+1660.5 Flag_Return: 3
+1660.5 Item: 3 weapon_rocketlauncher
+1661.3 Item: 4 item_health_mega
+1661.8 Item: 3 item_health_large
+1661.9 Item: 0 ammo_shells
+1662.6 Item: 3 weapon_railgun
+1667.5 Item: 4 item_armor_shard
+1667.8 Item: 4 item_armor_shard
+1668.1 Item: 4 item_armor_shard
+1668.3 Item: 4 item_armor_shard
+1668.6 Item: 4 item_armor_shard
+1669.3 Item: 3 ammo_shells
+1669.5 Item: 2 weapon_shotgun
+1669.5 Item: 0 team_CTF_blueflag
+1669.5 Flag_Pickup: 0
+1671.9 Item: 2 item_health
+1672.6 Item: 0 item_armor_body
+1673.9 Item: 3 item_armor_body
+1674.1 Item: 2 item_health
+1678.2 Item: 2 ammo_lightning
+1679.3 Kill: 4 4 7: Nudelbrotsuppe killed Nudelbrotsuppe by MOD_ROCKET_SPLASH 5
+1679.8 Item: 3 weapon_rocketlauncher
+1680.6 Item: 0 weapon_rocketlauncher
+1681.0 Item: 0 team_CTF_redflag
+1681.0 Flag_Return: 0
+1682.5 Item: 0 ammo_shells
+1684.3 Item: 3 team_CTF_redflag
+1684.3 Flag_Pickup: 3
+1684.8 Item: 2 ammo_slugs
+1687.9 Item: 1 weapon_lightning
+1688.5 Item: 4 ammo_shells
+1688.7 Item: 0 weapon_railgun
+1690.8 Item: 1 item_armor_shard
+1691.1 Item: 1 item_armor_shard
+1691.4 Item: 1 item_armor_shard
+1691.6 Item: 1 item_armor_shard
+1691.9 Item: 1 item_armor_shard
+1697.5 Kill: 4 0 3: Nudelbrotsuppe killed Snake by MOD_MACHINEGUN 5
+1697.5 Kill_Carrier: 4
+1698.8 Item: 3 team_CTF_blueflag
+1698.8 Flag_Return: 3
+1698.9 Item: 4 weapon_rocketlauncher
+1701.7 Kill: 2 4 10: Defender killed Nudelbrotsuppe by MOD_RAILGUN 5
+1701.7 Defend_Base: 2
+1703.3 Item: 0 ammo_slugs
+1704.1 Item: 2 weapon_rocketlauncher
+1704.4 Item: 2 ammo_slugs
+1704.5 Item: 4 ammo_shells
+1704.5 Item: 3 item_quad
+1707.3 Item: 3 item_health
+1708.7 Item: 0 item_armor_body
+1709.7 Item: 1 item_armor_body
+1713.2 Item: 0 team_CTF_blueflag
+1713.2 Flag_Pickup: 0
+1713.8 Item: 1 item_regen
+1715.9 Item: 4 weapon_rocketlauncher
+1720.1 Item: 3 item_health
+1725.0 Kill: 4 0 7: Nudelbrotsuppe killed Snake by MOD_ROCKET_SPLASH 1
+1725.0 Kill_Carrier: 4
+1725.2 Kill: 1 3 11: BlaFasel killed Tron by MOD_LIGHTNING 5
+1725.2 Kill_Carrier: 1
+1725.3 Item: 2 ammo_slugs
+1725.3 Item: 1 team_CTF_redflag
+1725.3 Flag_Return: 1
+1725.3 Item: 1 item_quad
+1725.3 Item: 1 weapon_rocketlauncher
+1726.2 Item: 4 team_CTF_blueflag
+1726.2 Flag_Return: 4
+1727.3 Kill: 1 4 11: BlaFasel killed Nudelbrotsuppe by MOD_LIGHTNING 5
+1727.8 Item: 1 weapon_rocketlauncher
+1730.5 Item: 0 ammo_slugs
+1731.9 Item: 0 item_haste
+1733.0 Item: 2 item_health
+1733.1 Item: 3 weapon_railgun
+1733.2 Item: 4 weapon_shotgun
+1735.0 Item: 0 item_armor_body
+1735.1 Item: 4 item_health_mega
+1741.1 Item: 0 team_CTF_blueflag
+1741.1 Flag_Pickup: 0
+1746.1 Item: 3 item_armor_body
+1748.7 Kill: 4 2 1: Nudelbrotsuppe killed Defender by MOD_SHOTGUN 7
+1748.9 Item: 0 weapon_railgun
+1749.2 Item: 3 team_CTF_redflag
+1749.2 Flag_Pickup: 3
+1749.7 Item: 4 weapon_railgun
+1753.7 Item: 4 weapon_lightning
+1753.9 Item: 3 ammo_bullets
+1754.0 Item: 3 weapon_plasmagun
+1754.2 Item: 3 ammo_bullets
+1756.1 Item: 2 ammo_shells
+1756.6 Item: 4 item_armor_shard
+1756.8 Item: 4 item_armor_shard
+1757.1 Item: 4 item_armor_shard
+1757.3 Item: 1 ammo_shells
+1757.3 Item: 4 item_armor_shard
+1757.6 Item: 4 item_armor_shard
+1763.4 Kill: 3 1 8: Tron killed BlaFasel by MOD_PLASMA 5
+1763.4 Hurt_Carrier_Defend: 3
+1764.7 Item: 3 weapon_rocketlauncher
+1765.2 Item: 3 item_health
+1765.3 Item: 0 ammo_slugs
+1766.7 Item: 1 weapon_plasmagun
+1766.8 Kill: 0 3 10: Snake killed Tron by MOD_RAILGUN 8
+1766.8 Kill_Carrier: 0
+1769.4 Item: 0 ammo_shells
+1771.5 Item: 4 weapon_rocketlauncher
+1775.3 Item: 1 team_CTF_redflag
+1775.3 Flag_Return: 1
+1775.4 Item: 1 weapon_plasmagun
+1777.2 Item: 4 team_CTF_redflag
+1777.2 Flag_Pickup: 4
+1777.5 Item: 1 ammo_bullets
+1777.6 Item: 1 weapon_plasmagun
+1777.8 Item: 1 ammo_bullets
+1780.6 Item: 4 item_armor_body
+1782.5 Kill: 3 0 3: Tron killed Snake by MOD_MACHINEGUN 7
+1782.5 Kill_Carrier: 3
+1784.1 Item: 3 team_CTF_blueflag
+1784.1 Flag_Return: 3
+1784.2 Item: 3 weapon_railgun
+1784.9 Item: 4 item_armor_shard
+1785.1 Item: 4 item_armor_shard
+1785.2 Item: 0 ammo_shells
+1785.4 Item: 4 item_armor_shard
+1785.6 Item: 4 item_armor_shard
+1785.9 Item: 4 item_armor_shard
+1788.7 Item: 4 weapon_lightning
+1792.1 Item: 4 item_health_mega
+1792.7 Item: 3 ammo_slugs
+1793.2 Item: 0 weapon_railgun
+1795.5 Item: 4 ammo_rockets
+1797.4 Item: 1 team_CTF_blueflag
+1797.4 Flag_Pickup: 1
+1797.8 Item: 0 ammo_slugs
+1798.4 Item: 4 item_armor_shard
+1798.6 Item: 4 item_armor_shard
+1798.9 Item: 4 item_armor_shard
+1799.1 Item: 4 item_armor_shard
+1799.4 Item: 4 item_armor_shard
+1800.5 Item: 3 weapon_plasmagun
+1800.5 Item: 1 item_armor_body
+1804.6 Kill: 1 3 8: BlaFasel killed Tron by MOD_PLASMA 8
+1804.6 Hurt_Carrier_Defend: 1
+1805.0 Item: 1 weapon_plasmagun
+1807.0 Item: 1 item_health
+1808.5 Item: 3 weapon_plasmagun
+1809.6 Kill: 4 1 10: Nudelbrotsuppe killed BlaFasel by MOD_RAILGUN 8
+1809.6 Kill_Carrier: 4
+1812.4 Item: 4 team_CTF_blueflag
+1812.4 Flag_Return: 4
+1812.4 Item: 0 team_CTF_blueflag
+1812.4 Flag_Pickup: 0
+1812.6 Item: 4 weapon_plasmagun
+1813.9 Item: 4 ammo_lightning
+1815.6 Item: 1 ammo_slugs
+1817.3 Item: 1 ammo_shells
+1819.2 Item: 4 ammo_bullets
+1819.4 Item: 4 weapon_plasmagun
+1819.6 Item: 4 ammo_bullets
+1821.7 Item: 1 ammo_lightning
+1823.3 Kill: 3 2 8: Tron killed Defender by MOD_PLASMA 2
+1823.3 Defend_Base: 3
+1827.2 Item: 0 weapon_railgun
+1828.4 Item: 3 ammo_shells
+1830.2 Kill: 4 1 6: Nudelbrotsuppe killed BlaFasel by MOD_ROCKET 2
+1830.2 Hurt_Carrier_Defend: 4
+1835.4 Item: 0 item_haste
+1836.9 Item: 0 ammo_shells
+1837.9 Kill: 4 1 6: Nudelbrotsuppe killed BlaFasel by MOD_ROCKET 2
+1837.9 Hurt_Carrier_Defend: 4
+1841.2 Item: 1 ammo_bullets
+1841.2 Item: 1 weapon_plasmagun
+1841.4 Item: 1 ammo_bullets
+1845.1 Item: 3 weapon_railgun
+1845.4 Item: 3 item_health_large
+1846.5 Item: 1 weapon_shotgun
+1851.2 Kill: 3 0 10: Tron killed Snake by MOD_RAILGUN 7
+1851.2 Kill_Carrier: 3
+1851.5 Item: 1 weapon_plasmagun
+1852.5 Item: 3 item_haste
+1852.6 Item: 3 team_CTF_blueflag
+1852.6 Flag_Return: 3
+1853.2 Item: 4 item_regen
+1853.5 Item: 3 weapon_railgun
+1855.0 Item: 3 ammo_slugs
+1856.3 Item: 1 team_CTF_blueflag
+1856.3 Flag_Pickup: 1
+1857.2 Item: 0 weapon_rocketlauncher
+1857.3 Item: 4 item_armor_body
+1859.8 Kill: 4 1 11: Nudelbrotsuppe killed BlaFasel by MOD_LIGHTNING 8
+1859.8 Kill_Carrier: 4
+1860.8 Item: 4 weapon_plasmagun
+1860.9 Item: 4 team_CTF_blueflag
+1860.9 Flag_Return: 4
+1861.5 Item: 3 item_quad
+1863.7 Item: 4 team_CTF_blueflag
+1863.7 Flag_Capture: 4
+1863.7 TeamScore: 1 3 RED
+1863.7 TeamScore: 2 4 BLUE
+1863.7 Game_End: Timelimit
+1863.7 Exit: Timelimit hit.
+1863.7 red:3  blue:4
+1863.7 score: 94  ping: 4  client: 4 Nudelbrotsuppe
+1863.7 score: 78  ping: 0  client: 3 Tron
+1863.7 score: 48  ping: 3  client: 0 Snake
+1863.7 score: 35  ping: 7  client: 1 BlaFasel
+1863.7 score: 17  ping: 4  client: 2 Defender
+1863.7 Flag_Assist_Return: 4
+1866.0 Weapon_Stats: 0 MachineGun:442:63:0:0 Shotgun:11:0:7:1 R.Launcher:36:9:12:5 LightningGun:143:28:4:1 Railgun:75:23:23:12 Plasmagun:172:11:6:0 Given:3853 Recvd:5264 Armor:1750 Health:575 TeamDmg:0
+1866.0 Weapon_Stats: 1 MachineGun:375:50:0:0 Shotgun:143:20:14:3 R.Launcher:71:13:17:6 LightningGun:414:77:8:2 Railgun:10:0:11:2 Plasmagun:179:33:15:5 Given:2921 Recvd:4595 Armor:1350 Health:825 TeamDmg:0
+1866.0 Weapon_Stats: 2 MachineGun:727:56:0:0 Shotgun:0:0:3:0 R.Launcher:53:6:16:3 LightningGun:207:7:9:2 Railgun:76:9:11:6 Plasmagun:297:11:11:1 Given:1944 Recvd:3935 Armor:995 Health:425 TeamDmg:0
+1866.0 Weapon_Stats: 3 MachineGun:684:179:0:0 Shotgun:77:12:5:1 R.Launcher:98:32:17:4 LightningGun:71:27:5:1 Railgun:39:14:21:4 Plasmagun:444:56:21:3 Given:6922 Recvd:4088 Armor:1025 Health:1150 TeamDmg:0
+1866.0 Weapon_Stats: 4 Gauntlet:0:2:0:0 MachineGun:761:151:0:0 Shotgun:22:2:7:0 R.Launcher:105:39:18:4 LightningGun:22:12:10:0 Railgun:51:18:13:7 Plasmagun:303:32:20:3 Given:6872 Recvd:4606 Armor:1250 Health:1025 TeamDmg:0
+1876.7 ShutdownGame:
+1876.7 ------------------------------------------------------------

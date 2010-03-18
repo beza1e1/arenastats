@@ -1,0 +1,198 @@
+25.5 ------------------------------------------------------------
+25.5 InitGame: \capturelimit\10\sv_floodProtect\0\sv_maxPing\0\sv_minPing\0\sv_maxRate\0\sv_minRate\0\sv_maxclients\10\sv_hostname\ipd\timelimit\15\fraglimit\30\dmflags\0\version\ioQ3 1.33 linux-i386 Apr  5 2007\g_gametype\0\protocol\68\mapname\q3dm7\sv_privateClients\0\sv_allowDownload\1\server_ospauth\1\gamename\osp\gameversion\OSP v1.03a\Players_Red\(None)\Players_Blue\(None)\Score_Red\0\Score_Blue\0\Score_Time\Waiting for Players\server_promode\0\g_needpass\0\server_freezetag\0\Players_Active\1 2 3 4 
+25.5 ServerTime:	20070622133049	13:30:49 (22 Jun 2007)
+25.5 Game_Start:
+25.7 ClientConnect: 0
+25.7 ClientUserinfoChanged: 0 n\Defender\t\0\model\bones/bones\hmodel\bones/bones\c1\1\c2\5\hc\100\w\0\l\0\rt\0\st\0
+25.7 ClientBegin: 0
+25.7 ClientConnect: 1
+25.7 ClientUserinfoChanged: 1 n\xt3\t\0\model\sarge\hmodel\sarge\c1\2\c2\5\hc\100\w\0\l\0\rt\0\st\0
+25.7 ClientBegin: 1
+25.7 ClientConnect: 2
+25.7 ClientUserinfoChanged: 2 n\UnnamedPlayer\t\0\model\sarge\hmodel\sarge\c1\4\c2\5\hc\100\w\0\l\0\rt\0\st\0
+25.7 ClientBegin: 2
+25.7 ClientConnect: 3
+25.7 ClientUserinfoChanged: 3 n\Snake\t\0\model\stb/red\hmodel\stb/red\c1\2\c2\5\hc\100\w\0\l\0\rt\0\st\0
+25.7 ClientBegin: 3
+26.0 Item: 1 weapon_shotgun
+26.4 Item: 0 weapon_plasmagun
+27.4 Item: 1 item_armor_combat
+27.9 Item: 0 ammo_shells
+28.1 Item: 0 ammo_shells
+30.6 Item: 2 ammo_slugs
+30.8 Item: 2 item_armor_combat
+31.0 Item: 0 ammo_slugs
+31.4 Item: 1 item_health_small
+32.6 Item: 0 item_health_small
+32.7 Item: 0 item_health_small
+32.8 Item: 0 item_health_small
+34.4 Item: 0 weapon_plasmagun
+36.4 Item: 1 weapon_rocketlauncher
+36.4 Item: 2 weapon_rocketlauncher
+38.0 Item: 1 holdable_teleporter
+39.1 Item: 0 ammo_bullets
+39.1 Item: 0 ammo_bullets
+39.3 Item: 2 item_armor_shard
+39.4 Item: 2 item_armor_shard
+39.5 Item: 2 item_armor_shard
+39.6 Item: 2 item_armor_shard
+44.9 Item: 2 weapon_rocketlauncher
+45.0 Item: 1 weapon_shotgun
+46.6 Item: 1 ammo_rockets
+46.8 Item: 1 ammo_cells
+48.3 Item: 0 ammo_slugs
+51.1 Item: 3 item_health_large
+52.0 Item: 3 weapon_rocketlauncher
+53.6 Kill: 1 3 6: xt3 killed Snake by MOD_ROCKET 5
+54.7 Item: 1 weapon_rocketlauncher
+59.2 Item: 0 weapon_plasmagun
+59.4 say: Snake: F1 druecken!!
+59.5 Kill: 1 1 7: xt3 killed xt3 by MOD_ROCKET_SPLASH 5
+61.5 Item: 3 ammo_shells
+62.2 Item: 2 weapon_rocketlauncher
+64.3 Vote Passed: ALLOW Railgun-only Instagib
+67.1 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+77.1 Kill: 3 0 10: Snake killed Defender by MOD_RAILGUN 7
+79.3 Kill: 1 3 10: xt3 killed Snake by MOD_RAILGUN 7
+83.7 Kill: 1 2 10: xt3 killed UnnamedPlayer by MOD_RAILGUN 7
+87.6 Kill: 3 0 10: Snake killed Defender by MOD_RAILGUN 7
+88.8 Kill: 1 2 10: xt3 killed UnnamedPlayer by MOD_RAILGUN 7
+92.6 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+97.9 Kill: 2 0 10: UnnamedPlayer killed Defender by MOD_RAILGUN 7
+105.9 Kill: 0 3 10: Defender killed Snake by MOD_RAILGUN 7
+110.1 Kill: 0 1 10: Defender killed xt3 by MOD_RAILGUN 7
+112.0 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+116.5 Kill: 3 0 10: Snake killed Defender by MOD_RAILGUN 7
+123.9 Kill: 1 3 10: xt3 killed Snake by MOD_RAILGUN 7
+127.8 Kill: 3 0 10: Snake killed Defender by MOD_RAILGUN 7
+129.7 Kill: 1 3 10: xt3 killed Snake by MOD_RAILGUN 7
+140.7 Kill: 0 1 10: Defender killed xt3 by MOD_RAILGUN 7
+145.7 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+148.2 Kill: 1 2 10: xt3 killed UnnamedPlayer by MOD_RAILGUN 7
+151.0 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+154.7 Kill: 0 1 10: Defender killed xt3 by MOD_RAILGUN 7
+156.8 Kill: 2 0 10: UnnamedPlayer killed Defender by MOD_RAILGUN 7
+167.8 Kill: 2 0 10: UnnamedPlayer killed Defender by MOD_RAILGUN 7
+175.3 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+183.2 ClientConnect: 4
+183.2 ClientUserinfoChanged: 4 n\Tron\t\0\model\hunter/default\hmodel\hunter/default\c1\2\c2\5\hc\100\w\0\l\0\rt\0\st\0
+184.4 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+188.7 ClientUserinfoChanged: 4 n\Tron\t\0\model\hunter/default\hmodel\hunter/default\c1\1\c2\5\hc\100\w\0\l\0\rt\0\st\0
+188.7 ClientBegin: 4
+196.7 Kill: 4 1 10: Tron killed xt3 by MOD_RAILGUN 7
+205.7 Kill: 4 1 10: Tron killed xt3 by MOD_RAILGUN 7
+208.2 Kill: 1 2 10: xt3 killed UnnamedPlayer by MOD_RAILGUN 7
+217.5 Kill: 4 0 10: Tron killed Defender by MOD_RAILGUN 7
+219.1 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+220.0 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+222.3 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+225.7 Kill: 1 3 10: xt3 killed Snake by MOD_RAILGUN 7
+233.4 Kill: 3 4 10: Snake killed Tron by MOD_RAILGUN 7
+238.0 Kill: 2 1 10: UnnamedPlayer killed xt3 by MOD_RAILGUN 7
+239.2 Kill: 4 3 10: Tron killed Snake by MOD_RAILGUN 7
+245.0 Kill: 1 0 10: xt3 killed Defender by MOD_RAILGUN 7
+250.0 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+250.3 Kill: 2 4 10: UnnamedPlayer killed Tron by MOD_RAILGUN 7
+253.0 Kill: 2 0 10: UnnamedPlayer killed Defender by MOD_RAILGUN 7
+254.6 Kill: 4 1 10: Tron killed xt3 by MOD_RAILGUN 7
+257.4 Kill: 1 2 10: xt3 killed UnnamedPlayer by MOD_RAILGUN 7
+259.2 Kill: 1 0 10: xt3 killed Defender by MOD_RAILGUN 7
+271.3 Kill: 0 2 10: Defender killed UnnamedPlayer by MOD_RAILGUN 7
+274.3 Kill: 4 2 10: Tron killed UnnamedPlayer by MOD_RAILGUN 7
+278.0 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+286.7 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+289.9 Kill: 4 2 10: Tron killed UnnamedPlayer by MOD_RAILGUN 7
+292.5 Kill: 4 0 10: Tron killed Defender by MOD_RAILGUN 7
+296.1 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+299.7 Kill: 4 3 10: Tron killed Snake by MOD_RAILGUN 7
+302.4 Kill: 2 1 10: UnnamedPlayer killed xt3 by MOD_RAILGUN 7
+305.0 Kill: 0 3 10: Defender killed Snake by MOD_RAILGUN 7
+310.3 Kill: 1 3 10: xt3 killed Snake by MOD_RAILGUN 7
+318.0 Kill: 0 2 10: Defender killed UnnamedPlayer by MOD_RAILGUN 7
+319.9 Kill: 3 0 10: Snake killed Defender by MOD_RAILGUN 7
+330.9 Kill: 4 1 10: Tron killed xt3 by MOD_RAILGUN 7
+331.2 Kill: 3 2 10: Snake killed UnnamedPlayer by MOD_RAILGUN 7
+336.9 Kill: 4 2 10: Tron killed UnnamedPlayer by MOD_RAILGUN 7
+338.2 Kill: 0 3 10: Defender killed Snake by MOD_RAILGUN 7
+338.6 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+341.8 Kill: 4 2 10: Tron killed UnnamedPlayer by MOD_RAILGUN 7
+343.6 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+349.2 Kill: 2 4 10: UnnamedPlayer killed Tron by MOD_RAILGUN 7
+353.7 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+359.2 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+364.5 Kill: 4 1 10: Tron killed xt3 by MOD_RAILGUN 7
+368.7 Kill: 1 2 10: xt3 killed UnnamedPlayer by MOD_RAILGUN 7
+375.7 Kill: 3 2 10: Snake killed UnnamedPlayer by MOD_RAILGUN 7
+378.4 Kill: 2 1 10: UnnamedPlayer killed xt3 by MOD_RAILGUN 7
+381.5 Kill: 4 2 10: Tron killed UnnamedPlayer by MOD_RAILGUN 7
+382.5 Kill: 0 4 10: Defender killed Tron by MOD_RAILGUN 7
+385.4 Kill: 1 2 10: xt3 killed UnnamedPlayer by MOD_RAILGUN 7
+386.5 Kill: 3 0 10: Snake killed Defender by MOD_RAILGUN 7
+389.1 Kill: 1 3 10: xt3 killed Snake by MOD_RAILGUN 7
+391.8 Kill: 4 1 10: Tron killed xt3 by MOD_RAILGUN 7
+394.6 Kill: 2 4 10: UnnamedPlayer killed Tron by MOD_RAILGUN 7
+397.0 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+398.7 Kill: 3 0 10: Snake killed Defender by MOD_RAILGUN 7
+402.1 Kill: 4 1 10: Tron killed xt3 by MOD_RAILGUN 7
+402.7 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+405.9 Kill: 1 2 10: xt3 killed UnnamedPlayer by MOD_RAILGUN 7
+411.3 Kill: 3 4 10: Snake killed Tron by MOD_RAILGUN 7
+414.3 Kill: 0 2 10: Defender killed UnnamedPlayer by MOD_RAILGUN 7
+416.3 Kill: 0 1 10: Defender killed xt3 by MOD_RAILGUN 7
+416.3 Kill: 0 3 10: Defender killed Snake by MOD_RAILGUN 7
+420.9 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+428.4 Kill: 3 4 10: Snake killed Tron by MOD_RAILGUN 7
+431.8 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+432.7 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+436.6 Kill: 2 4 10: UnnamedPlayer killed Tron by MOD_RAILGUN 7
+442.6 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+446.4 Kill: 0 4 10: Defender killed Tron by MOD_RAILGUN 7
+447.6 Kill: 3 2 10: Snake killed UnnamedPlayer by MOD_RAILGUN 7
+449.7 Kill: 1 0 10: xt3 killed Defender by MOD_RAILGUN 7
+451.8 Kill: 0 4 10: Defender killed Tron by MOD_RAILGUN 7
+455.9 Kill: 3 4 10: Snake killed Tron by MOD_RAILGUN 7
+460.6 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+462.7 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+466.4 Kill: 0 1 10: Defender killed xt3 by MOD_RAILGUN 7
+468.0 Kill: 0 4 10: Defender killed Tron by MOD_RAILGUN 7
+469.3 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+472.6 Kill: 4 0 10: Tron killed Defender by MOD_RAILGUN 7
+472.9 Kill: 2 1 10: UnnamedPlayer killed xt3 by MOD_RAILGUN 7
+475.6 Kill: 4 3 10: Tron killed Snake by MOD_RAILGUN 7
+478.4 Kill: 0 1 10: Defender killed xt3 by MOD_RAILGUN 7
+478.5 Kill: 3 2 10: Snake killed UnnamedPlayer by MOD_RAILGUN 7
+484.5 Kill: 2 4 10: UnnamedPlayer killed Tron by MOD_RAILGUN 7
+486.0 Kill: 2 0 10: UnnamedPlayer killed Defender by MOD_RAILGUN 7
+489.5 Kill: 3 2 10: Snake killed UnnamedPlayer by MOD_RAILGUN 7
+495.0 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+505.2 Kill: 3 1 10: Snake killed xt3 by MOD_RAILGUN 7
+505.7 Kill: 0 3 10: Defender killed Snake by MOD_RAILGUN 7
+507.3 Kill: 4 2 10: Tron killed UnnamedPlayer by MOD_RAILGUN 7
+511.0 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+512.9 Kill: 0 4 10: Defender killed Tron by MOD_RAILGUN 7
+515.9 Kill: 4 3 10: Tron killed Snake by MOD_RAILGUN 7
+519.5 Kill: 3 4 10: Snake killed Tron by MOD_RAILGUN 7
+520.3 Kill: 1 0 10: xt3 killed Defender by MOD_RAILGUN 7
+521.2 Kill: 3 2 10: Snake killed UnnamedPlayer by MOD_RAILGUN 7
+524.0 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+531.7 Kill: 4 2 10: Tron killed UnnamedPlayer by MOD_RAILGUN 7
+533.9 Kill: 1 3 10: xt3 killed Snake by MOD_RAILGUN 7
+535.4 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+537.7 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+542.1 Kill: 4 0 10: Tron killed Defender by MOD_RAILGUN 7
+542.5 Kill: 2 3 10: UnnamedPlayer killed Snake by MOD_RAILGUN 7
+544.3 Kill: 1 4 10: xt3 killed Tron by MOD_RAILGUN 7
+544.3 Game_End: Fraglimit
+544.3 Exit: Fraglimit hit.
+544.3 score: 30  ping: 3  client: 1 xt3
+544.3 score: 29  ping: 1  client: 3 Snake
+544.3 score: 27  ping: 3  client: 2 UnnamedPlayer
+544.3 score: 22  ping: 1  client: 4 Tron
+544.3 score: 19  ping: 0  client: 0 Defender
+546.5 Weapon_Stats: 0 MachineGun:4:0:0:0 Railgun:103:19:0:0 Plasmagun:14:1:3:0 Given:7620 Recvd:8000 Armor:0 Health:15
+546.5 Weapon_Stats: 1 MachineGun:1:0:0:0 Shotgun:0:0:2:0 R.Launcher:7:4:2:1 Railgun:108:30:0:0 Given:12269 Recvd:11334 Armor:50 Health:5
+546.5 Weapon_Stats: 2 MachineGun:11:10:0:0 R.Launcher:4:2:3:0 Railgun:81:27:0:0 Given:10990 Recvd:9771 Armor:70 Health:0
+546.5 Weapon_Stats: 3 MachineGun:8:2:0:0 R.Launcher:0:0:1:1 Railgun:89:29:0:0 Given:11614 Recvd:11788 Armor:0 Health:50
+546.5 Weapon_Stats: 4 Railgun:78:22:0:0 Given:8800 Recvd:10400 Armor:0 Health:0
+552.4 ShutdownGame:
+552.4 ------------------------------------------------------------
