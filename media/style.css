@@ -37,8 +37,8 @@ div.player_stats .weapon_info { width: 450px; }
 #kill_matrix .team_red,
 #kill_matrix .team_blue { padding: 1px 2px; }
 #award_table div.award { 
-	width: 150px; 
 	float: left; 
+	padding: 0.5em;
 	margin: 1em; 
 	background-color: #eee; 
 	border-radius: 1em; 
@@ -54,7 +54,6 @@ div.player_stats .weapon_info { width: 450px; }
 #award_table .winner { width: 100%%; text-align: center; }
 #award_table .winner a { padding: 1px 0.2em; }
 #award_table .name { font-size: 1.2em; }
-#award_table .winner { padding-bottom: 0.6em; }
 #footer { clear: both; padding: 4em; }
 
 /* TEXT */
