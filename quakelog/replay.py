@@ -234,7 +234,10 @@ class Player:
 	def setStats(self, stats):
 		self.damage_given = int(stats['Given'][0])
 		self.damage_received = int(stats['Recvd'][0])
-		self.team_damage_given = stats['TeamDmg'][0]
+		try:
+			self.team_damage_given = stats['TeamDmg'][0]
+		except KeyError:
+		 	self.team_damage_given = 0
 		self.health = int(stats['Health'][0])
 		for weapon, wattr in _STAT_WEAPONS.items():
 			weapon_stats = statdict(stats.get(weapon, [0,0,0,0]))
