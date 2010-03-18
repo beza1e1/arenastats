@@ -83,6 +83,7 @@ _WEAPONS = {
 	"ammo_grenades": Ammo("Grenades"),
 	"ammo_lightning": Ammo("Lightning"),
 	"ammo_shells": Ammo("Shells"),
+	"ammo_bfg": Ammo("BFG"),
 	"item_health_small": Health("Health", 10),
 	"item_health": Health("Health", 25),
 	"item_health_large": Health("Health", 50),
