@@ -325,7 +325,10 @@ _WEAPON_DESC = {
 class Game:
 	def __init__(self, token):
 		assert isinstance(token, InitGame)
-		self.gametype = _GAME_TYPES[int(token.g_gametype)]
+		try:
+			self.gametype = _GAME_TYPES[int(token.g_gametype)]
+		except IndexError:
+		 	self.gametype = "unknown game type"
 		self.mapname = getattr(token, 'mapname', 'no_map')
 		self.name = gen_game_name(token)
 		self.finished = False
