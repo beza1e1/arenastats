@@ -432,10 +432,13 @@ def replay_games(game_events):
 	g = None
 	for event in game_events:
 		if event.game_start:
-			assert not g, g
+			if g:
+				print "Log file broken (illegal game start) in line", event.line_count
 			g = Game(event)
 		elif event.game_destroy:
-			if g.finished:
+			if not g:
+				print "Log file broken (illegal game shutdown) in line", event.line_count
+			elif g.finished:
 				give_awards(g.players.values())
 				yield g
 			g = None
