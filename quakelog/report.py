@@ -47,19 +47,19 @@ def _player_html(player):
 	return '<a class="team_%s" href="#%s">%s</a>' %\
 			(player.team_color, player.slug_nick, player.nick)
 
-def emph_percentage(hitrate, lower_bound):
+def emph_percentage(hitrate, lower_bound, text=""):
 	if hitrate == infinity:
 		return "-"
 	elif hitrate > lower_bound and hitrate != infinity:
-		return "<strong>%.1f%%</strong>" % hitrate
+		return "<strong>%.1f%%%s</strong>" % (hitrate, text)
 	else:
-		return "%.1f%%" % hitrate
+		return "%.1f%%%s" % (hitrate, text)
 
-def emph_int(value, lower_bound):
+def emph_int(value, lower_bound, text=""):
 	if value > lower_bound:
-		return "<strong>%d</strong>" % value
+		return "<strong>%d%s</strong>" % (value, text)
 	else:
-		return "%d" % value
+		return "%d%s" % (value, text)
 
 _ODD_CLASS = {True: ' class="odd"', False: ''}
 _WEAPONS = [
@@ -88,7 +88,7 @@ def player_info(player):
 	html += '<tr class="odd"><th>Player mostly</th><td>killed by %s / killing %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
 	html += '<tr><th>Frags</th><td>%s &nbsp; (%s, %s, %s)</td></tr>\n' % (emph_int(player.kill_count, 20), pluralize(player.flag_carrier_kills, "carrier", 10), pluralize(player.team_kills, "mate", 10), pluralize(player.flag_assist_kills, "flag assist", 10))
 	html += '<tr class="odd"><th>Damage rate</th><td>%s &nbsp; (%d / %d)</td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
-	html += '<tr><th>Flag caps</th><td>%s (%s touches, %s caprate)</td></tr>\n' % (emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2), emph_percentage(player.caprate * 100, 40))
+	html += '<tr><th>Flag caps</th><td>%s (%s, %s)</td></tr>\n' % (emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2, ' touches'), emph_percentage(player.caprate * 100, 40, ' caprate'))
 	html += '<tr class="odd"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag", 6), pluralize(player.death_streak, "death", 6), pluralize(player.cap_streak, "cap", 6))
 	awards = ", ".join(_award_html(a) for a in player.awards)
 	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)
