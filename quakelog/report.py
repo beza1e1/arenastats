@@ -1,4 +1,5 @@
 # -!- encoding: utf-8 -!-
+import os
 
 infinity = float("infinity")
 
@@ -171,8 +172,9 @@ def award_table(players):
 		winners = " ".join(_player_html(p) for p in ps)
 		award = _award_html(a)
 		img = a.img_url or "media/award.png"
-		html += u'<div class="award"><div class="symbol"><img src="%s" alt="Award" /></div><div class="name">%s</div>\
-		<div class="winner">%s</div></div>\n' % (img, award, winners)
+		img_base = os.path.basename(img)
+		html += u'<div class="award"><div class="symbol"><img src="%s" alt="%s" /></div><div class="name">%s</div>\
+		<div class="winner">%s</div></div>\n' % (img, img_base, award, winners)
 	return html.encode('utf-8')
 
 _HTML = """\
