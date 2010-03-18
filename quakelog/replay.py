@@ -333,11 +333,15 @@ class Game:
 		self.end_time = self.start_time + self.game_duration
 	def nextStep(self, token):
 		if isinstance(token, NewClient):
+			if self.finished:
+				return
 			p = Player()
 			p.initFromToken(token)
 			self.players[token.client_id] = p
 			self.players_eternal.append(p)
 		elif isinstance(token, PlayerinfoChange):
+			if self.finished:
+				return
 			self.players[token.client_id].update(token)
 			for t in self.teams.values():
 				t.player_count = 0
