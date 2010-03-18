@@ -36,8 +36,9 @@ div.player_stats .weapon_info { width: 450px; }
 #kill_matrix td.kill_count { text-align: right; }
 #kill_matrix .team_red,
 #kill_matrix .team_blue { padding: 1px 2px; }
-#award_table div.award { 
-	float: left; 
+#award_table { text-align: center; }
+#award_table div.award {
+	display: inline-block;
 	padding: 0.5em;
 	margin: 1em; 
 	background-color: #eee; 
