@@ -33,7 +33,7 @@ _MAX_AWARDS = [
 	(3, 'team_kills', Award("Frag is Frag", None, "Most team kills")),
 	(250, 'team_damage_given', Award("Colorblind", None, "Most team damage given")),
 	(5, 'base_defends', Award("Housekeeper", None, "Most base defends")),
-	(5, 'flag_defends', Award("Flag Paladin", None, "Most flag defends")),
+	(6, 'flag_defends', Award("Flag Paladin", None, "Most flag defends")),
 	(11, 'carrier_defends', Award("Carrier Paladin", None, "Most carrier defends")),
 	(100, 'chat_length', Award("Chatterbox", None, "Most chatted characters")),
 	(8, 'kill_streak', Award("Killing Spree", None, "highest kill streak")),
@@ -51,7 +51,7 @@ _MIN_AWARDS = [
 ]
 ## minimum, weapon, weapon attribute, award
 _MAX_WEAPONS = [
-	(3, 'gauntlet', 'kills', Award("Pummel King", None, "Most kills with gauntlet")),
+	(2, 'gauntlet', 'kills', Award("Pummel King", None, "Most kills with gauntlet")),
 	(4, 'gauntlet', 'shots', Award("Close Combateer", None, "Most shots with gauntlet")),
 	(10, 'shotgun', 'kills', Award("Hot Shot", None, "Most kills with shotgun")),
 	(400, 'shotgun', 'shots', Award("Pumping Player", None, "Most shots with shotgun")),
@@ -60,10 +60,10 @@ _MAX_WEAPONS = [
 	(110, 'rocketlauncher', 'shots', Award("Rocketeer", None, "Most shots with rocket launcher")),
 	(0.45, 'rocketlauncher', 'hitrate', Award("Cruise Missile", None, "Best hitrate with rocket launcher")),
 	(4, 'grenadelauncher', 'kills', Award("Bomber", None, "Most kills with grenade launcher")),
-	(0.2, 'grenadelauncher', 'hitrate', Award("Trajectorist", None, "best hitrate with grenade launcher")),
+	(0.2, 'grenadelauncher', 'hitrate', Award("Trajectorist", None, "Best hitrate with grenade launcher")),
 	(1500, 'lightninggun', 'shots', Award("High Voltage", None, "Most shots with lightning gun")),
 	(20, 'lightninggun', 'kills', Award("Electrocutioner", None, "Most kills with lightning gun")),
-	(20, 'plasmagun', 'hitrate', Award("Plasma hitter", None, "best hitrate with plasma gun")),
+	(0.2, 'plasmagun', 'hitrate', Award("Plasma hitter", None, "Best hitrate with plasma gun")),
 	(200, 'plasmagun', 'shots', Award("Plasmatic", None, "Most shots with plasma gun")),
 	(10, 'railgun', 'kills', Award("Sniper", None, "Most kills with railgun")),
 	(100, 'railgun', 'shots', Award("Railfreak", None, "Most shots with railgun")),
