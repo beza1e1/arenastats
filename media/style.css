@@ -45,6 +45,11 @@ div.player_stats .weapon_info { width: 450px; }
 	-webkit-border-radius: 1em; 
 	-moz-border-radius: 1em; 
 }
+#award_table img { 
+	width: 150px;
+	height: 150px;
+	background-image: url(award.png); 
+}
 #award_table .name,
 #award_table .winner { width: 100%%; text-align: center; }
 #award_table .winner a { padding: 1px 0.2em; }

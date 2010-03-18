@@ -1,9 +1,14 @@
 from copy import deepcopy
+from utils import slugify
+
 
 class Award:
 	def __init__(self, name, img_url, description):
 		self.name = name
-		self.img_url = img_url
+		if not img_url:
+			self.img_url = "media/awards/" + slugify(name).lower() + ".png"
+		else:
+			self.img_url = "media/awards/" + img_url
 		self.description = description
 		self.value = None
 
@@ -13,7 +18,7 @@ _MAX_AWARDS = [
 	(1400, 'health', Award("Workout Warrior", None, "Most health collected")),
 	(1600, 'armor', Award("The Tank", None, "Most armor collected")),
 	(6000, 'damage_received', Award("Punching Bag", None, "Most damage received")),
-	(6000, 'damage_given', Award("Berserker", None, "Most damage given")),
+	(6000, 'damage_given', Award("Berserker", "berserker.jpg", "Most damage given")),
 	(2, 'invis_count', Award("Hollow Man", None, "Most often picked up Invisibility")),
 	(2, 'regen_count', Award("Snake Blood", None, "Most often picked up Regen")),
 	(3, 'mega_health_count', Award("Mega Man", None, "Most often picked up Mega Health")),
@@ -21,10 +26,10 @@ _MAX_AWARDS = [
 	(2, 'haste_count', Award("Speeder", None, "Most often picked up Haste")),
 	(2, 'medkit_count', Award("The Doc", None, "Most often picked up the Medikit")),
 	(5, 'flag_caps', Award("Flag Runner", None, "Most flag captures")),
-	(11, 'flag_returns', Award("Clucking Hen", None, "Most flag returns")),
+	(11, 'flag_returns', Award("Clucking Hen", "hen.gif", "Most flag returns")),
 #(5, 'flag_assist_returns', Award("JIT Clucking Hen", None, "Most flag assist returns")),
 	(10, 'flag_carrier_kills', Award("Headhunter", None, "Most flag carrier kills")),
-	(3, 'suicides', Award("Suicide Bunny", None, "Most suicides")),
+	(3, 'suicides', Award("Suicide Bunny", "suicide.jpg", "Most suicides")),
 	(3, 'team_kills', Award("Frag is Frag", None, "Most team kills")),
 	(250, 'team_damage_given', Award("Colorblind", None, "Most team damage given")),
 	(5, 'base_defends', Award("Housekeeper", None, "Most base defends")),
@@ -41,7 +46,7 @@ _MAX_AWARDS = [
 _ULTIMATE_MAX = 1000000
 _MIN_AWARDS = [
 	(1.5, 'dmg_kill_ratio', Award("Lucky Bastard", None, "Least damage per kill")),
-	(99, 'team_damage_given', Award("Friendliest Fire", None, "Least team damage")),
+	(99, 'team_damage_given', Award("Friendliest Fire", "lamb.jpg", "Least team damage")),
 	(10, 'death_count', Award("Survivor", None, "Least deaths")),
 ]
 ## minimum, weapon, weapon attribute, award
@@ -153,6 +158,6 @@ def give_awards(players):
 	# Booby prize for those, who got nothing ...
 	for p in players:
 		if hasattr(p, 'awards') and not p.awards:
-			p.awards.append(Award("Booby Prize", None, "Good luck next time. You need it."))
+			p.awards.append(Award("Booby Prize", "booby.gif", "Good luck next time. You need it."))
 
 
