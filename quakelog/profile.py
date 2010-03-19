@@ -1,4 +1,14 @@
 from replay import _ZERO_PROPERTIES, _STAT_WEAPONS
+from utils import Toggler
+
+def _player_overview(player):
+	odd = Toggler("even", "odd")
+	html = '<table class="overview">'
+	html += '<tr class="%s"><th>Overall Kills</th><td>%d</td></tr>' % (odd, player.kill_count)
+	html += '<tr class="%s"><th>Overall Deaths</th><td>%d</td></tr>' % (odd, player.death_count)
+	html += '<tr class="%s"><th>Overall Caps</th><td>%d</td></tr>' % (odd, player.flag_caps)
+	html += '</table>'
+	return html
 
 _ODD_CLASS = {True: 'odd', False: 'even'}
 _HTML= """\
@@ -18,7 +28,8 @@ _HTML= """\
 """
 def player_profile(player):
 	html = ""
-	html += "<table>"
+	html += _player_overview(player)
+	html += '<table style="font-size: 0.8em; float: right;">'
 	odd = False
 	for prop in _ZERO_PROPERTIES:
 		html += '<tr class="%s"><th>%s</th><td>%d</td></tr>' % (_ODD_CLASS[odd], prop, getattr(player, prop))
