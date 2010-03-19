@@ -57,6 +57,14 @@ class Medkit(Item):
 	def use(self, player):
 		player.medkit_count += 1
 
+class Flight(Item):
+	def use(self, player):
+		player.flight_count += 1
+
+class Teleporter(Item):
+	def use(self, player):
+		player.hand_teleporter_count += 1
+
 class Flag(Item):
 	def __init__(self, name, team_id):
 		self.name = name
@@ -68,6 +76,7 @@ class Flag(Item):
 			player.flag_touches += 1
 
 _WEAPONS = {
+# TODO names are useless
 	"weapon_gauntlet": Weapon("Gauntlet"),
 	"weapon_shotgun": Weapon("Shotgun"),
 	"weapon_lightning": Weapon("Lightning gun"),
@@ -98,6 +107,8 @@ _WEAPONS = {
 	"item_quad": Quad("Quad"),
 	"item_haste": Haste("Haste"),
 	"item_invis": Invisibility("Invisibility"),
+	"item_flight": Flight("Flight"),
+	"holdable_teleporter": Teleporter("Holdable Teleporter"),
 }
 
 _WORLD_ID = 1022 # Really?
@@ -144,7 +155,7 @@ _WEAPON_RELOAD_TIMES = { # in seconds
 	'bfg': 0.2,
 }
 
-_ZERO_PROPERTIES = ['quad_count', 'regen_count', 'haste_count', 'mega_health_count', 'invis_count', 'medkit_count', 'flag_returns', 'flag_touches', 'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides', 'kill_count', 'death_count', 'team_kills', 'flag_defends', 'base_defends', 'carrier_defends', 'flag_carrier_kills', 'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak', 'current_death_streak', 'cap_streak', 'current_cap_streak', 'score', 'health', 'armor', 'sudden_death_decider']
+_ZERO_PROPERTIES = ['quad_count', 'regen_count', 'haste_count', 'mega_health_count', 'invis_count', 'medkit_count', 'flag_returns', 'flag_touches', 'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides', 'kill_count', 'death_count', 'team_kills', 'flag_defends', 'base_defends', 'carrier_defends', 'flag_carrier_kills', 'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak', 'current_death_streak', 'cap_streak', 'current_cap_streak', 'score', 'health', 'armor', 'sudden_death_decider', 'flight_count', 'hand_teleporter_count']
 class Player:
 	def initFromToken(self, tok):
 		assert isinstance(tok, NewClient), tok
