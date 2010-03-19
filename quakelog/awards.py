@@ -27,6 +27,7 @@ _MAX_AWARDS = [
 	(2, 'medkit_count', Award("The Doc", None, "Most often picked up the Medikit")),
 	(2, 'teleporter_count', Award("Scotty", None, "Most often picked up the holdable teleporter")),
 	(2, 'flight_count', Award("Flying Dutchman", None, "Most often picked up the flight item")),
+	(1, 'battle_suit_count', Award("Acid Man", None, "Most often picked up the battle suit")),
 	(5, 'flag_caps', Award("Flag Runner", None, "Most flag captures")),
 	(11, 'flag_returns', Award("Clucking Hen", None, "Most flag returns")),
 #(5, 'flag_assist_returns', Award("JIT Clucking Hen", None, "Most flag assist returns")),

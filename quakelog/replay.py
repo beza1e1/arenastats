@@ -61,6 +61,10 @@ class Teleporter(Item):
 	def use(self, player):
 		player.hand_teleporter_count += 1
 
+class BattleSuit(Item):
+	def use(self, player):
+		player.battle_suit_count += 1
+
 class Flag(Item):
 	def __init__(self, team_id):
 		self.team_id = team_id
@@ -102,6 +106,7 @@ _WEAPONS = {
 	"item_haste": Haste(),
 	"item_invis": Invisibility(),
 	"item_flight": Flight(),
+	"item_enviro": BattleSuit(),
 	"holdable_teleporter": Teleporter(),
 }
 
@@ -158,7 +163,7 @@ _ZERO_PROPERTIES = [
 	'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak',
 	'current_death_streak', 'cap_streak', 'current_cap_streak', 'score',
 	'health', 'armor', 'sudden_death_decider', 'flight_count',
-	'hand_teleporter_count'
+	'hand_teleporter_count', 'battle_suit_count'
 ]
 class Player:
 	def initFromToken(self, tok):
