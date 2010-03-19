@@ -155,7 +155,17 @@ _WEAPON_RELOAD_TIMES = { # in seconds
 	'bfg': 0.2,
 }
 
-_ZERO_PROPERTIES = ['quad_count', 'regen_count', 'haste_count', 'mega_health_count', 'invis_count', 'medkit_count', 'flag_returns', 'flag_touches', 'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides', 'kill_count', 'death_count', 'team_kills', 'flag_defends', 'base_defends', 'carrier_defends', 'flag_carrier_kills', 'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak', 'current_death_streak', 'cap_streak', 'current_cap_streak', 'score', 'health', 'armor', 'sudden_death_decider', 'flight_count', 'hand_teleporter_count']
+_ZERO_PROPERTIES = [
+	'quad_count', 'regen_count', 'haste_count', 'mega_health_count',
+	'invis_count', 'medkit_count', 'flag_returns', 'flag_touches',
+	'flag_caps', 'flag_assist_returns', 'flag_assist_kills', 'suicides',
+	'kill_count', 'death_count', 'team_kills', 'flag_defends',
+	'base_defends', 'carrier_defends', 'flag_carrier_kills',
+	'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak',
+	'current_death_streak', 'cap_streak', 'current_cap_streak', 'score',
+	'health', 'armor', 'sudden_death_decider', 'flight_count',
+	'hand_teleporter_count'
+]
 class Player:
 	def initFromToken(self, tok):
 		assert isinstance(tok, NewClient), tok
