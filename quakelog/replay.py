@@ -5,8 +5,6 @@ from utils import slugify
 infinity = float("infinity")
 
 class Item:
-	def __init__(self, name):
-		self.name = name
 	def use(self, player):
 		print player.nick, "uses generic item", self.name
 
@@ -19,15 +17,13 @@ class Weapon(Item):
 		pass
 
 class Armor(Item):
-	def __init__(self, name, armor):
-		self.name = name
+	def __init__(self, armor):
 		self.armor = armor
 	def use(self, player):
 		player.armor += self.armor
 
 class Health(Item):
-	def __init__(self, name, health):
-		self.name = name
+	def __init__(self, health):
 		self.health = health
 	def use(self, player):
 		player.health += self.health
@@ -66,8 +62,7 @@ class Teleporter(Item):
 		player.hand_teleporter_count += 1
 
 class Flag(Item):
-	def __init__(self, name, team_id):
-		self.name = name
+	def __init__(self, team_id):
 		self.team_id = team_id
 	def use(self, player):
 		if player.team_id == self.team_id:
@@ -76,39 +71,38 @@ class Flag(Item):
 			player.flag_touches += 1
 
 _WEAPONS = {
-# TODO names are useless
-	"weapon_gauntlet": Weapon("Gauntlet"),
-	"weapon_shotgun": Weapon("Shotgun"),
-	"weapon_lightning": Weapon("Lightning gun"),
-	"weapon_plasmagun": Weapon("Plasma gun"),
-	"weapon_rocketlauncher": Weapon("Rocket launcher"),
-	"weapon_grenadelauncher": Weapon("Grenade launcher"),
-	"weapon_railgun": Weapon("Rail gun"),
-	"weapon_bfg": Weapon("BFG"),
-	"ammo_bullets": Ammo("Bullets"),
-	"ammo_cells": Ammo("Cells"),
-	"ammo_slugs": Ammo("Slugs"),
-	"ammo_rockets": Ammo("Rockets"),
-	"ammo_grenades": Ammo("Grenades"),
-	"ammo_lightning": Ammo("Lightning"),
-	"ammo_shells": Ammo("Shells"),
-	"ammo_bfg": Ammo("BFG"),
-	"item_health_small": Health("Health", 10),
-	"item_health": Health("Health", 25),
-	"item_health_large": Health("Health", 50),
-	"item_health_mega": MegaHealth("Health", 100),
-	"item_armor_shard": Armor("Armor", 25),
-	"item_armor_combat": Armor("Armor", 50),
-	"item_armor_body": Armor("Armor", 100),
-	"team_CTF_redflag": Flag("Red flag", 1),
-	"team_CTF_blueflag": Flag("Blue flag", 2),
-	"item_regen": Regen("Regen"),
-	"holdable_medkit": Medkit("Medkit"),
-	"item_quad": Quad("Quad"),
-	"item_haste": Haste("Haste"),
-	"item_invis": Invisibility("Invisibility"),
-	"item_flight": Flight("Flight"),
-	"holdable_teleporter": Teleporter("Holdable Teleporter"),
+	"weapon_gauntlet": Weapon(),
+	"weapon_shotgun": Weapon(),
+	"weapon_lightning": Weapon(),
+	"weapon_plasmagun": Weapon(),
+	"weapon_rocketlauncher": Weapon(),
+	"weapon_grenadelauncher": Weapon(),
+	"weapon_railgun": Weapon(),
+	"weapon_bfg": Weapon(),
+	"ammo_bullets": Ammo(),
+	"ammo_cells": Ammo(),
+	"ammo_slugs": Ammo(),
+	"ammo_rockets": Ammo(),
+	"ammo_grenades": Ammo(),
+	"ammo_lightning": Ammo(),
+	"ammo_shells": Ammo(),
+	"ammo_bfg": Ammo(),
+	"item_health_small": Health(10),
+	"item_health": Health(25),
+	"item_health_large": Health(50),
+	"item_health_mega": MegaHealth(100),
+	"item_armor_shard": Armor(25),
+	"item_armor_combat": Armor(50),
+	"item_armor_body": Armor(100),
+	"team_CTF_redflag": Flag(1),
+	"team_CTF_blueflag": Flag(2),
+	"item_regen": Regen(),
+	"holdable_medkit": Medkit(),
+	"item_quad": Quad(),
+	"item_haste": Haste(),
+	"item_invis": Invisibility(),
+	"item_flight": Flight(),
+	"holdable_teleporter": Teleporter(),
 }
 
 _WORLD_ID = 1022 # Really?
