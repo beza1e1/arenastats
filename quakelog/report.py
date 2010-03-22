@@ -87,9 +87,9 @@ def player_info(player):
 	html += '<tr><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
 			(_WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
 	html += '<tr class="odd"><th>Player mostly</th><td>killed by %s / killing %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
-	html += '<tr><th>Frags</th><td>%s &nbsp; (%s, %s, %s)</td></tr>\n' % (emph_int(player.kill_count, 20), pluralize(player.flag_carrier_kills, "carrier", 10), pluralize(player.team_kills, "mate", 10), pluralize(player.flag_assist_kills, "flag assist", 10))
-	html += '<tr class="odd"><th>Damage rate</th><td>%s &nbsp; (%d / %d)</td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
-	html += '<tr><th>Flag caps</th><td>%s (%s, %s)</td></tr>\n' % (emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2, ' touches'), emph_percentage(player.caprate * 100, 40, ' caprate'))
+	html += '<tr><th>Frag rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (emph_percentage(player.fragrate*101.0, 100.0), emph_int(player.kill_count, 30), emph_int(player.death_count, 30))
+	html += '<tr class="odd"><th>Damage rate</th><td>%s <span class="aside">(%d / %d)</span></td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
+	html += '<tr><th>Cap rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (emph_percentage(player.caprate * 100, 40), emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2))
 	html += '<tr class="odd"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag", 6), pluralize(player.death_streak, "death", 6), pluralize(player.cap_streak, "cap", 6))
 	awards = ", ".join(_award_html(a) for a in player.awards)
 	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)

@@ -290,6 +290,12 @@ class Player:
 		else:
 			return float(self.damage_given) / float(self.damage_received)
 	damage_rate = property(_get_dmgrate)
+	def _get_fragrate(self):
+		if self.death_count == 0:
+			return infinity
+		else:
+			return float(self.kill_count) / float(self.death_count)
+	fragrate = property(_get_fragrate)
 	def _get_dmg_kill_ratio(self):
 		if self.kill_count == 0:
 			return infinity
