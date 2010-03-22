@@ -176,7 +176,7 @@ class Player:
 		self.player_kill_count = dict()
 		self.player_death_count = dict()
 		for weapon in _STAT_WEAPONS.values():
-			setattr(self, weapon, dict(kills=0, deaths=0))
+			setattr(self, weapon, dict(kills=0, deaths=0, shots=0, hits=0))
 		self.awards = list()
 		for prop in _ZERO_PROPERTIES:
 			setattr(self, prop, 0)
@@ -268,7 +268,6 @@ class Player:
 					sattr[key] = val
 				else:
 					print "ignore weapon stats", key, val
-		self.finalize() # seems right at this point?
 	def serialize(self):
 		strings = list()
 		strings.append('"%s"' % self.nick)
@@ -447,6 +446,10 @@ class Game:
 		if not compare:
 			compare = lambda x,y: cmp(x.nick.lower(), y.nick.lower())
 		return sorted(filter(include, self.players.values()), compare)
+	def finalize(self):
+		for p in self.players.values():
+			if hasattr(p, 'team_id'):
+				p.finalize()
 
 def replay_games(game_events):
 	g = None
@@ -459,6 +462,7 @@ def replay_games(game_events):
 			if not g:
 				print "Log file broken (illegal game shutdown) in line", event.line_count
 			elif g.finished:
+				g.finalize()
 				give_awards(g.players.values())
 				yield g
 			g = None
