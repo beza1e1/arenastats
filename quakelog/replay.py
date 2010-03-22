@@ -163,6 +163,7 @@ _ZERO_PROPERTIES = [
 	'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak',
 	'current_death_streak', 'cap_streak', 'current_cap_streak', 'score',
 	'health', 'armor', 'sudden_death_decider', 'flight_count',
+	'damage_given', 'damage_received', 'team_damage_given',
 	'hand_teleporter_count', 'battle_suit_count'
 ]
 class Player:
