@@ -128,26 +128,26 @@ def kill_matrix(game):
 	def filter(p):
 		return hasattr(p, 'player_kill_count')
 	ps = game.sortedPlayers(compare=compare, include=filter)
-	html += "<tr><th>Frags</th>"
+	html += "<tr><th>Frag diff</th>"
 	for p in ps:
 		html += '<th class="team_%s">%s</th>' % (p.team_color, p.nick)
-	html += "<th>Total Frags</th></tr>\n"
+	html += "<th>Total</th></tr>\n"
 	odd = False
 	for p in ps:
 		odd_class = _ODD_CLASS[odd]
 		html += '<tr%s><th class="team_%s">%s</th>' % (odd_class, p.team_color, p.nick)
+		diff_count = 0
 		for p2 in ps:
 			kill_count = p.player_kill_count.get(p2, 0)
+			death_count = p.player_death_count.get(p2, 0)
+			diff = kill_count - death_count
+			diff_count += diff
 			teamkill = ""
-			if p.team_id == p2.team_id and kill_count > 0:
+			if p.team_id == p2.team_id and diff > 0:
 				teamkill = ' teamkill'
-			html += '<td class="kill_count %s">%d</td>' % (teamkill, kill_count)
-		html += '<td class="kill_count">%s</td></tr>\n' % (p.kill_count)
+			html += '<td class="kill_count %s">%d</td>' % (teamkill, diff)
+		html += '<td class="kill_count">%s</td></tr>\n' % (diff_count)
 		odd = not odd
-	html += "<tr%s><th>Total deaths</th>" % _ODD_CLASS[odd]
-	for p in ps:
-		html += '<td class="kill_count">%s</td>' % (p.death_count)
-	html += "<td></td></tr>\n"
 	html += "</table>"
 	return html
 			
