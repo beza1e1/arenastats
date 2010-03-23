@@ -143,9 +143,9 @@ def kill_matrix(game):
 			diff = kill_count - death_count
 			diff_count += diff
 			teamkill = ""
-			if p.team_id == p2.team_id and diff > 0:
+			if p.team_id == p2.team_id and kill_count > 0:
 				teamkill = ' teamkill'
-			html += '<td class="kill_count %s">%d</td>' % (teamkill, diff)
+			html += '<td class="kill_count %s" title="%d kills - %d deaths">%d</td>' % (teamkill, kill_count, death_count, diff)
 		html += '<td class="kill_count">%s</td></tr>\n' % (diff_count)
 		odd = not odd
 	html += "</table>"
