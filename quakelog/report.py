@@ -86,7 +86,7 @@ def player_info(player):
 	html += '<tr><td colspan="2" class="name team_%s"><strong>%s</strong></td></tr>\n' % (player.team_color, player.nick)
 	html += '<tr><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
 			(_WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
-	html += '<tr class="odd"><th>Player mostly</th><td>killed by %s / killing %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
+	html += '<tr class="odd"><th>Player mostly</th><td>fragged by %s / fragging %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
 	html += '<tr><th>Frag rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (emph_percentage(player.fragrate*101.0, 100.0), emph_int(player.kill_count, 30), emph_int(player.death_count, 30))
 	html += '<tr class="odd"><th>Damage rate</th><td>%s <span class="aside">(%d / %d)</span></td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
 	html += '<tr><th>Cap rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (emph_percentage(player.caprate * 100, 40), emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2))
