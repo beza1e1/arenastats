@@ -28,7 +28,7 @@ _MAX_AWARDS = [
 	(2, 'teleporter_count', Award("Scotty", None, "Most often picked up the holdable teleporter")),
 	(2, 'flight_count', Award("Flying Dutchman", None, "Most often picked up the flight item")),
 	(1, 'battle_suit_count', Award("Acid Man", None, "Most often picked up the battle suit")),
-	(5, 'flag_caps', Award("Flag Runner", None, "Most flag captures")),
+	(4, 'flag_caps', Award("Flag Runner", None, "Most flag captures")),
 	(11, 'flag_returns', Award("Clucking Hen", None, "Most flag returns")),
 #(5, 'flag_assist_returns', Award("JIT Clucking Hen", None, "Most flag assist returns")),
 	(10, 'flag_carrier_kills', Award("Headhunter", None, "Most flag carrier kills")),
@@ -41,7 +41,7 @@ _MAX_AWARDS = [
 	(100, 'chat_length', Award("Chatterbox", None, "Most chatted characters")),
 	(8, 'kill_streak', Award("Killing Spree", None, "highest kill streak")),
 	(7, 'death_streak', Award("Frustrated Dead", None, "highest death streak")),
-	(2, 'cap_streak', Award("Capture King", None, "highest cap streak")),
+	(1, 'cap_streak', Award("Capture King", None, "highest cap streak")),
 	(2.01, 'dmg_kill_ratio', Award("Hard Worker", None, "Most damage per kill")),
 	(0, 'sudden_death_decider', Award("Sudden Death Decider", None, "Final cap in sudden death overtime")),
 ]
