@@ -28,6 +28,9 @@ def general_game_info(game, levelshots):
 	html += "<tr><td>Game type</td><td>%s</td></tr>\n" % (game.gametype)
 	html += '<tr><td>Total Frags</td><td><a href="#kill_matrix">%d</a></td></tr>\n' % (game.frag_count)
 	html += "</table>\n"
+	if not 1 in game.teams:
+		print "Not a CTF game!" # TODO
+		return html
 	html += '<table>\n<tr class="game_result">\n'
 	html += '<td class="team_red">%s</td>' % game.teams[1].capture_count
 	html += "<td>vs</td>"
