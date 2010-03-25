@@ -7,6 +7,7 @@ from quakelog.profile import player_profile
 import sys
 import os
 from optparse import OptionParser
+from datetime import datetime
 
 _CURDIR = os.path.abspath(os.curdir)
 
@@ -21,11 +22,36 @@ _OPTS.add_option("-d", "--directory", dest="directory", default=_CURDIR,
                   help="Write reports to directory DIR", metavar="DIR")
 _OPTS.add_option("-s", "--level-shots", dest="level_shots", default="media",
                   help="link to URL/<mapname>.jpg for levelshot images ", metavar="URL")
+_OPTS.add_option("-a", "--age", dest="max_age", default="1d",
+                  help='Process only games less than AGE old.\
+									Syntax is "5s|19m|3h|2d|2w" for seconds, minutes, hours, days or weeks.',
+									metavar="AGE")
+
+_SECONDS = {
+	"s": 1,
+	"m": 60,
+	"h": 60*60,
+	"d": 24*60*60,
+	"w": 7*24*60*60,
+}
+def timedelta_checker(string):
+	number = int(string[:-1])
+	unit = string[-1:]
+	seconds = number * _SECONDS[unit]
+	def check(delta):
+		delta = (delta.days * 24*60*60) + delta.seconds
+		return delta > seconds
+	return check
 
 def main(options, args):
 	games = list()
 	if options.logfile:
 		for game in replay_games(tokenize(open(options.logfile))):
+			if options.max_age:
+				delta = datetime.now() - game.datetime
+				check = timedelta_checker(options.max_age)
+				if check(delta):
+					continue
 			games.append(game)
 			games = games[-options.game_count:]
 	if options.nicklog:
