@@ -2,7 +2,7 @@
 from quakelog.tokenizer import tokenize
 from quakelog.replay import replay_games
 from quakelog.report import html_report
-from quakelog.nicklog import player_line, merge_player_lines
+from quakelog.nicklog import player_line, merge_player_lines, append_nicklog
 from quakelog.profile import player_profile
 import sys
 import os
@@ -56,11 +56,7 @@ def main(options, args):
 			games = games[-options.game_count:]
 	if options.nicklog:
 		fh = open(options.nicklog, "a")
-		for game in games:
-			for player in game.players.values():
-				if not hasattr(player, 'team_id'):
-					continue
-				fh.write("%s\n" % player_line(player))
+		append_nicklog(fh, games)
 		fh.close()
 		fh = open(options.nicklog)
 		for player in merge_player_lines(fh):
