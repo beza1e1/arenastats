@@ -22,7 +22,7 @@ _OPTS.add_option("-d", "--directory", dest="directory", default=_CURDIR,
                   help="Write reports to directory DIR", metavar="DIR")
 _OPTS.add_option("-s", "--level-shots", dest="level_shots", default="media",
                   help="link to URL/<mapname>.jpg for levelshot images ", metavar="URL")
-_OPTS.add_option("-a", "--age", dest="max_age", default="1d",
+_OPTS.add_option("-a", "--age", dest="max_age",
                   help='Process only games less than AGE old.\
 									Syntax is "5s|19m|3h|2d|2w" for seconds, minutes, hours, days or weeks.',
 									metavar="AGE")
