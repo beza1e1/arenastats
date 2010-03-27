@@ -1,6 +1,7 @@
 from tokenizer import GameEvent, NewClient, PlayerinfoChange, KillClient, ItemPickup, Kill, InitGame, TeamName, Chat, WeaponStats, EndGame, ServerTime, TeamScore, FlagCapture, FlagReturn, FlagAssistReturn, FlagCarrierKill, FlagDefend, BaseDefend, FlagAssistFrag, CarrierDefend, Score
 from awards import give_awards
 from utils import slugify, infinity
+from elo import get_rating
 
 class Item:
 	def use(self, player):
@@ -303,6 +304,9 @@ class Player:
 	def _get_slug_nick(self):
 		return slugify(self.nick)
 	slug_nick = property(_get_slug_nick)
+	def _get_elo_rating(self):
+		return get_rating(self.nick)
+	elo = property(_get_elo_rating)
 
 class World(Player):
 	def __init__(self):

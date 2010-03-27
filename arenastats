@@ -4,6 +4,7 @@ from quakelog.replay import replay_games
 from quakelog.report import html_report
 from quakelog.nicklog import player_line, merge_player_lines, append_nicklog
 from quakelog.profile import player_profile
+from quakelog.elo import rate
 import sys
 import os
 from optparse import OptionParser
@@ -66,6 +67,7 @@ def main(options, args):
 			pfh.close()
 		fh.close()
 	for g in games:
+		rate(g)
 		fname = os.path.join(options.directory, g.name+".html")
 		fh = open(fname, 'w')
 		fh.write(html_report(g, options.level_shots))
