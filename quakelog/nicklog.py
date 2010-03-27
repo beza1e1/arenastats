@@ -34,26 +34,17 @@ def read_player_line(line):
 			setattr(p, prop, 0)
 	return p
 
-def merge(player_from, player_into):
-	for key in _ZERO_PROPERTIES:
-		val = getattr(player_from, key)
-		val_old = getattr(player_into, key)
-		setattr(player_into, key, val + val_old)
-	for w in _STAT_WEAPONS.values():
-		wstats = getattr(player_into, w)
-		for attr in ['shots', 'hits', 'kills', 'deaths']:
-			wstats[attr] = getattr(player_from, w)[attr]
 
 def merge_player_lines(lines):
 	players = dict()
 	for line in lines:
 		player = read_player_line(line)
 		if not player.nick in players:
-			players[player.nick] = player
+			players[player.nick] = [player]
 		else:
-			merge(player, players[player.nick])
-	for nick, player in players.items():
-		yield player
+			players[player.nick].append([player])
+	for nick, player_timeline in players.items():
+		yield player_timeline
 
 def append_nicklog(fh, games):
 	for game in games:

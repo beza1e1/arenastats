@@ -12,6 +12,19 @@ def _player_overview(player):
 	html += '</table>'
 	return html
 
+def merge(player_into, player_from):
+	player_from = player_from[0]
+	print player_from, player_into
+	for key in _ZERO_PROPERTIES:
+		val = getattr(player_from, key)
+		val_old = getattr(player_into, key)
+		setattr(player_into, key, val + val_old)
+	for w in _STAT_WEAPONS.values():
+		wstats = getattr(player_into, w)
+		for attr in ['shots', 'hits', 'kills', 'deaths']:
+			wstats[attr] = getattr(player_from, w)[attr]
+	return player_into
+
 _ODD_CLASS = {True: 'odd', False: 'even'}
 _HTML= """\
 <html>
@@ -28,7 +41,8 @@ _HTML= """\
 </body>
 </html>
 """
-def player_profile(player):
+def player_profile(player_timeline):
+	player = reduce(merge, player_timeline)
 	html = ""
 	html += _player_overview(player)
 	html += '<table style="font-size: 0.8em; float: right;">'
