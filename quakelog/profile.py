@@ -12,9 +12,18 @@ def _player_overview(player):
 	html += '</table>'
 	return html
 
+def _hitrate_data(player_timeline):
+	data = []
+	for p in player_timeline:
+		datapoint = []
+		for weapon in _STAT_WEAPONS.values():
+			wdata = getattr(p, weapon, {}) 
+			datapoint.append(wdata.get('hitrate', 0))
+		data.append(datapoint)
+	data = map(list, zip(*data))
+	return str(data)
+
 def merge(player_into, player_from):
-	player_from = player_from[0]
-	print player_from, player_into
 	for key in _ZERO_PROPERTIES:
 		val = getattr(player_from, key)
 		val_old = getattr(player_into, key)
@@ -37,12 +46,29 @@ _HTML= """\
 </head>
 <body>
 	<h1>%s profile</h1>
+	<script type="text/javascript" src="media/protovis-3.1/protovis-d3.1.js"></script>
+	<script type="text/javascript+protovis">
+	%s
+	var vis = new pv.Panel()
+		.width(350)
+		.height(150);
+		
+	vis.add(pv.Panel)
+		.data(hitrate_data)
+		.add(pv.Line)
+			.data(function(a) a)
+			.bottom(function(d) d * 140)
+			.left(function() this.index * 50 + 5)
+		.add(pv.Dot)
+		.root.render();
+	</script>
 	%s
 </body>
 </html>
 """
 def player_profile(player_timeline):
 	player = reduce(merge, player_timeline)
+	data = "var hitrate_data = %s;\n" % _hitrate_data(player_timeline)
 	html = ""
 	html += _player_overview(player)
 	html += '<table style="font-size: 0.8em; float: right;">'
@@ -54,4 +80,4 @@ def player_profile(player_timeline):
 		for key, val in getattr(player, weapon).items():
 			html += '<tr class="%s"><th>%s %s</th><td>%d</td></tr>' % (_ODD_CLASS[odd], weapon, key, val)
 	html += "</table>\n"
-	return _HTML % (player.nick, player.nick, html)
+	return _HTML % (player.nick, player.nick, data, html)

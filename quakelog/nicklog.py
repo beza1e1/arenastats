@@ -26,7 +26,11 @@ def read_player_line(line):
 			setattr(p, key, int(val))
 		elif len(attr) == 5:
 			weapon, shots, hits, kills, deaths = attr
-			setattr(p, weapon, dict(shots=int(shots), hits=int(hits), kills=int(kills), deaths=int(deaths)))
+			try:
+				hitrate = float(hits) / float(shots)
+			except ZeroDivisionError:
+				hitrate = 0.0
+			setattr(p, weapon, dict(shots=int(shots), hits=int(hits), kills=int(kills), deaths=int(deaths), hitrate=hitrate))
 		else:
 			print attr
 	for prop in _ZERO_PROPERTIES:
@@ -42,7 +46,7 @@ def merge_player_lines(lines):
 		if not player.nick in players:
 			players[player.nick] = [player]
 		else:
-			players[player.nick].append([player])
+			players[player.nick].append(player)
 	for nick, player_timeline in players.items():
 		yield player_timeline
 
