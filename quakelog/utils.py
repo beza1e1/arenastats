@@ -1,3 +1,5 @@
+infinity = float("infinity")
+
 def slugify(name):
 	name = name.replace(" ", "_")
 	for char in ".;!?$()":

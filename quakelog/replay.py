@@ -1,8 +1,6 @@
 from tokenizer import GameEvent, NewClient, PlayerinfoChange, KillClient, ItemPickup, Kill, InitGame, TeamName, Chat, WeaponStats, EndGame, ServerTime, TeamScore, FlagCapture, FlagReturn, FlagAssistReturn, FlagCarrierKill, FlagDefend, BaseDefend, FlagAssistFrag, CarrierDefend, Score
 from awards import give_awards
-from utils import slugify
-
-infinity = float("infinity")
+from utils import slugify, infinity
 
 class Item:
 	def use(self, player):

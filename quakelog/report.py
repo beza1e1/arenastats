@@ -1,8 +1,6 @@
 # -!- encoding: utf-8 -!-
 import os
-from utils import Toggler
-
-infinity = float("infinity")
+from utils import Toggler, infinity
 
 def gen_player_links(players, team_id):
 	ps = list()
