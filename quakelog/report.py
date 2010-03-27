@@ -1,5 +1,6 @@
 # -!- encoding: utf-8 -!-
 import os
+from utils import Toggler
 
 infinity = float("infinity")
 
@@ -64,7 +65,6 @@ def emph_int(value, lower_bound, text=""):
 	else:
 		return "%d%s" % (value, text)
 
-_ODD_CLASS = {True: ' class="odd"', False: ''}
 _WEAPONS = [
 # internal key, descriptive name, hitrate emphasize
 	('gauntlet', 'Gauntlet', 1),
@@ -86,16 +86,18 @@ _BORING_STATS = "team_damage_given team_kills flag_returns flag_assist_returns s
 def player_info(player):
 	html = '<div class="player_stats" id="%s">\n' % player.slug_nick
 	html += '<table class="player_info">\n'
+	odd = Toggler("even", "odd")
 	html += '<tr><td colspan="2" class="name team_%s"><strong>%s</strong></td></tr>\n' % (player.team_color, player.nick)
-	html += '<tr><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
-			(_WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
-	html += '<tr class="odd"><th>Player mostly</th><td>fragged by %s / fragging %s </td></tr>\n' % (player.worst_enemy.nick, player.easiest_prey.nick)
-	html += '<tr><th>Frag rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (emph_percentage(player.fragrate*101.0, 100.0), emph_int(player.kill_count, 30), emph_int(player.death_count, 30))
-	html += '<tr class="odd"><th>Damage rate</th><td>%s <span class="aside">(%d / %d)</span></td></tr>\n' % (emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
-	html += '<tr><th>Cap rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (emph_percentage(player.caprate * 100, 40), emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2))
-	html += '<tr class="odd"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' % (pluralize(player.kill_streak, "frag", 6), pluralize(player.death_streak, "death", 6), pluralize(player.cap_streak, "cap", 6))
+	html += '<tr class="%s"><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
+			(odd, _WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
+	html += '<tr class="%s"><th>Player mostly</th><td>fragged by %s / fragging %s </td></tr>\n' % (odd, player.worst_enemy.nick, player.easiest_prey.nick)
+	html += '<tr class="%s"><th>Frag rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd, emph_percentage(player.fragrate*101.0, 100.0), emph_int(player.kill_count, 30), emph_int(player.death_count, 30))
+	html += '<tr class="%s"><th>Damage rate</th><td>%s <span class="aside">(%d / %d)</span></td></tr>\n' % (odd, emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
+	html += '<tr class="%s"><th>Cap rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd, emph_percentage(player.caprate * 100, 40), emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2))
+	html += '<tr class="%s"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' %\
+		(odd, pluralize(player.kill_streak, "frag", 6), pluralize(player.death_streak, "death", 6), pluralize(player.cap_streak, "cap", 6))
 	awards = ", ".join(_award_html(a) for a in player.awards)
-	html += "<tr><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n" % (len(player.awards), awards)
+	html += '<tr class="%s"><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n' % (odd, len(player.awards), awards)
 	html += '<tr><td colspan="2">'
 	html += '<div class="debug_stats">\n'
 	for attr in _BORING_STATS:
@@ -105,21 +107,19 @@ def player_info(player):
 	html += "</table>\n"
 	html += '<table class="weapon_info">\n'
 	html += "<tr><th>Weapon</th><th>Hitrate</th><th>Fragrate</th></tr>\n"
-	odd = True
+	odd = Toggler("odd", "even")
 	for w, wname, emph_rate in _WEAPONS:
 		stats = getattr(player, w, None)
 		if not stats:
 			continue
 		if int(stats['shots']) < 1:
 			continue
-		odd_class = _ODD_CLASS[odd]
-		html += "<tr%s><td>%s</td>" % (odd_class, wname)
+		html += '<tr class="%s"><td>%s</td>' % (odd, wname)
 		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
 						(stats['hits'], stats['shots'], emph_percentage(stats['hitrate']*100, emph_rate))
 		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
 						(stats['kills'], stats['deaths'], emph_percentage(stats['killrate']*100, 100))
 		html += "</tr>\n"
-		odd = not odd
 	html += "</table>\n"
 	html += "</div>\n"
 	return html
@@ -135,10 +135,9 @@ def kill_matrix(game):
 	for p in ps:
 		html += '<th class="team_%s">%s</th>' % (p.team_color, p.nick)
 	html += "<th>Total</th></tr>\n"
-	odd = False
+	odd = Toggler("even", "odd")
 	for p in ps:
-		odd_class = _ODD_CLASS[odd]
-		html += '<tr%s><th class="team_%s">%s</th>' % (odd_class, p.team_color, p.nick)
+		html += '<tr class="%s"><th class="team_%s">%s</th>' % (odd, p.team_color, p.nick)
 		diff_count = 0
 		for p2 in ps:
 			kill_count = p.player_kill_count.get(p2, 0)
@@ -150,7 +149,6 @@ def kill_matrix(game):
 				teamkill = ' teamkill'
 			html += '<td class="kill_count %s" title="%d kills - %d deaths">%d</td>' % (teamkill, kill_count, death_count, diff)
 		html += '<td class="kill_count">%s</td></tr>\n' % (diff_count)
-		odd = not odd
 	html += "</table>"
 	return html
 			
