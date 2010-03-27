@@ -4,12 +4,12 @@ from utils import Toggler
 def _player_overview(player):
 	odd = Toggler("even", "odd")
 	html = '<table class="overview">'
-	html += '<tr class="%s"><th>Kills</th><td>%d</td></tr>' % (odd, player.kill_count)
-	html += '<tr class="%s"><th>Deaths</th><td>%d</td></tr>' % (odd, player.death_count)
-	html += '<tr class="%s"><th>Caps</th><td>%d</td></tr>' % (odd, player.flag_caps)
-	html += '<tr class="%s"><th>Suicides</th><td>%d</td></tr>' % (odd, player.suicides)
-	html += '<tr class="%s"><th>Team Kills</th><td>%d</td></tr>' % (odd, player.team_kills)
-	html += '</table>'
+	html += '<tr class="%s"><th>Kills</th><td>%d</td></tr>\n' % (odd, player.kill_count)
+	html += '<tr class="%s"><th>Deaths</th><td>%d</td></tr>\n' % (odd, player.death_count)
+	html += '<tr class="%s"><th>Caps</th><td>%d</td></tr>\n' % (odd, player.flag_caps)
+	html += '<tr class="%s"><th>Suicides</th><td>%d</td></tr>\n' % (odd, player.suicides)
+	html += '<tr class="%s"><th>Team Kills</th><td>%d</td></tr>\n' % (odd, player.team_kills)
+	html += '</table>\n'
 	return html
 
 def _hitrate_data(player_timeline):
@@ -58,7 +58,7 @@ _HTML= """\
 		.add(pv.Line)
 			.data(function(a) a)
 			.bottom(function(d) d * 140)
-			.left(function() this.index * 50 + 5)
+			.left(function() this.index * 30 + 5)
 		.add(pv.Dot)
 		.root.render();
 	</script>
@@ -71,13 +71,13 @@ def player_profile(player_timeline):
 	data = "var hitrate_data = %s;\n" % _hitrate_data(player_timeline)
 	html = ""
 	html += _player_overview(player)
-	html += '<table style="font-size: 0.8em; float: right;">'
+	html += '\n<table style="font-size: 0.8em; float: right;">'
 	odd = False
 	for prop in _ZERO_PROPERTIES:
-		html += '<tr class="%s"><th>%s</th><td>%d</td></tr>' % (_ODD_CLASS[odd], prop, getattr(player, prop))
+		html += '<tr class="%s"><th>%s</th><td>%d</td></tr>\n' % (_ODD_CLASS[odd], prop, getattr(player, prop))
 		odd = not odd
 	for weapon in _STAT_WEAPONS.values():
 		for key, val in getattr(player, weapon).items():
-			html += '<tr class="%s"><th>%s %s</th><td>%d</td></tr>' % (_ODD_CLASS[odd], weapon, key, val)
+			html += '<tr class="%s"><th>%s %s</th><td>%d</td></tr>\n' % (_ODD_CLASS[odd], weapon, key, val)
 	html += "</table>\n"
 	return _HTML % (player.nick, player.nick, data, html)
