@@ -2,7 +2,7 @@ def slugify(name):
 	name = name.replace(" ", "_")
 	for char in ".;!?$()":
 		name = name.replace(char, "")
-	return name
+	return name.lower()
 
 class Toggler:
 	def __init__(self, *items):

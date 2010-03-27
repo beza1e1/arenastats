@@ -64,7 +64,7 @@ def main(options, args):
 		fh.close()
 		fh = open(options.nicklog)
 		for player in merge_player_lines(fh):
-			fname = os.path.join(options.directory, player.slug_nick+".html")
+			fname = os.path.join(options.directory, "p_"+player.slug_nick+".html")
 			pfh = open(fname, 'w')
 			pfh.write(player_profile(player))
 			pfh.close()

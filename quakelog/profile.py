@@ -4,9 +4,11 @@ from utils import Toggler
 def _player_overview(player):
 	odd = Toggler("even", "odd")
 	html = '<table class="overview">'
-	html += '<tr class="%s"><th>Overall Kills</th><td>%d</td></tr>' % (odd, player.kill_count)
-	html += '<tr class="%s"><th>Overall Deaths</th><td>%d</td></tr>' % (odd, player.death_count)
-	html += '<tr class="%s"><th>Overall Caps</th><td>%d</td></tr>' % (odd, player.flag_caps)
+	html += '<tr class="%s"><th>Kills</th><td>%d</td></tr>' % (odd, player.kill_count)
+	html += '<tr class="%s"><th>Deaths</th><td>%d</td></tr>' % (odd, player.death_count)
+	html += '<tr class="%s"><th>Caps</th><td>%d</td></tr>' % (odd, player.flag_caps)
+	html += '<tr class="%s"><th>Suicides</th><td>%d</td></tr>' % (odd, player.suicides)
+	html += '<tr class="%s"><th>Team Kills</th><td>%d</td></tr>' % (odd, player.team_kills)
 	html += '</table>'
 	return html
 
