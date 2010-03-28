@@ -12,27 +12,30 @@ def get_rating(nick):
 
 def predict_game(game):
 	assert game.gametype == "Capture the Flag", game.gametype
-	red = 0.0
-	blue = 0.0
+	rsum = [0.0] * 4
+	rcount = [0] * 4
 	for pid, p in game.players.items():
 		if not hasattr(p, 'team_id'):
 			continue
-		if p.team_id == 1:
-			red += get_rating(p.nick)
-		elif p.team_id == 2:
-			blue += get_rating(p.nick)
-	sum = red + blue
-	return red / sum, blue / sum
+		rsum[p.team_id] += get_rating(p.nick)
+		rcount[p.team_id] += 1
+	for i in range(len(rsum)):
+		rsum[i] = rsum[i] * rcount[i]
+	sum = rsum[1] + rsum[2]
+	return rsum[1] / sum, rsum[2] / sum
 	
 def rating_adaption(game):
-	pred, pblue = predict_game(game)
+	red_p, blue_p = predict_game(game)
 	red  = game.teams[1].capture_count
 	blue = game.teams[2].capture_count
-	red, blue = {True: (1,0), False: (0,1)}[red > blue]
-	red_pc  = game.teams[1].player_count
+	red_pc = game.teams[1].player_count
 	blue_pc = game.teams[2].player_count
-	return float(red - pred) / red_pc,\
-		   float(blue - pblue) / blue_pc
+	def formula(x, y):
+		return float(x - y) / (y + 1)
+	red_f, blue_f = formula(red, blue), formula(blue, red)
+	def formula(f, pred, count):
+		return f * (((1 - pred)**2) / count)
+	return formula(red_f, red_p, red_pc), formula(blue_f, blue_p, blue_pc)
 
 def adapt_ratings(game):
 	red_a, blue_a = rating_adaption(game)
