@@ -7,6 +7,7 @@ _RATINGS = dict()
 _DEFAULT_RATING = 1.0
 _MINIMUM_RATING = 0.001
 _FRAGS_PER_SECOND = 0.01
+_ABSORBER = 0.3
 
 def persistent_rating(filename):
 	global _RATINGS
@@ -42,11 +43,9 @@ def predict_player(player, game):
 	
 def rating_adaption(player, game):
 	pred = predict_player(player, game)
-	print "Prediction vs reality: %s (%.3f) %.1f vs %d" % (player.nick, get_rating(player.nick), pred, player.kill_count)
-	adapt = (player.kill_count - pred) / game.frag_count
+	adapt = _ABSORBER * ((player.kill_count - pred) / game.frag_count)
 	if get_rating(player.nick) - adapt < _MINIMUM_RATING:
 		adapt = _MINIMUM_RATING - get_rating(player.nick)
-	print "adaption", adapt
 	return adapt
 
 def adapt_ratings(game):
@@ -57,10 +56,9 @@ def adapt_ratings(game):
 		adaptions[p.nick] = rating_adaption(p, game)
 	for nick, adapt in adaptions.items():
 		_RATINGS[nick] += adapt
-	if hasattr(_RATINGS, 'sync'):
-		_RATINGS.sync() # ensure persistence
 
 def rate(game):
 	adapt_ratings(game)
-	print _RATINGS
+	if hasattr(_RATINGS, 'sync'):
+		_RATINGS.sync() # ensure persistence
 
