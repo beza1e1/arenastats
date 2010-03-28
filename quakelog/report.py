@@ -116,7 +116,7 @@ def player_info(player):
 		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
 						(stats['hits'], stats['shots'], emph_percentage(stats['hitrate']*100, emph_rate))
 		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
-						(stats['kills'], stats['deaths'], emph_percentage(stats['killrate']*100, 100))
+						(stats['kills'], stats['deaths'], emph_percentage(stats['killrate']*100, 200))
 		html += "</tr>\n"
 	html += "</table>\n"
 	html += "</div>\n"
