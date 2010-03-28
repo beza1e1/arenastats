@@ -1,51 +1,66 @@
 """
 A rating system for player performance
 """
+import shelve
 
 _RATINGS = dict()
 _DEFAULT_RATING = 1.0
+_MINIMUM_RATING = 0.001
+_FRAGS_PER_SECOND = 0.01
+
+def persistent_rating(filename):
+	global _RATINGS
+	_RATINGS = shelve.open(filename)
 
 def get_rating(nick):
 	if not nick in _RATINGS:
 		_RATINGS[nick] = _DEFAULT_RATING
 	return _RATINGS[nick]
 
-def predict_game(game):
-	assert game.gametype == "Capture the Flag", game.gametype
-	rsum = [0.0] * 4
-	rcount = [0] * 4
+def team_average(game, team_id):
+	avg = (0.0, 0)
 	for pid, p in game.players.items():
 		if not hasattr(p, 'team_id'):
 			continue
-		rsum[p.team_id] += get_rating(p.nick)
-		rcount[p.team_id] += 1
-	for i in range(len(rsum)):
-		rsum[i] = rsum[i] * rcount[i]
-	sum = rsum[1] + rsum[2]
-	return rsum[1] / sum, rsum[2] / sum
+		elif p.team_id == team_id:
+			avg = (avg[0] + get_rating(p.nick), avg[1]+1)
+	return avg[0] / avg[1]
+
+def other_team(team_id):
+	if team_id == 1:
+		return 2
+	elif team_id == 2:
+		return 1
+	else:
+		return team_id
+
+def predict_player(player, game):
+	avg = team_average(game, other_team(player.team_id))
+	rel_frags = (avg + get_rating(player.nick)) / avg
+	# TODO time could be wrong if the player joined later
+	return game.game_duration *_FRAGS_PER_SECOND * rel_frags
 	
-def rating_adaption(game):
-	red_p, blue_p = predict_game(game)
-	red  = game.teams[1].capture_count
-	blue = game.teams[2].capture_count
-	red_pc = game.teams[1].player_count
-	blue_pc = game.teams[2].player_count
-	def formula(x, y):
-		return float(x - y) / (y + 1)
-	red_f, blue_f = formula(red, blue), formula(blue, red)
-	def formula(f, pred, count):
-		return f * (((1 - pred)**2) / count)
-	return formula(red_f, red_p, red_pc), formula(blue_f, blue_p, blue_pc)
+def rating_adaption(player, game):
+	pred = predict_player(player, game)
+	print "Prediction vs reality: %s (%.3f) %.1f vs %d" % (player.nick, get_rating(player.nick), pred, player.kill_count)
+	adapt = (player.kill_count - pred) / game.frag_count
+	if get_rating(player.nick) - adapt < _MINIMUM_RATING:
+		adapt = _MINIMUM_RATING - get_rating(player.nick)
+	print "adaption", adapt
+	return adapt
 
 def adapt_ratings(game):
-	red_a, blue_a = rating_adaption(game)
+	adaptions = dict()
 	for pid, p in game.players.items():
 		if not hasattr(p, 'team_id'):
 			continue
-		if p.team_id == 1:
-			_RATINGS[p.nick] += red_a
-		elif p.team_id == 2:
-			_RATINGS[p.nick] += blue_a
-	
+		adaptions[p.nick] = rating_adaption(p, game)
+	for nick, adapt in adaptions.items():
+		_RATINGS[nick] += adapt
+	if hasattr(_RATINGS, 'sync'):
+		_RATINGS.sync() # ensure persistence
+
 def rate(game):
 	adapt_ratings(game)
+	print _RATINGS
+

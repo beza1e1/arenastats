@@ -305,7 +305,7 @@ class Player:
 		return slugify(self.nick)
 	slug_nick = property(_get_slug_nick)
 	def _get_elo_rating(self):
-		return get_rating(self.nick)
+		return int(get_rating(self.nick) * 1000)
 	elo = property(_get_elo_rating)
 
 class World(Player):
