@@ -1,0 +1,1069 @@
+23.9 ------------------------------------------------------------
+23.9 InitGame: \capturelimit\10\sv_floodProtect\0\sv_maxPing\0\sv_minPing\0\sv_maxRate\0\sv_minRate\0\sv_maxclients\10\sv_hostname\ipd\timelimit\13\fraglimit\30\dmflags\0\version\ioQ3 1.34-rc4 linux-i386 Jan 19 2009\g_gametype\4\protocol\68\mapname\q3w2\sv_privateClients\0\sv_allowDownload\1\server_ospauth\1\gamename\osp\gameversion\OSP v1.03a\Players_Red\2 3 \Players_Blue\1 4 \Score_Red\0\Score_Blue\0\Score_Time\Waiting for Players\server_promode\0\g_needpass\0\server_freezetag\0
+23.9 ServerTime:	20100120173047	17:30:47 (20 Jan 2010)
+23.9 Game_Start:
+23.9 TeamName: 1 RED
+23.9 TeamName: 2 BLUE
+24.1 ClientConnect: 0
+24.1 ClientUserinfoChanged: 0 n\beza1e1\t\2\model\spacemarine40k/blue\hmodel\spacemarine40k/blue\c1\1\c2\5\hc\100\w\0\l\0\rt\2\st\0
+24.1 ClientBegin: 0
+24.1 ClientConnect: 1
+24.1 ClientUserinfoChanged: 1 n\Cici\t\1\model\flic/red\hmodel\flic/red\c1\1\c2\5\hc\100\w\0\l\0\rt\1\st\0
+24.1 ClientBegin: 1
+24.1 ClientConnect: 2
+24.1 ClientUserinfoChanged: 2 n\hecker\t\1\model\sarge/red\hmodel\sarge/red\c1\1\c2\5\hc\100\w\0\l\0\rt\1\st\0
+24.1 ClientBegin: 2
+24.1 ClientConnect: 3
+24.1 ClientUserinfoChanged: 3 n\Snake\t\2\model\stb/blue\hmodel\stb/blue\c1\1\c2\5\hc\100\w\0\l\0\rt\2\st\0
+24.1 ClientBegin: 3
+26.4 Item: 3 weapon_rocketlauncher
+26.7 Item: 1 weapon_rocketlauncher
+28.2 Item: 0 ammo_rockets
+28.9 Item: 0 ammo_slugs
+29.5 Item: 2 weapon_lightning
+29.6 Item: 3 ammo_grenades
+29.9 Item: 3 weapon_railgun
+30.1 Item: 3 ammo_shells
+30.7 Item: 1 item_armor_body
+32.0 Item: 0 item_health_mega
+32.2 Item: 1 item_health_mega
+33.6 Item: 3 item_armor_shard
+33.6 Item: 3 item_armor_shard
+33.7 Item: 2 weapon_railgun
+33.7 Item: 3 item_armor_shard
+33.9 Item: 3 item_armor_shard
+35.1 Item: 0 weapon_railgun
+35.3 Item: 1 item_armor_shard
+35.5 Item: 1 item_armor_shard
+35.7 Item: 1 item_armor_shard
+35.9 Item: 1 item_armor_shard
+36.7 Item: 2 weapon_plasmagun
+39.2 Item: 3 item_health_large
+39.5 Item: 3 ammo_shells
+41.2 Item: 2 ammo_rockets
+43.0 Kill: 3 1 10: Snake killed Cici by MOD_RAILGUN 5
+43.1 Kill: 2 3 10: hecker killed Snake by MOD_RAILGUN 7
+46.2 Item: 3 weapon_railgun
+46.5 Item: 1 ammo_grenades
+46.7 Item: 1 weapon_railgun
+46.9 Item: 1 ammo_shells
+47.0 Item: 2 item_armor_combat
+49.6 Item: 1 weapon_grenadelauncher
+53.9 Item: 2 weapon_rocketlauncher
+54.9 Item: 3 weapon_railgun
+55.6 Item: 3 weapon_plasmagun
+56.3 Item: 1 weapon_railgun
+56.9 Item: 3 item_armor_shard
+57.1 Item: 3 item_armor_shard
+57.4 Item: 3 item_armor_shard
+57.5 Item: 3 item_armor_shard
+58.0 Item: 2 item_armor_body
+58.9 Item: 1 item_health_large
+59.9 Item: 1 weapon_rocketlauncher
+63.3 Item: 3 weapon_plasmagun
+64.9 Item: 1 item_armor_shard
+65.1 Item: 1 item_health_small
+65.3 Item: 1 item_armor_shard
+65.5 Item: 2 team_CTF_blueflag
+65.5 Flag_Pickup: 2
+65.5 Item: 1 item_armor_shard
+65.7 Item: 1 item_health_small
+66.0 Item: 1 ammo_grenades
+66.1 Item: 1 item_health_small
+66.3 Item: 1 item_armor_shard
+66.5 Item: 1 item_armor_shard
+66.5 Item: 3 ammo_grenades
+66.7 Item: 1 item_health_small
+66.9 Item: 1 item_armor_shard
+67.9 Item: 3 weapon_rocketlauncher
+69.2 Item: 0 item_health_mega
+69.3 Item: 1 weapon_rocketlauncher
+74.3 Item: 3 team_CTF_redflag
+74.3 Flag_Pickup: 3
+77.8 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 7
+77.8 Hurt_Carrier_Defend: 2
+78.5 Item: 1 weapon_rocketlauncher
+79.0 Item: 2 item_health_large
+80.0 Item: 3 item_haste
+80.0 Item: 0 ammo_rockets
+83.4 Item: 2 item_regen
+84.6 Item: 3 item_armor_combat
+85.4 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 2
+85.4 Hurt_Carrier_Defend: 2
+86.0 Item: 2 item_armor_shard
+86.0 Item: 2 item_armor_shard
+86.3 Item: 2 item_health
+86.5 Item: 2 item_armor_shard
+86.6 Item: 2 item_armor_shard
+89.2 Item: 2 weapon_plasmagun
+89.8 Item: 0 weapon_rocketlauncher
+90.0 Kill: 3 1 6: Snake killed Cici by MOD_ROCKET 5
+90.0 Hurt_Carrier_Defend: 3
+90.3 Item: 0 weapon_railgun
+94.2 Item: 1 weapon_rocketlauncher
+94.9 Item: 0 ammo_shells
+96.0 Item: 2 ammo_grenades
+98.0 Item: 0 weapon_shotgun
+98.3 Kill: 2 3 8: hecker killed Snake by MOD_PLASMA 8
+98.3 Kill_Carrier: 2
+98.6 Item: 1 item_armor_combat
+98.9 Item: 2 item_haste
+99.2 Item: 2 team_CTF_redflag
+99.2 Flag_Return: 2
+100.0 Item: 2 weapon_plasmagun
+101.4 Item: 1 weapon_rocketlauncher
+101.4 Item: 3 weapon_railgun
+103.6 Kill: 0 2 10: beza1e1 killed hecker by MOD_RAILGUN 8
+103.6 Kill_Carrier: 0
+105.1 Item: 3 team_CTF_blueflag
+105.1 Flag_Return: 3
+105.2 Item: 0 item_haste
+105.3 Item: 3 item_regen
+105.3 Item: 3 weapon_shotgun
+107.3 Item: 2 item_armor_body
+108.5 Kill: 1 3 7: Cici killed Snake by MOD_ROCKET_SPLASH 7
+108.5 Item: 1 weapon_railgun
+108.5 Item: 1 item_regen
+110.7 Item: 3 weapon_grenadelauncher
+111.0 Item: 1 item_health
+111.2 Item: 1 item_health
+111.7 Item: 3 item_armor_shard
+111.7 Item: 3 item_armor_shard
+111.9 Item: 0 team_CTF_redflag
+111.9 Flag_Pickup: 0
+111.9 Item: 3 item_armor_shard
+112.1 Item: 3 item_armor_shard
+112.2 Item: 2 weapon_rocketlauncher
+115.0 Kill: 2 0 3: hecker killed beza1e1 by MOD_MACHINEGUN 7
+115.0 Kill_Carrier: 2
+116.4 Item: 2 weapon_railgun
+116.8 Item: 0 ammo_grenades
+117.6 Item: 3 ammo_shells
+117.8 Item: 3 weapon_railgun
+118.3 Item: 1 item_armor_shard
+118.3 Item: 1 item_armor_shard
+118.6 Item: 0 weapon_plasmagun
+118.7 Item: 1 item_armor_shard
+118.9 Item: 1 item_armor_shard
+119.5 Item: 2 team_CTF_redflag
+119.5 Flag_Return: 2
+120.8 Item: 3 item_health_mega
+121.1 Item: 2 ammo_rockets
+123.4 Item: 0 team_CTF_redflag
+123.4 Flag_Pickup: 0
+126.3 Kill: 2 0 6: hecker killed beza1e1 by MOD_ROCKET 8
+126.3 Kill_Carrier: 2
+127.1 Item: 2 team_CTF_redflag
+127.1 Flag_Return: 2
+127.4 Item: 1 team_CTF_blueflag
+127.4 Flag_Pickup: 1
+127.7 Item: 2 weapon_rocketlauncher
+127.8 Item: 2 weapon_plasmagun
+129.4 Item: 0 weapon_shotgun
+129.9 Item: 2 weapon_lightning
+132.9 Item: 0 weapon_plasmagun
+134.0 Item: 2 item_armor_body
+134.2 Item: 1 item_armor_body
+135.8 Item: 2 ammo_rockets
+136.8 Item: 2 item_health_mega
+138.5 Item: 1 ammo_rockets
+139.5 Item: 0 team_CTF_redflag
+139.5 Flag_Pickup: 0
+139.7 Kill: 2 0 10: hecker killed beza1e1 by MOD_RAILGUN 3
+139.7 Kill_Carrier: 2
+142.1 Item: 0 weapon_grenadelauncher
+142.6 Item: 2 item_armor_shard
+142.7 Item: 2 item_armor_shard
+144.2 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 4
+145.6 Item: 2 weapon_grenadelauncher
+147.0 Item: 1 item_armor_shard
+147.2 Item: 1 item_armor_shard
+147.4 Item: 1 item_armor_shard
+147.6 Item: 1 item_armor_shard
+147.9 Item: 1 weapon_grenadelauncher
+148.0 Item: 2 ammo_slugs
+148.8 Item: 0 weapon_rocketlauncher
+152.3 Item: 1 item_armor_shard
+152.4 Kill: 2 3 11: hecker killed Snake by MOD_LIGHTNING 7
+152.4 Defend_Hurt_Carrier: 2
+152.5 Item: 1 item_armor_shard
+152.7 Item: 0 ammo_grenades
+152.9 Item: 0 weapon_railgun
+156.5 Item: 3 weapon_rocketlauncher
+157.2 Item: 0 weapon_railgun
+157.5 Item: 1 team_CTF_redflag
+157.5 Flag_Return: 1
+157.5 Item: 1 team_CTF_redflag
+157.5 Flag_Capture: 1
+157.5 TeamScore: 1 1 RED
+157.5 TeamScore: 2 0 BLUE
+157.5 Flag_Assist_Return: 1
+157.7 Item: 1 weapon_shotgun
+157.7 Item: 2 weapon_railgun
+157.9 Item: 2 ammo_grenades
+158.3 say: Cici: ^7^2^1MU^7HAHA^1HA
+158.9 Item: 1 item_armor_shard
+159.1 Item: 1 item_health_small
+159.3 Item: 1 item_armor_shard
+159.5 Item: 1 item_armor_shard
+159.7 Item: 1 item_health_small
+160.0 Item: 1 ammo_grenades
+160.1 Item: 1 item_health_small
+160.3 Item: 1 item_armor_shard
+160.5 Item: 1 item_armor_shard
+160.7 Item: 1 item_health_small
+160.9 Item: 1 item_armor_shard
+160.9 Item: 3 item_armor_combat
+162.3 Item: 1 item_health_large
+163.8 Item: 1 weapon_rocketlauncher
+163.9 Item: 2 weapon_railgun
+164.2 Kill: 2 0 10: hecker killed beza1e1 by MOD_RAILGUN 7
+165.3 Item: 3 weapon_railgun
+165.9 Item: 1 item_health_large
+166.6 Item: 0 item_health_mega
+166.9 Item: 2 weapon_railgun
+168.0 Item: 3 item_armor_combat
+169.9 Item: 0 ammo_shells
+170.1 Item: 0 weapon_railgun
+171.2 Item: 2 weapon_plasmagun
+172.4 Item: 2 item_armor_shard
+172.6 Item: 2 item_armor_shard
+173.0 Item: 2 item_armor_shard
+173.1 Item: 2 item_armor_shard
+176.0 Item: 3 team_CTF_redflag
+176.0 Flag_Pickup: 3
+176.4 Item: 1 item_armor_body
+177.3 Item: 1 ammo_rockets
+177.8 Item: 1 item_health_mega
+180.4 Item: 3 ammo_rockets
+180.5 Item: 3 item_health
+180.7 Item: 3 ammo_slugs
+182.3 Kill: 1 3 6: Cici killed Snake by MOD_ROCKET 7
+182.3 Kill_Carrier: 1
+183.6 Item: 1 weapon_railgun
+183.8 Item: 1 team_CTF_redflag
+183.8 Flag_Return: 1
+184.0 Item: 3 ammo_grenades
+184.9 Item: 2 weapon_plasmagun
+186.8 Kill: 2 3 8: hecker killed Snake by MOD_PLASMA 2
+189.7 Item: 3 ammo_slugs
+192.7 Item: 2 weapon_shotgun
+192.7 Item: 3 weapon_rocketlauncher
+193.9 Item: 0 item_armor_shard
+193.9 Item: 0 item_armor_shard
+194.1 Item: 0 item_armor_shard
+194.3 Item: 0 item_armor_shard
+194.9 Item: 0 weapon_grenadelauncher
+195.3 Item: 2 item_armor_combat
+196.2 Item: 3 ammo_grenades
+196.4 Item: 3 weapon_railgun
+198.1 Item: 1 item_armor_shard
+198.6 Item: 1 item_armor_shard
+198.8 Item: 1 item_armor_shard
+202.6 Item: 2 weapon_lightning
+203.8 Item: 1 item_regen
+203.8 Item: 3 ammo_shells
+205.7 Item: 0 item_health_mega
+206.2 Item: 2 team_CTF_blueflag
+206.2 Flag_Pickup: 2
+206.6 Item: 3 item_regen
+211.0 Kill: 2 0 10: hecker killed beza1e1 by MOD_RAILGUN 7
+212.0 Item: 3 team_CTF_redflag
+212.0 Flag_Pickup: 3
+212.3 Item: 2 weapon_railgun
+217.5 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 2
+217.5 Hurt_Carrier_Defend: 2
+217.6 Item: 3 item_armor_combat
+219.2 Item: 1 ammo_rockets
+222.8 Item: 0 weapon_shotgun
+224.4 Item: 0 item_armor_combat
+224.4 Item: 2 weapon_shotgun
+228.2 Kill: 1 3 10: Cici killed Snake by MOD_RAILGUN 7
+228.2 Kill_Carrier: 1
+228.4 Item: 2 weapon_lightning
+228.6 Item: 2 ammo_rockets
+229.3 Item: 1 weapon_railgun
+229.5 Item: 1 item_regen
+229.7 Item: 1 team_CTF_redflag
+229.7 Flag_Return: 1
+232.3 Item: 3 weapon_rocketlauncher
+232.4 Item: 2 team_CTF_redflag
+232.4 Flag_Capture: 2
+232.4 TeamScore: 1 2 RED
+232.4 TeamScore: 2 0 BLUE
+232.4 Flag_Assist_Return: 1
+233.4 Item: 1 item_health
+233.8 Item: 1 item_health
+234.8 Item: 2 ammo_lightning
+236.8 Kill: 3 1 6: Snake killed Cici by MOD_ROCKET 7
+236.8 Item: 3 item_regen
+236.8 Item: 3 weapon_railgun
+237.0 Item: 0 weapon_plasmagun
+238.7 Item: 0 item_armor_shard
+238.7 Item: 0 item_armor_shard
+238.9 Item: 0 item_health
+239.0 Item: 0 item_armor_shard
+239.2 Item: 0 item_armor_shard
+239.8 Item: 0 ammo_slugs
+240.3 Item: 1 weapon_grenadelauncher
+241.9 Item: 1 item_armor_shard
+242.1 Item: 1 item_armor_shard
+242.3 Item: 1 item_armor_shard
+242.5 Item: 1 item_armor_shard
+243.8 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 3
+244.4 Item: 3 weapon_railgun
+244.9 Item: 2 weapon_shotgun
+245.1 Item: 1 item_health_mega
+246.2 Item: 0 weapon_grenadelauncher
+247.4 Item: 3 item_armor_combat
+249.3 Item: 0 ammo_shells
+249.6 Item: 0 weapon_railgun
+249.8 Item: 0 ammo_grenades
+252.2 Item: 2 item_armor_shard
+252.3 Item: 1 ammo_shells
+252.3 Item: 2 item_armor_shard
+252.4 Item: 3 weapon_rocketlauncher
+252.5 Item: 1 weapon_railgun
+252.5 Item: 2 item_armor_shard
+252.7 Item: 2 item_armor_shard
+252.7 Item: 1 ammo_grenades
+253.7 Item: 0 weapon_rocketlauncher
+254.3 Item: 3 team_CTF_redflag
+254.3 Flag_Pickup: 3
+256.0 Item: 2 item_health_mega
+257.7 Item: 2 ammo_lightning
+259.2 Item: 3 ammo_rockets
+259.5 Item: 3 ammo_slugs
+259.9 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 7
+261.6 Item: 2 team_CTF_blueflag
+261.6 Flag_Pickup: 2
+263.4 Item: 2 weapon_rocketlauncher
+264.1 Kill: 3 1 10: Snake killed Cici by MOD_RAILGUN 7
+264.1 Hurt_Carrier_Defend: 3
+264.6 Item: 0 weapon_plasmagun
+267.2 Item: 1 weapon_plasmagun
+267.7 Item: 2 item_armor_body
+267.7 Item: 3 weapon_grenadelauncher
+269.0 Item: 2 ammo_rockets
+273.2 Item: 2 weapon_grenadelauncher
+274.1 Item: 3 item_armor_shard
+274.1 Item: 3 item_armor_shard
+274.4 Item: 3 item_health
+274.6 Item: 3 item_armor_shard
+274.7 Item: 3 item_armor_shard
+275.5 Item: 3 ammo_slugs
+277.5 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 8
+277.5 Hurt_Carrier_Defend: 2
+277.8 Kill: 1 3 8: Cici killed Snake by MOD_PLASMA 7
+277.8 Kill_Carrier: 1
+278.1 Item: 2 item_armor_shard
+278.4 Item: 2 item_armor_shard
+278.5 Item: 2 item_armor_shard
+278.5 Item: 1 weapon_railgun
+278.7 Item: 1 team_CTF_redflag
+278.7 Flag_Return: 1
+279.7 Item: 2 weapon_grenadelauncher
+280.6 Item: 3 item_armor_combat
+281.8 Item: 1 weapon_rocketlauncher
+282.9 Item: 2 weapon_grenadelauncher
+283.6 Item: 2 item_armor_shard
+283.7 Item: 2 item_armor_shard
+285.8 Kill: 0 1 3: beza1e1 killed Cici by MOD_MACHINEGUN 5
+286.1 Item: 0 item_health_large
+286.7 Item: 0 weapon_rocketlauncher
+287.4 Item: 3 weapon_rocketlauncher
+288.8 Item: 0 weapon_rocketlauncher
+289.1 Kill: 2 3 11: hecker killed Snake by MOD_LIGHTNING 5
+289.1 Defend_Flag: 2
+290.4 Item: 2 weapon_rocketlauncher
+291.0 Item: 2 team_CTF_redflag
+291.0 Flag_Capture: 2
+291.0 TeamScore: 1 3 RED
+291.0 TeamScore: 2 0 BLUE
+291.3 Item: 1 weapon_railgun
+291.4 Item: 1 item_health_mega
+291.8 Item: 3 item_armor_combat
+292.8 Item: 3 ammo_shells
+293.9 Item: 2 ammo_lightning
+296.5 Item: 0 ammo_rockets
+296.6 Item: 3 weapon_railgun
+296.9 Item: 0 ammo_slugs
+300.4 Item: 0 item_health_mega
+303.1 Kill: 3 1 10: Snake killed Cici by MOD_RAILGUN 7
+307.1 Item: 3 ammo_shells
+307.6 Item: 1 weapon_rocketlauncher
+310.2 Item: 2 item_armor_shard
+310.5 Item: 2 item_armor_shard
+310.8 Item: 2 item_armor_shard
+310.9 Item: 2 item_armor_shard
+312.8 Kill: 3 1 10: Snake killed Cici by MOD_RAILGUN 5
+314.0 Item: 3 team_CTF_redflag
+314.0 Flag_Pickup: 3
+314.6 Item: 2 ammo_lightning
+315.4 Item: 3 item_health_large
+319.1 Item: 2 team_CTF_blueflag
+319.1 Flag_Pickup: 2
+320.2 Item: 0 item_health
+320.7 Item: 3 item_armor_combat
+324.6 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 5
+325.7 Item: 1 item_armor_shard
+325.9 Item: 1 item_armor_shard
+326.0 Item: 2 weapon_rocketlauncher
+326.1 Item: 1 item_armor_shard
+326.3 Item: 1 item_armor_shard
+326.3 Item: 0 ammo_grenades
+326.5 Item: 2 weapon_rocketlauncher
+326.9 Item: 1 weapon_grenadelauncher
+328.5 Item: 0 item_haste
+330.1 Item: 3 item_regen
+330.6 Item: 2 item_armor_body
+331.3 Item: 1 weapon_grenadelauncher
+332.0 Item: 1 item_armor_shard
+332.0 Item: 1 item_armor_shard
+332.1 Item: 1 item_armor_shard
+332.5 Item: 0 weapon_rocketlauncher
+332.7 Item: 0 weapon_rocketlauncher
+333.3 Item: 2 ammo_rockets
+335.9 Item: 3 weapon_rocketlauncher
+340.9 Item: 1 weapon_rocketlauncher
+343.7 Item: 3 ammo_bullets
+344.0 Item: 3 ammo_bullets
+345.6 Item: 2 item_health_mega
+346.9 Item: 0 weapon_grenadelauncher
+353.5 Kill: 2 0 10: hecker killed beza1e1 by MOD_RAILGUN 5
+353.5 Hurt_Carrier_Defend: 2
+355.5 Item: 0 weapon_grenadelauncher
+356.0 Item: 2 item_armor_combat
+356.0 Item: 2 item_health
+356.2 Item: 2 item_health
+357.0 Item: 2 ammo_shells
+357.5 Item: 2 weapon_rocketlauncher
+357.7 Item: 2 item_haste
+358.7 Item: 3 weapon_railgun
+358.8 Item: 0 ammo_shells
+359.0 Item: 3 ammo_grenades
+360.2 Item: 3 ammo_shells
+364.3 Kill: 2 0 1: hecker killed beza1e1 by MOD_SHOTGUN 2
+364.3 Hurt_Carrier_Defend: 2
+364.3 Item: 1 item_health_large
+366.2 Item: 2 ammo_shells
+366.5 Item: 2 item_health_large
+368.2 Item: 1 item_armor_body
+368.8 Item: 2 item_health
+368.8 Item: 2 item_armor_combat
+373.0 Item: 1 ammo_shells
+374.2 Item: 2 weapon_lightning
+374.4 Item: 2 ammo_rockets
+375.0 Item: 1 ammo_rockets
+375.3 Item: 0 weapon_shotgun
+377.3 Item: 3 ammo_slugs
+377.5 Item: 3 item_health
+377.8 Item: 3 ammo_rockets
+378.9 Item: 2 item_armor_body
+379.2 Item: 0 weapon_shotgun
+380.4 Item: 2 ammo_rockets
+380.6 Item: 1 item_health_mega
+380.7 Item: 3 item_armor_shard
+380.9 Item: 3 item_health_small
+381.1 Item: 3 item_armor_shard
+381.3 Item: 3 item_armor_shard
+381.5 Item: 3 item_health_small
+381.7 Item: 3 ammo_grenades
+381.8 Item: 3 item_health_small
+382.0 Item: 3 item_armor_shard
+382.2 Item: 3 item_armor_shard
+382.4 Item: 3 item_health_small
+382.6 Item: 3 item_armor_shard
+382.8 Item: 0 item_armor_shard
+382.8 Item: 0 item_armor_shard
+383.1 Item: 0 item_health
+383.3 Item: 0 item_armor_shard
+383.4 Item: 0 item_armor_shard
+384.1 Item: 0 ammo_slugs
+387.0 Item: 2 item_health_mega
+390.8 Kill: 2 0 10: hecker killed beza1e1 by MOD_RAILGUN 3
+390.8 Defend_Base: 2
+393.4 Item: 2 item_armor_shard
+393.5 Item: 2 item_armor_shard
+393.5 Item: 0 item_armor_combat
+394.6 Item: 2 weapon_grenadelauncher
+395.7 Item: 1 item_health_large
+396.7 Item: 1 weapon_rocketlauncher
+396.8 Item: 0 weapon_shotgun
+401.0 Item: 1 item_armor_body
+401.3 Item: 2 weapon_grenadelauncher
+401.7 Item: 2 item_armor_shard
+401.9 Item: 2 item_armor_shard
+402.5 Item: 0 item_armor_combat
+409.0 Item: 0 item_armor_shard
+409.2 Item: 0 item_armor_shard
+411.6 Item: 0 ammo_shells
+411.8 Item: 0 weapon_railgun
+412.1 Item: 0 ammo_grenades
+412.8 Item: 2 item_armor_shard
+413.0 Item: 2 item_armor_shard
+413.9 Kill: 1 3 6: Cici killed Snake by MOD_ROCKET 7
+413.9 Kill_Carrier: 1
+414.3 Item: 0 weapon_rocketlauncher
+414.8 Item: 1 weapon_railgun
+415.0 Item: 1 team_CTF_redflag
+415.0 Flag_Return: 1
+415.5 Item: 1 item_armor_shard
+415.9 Item: 1 item_health_small
+416.5 Item: 1 item_health_small
+416.7 Item: 0 team_CTF_redflag
+416.7 Flag_Pickup: 0
+416.9 Item: 1 item_armor_shard
+417.1 Item: 1 item_armor_shard
+417.3 Item: 3 weapon_railgun
+417.5 Item: 2 weapon_grenadelauncher
+417.9 Item: 1 item_health_small
+418.5 Item: 1 item_armor_shard
+418.5 Item: 1 item_health_small
+418.7 Item: 1 item_armor_shard
+418.8 Item: 3 ammo_rockets
+419.6 Item: 1 item_armor_shard
+422.4 Kill: 2 3 11: hecker killed Snake by MOD_LIGHTNING 7
+422.7 Item: 2 weapon_grenadelauncher
+423.0 Item: 1 weapon_rocketlauncher
+427.6 Item: 1 item_armor_body
+427.6 Item: 0 item_armor_combat
+427.6 Item: 0 item_health
+428.5 Item: 1 ammo_rockets
+429.1 Item: 3 weapon_railgun
+429.2 Kill: 2 3 11: hecker killed Snake by MOD_LIGHTNING 2
+429.2 Hurt_Carrier_Defend: 2
+429.3 Item: 1 item_health_mega
+431.4 Item: 3 weapon_grenadelauncher
+431.8 Item: 0 ammo_shells
+433.5 Item: 3 weapon_shotgun
+434.9 Item: 2 item_armor_shard
+435.2 Item: 2 item_armor_shard
+436.2 Item: 1 ammo_rockets
+437.8 Item: 3 weapon_plasmagun
+440.0 Item: 2 item_armor_shard
+441.8 Item: 2 item_health
+442.0 Item: 2 item_armor_shard
+442.9 Kill: 2 3 1: hecker killed Snake by MOD_SHOTGUN 3
+442.9 Hurt_Carrier_Defend: 2
+444.2 Item: 2 weapon_shotgun
+445.3 Item: 3 weapon_lightning
+447.1 Kill: 0 1 10: beza1e1 killed Cici by MOD_RAILGUN 5
+447.1 Hurt_Carrier_Defend: 0
+447.8 Item: 0 weapon_rocketlauncher
+449.1 Item: 2 item_health_large
+449.2 Item: 3 ammo_grenades
+449.3 Item: 3 weapon_railgun
+449.6 Item: 3 ammo_shells
+450.4 Item: 1 ammo_shells
+450.7 Item: 0 ammo_slugs
+450.9 Item: 0 item_health
+450.9 Item: 2 item_health_large
+451.7 Item: 3 item_armor_shard
+451.7 Item: 3 item_armor_shard
+451.8 Item: 3 item_armor_shard
+451.8 Item: 1 weapon_railgun
+451.9 Item: 3 item_armor_shard
+452.0 Item: 2 weapon_rocketlauncher
+454.7 Item: 1 item_haste
+455.8 Item: 1 item_health
+455.9 Item: 1 item_armor_shard
+456.1 Item: 2 item_armor_body
+456.4 Item: 1 item_armor_shard
+456.5 Item: 1 item_armor_shard
+457.6 Item: 1 weapon_plasmagun
+457.7 Item: 2 ammo_rockets
+458.3 Item: 1 ammo_grenades
+458.4 Item: 2 item_health_mega
+459.4 Kill: 3 1 10: Snake killed Cici by MOD_RAILGUN 7
+459.7 Item: 0 item_health_large
+461.4 Item: 3 item_haste
+461.4 Item: 3 weapon_railgun
+462.8 Item: 2 weapon_plasmagun
+462.9 Item: 1 weapon_rocketlauncher
+464.3 Item: 0 item_armor_body
+464.3 Item: 2 item_armor_shard
+464.8 Item: 2 item_armor_shard
+465.6 Item: 3 item_armor_combat
+466.6 Item: 0 ammo_slugs
+467.7 Item: 1 item_haste
+469.0 Item: 0 ammo_rockets
+470.3 Item: 0 item_health_mega
+470.9 Item: 1 ammo_rockets
+471.4 Item: 3 item_armor_shard
+471.4 Item: 3 item_health_small
+471.6 Item: 3 item_armor_shard
+471.8 Item: 3 item_armor_shard
+471.9 Item: 3 item_health_small
+472.1 Item: 3 ammo_grenades
+472.2 Item: 3 item_health_small
+472.4 Item: 3 item_armor_shard
+472.5 Item: 3 item_armor_shard
+472.7 Item: 3 item_health_small
+472.8 Item: 3 item_armor_shard
+473.6 Item: 1 item_armor_combat
+476.6 Item: 3 ammo_slugs
+476.7 Item: 2 ammo_shells
+477.3 Item: 1 weapon_rocketlauncher
+479.1 Item: 2 ammo_cells
+479.9 Item: 1 weapon_lightning
+480.1 Item: 1 ammo_rockets
+480.8 Item: 3 item_armor_shard
+481.3 Item: 3 item_armor_shard
+491.2 Kill: 1 0 6: Cici killed beza1e1 by MOD_ROCKET 7
+491.2 Kill_Carrier: 1
+492.2 Item: 3 weapon_rocketlauncher
+492.3 Item: 2 item_armor_shard
+492.5 Item: 2 item_armor_shard
+492.7 Item: 2 item_armor_shard
+492.9 Item: 2 item_armor_shard
+493.7 Item: 1 team_CTF_redflag
+493.7 Flag_Return: 1
+495.0 Item: 3 weapon_lightning
+495.5 Item: 1 ammo_rockets
+495.7 Item: 1 item_health
+495.9 Item: 1 ammo_slugs
+497.5 Item: 0 weapon_rocketlauncher
+497.7 Item: 2 weapon_grenadelauncher
+499.2 Kill: 0 1 6: beza1e1 killed Cici by MOD_ROCKET 5
+499.2 Defend_Base: 0
+500.6 Item: 3 team_CTF_redflag
+500.6 Flag_Pickup: 3
+500.8 Item: 0 item_health_large
+501.7 Item: 2 weapon_grenadelauncher
+502.4 Item: 0 weapon_rocketlauncher
+502.6 Item: 2 item_armor_shard
+502.6 Item: 2 item_armor_shard
+502.7 Item: 2 item_armor_shard
+504.4 Item: 1 weapon_plasmagun
+504.9 Item: 0 ammo_grenades
+505.2 Item: 0 weapon_railgun
+505.4 Item: 0 ammo_shells
+505.7 Item: 2 item_health_mega
+508.2 Item: 0 weapon_grenadelauncher
+509.8 Item: 3 item_armor_combat
+509.8 Item: 3 item_health
+510.2 Item: 3 item_health
+511.3 Item: 2 weapon_grenadelauncher
+514.1 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 7
+514.1 Hurt_Carrier_Defend: 2
+514.2 Item: 2 item_armor_shard
+514.8 Item: 2 weapon_railgun
+516.1 Kill: 2 3 11: hecker killed Snake by MOD_LIGHTNING 7
+516.1 Kill_Carrier: 2
+516.3 Item: 2 weapon_grenadelauncher
+516.5 Item: 1 weapon_railgun
+516.6 Item: 0 item_armor_combat
+518.1 Item: 1 team_CTF_redflag
+518.1 Flag_Return: 1
+519.8 Item: 2 weapon_railgun
+520.3 Item: 0 weapon_shotgun
+520.5 Item: 1 weapon_grenadelauncher
+520.6 Item: 3 ammo_shells
+521.1 Item: 1 item_armor_shard
+521.3 Item: 1 item_armor_shard
+521.5 Item: 1 item_armor_shard
+521.7 Item: 1 item_armor_shard
+522.6 Item: 2 team_CTF_redflag
+522.6 Flag_Capture: 2
+522.6 TeamScore: 1 4 RED
+522.6 TeamScore: 2 0 BLUE
+522.6 Flag_Assist_Return: 1
+522.6 Flag_Assist_Frag: 2
+524.6 Item: 1 item_health_mega
+524.7 Item: 3 weapon_railgun
+525.8 Item: 2 weapon_lightning
+526.2 Item: 2 ammo_rockets
+529.0 Item: 0 team_CTF_redflag
+529.0 Flag_Pickup: 0
+529.1 Item: 1 team_CTF_blueflag
+529.1 Flag_Pickup: 1
+530.6 Item: 0 item_health_large
+530.9 Item: 1 weapon_rocketlauncher
+531.8 Item: 0 weapon_rocketlauncher
+532.4 Kill: 2 3 11: hecker killed Snake by MOD_LIGHTNING 7
+534.0 Kill: 2 0 11: hecker killed beza1e1 by MOD_LIGHTNING 3
+534.0 Kill_Carrier: 2
+535.2 Item: 1 item_armor_body
+535.2 Item: 2 weapon_shotgun
+535.2 Item: 2 team_CTF_redflag
+535.2 Flag_Return: 2
+536.2 Kill: 1 3 18: Cici killed Snake by MOD_TELEFRAG 2
+537.2 Item: 2 weapon_railgun
+537.4 Item: 2 ammo_shells
+537.6 Item: 0 weapon_railgun
+539.2 Item: 2 item_armor_shard
+539.2 Item: 2 item_armor_shard
+539.3 Item: 2 item_armor_shard
+539.4 Item: 2 item_armor_shard
+540.0 Item: 2 weapon_grenadelauncher
+540.5 Item: 1 weapon_grenadelauncher
+541.1 Item: 3 weapon_rocketlauncher
+546.4 Item: 3 item_armor_combat
+548.6 Item: 1 weapon_rocketlauncher
+549.1 Item: 2 item_armor_combat
+549.8 Item: 1 team_CTF_redflag
+549.8 Flag_Capture: 1
+549.8 TeamScore: 1 5 RED
+549.8 TeamScore: 2 0 BLUE
+550.8 Item: 3 weapon_railgun
+552.2 Item: 0 ammo_lightning
+553.9 Item: 1 ammo_slugs
+554.0 Item: 0 item_health_large
+554.9 Item: 2 weapon_lightning
+555.3 Item: 0 weapon_rocketlauncher
+556.6 Item: 1 item_health_mega
+559.0 Item: 0 ammo_grenades
+559.2 Item: 0 weapon_railgun
+559.3 Item: 3 team_CTF_redflag
+559.3 Flag_Pickup: 3
+559.4 Item: 0 ammo_shells
+559.8 Item: 2 item_health_large
+560.0 Item: 2 weapon_railgun
+560.3 Item: 1 ammo_rockets
+561.9 Kill: 2 3 10: hecker killed Snake by MOD_RAILGUN 7
+561.9 Kill_Carrier: 2
+562.2 Item: 2 weapon_rocketlauncher
+562.8 Item: 0 item_health_mega
+563.4 Item: 1 team_CTF_redflag
+563.4 Flag_Return: 1
+565.2 Item: 3 weapon_railgun
+567.1 Item: 2 weapon_plasmagun
+569.0 Item: 2 item_armor_shard
+569.0 Item: 2 item_armor_shard
+569.2 Item: 2 item_health
+569.4 Item: 2 item_armor_shard
+569.5 Item: 2 item_armor_shard
+570.0 Item: 1 item_armor_body
+571.0 Item: 1 ammo_rockets
+573.0 Item: 3 weapon_rocketlauncher
+574.8 Item: 3 team_CTF_redflag
+574.8 Flag_Pickup: 3
+574.8 Item: 2 ammo_shells
+577.1 Item: 2 item_armor_combat
+578.2 Item: 0 ammo_slugs
+578.7 Item: 0 ammo_rockets
+581.4 Item: 3 ammo_grenades
+581.7 Item: 3 weapon_railgun
+581.9 Item: 2 item_haste
+581.9 Item: 3 ammo_shells
+582.4 Item: 2 weapon_plasmagun
+582.6 Item: 1 item_armor_combat
+583.7 Item: 3 item_armor_shard
+583.9 Item: 3 item_armor_shard
+584.1 Item: 3 item_armor_shard
+584.3 Item: 3 item_armor_shard
+587.8 Kill: 2 3 8: hecker killed Snake by MOD_PLASMA 7
+587.8 Kill_Carrier: 2
+588.7 Item: 1 team_CTF_redflag
+588.7 Flag_Return: 1
+588.7 Item: 2 weapon_railgun
+591.5 Item: 1 weapon_plasmagun
+592.7 Item: 1 item_armor_shard
+592.8 Item: 1 item_armor_shard
+593.1 Item: 1 item_armor_shard
+593.2 Item: 1 item_armor_shard
+594.6 Item: 2 weapon_rocketlauncher
+595.5 Item: 3 weapon_railgun
+597.2 Item: 2 team_CTF_blueflag
+597.2 Flag_Pickup: 2
+603.4 Kill: 2 0 7: hecker killed beza1e1 by MOD_ROCKET_SPLASH 7
+603.4 Item: 2 ammo_slugs
+603.6 Item: 3 team_CTF_redflag
+603.6 Flag_Pickup: 3
+604.5 Item: 2 item_health
+605.1 Item: 0 ammo_grenades
+606.1 Item: 2 weapon_plasmagun
+606.9 Item: 0 item_regen
+608.3 Item: 3 ammo_rockets
+608.6 Item: 3 ammo_slugs
+609.2 Item: 1 item_armor_combat
+610.4 Item: 2 item_armor_combat
+610.4 Item: 2 item_health
+611.8 Item: 3 item_health_mega
+612.0 Item: 2 weapon_shotgun
+612.1 Item: 0 weapon_rocketlauncher
+617.8 Item: 0 weapon_shotgun
+618.7 Item: 2 item_health
+619.0 Item: 1 item_health_mega
+619.2 Kill: 0 2 6: beza1e1 killed hecker by MOD_ROCKET 5
+619.2 Kill_Carrier: 0
+619.4 Item: 0 team_CTF_blueflag
+619.4 Flag_Return: 0
+619.4 Item: 0 weapon_rocketlauncher
+621.3 say: hecker: LOL
+624.4 say: hecker: nich gehoert
+624.5 Item: 1 team_CTF_blueflag
+624.5 Flag_Pickup: 1
+626.3 Item: 1 weapon_rocketlauncher
+628.0 Item: 0 item_armor_shard
+628.0 Item: 0 item_armor_shard
+628.1 say: hecker: schleicher :D
+628.2 Item: 0 item_armor_shard
+628.4 Item: 0 item_armor_shard
+630.8 Item: 1 item_armor_body
+631.1 Item: 2 weapon_plasmagun
+635.7 Item: 0 ammo_shells
+636.0 Item: 0 weapon_railgun
+636.2 Item: 2 item_armor_combat
+636.2 Item: 0 ammo_grenades
+640.7 Item: 0 weapon_grenadelauncher
+642.4 Kill: 1 0 7: Cici killed beza1e1 by MOD_ROCKET_SPLASH 5
+642.4 Hurt_Carrier_Defend: 1
+643.3 Item: 1 weapon_rocketlauncher
+644.7 Kill: 1 3 6: Cici killed Snake by MOD_ROCKET 7
+644.7 Kill_Carrier: 1
+644.8 Item: 2 weapon_railgun
+645.7 Item: 1 team_CTF_redflag
+645.7 Flag_Return: 1
+646.3 say: Cici: ^7^2^1MU^7HAHA^1HA
+648.6 Item: 3 ammo_shells
+648.6 Kill: 2 0 8: hecker killed beza1e1 by MOD_PLASMA 2
+651.1 Item: 2 weapon_railgun
+651.3 Item: 0 item_armor_combat
+651.6 Item: 2 weapon_grenadelauncher
+651.8 Item: 1 weapon_grenadelauncher
+652.3 Item: 1 item_armor_shard
+652.5 Item: 3 weapon_railgun
+652.5 Item: 1 item_armor_shard
+653.0 Item: 1 item_armor_shard
+655.4 Item: 1 item_health_mega
+658.6 Item: 0 weapon_plasmagun
+659.5 Item: 2 weapon_railgun
+659.7 Item: 3 weapon_rocketlauncher
+660.9 Item: 1 team_CTF_redflag
+660.9 Flag_Capture: 1
+660.9 TeamScore: 1 6 RED
+660.9 TeamScore: 2 0 BLUE
+663.1 Item: 3 item_armor_shard
+663.3 Item: 3 item_health_small
+663.4 Item: 0 ammo_lightning
+663.5 Item: 3 item_armor_shard
+663.7 Item: 3 item_armor_shard
+663.9 Item: 3 item_health_small
+664.1 Item: 3 ammo_grenades
+664.3 Item: 3 item_health_small
+664.5 Item: 3 item_armor_shard
+664.7 Item: 3 item_armor_shard
+664.9 Item: 3 item_health_small
+665.1 Item: 3 item_armor_shard
+665.4 Item: 2 weapon_rocketlauncher
+666.5 Kill: 2 0 10: hecker killed beza1e1 by MOD_RAILGUN 8
+666.5 Defend_Flag: 2
+667.8 Item: 3 weapon_plasmagun
+668.2 Item: 3 team_CTF_redflag
+668.2 Flag_Pickup: 3
+669.3 Kill: 3 1 10: Snake killed Cici by MOD_RAILGUN 8
+669.3 Hurt_Carrier_Defend: 3
+670.0 Item: 0 weapon_railgun
+670.6 Item: 2 weapon_rocketlauncher
+670.9 Kill: 2 3 10: hecker killed Snake by MOD_RAILGUN 7
+670.9 Kill_Carrier: 2
+673.5 Item: 2 weapon_railgun
+675.4 Item: 3 weapon_rocketlauncher
+675.5 Item: 2 ammo_rockets
+675.5 Item: 2 item_health
+675.5 Item: 1 team_CTF_redflag
+675.5 Flag_Return: 1
+675.7 Item: 2 ammo_slugs
+677.1 Item: 1 weapon_rocketlauncher
+678.9 Item: 3 ammo_grenades
+679.1 Kill: 1 1 7: Cici killed Cici by MOD_ROCKET_SPLASH 5
+679.1 Item: 3 weapon_railgun
+679.4 Item: 3 ammo_shells
+680.4 Kill: 2 0 10: hecker killed beza1e1 by MOD_RAILGUN 7
+681.5 Item: 1 weapon_plasmagun
+682.1 Item: 3 item_health_mega
+683.6 Item: 2 item_health
+683.8 Item: 2 item_armor_combat
+684.2 Item: 0 weapon_railgun
+684.4 Item: 1 weapon_rocketlauncher
+684.6 Item: 1 weapon_railgun
+684.9 Item: 3 item_armor_shard
+685.0 Item: 3 item_armor_shard
+685.1 Item: 3 item_armor_shard
+685.3 Item: 3 item_armor_shard
+688.4 Item: 1 weapon_railgun
+688.4 Item: 1 ammo_shells
+690.1 Item: 3 item_armor_shard
+690.4 Item: 0 ammo_rockets
+690.6 Item: 1 item_armor_shard
+690.6 Item: 3 item_armor_shard
+690.8 Item: 1 item_armor_shard
+692.0 Kill: 1 3 7: Cici killed Snake by MOD_ROCKET_SPLASH 7
+692.4 Item: 1 weapon_grenadelauncher
+692.5 Item: 1 weapon_railgun
+692.6 Item: 2 item_armor_shard
+692.7 Item: 2 item_armor_shard
+693.1 Item: 2 item_armor_shard
+693.3 Item: 2 item_armor_shard
+695.9 Item: 3 weapon_rocketlauncher
+697.5 Kill: 2 0 8: hecker killed beza1e1 by MOD_PLASMA 7
+698.4 Item: 2 weapon_railgun
+699.5 Item: 3 weapon_railgun
+699.9 Item: 0 weapon_grenadelauncher
+700.3 Item: 2 ammo_lightning
+702.5 Item: 2 item_health_large
+704.6 Kill: 1 3 6: Cici killed Snake by MOD_ROCKET 7
+706.6 Kill: 0 2 3: beza1e1 killed hecker by MOD_MACHINEGUN 7
+706.6 Defend_Flag: 0
+707.9 Item: 1 item_armor_body
+709.5 Item: 3 weapon_railgun
+710.4 Item: 2 weapon_railgun
+710.7 Item: 3 weapon_rocketlauncher
+711.9 Item: 1 ammo_rockets
+712.6 Item: 0 weapon_railgun
+712.9 Item: 2 item_health_mega
+715.6 Item: 2 item_armor_shard
+716.2 Item: 2 weapon_grenadelauncher
+718.2 Item: 3 item_armor_shard
+718.2 Item: 3 item_armor_shard
+718.4 Item: 3 item_armor_shard
+718.7 Item: 3 item_armor_shard
+719.3 Kill: 2 3 4: hecker killed Snake by MOD_GRENADE 7
+719.3 Item: 1 item_armor_shard
+719.4 Item: 2 weapon_railgun
+719.5 Item: 1 item_health_small
+719.7 Item: 1 item_armor_shard
+719.9 Item: 1 item_armor_shard
+720.1 Item: 1 item_health_small
+720.4 Item: 1 ammo_grenades
+720.5 Item: 1 item_health_small
+720.7 Item: 1 item_armor_shard
+720.9 Item: 1 item_armor_shard
+721.1 Item: 1 item_health_small
+721.3 Item: 1 item_armor_shard
+722.9 Item: 3 item_armor_combat
+723.2 Item: 1 team_CTF_blueflag
+723.2 Flag_Pickup: 1
+724.1 Item: 3 ammo_shells
+724.6 Kill: 1022 0 19: <world> killed beza1e1 by MOD_FALLING 7
+724.8 Item: 2 item_health_mega
+726.9 Item: 3 weapon_railgun
+727.1 Item: 0 weapon_lightning
+729.0 Item: 0 weapon_railgun
+729.0 Item: 1 ammo_shells
+731.4 Item: 3 item_haste
+731.9 Item: 0 ammo_grenades
+731.9 Item: 1 weapon_grenadelauncher
+732.1 Item: 0 weapon_railgun
+735.6 Item: 3 team_CTF_redflag
+735.6 Flag_Pickup: 3
+736.6 Item: 1 item_armor_shard
+736.6 Item: 1 item_armor_shard
+736.9 Item: 0 weapon_grenadelauncher
+738.4 Item: 1 ammo_shells
+738.5 Item: 1 weapon_railgun
+740.5 Item: 3 weapon_plasmagun
+740.5 Item: 1 item_health_large
+741.2 Item: 0 weapon_grenadelauncher
+741.3 Item: 3 ammo_grenades
+741.7 Item: 0 item_armor_shard
+745.1 Item: 1 item_armor_body
+746.8 Item: 3 item_armor_shard
+746.9 Item: 3 item_armor_shard
+747.1 Item: 3 item_armor_shard
+747.5 Item: 1 ammo_shells
+750.3 Item: 0 item_health_mega
+750.9 Item: 1 ammo_rockets
+754.0 Item: 2 ammo_grenades
+754.2 Item: 2 weapon_railgun
+754.7 Kill: 1 0 8: Cici killed beza1e1 by MOD_PLASMA 7
+754.7 Hurt_Carrier_Defend: 1
+754.9 Item: 1 weapon_railgun
+755.0 Item: 3 ammo_slugs
+755.3 Item: 3 ammo_rockets
+757.7 Item: 1 ammo_slugs
+757.8 Item: 1 item_health
+757.9 Item: 3 item_armor_shard
+757.9 Item: 1 ammo_rockets
+758.0 Item: 3 item_health_small
+758.2 Item: 3 item_armor_shard
+758.3 Item: 3 item_armor_shard
+758.4 Item: 3 item_health_small
+758.7 Item: 3 item_health_small
+758.8 Item: 3 item_armor_shard
+759.0 Item: 3 item_armor_shard
+759.0 Item: 0 weapon_rocketlauncher
+759.1 Item: 3 item_health_small
+759.3 Item: 3 item_armor_shard
+760.0 Item: 1 weapon_rocketlauncher
+761.2 Item: 1 item_health_large
+762.0 Item: 0 weapon_railgun
+762.2 Item: 2 item_armor_combat
+762.2 Item: 2 item_health
+762.2 Item: 2 item_health
+763.4 Item: 1 item_armor_shard
+763.6 Item: 1 item_health_small
+763.8 Item: 1 item_armor_shard
+764.0 Item: 1 item_armor_shard
+764.1 Item: 1 item_health_small
+764.4 Item: 1 ammo_grenades
+764.6 Item: 1 item_health_small
+764.8 Item: 1 item_armor_shard
+765.0 Item: 1 item_armor_shard
+765.1 Item: 0 weapon_grenadelauncher
+765.1 Item: 3 item_armor_body
+765.2 Item: 1 item_health_small
+765.2 Item: 2 ammo_slugs
+765.4 Item: 1 item_armor_shard
+768.0 Item: 2 ammo_rockets
+768.1 Item: 1 weapon_rocketlauncher
+769.3 Item: 3 ammo_rockets
+769.3 Item: 0 item_armor_shard
+769.3 Item: 0 item_armor_shard
+769.5 Item: 0 item_armor_shard
+769.7 Item: 0 item_armor_shard
+769.9 Item: 3 item_health_mega
+773.1 Item: 1 item_armor_body
+773.9 Item: 0 weapon_railgun
+774.2 Item: 2 item_armor_shard
+774.2 Item: 2 item_armor_shard
+774.3 Item: 2 item_armor_shard
+781.7 Item: 2 weapon_railgun
+781.7 Item: 2 ammo_grenades
+784.6 Item: 2 item_health_large
+787.2 Item: 0 item_health_mega
+791.8 Kill: 1 0 7: Cici killed beza1e1 by MOD_ROCKET_SPLASH 7
+791.8 Hurt_Carrier_Defend: 1
+792.2 Item: 1 weapon_railgun
+792.3 Item: 1 weapon_railgun
+792.6 Item: 2 item_armor_body
+794.2 Item: 0 weapon_lightning
+795.0 Item: 1 item_health_large
+796.1 Item: 1 weapon_rocketlauncher
+797.9 Item: 1 item_health_large
+798.5 Kill: 2 0 10: hecker killed beza1e1 by MOD_RAILGUN 6
+798.7 Item: 3 ammo_slugs
+799.1 Item: 1 item_armor_shard
+799.2 Item: 3 ammo_rockets
+799.3 Item: 1 item_health_small
+799.4 Item: 2 weapon_lightning
+799.5 Item: 1 item_armor_shard
+799.7 Item: 1 item_armor_shard
+799.9 Item: 1 item_health_small
+800.3 Item: 1 item_health_small
+800.5 Item: 1 item_armor_shard
+800.7 Item: 1 item_armor_shard
+800.9 Item: 1 item_health_small
+801.1 Item: 1 item_armor_shard
+801.7 Item: 0 weapon_railgun
+803.4 Item: 3 item_armor_shard
+803.6 Item: 3 item_health_small
+803.8 Item: 1 weapon_rocketlauncher
+803.9 Game_End: Timelimit
+803.9 Exit: Timelimit hit.
+803.9 red:6  blue:0
+803.9 score: 100  ping: 3  client: 2 hecker
+803.9 score: 59  ping: 0  client: 1 Cici
+803.9 score: 15  ping: 0  client: 3 Snake
+803.9 score: 14  ping: 4  client: 0 beza1e1
+806.1 Weapon_Stats: 0 MachineGun:311:69:0:0 Shotgun:121:19:8:4 G.Launcher:1:0:11:1 R.Launcher:33:11:16:3 LightningGun:33:4:2:1 Railgun:53:16:19:13 Plasmagun:54:4:5:3 Given:2910 Recvd:5297 Armor:515 Health:1275 TeamDmg:131
+806.1 Weapon_Stats: 1 MachineGun:15:0:0:0 Shotgun:0:0:1:0 G.Launcher:15:1:10:0 R.Launcher:169:61:24:7 LightningGun:0:0:1:0 Railgun:16:3:18:4 Plasmagun:126:35:5:1 Given:4582 Recvd:4120 Armor:1810 Health:1745 TeamDmg:20
+806.1 Weapon_Stats: 2 MachineGun:45:15:0:0 Shotgun:66:13:6:0 G.Launcher:57:6:15:0 R.Launcher:12:6:13:1 LightningGun:660:204:8:0 Railgun:55:26:20:1 Plasmagun:207:24:11:1 Given:5711 Recvd:2424 Armor:1595 Health:1475 TeamDmg:101
+806.1 Weapon_Stats: 3 MachineGun:49:9:0:0 Shotgun:99:21:2:1 G.Launcher:0:0:3:0 R.Launcher:23:4:15:1 LightningGun:0:0:2:0 Railgun:78:30:25:17 Plasmagun:20:3:5:1 Given:3634 Recvd:4996 Armor:1020 Health:710 TeamDmg:7
+815.8 ClientDisconnect: 0
+817.7 say: hecker: die map mag ich schon eher!
+826.6 say: Snake: ich mochte die vorher auch :)
+829.2 ShutdownGame:
+829.2 ------------------------------------------------------------
