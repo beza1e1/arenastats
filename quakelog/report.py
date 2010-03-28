@@ -80,7 +80,7 @@ _WEAPON_NAMES = dict()
 for w, name, x in _WEAPONS:
 	_WEAPON_NAMES[w] = name
 _WEAPON_NAMES[None] = 'None'
-_BORING_STATS = "team_damage_given team_kills flag_returns flag_assist_returns score suicides dmg_kill_ratio health armor base_defends carrier_defends flag_defends".split(" ")
+_BORING_STATS = "elo team_damage_given team_kills flag_returns flag_assist_returns score suicides dmg_kill_ratio health armor base_defends carrier_defends flag_defends".split(" ")
 def player_info(player):
 	html = '<div class="player_stats" id="%s">\n' % player.slug_nick
 	html += '<table class="player_info">\n'
