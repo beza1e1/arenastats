@@ -1,9 +1,13 @@
  
- * better player profiles
- * award images
- * support other game types than CTF
- * player achievements
  * hitrate graph does not make sense, because of map differences
  * player overview page
  * display elo rating in reports
+ * use score for elo rating?
+
+== Maybe sometimes ==
+
+ * better player profiles
+ * support other game types than CTF
+ * player achievements
+ * award images
 
