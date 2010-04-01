@@ -1,0 +1,1099 @@
+17.4 ------------------------------------------------------------
+17.4 InitGame: \dmflags\0\fraglimit\30\timelimit\13\sv_hostname\ipd\sv_maxclients\10\sv_minRate\0\sv_maxRate\0\sv_minPing\0\sv_maxPing\0\sv_floodProtect\0\capturelimit\10\version\ioQ3 1.34-rc4 linux-i386 Jan 19 2009\g_gametype\4\protocol\68\mapname\q3wxs1\sv_privateClients\0\sv_allowDownload\1\server_ospauth\1\gamename\osp\gameversion\OSP v1.03a\Players_Red\1 2 \Players_Blue\3 4 \Score_Red\0\Score_Blue\0\Score_Time\Waiting for Players\server_promode\0\g_needpass\0\server_freezetag\0
+17.4 ServerTime:	20100401155127	15:51:27 (01 Apr 2010)
+17.4 Game_Start:
+17.4 TeamName: 1 RED
+17.4 TeamName: 2 BLUE
+17.6 ClientConnect: 0
+17.6 ClientUserinfoChanged: 0 n\Cici\t\1\model\flic/red\hmodel\flic/red\c1\1\c2\5\hc\100\w\0\l\0\rt\1\st\0
+17.6 Item: 0 weapon_railgun
+17.6 ClientBegin: 0
+17.6 ClientConnect: 1
+17.6 ClientUserinfoChanged: 1 n\heckerQ\t\1\model\sarge/red\hmodel\sarge/red\c1\1\c2\5\hc\100\w\0\l\0\rt\1\st\0
+17.6 Item: 1 weapon_railgun
+17.6 ClientBegin: 1
+17.6 ClientConnect: 2
+17.6 ClientUserinfoChanged: 2 n\^3beza^71^3e^71\t\2\model\bones/blue\hmodel\bones/blue\c1\7\c2\5\hc\100\w\0\l\0\rt\2\st\0
+17.6 Item: 2 weapon_railgun
+17.6 ClientBegin: 2
+17.6 ClientConnect: 3
+17.6 ClientUserinfoChanged: 3 n\^2Snake\t\2\model\stb/blue\hmodel\stb/blue\c1\1\c2\5\hc\100\w\0\l\0\rt\2\st\0
+17.6 Item: 3 weapon_railgun
+17.6 ClientBegin: 3
+21.2 ClientConnect: 4
+21.2 ClientUserinfoChanged: 4 n\Major\t\3\model\major/red\hmodel\major/red\c1\\c2\\hc\90\w\0\l\0\skill\ 3.00\rt\3
+21.2 ClientBegin: 4
+21.6 ClientUserinfoChanged: 4 n\Major\t\2\model\major/blue\hmodel\major/blue\c1\\c2\\hc\90\w\0\l\0\skill\ 3.00\rt\2
+21.6 Item: 4 weapon_railgun
+21.6 ClientBegin: 4
+22.0 Item: 3 ammo_slugs
+22.3 sayteam: Major: I am on guard at the Blue Flag!
+22.6 Item: 1 item_armor_combat
+27.2 Item: 1 ammo_slugs
+27.3 say: Cici: ^1!BAM!
+27.5 Kill: 4 1 10: Major killed heckerQ by MOD_RAILGUN 7
+28.1 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+28.4 Item: 2 weapon_railgun
+28.9 Item: 3 team_CTF_redflag
+28.9 Flag_Pickup: 3
+29.2 Item: 2 ammo_slugs
+29.3 Item: 1 weapon_railgun
+29.9 Item: 0 weapon_railgun
+32.5 Kill: 1022 3 19: <world> killed ^2Snake by MOD_FALLING 7
+33.7 Item: 1 ammo_slugs
+34.8 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+34.8 Defend_Hurt_Carrier: 2
+34.8 Item: 2 team_CTF_redflag
+34.8 Flag_Pickup: 2
+34.8 Item: 2 weapon_railgun
+34.8 Kill: 0 2 10: Cici killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+34.8 Kill_Carrier: 0
+35.1 Item: 3 weapon_railgun
+35.8 Item: 0 team_CTF_redflag
+35.8 Flag_Return: 0
+36.1 Item: 0 weapon_railgun
+36.6 Item: 1 weapon_railgun
+37.6 Item: 2 weapon_railgun
+38.0 Item: 3 ammo_slugs
+38.6 sayteam: ^3beza^71^3e^71: i am the leader
+39.4 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+40.6 Item: 3 ammo_slugs
+41.9 Item: 4 weapon_railgun
+42.9 Kill: 1 4 10: heckerQ killed Major by MOD_RAILGUN 7
+44.2 Item: 2 ammo_slugs
+44.6 Item: 4 weapon_railgun
+46.4 Item: 3 team_CTF_redflag
+46.4 Flag_Pickup: 3
+47.1 Item: 0 weapon_railgun
+47.9 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+47.9 Defend_Flag: 2
+48.9 Item: 2 ammo_slugs
+49.6 Item: 1 weapon_railgun
+49.9 Item: 1 weapon_railgun
+51.0 Item: 0 ammo_slugs
+51.5 Kill: 4 1 10: Major killed heckerQ by MOD_RAILGUN 7
+51.5 Defend_Carrier: 4
+53.3 Item: 1 weapon_railgun
+55.0 Item: 3 team_CTF_blueflag
+55.0 Flag_Capture: 3
+55.0 TeamScore: 1 0 RED
+55.0 TeamScore: 2 1 BLUE
+55.9 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+55.9 Defend_Flag: 2
+57.6 Item: 0 weapon_railgun
+58.7 Item: 4 item_health
+59.4 sayteam: ^3beza^71^3e^71: get the enemy flag
+59.5 Item: 4 weapon_railgun
+59.8 Item: 1 item_armor_combat
+59.9 ClientDisconnect: 4
+59.9 Weapon_Stats: 4 MachineGun:1:0:0:0 Railgun:13:4:4:2 Given:360 Recvd:200 Armor:0 Health:25 TeamDmg:0
+60.5 Item: 2 ammo_slugs
+62.2 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+63.1 Item: 2 ammo_slugs
+63.7 Item: 3 ammo_slugs
+64.0 Item: 1 weapon_railgun
+66.5 Item: 0 weapon_railgun
+68.4 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+68.4 Defend_Flag: 2
+69.3 Item: 1 item_armor_combat
+69.6 Item: 1 weapon_railgun
+69.9 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+70.6 Item: 0 weapon_railgun
+71.7 Item: 3 weapon_railgun
+72.7 Item: 1 ammo_slugs
+72.8 Item: 3 weapon_railgun
+73.1 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+74.2 Item: 2 weapon_railgun
+74.7 Item: 2 ammo_slugs
+74.9 Item: 1 weapon_railgun
+75.5 Kill: 0 2 10: Cici killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+77.4 Item: 2 weapon_railgun
+78.1 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+78.9 Item: 0 weapon_railgun
+79.7 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+79.7 Defend_Flag: 2
+79.9 Item: 3 weapon_railgun
+81.5 Item: 0 weapon_railgun
+81.9 Item: 2 weapon_railgun
+85.0 Item: 1 weapon_railgun
+85.4 Item: 1 item_health
+86.1 Item: 1 item_health
+86.8 Item: 3 ammo_slugs
+87.2 Item: 2 ammo_slugs
+87.8 Item: 0 item_armor_combat
+89.1 Item: 1 weapon_railgun
+90.6 Item: 1 team_CTF_blueflag
+90.6 Flag_Pickup: 1
+93.6 Item: 3 team_CTF_redflag
+93.6 Flag_Pickup: 3
+93.6 Kill: 0 2 3: Cici killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+94.0 Item: 1 weapon_railgun
+94.3 Item: 0 weapon_railgun
+94.7 Item: 1 item_armor_combat
+95.4 Item: 2 weapon_railgun
+96.2 Item: 1 ammo_slugs
+99.0 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+99.0 Defend_Carrier: 2
+100.8 Item: 0 weapon_railgun
+105.4 Item: 0 ammo_slugs
+108.3 Kill: 1 2 3: heckerQ killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+108.3 Hurt_Carrier_Defend: 1
+110.1 Item: 2 weapon_railgun
+110.5 Item: 1 ammo_slugs
+110.9 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+110.9 Kill_Carrier: 1
+112.2 Item: 0 item_armor_combat
+112.7 Item: 3 weapon_railgun
+114.0 Item: 1 item_armor_combat
+114.8 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+115.4 Item: 0 weapon_railgun
+115.4 Item: 0 team_CTF_redflag
+115.4 Flag_Return: 0
+116.6 Item: 3 weapon_railgun
+116.6 Item: 2 weapon_railgun
+117.1 Kill: 3 1 10: ^2Snake killed heckerQ by MOD_RAILGUN 7
+117.1 Kill_Carrier: 3
+117.8 Item: 3 weapon_railgun
+118.9 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+118.9 Item: 1 weapon_railgun
+119.8 Item: 3 team_CTF_blueflag
+119.8 Flag_Return: 3
+119.9 Item: 3 weapon_railgun
+120.0 Item: 3 ammo_slugs
+120.3 Item: 3 weapon_railgun
+120.7 Item: 0 weapon_railgun
+123.3 Item: 2 weapon_railgun
+125.2 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+125.3 Item: 3 weapon_railgun
+127.0 Item: 1 weapon_railgun
+127.1 Kill: 0 2 10: Cici killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+127.1 Defend_Flag: 0
+128.4 Item: 1 ammo_slugs
+128.8 Item: 2 weapon_railgun
+130.0 Item: 3 team_CTF_redflag
+130.0 Flag_Pickup: 3
+131.3 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+131.3 Hurt_Carrier_Defend: 3
+131.5 Item: 1 ammo_slugs
+131.9 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+131.9 Kill_Carrier: 1
+131.9 Item: 2 ammo_slugs
+133.1 Item: 0 weapon_railgun
+133.6 Item: 3 weapon_railgun
+134.7 Item: 2 ammo_slugs
+135.8 Item: 0 team_CTF_redflag
+135.8 Flag_Return: 0
+136.4 Item: 0 ammo_slugs
+136.6 Kill: 3 1 10: ^2Snake killed heckerQ by MOD_RAILGUN 7
+137.2 Item: 2 ammo_slugs
+137.2 Item: 3 weapon_railgun
+138.3 Item: 1 weapon_railgun
+138.5 Item: 0 item_armor_combat
+139.6 Item: 2 item_armor_combat
+142.5 Item: 3 weapon_railgun
+143.4 Item: 0 team_CTF_blueflag
+143.4 Flag_Pickup: 0
+143.9 Item: 3 team_CTF_redflag
+143.9 Flag_Pickup: 3
+144.6 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+144.6 Defend_Carrier: 1
+145.0 Item: 1 ammo_slugs
+145.7 Item: 1 weapon_railgun
+146.4 Item: 2 weapon_railgun
+151.3 Kill: 3 1 10: ^2Snake killed heckerQ by MOD_RAILGUN 7
+151.6 Item: 0 weapon_railgun
+152.7 Item: 2 ammo_slugs
+153.1 Item: 1 weapon_railgun
+155.7 Item: 2 weapon_railgun
+157.9 Item: 3 ammo_slugs
+158.6 Kill: 1 2 3: heckerQ killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+158.6 Defend_Base: 1
+160.4 Item: 2 weapon_railgun
+162.3 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+162.3 Kill_Carrier: 2
+163.3 Item: 1 ammo_slugs
+164.1 Item: 0 weapon_railgun
+164.6 Item: 2 weapon_railgun
+165.5 Item: 2 team_CTF_blueflag
+165.5 Flag_Return: 2
+165.6 Item: 2 weapon_railgun
+168.1 Item: 1 ammo_slugs
+169.2 Kill: 0 2 10: Cici killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+169.2 Defend_Base: 0
+169.8 Item: 1 item_armor_combat
+169.8 Item: 0 weapon_railgun
+170.6 Item: 3 team_CTF_blueflag
+170.6 Flag_Capture: 3
+170.6 TeamScore: 1 0 RED
+170.6 TeamScore: 2 2 BLUE
+170.6 Flag_Assist_Return: 2
+170.9 Item: 2 weapon_railgun
+173.6 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+173.6 Defend_Flag: 2
+173.9 Item: 0 ammo_slugs
+175.3 Item: 1 weapon_railgun
+175.6 Item: 3 weapon_railgun
+176.9 Item: 0 item_armor_combat
+177.5 Item: 3 ammo_slugs
+178.5 Item: 2 ammo_slugs
+179.0 Item: 0 item_health
+180.1 Item: 0 item_health
+180.9 Item: 0 item_health
+183.1 Item: 1 team_CTF_blueflag
+183.1 Flag_Pickup: 1
+184.8 Item: 0 ammo_slugs
+184.8 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+184.8 Kill_Carrier: 2
+185.3 Item: 3 team_CTF_redflag
+185.3 Flag_Pickup: 3
+186.5 Item: 2 weapon_railgun
+186.6 Item: 1 weapon_railgun
+187.3 Item: 2 team_CTF_blueflag
+187.3 Flag_Return: 2
+187.4 Item: 0 ammo_slugs
+187.5 Kill: 0 3 10: Cici killed ^2Snake by MOD_RAILGUN 7
+187.5 Kill_Carrier: 0
+188.2 Item: 2 ammo_slugs
+189.2 Item: 3 weapon_railgun
+191.5 Item: 0 item_armor_combat
+193.0 Item: 1 ammo_slugs
+193.1 Kill: 0 2 10: Cici killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+193.1 Item: 1 team_CTF_redflag
+193.1 Flag_Return: 1
+193.7 Item: 3 ammo_slugs
+194.5 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+194.9 Item: 2 weapon_railgun
+195.4 Item: 1 item_armor_combat
+196.1 Item: 3 ammo_slugs
+196.2 Item: 3 weapon_railgun
+196.3 Item: 0 weapon_railgun
+199.8 Item: 0 ammo_slugs
+200.9 Item: 1 item_armor_combat
+201.0 Kill: 1 2 3: heckerQ killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+201.7 Kill: 0 3 10: Cici killed ^2Snake by MOD_RAILGUN 7
+201.7 Defend_Flag: 0
+202.8 Item: 2 weapon_railgun
+203.4 Item: 3 weapon_railgun
+203.5 Item: 0 item_armor_combat
+205.8 Item: 0 ammo_slugs
+208.7 Item: 1 team_CTF_blueflag
+208.7 Flag_Pickup: 1
+210.2 Kill: 3 1 10: ^2Snake killed heckerQ by MOD_RAILGUN 7
+210.2 Kill_Carrier: 3
+211.7 Item: 0 weapon_railgun
+212.1 Item: 1 weapon_railgun
+213.1 Kill: 0 2 3: Cici killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+214.2 Item: 0 weapon_railgun
+214.5 Item: 0 ammo_slugs
+214.9 Item: 2 weapon_railgun
+216.5 Item: 1 item_armor_combat
+218.1 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+218.1 Defend_Base: 2
+219.9 Item: 0 weapon_railgun
+221.7 Item: 3 weapon_railgun
+223.5 Item: 3 ammo_slugs
+224.6 Item: 0 item_armor_combat
+225.7 Item: 1 ammo_slugs
+226.6 Kill: 3 1 10: ^2Snake killed heckerQ by MOD_RAILGUN 7
+226.7 Item: 0 ammo_slugs
+227.3 Item: 2 team_CTF_redflag
+227.3 Flag_Pickup: 2
+227.4 Kill: 0 3 10: Cici killed ^2Snake by MOD_RAILGUN 7
+228.3 Item: 1 weapon_railgun
+229.2 Item: 3 weapon_railgun
+230.0 Item: 0 team_CTF_blueflag
+230.0 Flag_Pickup: 0
+231.5 Item: 3 weapon_railgun
+232.3 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+232.3 Kill_Carrier: 3
+232.6 Item: 3 ammo_slugs
+233.8 Item: 2 ammo_slugs
+234.0 Item: 0 weapon_railgun
+234.2 Item: 3 team_CTF_blueflag
+234.2 Flag_Return: 3
+234.4 Item: 3 weapon_railgun
+234.9 Item: 3 weapon_railgun
+235.4 Item: 3 ammo_slugs
+239.0 Kill: 3 1 10: ^2Snake killed heckerQ by MOD_RAILGUN 7
+239.0 Defend_Flag: 3
+239.5 Kill: 0 2 10: Cici killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+239.5 Kill_Carrier: 0
+240.4 Item: 3 weapon_railgun
+240.8 Item: 1 weapon_railgun
+241.2 Item: 2 weapon_railgun
+241.6 Item: 3 weapon_railgun
+241.7 Item: 3 team_CTF_redflag
+241.7 Flag_Pickup: 3
+243.4 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+243.4 Defend_Flag: 2
+243.4 Item: 3 weapon_railgun
+243.7 Item: 3 team_CTF_blueflag
+243.7 Flag_Capture: 3
+243.7 TeamScore: 1 0 RED
+243.7 TeamScore: 2 3 BLUE
+243.7 Flag_Assist_Return: 3
+245.1 Item: 0 weapon_railgun
+250.2 Item: 0 item_armor_combat
+251.0 Item: 3 ammo_slugs
+254.6 Item: 0 ammo_slugs
+255.7 Item: 3 team_CTF_redflag
+255.7 Flag_Pickup: 3
+256.8 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+256.8 Defend_Flag: 2
+258.5 Item: 1 weapon_railgun
+258.5 Kill: 0 2 3: Cici killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+259.5 Item: 0 team_CTF_blueflag
+259.5 Flag_Pickup: 0
+260.3 Item: 2 weapon_railgun
+261.2 Item: 1 ammo_slugs
+265.6 Kill: 3 1 10: ^2Snake killed heckerQ by MOD_RAILGUN 7
+267.3 Item: 1 weapon_railgun
+268.7 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+268.7 Defend_Carrier: 1
+270.2 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+270.2 Kill_Carrier: 1
+270.4 Item: 2 weapon_railgun
+270.8 Item: 1 team_CTF_redflag
+270.8 Flag_Return: 1
+271.2 Item: 1 weapon_railgun
+272.0 Item: 3 weapon_railgun
+272.7 Item: 0 team_CTF_redflag
+272.7 Flag_Capture: 0
+272.7 TeamScore: 1 1 RED
+272.7 TeamScore: 2 3 BLUE
+272.7 Flag_Assist_Return: 1
+274.9 Item: 1 ammo_slugs
+277.1 Item: 0 item_armor_combat
+277.7 Item: 2 weapon_railgun
+279.2 Kill: 0 2 10: Cici killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+279.3 Item: 1 team_CTF_blueflag
+279.3 Flag_Pickup: 1
+279.6 Item: 1 weapon_railgun
+279.6 Item: 1 weapon_railgun
+281.0 Item: 2 weapon_railgun
+281.1 Item: 3 team_CTF_redflag
+281.1 Flag_Pickup: 3
+282.3 Item: 0 ammo_slugs
+283.5 Item: 1 item_armor_combat
+284.7 Item: 2 ammo_slugs
+285.8 Item: 1 item_health
+286.7 Item: 1 item_health
+287.7 Item: 1 item_health
+288.0 Kill: 0 3 10: Cici killed ^2Snake by MOD_RAILGUN 7
+288.0 Kill_Carrier: 0
+288.3 Item: 0 weapon_railgun
+288.7 Item: 1 item_health
+289.3 Item: 0 weapon_railgun
+289.8 Item: 3 weapon_railgun
+289.8 Item: 0 team_CTF_redflag
+289.8 Flag_Return: 0
+290.4 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+290.4 Kill_Carrier: 2
+291.2 Item: 2 weapon_railgun
+291.3 Item: 2 team_CTF_blueflag
+291.3 Flag_Return: 2
+292.1 Item: 1 weapon_railgun
+293.0 Item: 0 item_health
+293.4 Item: 3 ammo_slugs
+296.3 Item: 2 ammo_slugs
+299.1 Item: 1 item_armor_combat
+299.6 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+300.1 Item: 3 team_CTF_redflag
+300.1 Flag_Pickup: 3
+301.1 Kill: 0 3 3: Cici killed ^2Snake by MOD_MACHINEGUN 7
+301.1 Kill_Carrier: 0
+301.3 Item: 2 weapon_railgun
+302.8 Item: 3 weapon_railgun
+303.1 Item: 0 ammo_slugs
+303.6 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+303.6 Defend_Flag: 2
+304.0 Item: 2 weapon_railgun
+304.4 Item: 0 weapon_railgun
+305.3 Item: 0 item_armor_combat
+305.3 Item: 1 weapon_railgun
+305.9 Item: 2 ammo_slugs
+307.0 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+308.3 Item: 3 ammo_slugs
+308.8 Item: 0 weapon_railgun
+310.8 Item: 0 item_armor_combat
+311.2 Item: 2 weapon_railgun
+313.2 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+313.2 Defend_Base: 1
+313.7 Item: 0 ammo_slugs
+313.7 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+315.0 Item: 3 weapon_railgun
+315.5 Item: 0 weapon_railgun
+316.2 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+318.0 Item: 1 weapon_railgun
+318.1 Item: 3 ammo_slugs
+318.5 Item: 3 weapon_railgun
+320.8 Item: 0 item_armor_combat
+322.6 Item: 3 team_CTF_redflag
+322.6 Flag_Pickup: 3
+323.6 Kill: 0 3 10: Cici killed ^2Snake by MOD_RAILGUN 7
+323.6 Kill_Carrier: 0
+325.3 Item: 2 weapon_railgun
+325.3 Item: 3 weapon_railgun
+325.4 Item: 0 team_CTF_redflag
+325.4 Flag_Return: 0
+325.8 Item: 0 weapon_railgun
+327.9 Item: 2 item_armor_combat
+328.3 Item: 0 ammo_slugs
+329.8 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+331.5 Item: 0 weapon_railgun
+332.0 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+332.0 Defend_Flag: 2
+333.6 Item: 3 team_CTF_redflag
+333.6 Flag_Pickup: 3
+333.8 Item: 1 weapon_railgun
+335.4 Item: 2 item_health
+335.7 Kill: 0 3 3: Cici killed ^2Snake by MOD_MACHINEGUN 7
+335.7 Kill_Carrier: 0
+336.1 Item: 2 item_health
+337.0 Item: 1 weapon_railgun
+337.4 Item: 3 weapon_railgun
+337.4 Item: 2 item_health
+338.1 Item: 0 team_CTF_redflag
+338.1 Flag_Return: 0
+338.2 Item: 2 item_health
+338.3 Item: 1 weapon_railgun
+340.8 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+340.8 Item: 2 item_armor_combat
+342.2 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+342.6 Item: 0 weapon_railgun
+343.6 Item: 2 item_health
+344.0 Item: 1 weapon_railgun
+344.2 Item: 2 item_health
+348.5 Item: 3 team_CTF_redflag
+348.5 Flag_Pickup: 3
+350.5 Kill: 0 3 3: Cici killed ^2Snake by MOD_MACHINEGUN 7
+350.5 Kill_Carrier: 0
+352.2 Item: 0 team_CTF_redflag
+352.2 Flag_Return: 0
+352.3 Item: 3 weapon_railgun
+355.9 Item: 3 ammo_slugs
+356.0 Item: 0 item_armor_combat
+357.5 Item: 2 ammo_slugs
+357.6 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+358.2 Item: 0 item_health
+358.7 Item: 2 weapon_railgun
+358.9 Item: 0 item_health
+359.5 Item: 1 weapon_railgun
+360.6 Item: 0 weapon_railgun
+360.7 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+360.7 Defend_Flag: 1
+362.2 Item: 0 ammo_slugs
+362.4 Item: 3 weapon_railgun
+362.7 Item: 1 weapon_railgun
+364.5 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+366.3 Item: 1 weapon_railgun
+369.4 Kill: 0 3 3: Cici killed ^2Snake by MOD_MACHINEGUN 7
+369.4 Item: 0 weapon_railgun
+370.5 Item: 0 team_CTF_blueflag
+370.5 Flag_Pickup: 0
+371.1 Item: 3 weapon_railgun
+374.7 Item: 3 ammo_slugs
+375.1 Kill: 1 3 3: heckerQ killed ^2Snake by MOD_MACHINEGUN 7
+375.2 Item: 2 weapon_railgun
+376.8 Item: 3 weapon_railgun
+377.7 Item: 2 weapon_railgun
+377.9 Kill: 3 1 10: ^2Snake killed heckerQ by MOD_RAILGUN 7
+379.7 Item: 1 weapon_railgun
+379.8 Item: 2 team_CTF_redflag
+379.8 Flag_Pickup: 2
+380.2 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+380.2 Kill_Carrier: 3
+381.6 Item: 3 weapon_railgun
+381.9 Item: 0 weapon_railgun
+384.6 Item: 3 team_CTF_blueflag
+384.6 Flag_Return: 3
+386.3 Item: 1 ammo_slugs
+387.1 Item: 2 team_CTF_blueflag
+387.1 Flag_Capture: 2
+387.1 TeamScore: 1 1 RED
+387.1 TeamScore: 2 4 BLUE
+387.1 Flag_Assist_Return: 3
+388.6 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+388.8 Item: 3 team_CTF_redflag
+388.8 Flag_Pickup: 3
+389.5 Item: 0 item_armor_combat
+390.3 Item: 2 weapon_railgun
+391.2 Item: 1 team_CTF_blueflag
+391.2 Flag_Pickup: 1
+394.4 Item: 2 ammo_slugs
+395.3 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+395.3 Kill_Carrier: 2
+397.0 Item: 1 weapon_railgun
+398.7 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+398.7 Defend_Base: 1
+398.9 Item: 0 weapon_railgun
+399.6 Kill: 0 3 10: Cici killed ^2Snake by MOD_RAILGUN 7
+399.6 Kill_Carrier: 0
+400.5 Item: 2 weapon_railgun
+400.5 Item: 1 team_CTF_blueflag
+400.5 Flag_Pickup: 1
+401.2 Item: 0 team_CTF_redflag
+401.2 Flag_Return: 0
+401.4 Item: 3 weapon_railgun
+404.4 Item: 1 team_CTF_redflag
+404.4 Flag_Capture: 1
+404.4 TeamScore: 1 2 RED
+404.4 TeamScore: 2 4 BLUE
+404.4 Flag_Assist_Return: 0
+405.7 Item: 0 team_CTF_blueflag
+405.7 Flag_Pickup: 0
+409.1 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+409.1 Kill_Carrier: 2
+409.7 Item: 3 ammo_slugs
+410.6 Item: 2 team_CTF_blueflag
+410.6 Flag_Return: 2
+410.8 Item: 0 weapon_railgun
+411.3 Item: 2 weapon_railgun
+411.8 Item: 1 ammo_slugs
+415.0 Item: 1 item_armor_combat
+415.3 Kill: 0 3 3: Cici killed ^2Snake by MOD_MACHINEGUN 7
+415.3 Defend_Flag: 0
+416.2 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+417.1 Item: 3 weapon_railgun
+418.0 Item: 2 weapon_railgun
+420.1 Item: 0 weapon_railgun
+420.4 Item: 0 item_armor_combat
+422.9 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+422.9 Defend_Flag: 2
+424.4 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+424.4 Defend_Flag: 2
+424.7 Item: 1 weapon_railgun
+425.2 Item: 2 weapon_railgun
+426.2 Item: 0 weapon_railgun
+426.4 Item: 2 ammo_slugs
+427.7 Item: 3 ammo_slugs
+428.1 Item: 0 item_armor_combat
+430.3 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+431.1 Item: 1 team_CTF_blueflag
+431.1 Flag_Pickup: 1
+432.1 Item: 2 weapon_railgun
+432.2 Item: 3 weapon_railgun
+433.9 Item: 3 team_CTF_redflag
+433.9 Flag_Pickup: 3
+437.7 Kill: 0 1 3: Cici killed heckerQ by MOD_MACHINEGUN 7
+438.5 Kill: 0 2 3: Cici killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+438.5 Defend_Hurt_Carrier: 0
+439.5 Item: 1 weapon_railgun
+440.3 Item: 2 weapon_railgun
+441.2 Item: 1 weapon_railgun
+441.5 Item: 1 weapon_railgun
+441.6 Item: 1 team_CTF_blueflag
+441.6 Flag_Pickup: 1
+442.2 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+442.2 Defend_Base: 2
+443.9 Item: 0 weapon_railgun
+447.1 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+449.1 Item: 0 weapon_railgun
+450.7 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+450.7 Defend_Base: 1
+451.5 Item: 0 weapon_railgun
+451.7 Item: 1 weapon_railgun
+452.5 Item: 2 weapon_railgun
+454.3 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+454.3 Kill_Carrier: 1
+455.6 Item: 2 team_CTF_redflag
+455.6 Flag_Pickup: 2
+455.8 Item: 2 weapon_railgun
+456.1 Item: 3 weapon_railgun
+457.7 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+457.7 Defend_Base: 3
+459.4 Item: 0 weapon_railgun
+459.9 Item: 3 ammo_slugs
+461.9 Item: 1 ammo_slugs
+466.4 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+467.8 Item: 1 item_armor_combat
+468.2 Item: 3 weapon_railgun
+469.1 Item: 1 weapon_railgun
+470.6 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+470.6 Defend_Base: 2
+472.3 Item: 0 weapon_railgun
+476.0 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+476.0 Hurt_Carrier_Defend: 1
+477.3 Item: 1 item_armor_combat
+477.7 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+477.7 Kill_Carrier: 1
+477.8 Item: 3 weapon_railgun
+479.4 Item: 2 weapon_railgun
+479.6 Item: 1 item_health
+480.5 Item: 0 team_CTF_redflag
+480.5 Flag_Return: 0
+480.5 Item: 0 weapon_railgun
+481.8 Kill: 1 3 3: heckerQ killed ^2Snake by MOD_MACHINEGUN 7
+482.0 Item: 1 weapon_railgun
+483.2 Item: 2 ammo_slugs
+483.6 Item: 3 weapon_railgun
+483.7 Item: 0 ammo_slugs
+485.9 Item: 1 team_CTF_redflag
+485.9 Flag_Capture: 1
+485.9 TeamScore: 1 3 RED
+485.9 TeamScore: 2 4 BLUE
+485.9 Flag_Assist_Return: 0
+485.9 Flag_Assist_Frag: 1
+486.0 Item: 0 item_armor_combat
+486.8 Item: 3 ammo_slugs
+489.3 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+491.1 Item: 1 weapon_railgun
+492.1 Item: 2 team_CTF_redflag
+492.1 Flag_Pickup: 2
+492.2 Item: 0 weapon_railgun
+493.9 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+493.9 Kill_Carrier: 1
+495.6 Item: 2 weapon_railgun
+497.7 Kill: 1 3 10: heckerQ killed ^2Snake by MOD_RAILGUN 7
+497.7 Defend_Base: 1
+499.2 Item: 0 team_CTF_redflag
+499.2 Flag_Return: 0
+499.4 Item: 3 weapon_railgun
+499.7 Item: 0 weapon_railgun
+503.0 Item: 0 item_armor_combat
+505.2 Item: 3 team_CTF_redflag
+505.2 Flag_Pickup: 3
+505.5 Kill: 2 1 10: ^3beza^71^3e^71 killed heckerQ by MOD_RAILGUN 7
+505.5 Defend_Flag: 2
+506.5 Item: 0 item_health
+507.3 Item: 0 item_health
+507.3 Item: 1 weapon_railgun
+509.3 Item: 2 weapon_railgun
+509.3 Item: 0 item_health
+510.3 Item: 2 item_health
+511.9 Item: 1 ammo_slugs
+513.2 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+513.2 Defend_Carrier: 2
+515.0 Item: 0 weapon_railgun
+515.3 Item: 3 team_CTF_blueflag
+515.3 Flag_Capture: 3
+515.3 TeamScore: 1 3 RED
+515.3 TeamScore: 2 5 BLUE
+516.3 Kill: 1 2 10: heckerQ killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+518.1 Item: 2 weapon_railgun
+519.2 say: heckerQ: muss los :((
+519.6 Item: 0 item_armor_combat
+520.1 Item: 3 ammo_slugs
+521.0 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+521.0 Defend_Flag: 2
+521.8 say: heckerQ: ihr gewinnt!
+522.7 Item: 0 weapon_railgun
+522.8 Item: 2 ammo_slugs
+523.9 ClientDisconnect: 1
+523.9 Weapon_Stats: 1 MachineGun:77:18:0:0 Railgun:139:57:48:31 Given:5826 Recvd:6370 Armor:700 Health:175 TeamDmg:0
+524.0 Item: 2 weapon_railgun
+525.4 Item: 3 weapon_railgun
+526.5 Item: 2 ammo_slugs
+526.7 Item: 3 team_CTF_redflag
+526.7 Flag_Pickup: 3
+526.9 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+526.9 Defend_Flag: 2
+527.7 Item: 2 weapon_railgun
+529.0 Item: 2 ammo_slugs
+534.1 Item: 3 weapon_railgun
+535.5 say: ^2Snake: bis dann
+538.9 ClientConnect: 1
+538.9 ClientUserinfoChanged: 1 n\Xaero\t\3\model\xaero/red\hmodel\xaero/red\c1\\c2\\hc\100\w\0\l\0\skill\ 5.00\rt\3
+538.9 ClientBegin: 1
+539.2 ClientUserinfoChanged: 1 n\Xaero\t\1\model\xaero/red\hmodel\xaero/red\c1\\c2\\hc\100\w\0\l\0\skill\ 5.00\rt\1
+539.2 Item: 1 weapon_railgun
+539.2 ClientBegin: 1
+539.6 sayteam: Xaero: I'm on guard at the Red Flag!
+540.5 ClientConnect: 4
+540.5 ClientUserinfoChanged: 4 n\Xaero\t\3\model\xaero/red\hmodel\xaero/red\c1\\c2\\hc\100\w\0\l\0\skill\ 5.00\rt\3
+540.5 ClientBegin: 4
+540.8 ClientUserinfoChanged: 4 n\Xaero\t\1\model\xaero/red\hmodel\xaero/red\c1\\c2\\hc\100\w\0\l\0\skill\ 5.00\rt\1
+540.8 Item: 4 weapon_railgun
+540.8 ClientBegin: 4
+541.3 Kill: 1022 2 19: <world> killed ^3beza^71^3e^71 by MOD_FALLING 7
+541.5 Item: 0 weapon_railgun
+542.6 sayteam: Xaero: I'll guard the Red Flag!
+543.5 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+543.5 Kill_Carrier: 4
+545.3 Item: 3 weapon_railgun
+547.4 Item: 0 item_armor_combat
+547.5 Item: 2 weapon_railgun
+548.5 Item: 3 weapon_railgun
+548.7 Item: 3 team_CTF_redflag
+548.7 Flag_Pickup: 3
+549.1 Item: 3 team_CTF_blueflag
+549.1 Flag_Capture: 3
+549.1 TeamScore: 1 3 RED
+549.1 TeamScore: 2 6 BLUE
+551.2 Item: 1 weapon_railgun
+552.0 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+552.0 Defend_Flag: 2
+553.8 Item: 0 weapon_railgun
+554.4 Item: 2 ammo_slugs
+556.4 Item: 2 ammo_slugs
+558.6 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+558.6 Defend_Flag: 4
+560.1 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+560.1 Defend_Flag: 4
+560.4 Item: 3 weapon_railgun
+561.8 Item: 0 weapon_railgun
+561.9 Item: 2 weapon_railgun
+562.4 Item: 4 weapon_railgun
+562.6 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+562.6 Defend_Flag: 3
+564.3 Item: 0 weapon_railgun
+565.7 Kill: 2 1 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 2
+565.7 Defend_Flag: 2
+565.8 Item: 3 weapon_railgun
+567.5 Item: 1 weapon_railgun
+568.9 Item: 4 item_health
+571.3 Kill: 0 2 10: Cici killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+573.1 Item: 2 weapon_railgun
+574.5 Item: 0 team_CTF_blueflag
+574.5 Flag_Pickup: 0
+575.3 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+575.3 Defend_Carrier: 4
+575.3 Item: 4 weapon_railgun
+575.4 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+577.1 Item: 3 weapon_railgun
+577.1 Item: 2 weapon_railgun
+578.0 Item: 4 weapon_railgun
+579.1 Item: 4 weapon_railgun
+579.5 Item: 1 ammo_slugs
+580.5 Item: 3 ammo_slugs
+580.9 Item: 3 weapon_railgun
+581.7 Item: 0 team_CTF_redflag
+581.7 Flag_Capture: 0
+581.7 TeamScore: 1 4 RED
+581.7 TeamScore: 2 6 BLUE
+582.6 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+584.1 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+584.3 Item: 3 weapon_railgun
+585.9 Item: 2 weapon_railgun
+586.1 Kill: 3 4 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+586.1 Defend_Flag: 3
+587.8 Kill: 3 1 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+587.8 Defend_Flag: 3
+588.0 Item: 4 weapon_railgun
+588.0 Item: 0 item_armor_combat
+589.6 Item: 1 weapon_railgun
+590.2 Item: 0 item_health
+591.0 Item: 0 item_health
+591.8 Item: 0 item_health
+593.1 Item: 2 ammo_slugs
+595.4 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+597.2 Item: 3 weapon_railgun
+597.9 Item: 1 weapon_railgun
+598.9 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+598.9 Defend_Flag: 3
+599.5 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+600.7 Item: 0 weapon_railgun
+601.2 Item: 2 weapon_railgun
+602.2 Item: 4 weapon_railgun
+602.7 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+603.7 Item: 0 ammo_slugs
+604.4 Item: 4 weapon_railgun
+604.5 Item: 3 weapon_railgun
+604.6 Item: 4 weapon_railgun
+605.0 Item: 0 item_armor_combat
+606.3 Item: 2 weapon_railgun
+608.0 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 2
+608.8 Item: 4 weapon_railgun
+609.4 Kill: 3 4 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+609.4 Defend_Flag: 3
+609.8 Item: 2 weapon_railgun
+610.3 Item: 3 weapon_railgun
+610.8 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+611.3 Item: 4 weapon_railgun
+612.4 Item: 0 team_CTF_blueflag
+612.4 Flag_Pickup: 0
+612.5 Item: 3 weapon_railgun
+614.3 Item: 1 weapon_railgun
+616.3 Item: 0 item_armor_combat
+617.1 Kill: 1 2 3: Xaero killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+617.1 Defend_Hurt_Carrier: 1
+617.8 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+617.8 Defend_Hurt_Carrier: 1
+618.7 Item: 1 weapon_railgun
+618.8 Item: 2 weapon_railgun
+619.5 Item: 3 weapon_railgun
+621.5 Item: 0 team_CTF_redflag
+621.5 Flag_Capture: 0
+621.5 TeamScore: 1 5 RED
+621.5 TeamScore: 2 6 BLUE
+623.6 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+624.3 Item: 2 ammo_slugs
+624.3 Item: 4 weapon_railgun
+624.9 Kill: 2 1 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 7
+625.3 Item: 3 weapon_railgun
+626.6 Item: 2 item_armor_combat
+626.7 Item: 1 weapon_railgun
+626.7 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+627.3 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+627.3 Defend_Flag: 4
+628.5 Item: 0 weapon_railgun
+630.1 Item: 2 weapon_railgun
+631.1 Item: 3 ammo_slugs
+631.6 Item: 0 ammo_slugs
+632.3 Kill: 3 4 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+634.2 Item: 4 weapon_railgun
+634.2 Item: 0 item_armor_combat
+636.4 Item: 1 weapon_railgun
+638.0 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+638.0 Defend_Flag: 4
+639.8 Item: 3 weapon_railgun
+640.5 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+641.1 Item: 2 weapon_railgun
+641.4 Item: 1 weapon_railgun
+642.3 Item: 0 weapon_railgun
+643.1 Item: 2 ammo_slugs
+643.9 Kill: 2 1 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 7
+645.5 Item: 2 item_armor_combat
+645.7 Item: 1 weapon_railgun
+648.0 Item: 4 weapon_railgun
+648.2 Item: 0 item_armor_combat
+648.5 Item: 0 weapon_railgun
+649.0 Item: 0 weapon_railgun
+650.2 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+650.5 Item: 3 ammo_slugs
+652.0 Item: 0 weapon_railgun
+652.2 Kill: 4 2 3: Xaero killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+652.2 Item: 4 weapon_railgun
+652.8 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+654.0 Item: 2 weapon_railgun
+654.5 Item: 3 weapon_railgun
+656.3 Item: 1 weapon_railgun
+657.3 Item: 3 weapon_railgun
+657.5 Item: 3 ammo_slugs
+657.5 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+659.3 Item: 2 weapon_railgun
+659.7 Item: 1 item_health
+660.4 Item: 4 weapon_railgun
+660.6 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+660.6 Defend_Flag: 2
+660.7 Item: 1 item_health
+661.2 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+662.4 Item: 0 weapon_railgun
+662.7 Item: 1 item_health
+662.9 Item: 3 weapon_railgun
+663.4 Item: 2 ammo_slugs
+664.6 Item: 4 weapon_railgun
+665.2 Kill: 2 1 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 7
+666.9 Item: 0 item_armor_combat
+667.0 Item: 1 weapon_railgun
+667.8 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+667.9 Kill: 3 4 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+667.9 Defend_Flag: 3
+669.6 Item: 2 weapon_railgun
+669.7 Item: 4 weapon_railgun
+669.9 Item: 1 ammo_slugs
+671.6 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+671.6 Defend_Flag: 3
+672.3 Item: 3 weapon_railgun
+673.3 Item: 0 weapon_railgun
+676.0 Item: 0 ammo_slugs
+676.7 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+676.9 Item: 3 weapon_railgun
+678.5 Item: 2 weapon_railgun
+679.7 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+680.0 Item: 1 weapon_railgun
+680.1 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+681.4 Item: 0 weapon_railgun
+681.9 Item: 2 weapon_railgun
+681.9 Item: 3 weapon_railgun
+682.1 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+683.2 Item: 1 weapon_railgun
+683.9 Item: 3 weapon_railgun
+685.1 Kill: 3 1 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+685.1 Defend_Flag: 3
+686.3 Item: 2 weapon_railgun
+686.9 Item: 1 weapon_railgun
+687.1 Item: 4 weapon_railgun
+687.6 Item: 0 item_armor_combat
+688.7 Item: 3 ammo_slugs
+688.9 Item: 2 ammo_slugs
+691.0 Kill: 3 4 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+692.4 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+692.4 Item: 2 item_armor_combat
+692.5 Item: 2 weapon_railgun
+692.6 Item: 3 ammo_slugs
+692.8 Item: 4 weapon_railgun
+693.9 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+694.2 Item: 0 weapon_railgun
+695.7 Item: 2 weapon_railgun
+696.0 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+697.8 Item: 3 weapon_railgun
+698.8 Item: 1 weapon_railgun
+702.9 Kill: 4 3 3: Xaero killed ^2Snake by MOD_MACHINEGUN 7
+704.1 Item: 1 weapon_railgun
+704.4 Item: 0 team_CTF_blueflag
+704.4 Flag_Pickup: 0
+704.7 Item: 3 weapon_railgun
+706.0 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+706.0 Kill_Carrier: 3
+707.0 Item: 4 weapon_railgun
+707.7 Item: 0 weapon_railgun
+707.8 Kill: 1 2 3: Xaero killed ^3beza^71^3e^71 by MOD_MACHINEGUN 7
+708.5 Kill: 3 4 10: ^2Snake killed Xaero by MOD_RAILGUN 2
+708.5 Defend_Base: 3
+708.6 Item: 1 weapon_railgun
+708.8 Item: 3 team_CTF_blueflag
+708.8 Flag_Return: 3
+709.5 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+709.5 Item: 2 weapon_railgun
+710.4 Item: 4 weapon_railgun
+710.9 Item: 0 ammo_slugs
+711.2 Item: 3 weapon_railgun
+712.1 Kill: 2 1 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 7
+712.5 Item: 0 item_armor_combat
+713.3 Item: 3 weapon_railgun
+713.5 Item: 2 weapon_railgun
+713.9 Item: 1 weapon_railgun
+713.9 Item: 3 weapon_railgun
+714.6 Item: 2 ammo_slugs
+715.0 Item: 0 ammo_slugs
+715.5 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+715.9 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+715.9 Defend_Flag: 3
+717.2 Item: 2 weapon_railgun
+717.3 Item: 3 weapon_railgun
+717.7 Item: 0 weapon_railgun
+718.6 Item: 1 ammo_slugs
+720.1 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+721.8 Item: 1 weapon_railgun
+721.8 Item: 2 weapon_railgun
+722.3 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+723.1 Kill: 2 1 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 7
+723.3 Item: 2 ammo_slugs
+723.9 Item: 0 team_CTF_blueflag
+723.9 Flag_Pickup: 0
+724.1 Item: 3 weapon_railgun
+724.9 Item: 1 weapon_railgun
+725.3 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+725.3 Defend_Carrier: 4
+727.1 Item: 2 weapon_railgun
+728.7 Item: 4 weapon_railgun
+729.5 Kill: 2 4 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 2
+729.5 Defend_Base: 2
+730.4 Item: 0 team_CTF_redflag
+730.4 Flag_Capture: 0
+730.4 TeamScore: 1 6 RED
+730.4 TeamScore: 2 6 BLUE
+731.3 Item: 4 weapon_railgun
+733.6 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+733.6 Defend_Flag: 4
+735.1 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+735.1 Defend_Flag: 4
+735.4 Item: 3 weapon_railgun
+736.9 Item: 2 weapon_railgun
+737.6 Item: 4 weapon_railgun
+738.2 Item: 4 weapon_railgun
+738.5 Item: 3 ammo_slugs
+740.4 Item: 2 weapon_railgun
+741.5 Item: 0 item_armor_combat
+742.1 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+742.5 Item: 3 ammo_slugs
+743.8 Item: 0 weapon_railgun
+744.5 Item: 2 weapon_railgun
+745.9 Item: 3 ammo_slugs
+747.0 Item: 2 weapon_railgun
+747.2 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+747.2 Kill: 2 4 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 7
+748.2 Item: 0 ammo_slugs
+748.8 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+748.8 Defend_Flag: 1
+749.0 Item: 3 weapon_railgun
+749.0 Item: 4 weapon_railgun
+750.4 Item: 0 item_armor_combat
+750.5 Item: 2 weapon_railgun
+752.5 Item: 0 ammo_slugs
+752.6 Item: 3 ammo_slugs
+753.0 Item: 0 weapon_railgun
+755.7 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+757.5 Item: 2 weapon_railgun
+758.2 Item: 1 item_health
+758.5 Item: 1 weapon_railgun
+760.4 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+761.2 Item: 0 team_CTF_blueflag
+761.2 Flag_Pickup: 0
+761.3 Item: 1 weapon_railgun
+762.2 Item: 2 weapon_railgun
+762.8 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+762.8 Kill_Carrier: 3
+763.2 Item: 3 team_CTF_blueflag
+763.2 Flag_Return: 3
+764.5 Item: 0 weapon_railgun
+764.7 Item: 4 ammo_slugs
+765.0 Kill: 3 1 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+766.0 Kill: 2 4 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 7
+766.0 Item: 2 item_armor_combat
+766.8 Item: 1 weapon_railgun
+767.1 Item: 3 weapon_railgun
+768.0 Item: 4 weapon_railgun
+768.2 Item: 3 weapon_railgun
+768.8 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+769.7 Item: 3 weapon_railgun
+770.5 Item: 2 weapon_railgun
+770.7 Item: 3 weapon_railgun
+771.4 Item: 0 item_armor_combat
+771.5 Kill: 4 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+773.5 Item: 3 weapon_railgun
+775.2 Kill: 3 0 10: ^2Snake killed Cici by MOD_RAILGUN 7
+775.8 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+776.4 Kill: 4 3 3: Xaero killed ^2Snake by MOD_MACHINEGUN 7
+777.0 Item: 0 weapon_railgun
+777.3 Item: 4 weapon_railgun
+777.5 Item: 2 weapon_railgun
+777.9 Item: 4 weapon_railgun
+778.2 Item: 3 weapon_railgun
+778.5 Item: 1 weapon_railgun
+779.2 Item: 4 weapon_railgun
+782.0 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+783.7 Item: 2 weapon_railgun
+783.8 Item: 4 weapon_railgun
+784.6 Kill: 4 0 10: Xaero killed Cici by MOD_RAILGUN 7
+785.3 Kill: 2 4 10: ^3beza^71^3e^71 killed Xaero by MOD_RAILGUN 7
+786.4 Item: 0 weapon_railgun
+786.7 Kill: 1 3 3: Xaero killed ^2Snake by MOD_MACHINEGUN 7
+787.0 Item: 4 weapon_railgun
+787.0 Item: 2 item_armor_combat
+787.1 Item: 1 weapon_railgun
+788.4 Item: 3 weapon_railgun
+789.8 Item: 0 ammo_slugs
+790.7 Item: 1 weapon_railgun
+791.6 Kill: 3 1 10: ^2Snake killed Xaero by MOD_RAILGUN 7
+791.6 Defend_Flag: 3
+792.1 Item: 0 item_armor_combat
+793.6 Item: 1 weapon_railgun
+794.1 Kill: 2 0 10: ^3beza^71^3e^71 killed Cici by MOD_RAILGUN 7
+794.4 Item: 1 weapon_railgun
+795.7 Item: 2 weapon_railgun
+795.9 Item: 0 weapon_railgun
+796.3 Kill: 1 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+798.0 Item: 2 weapon_railgun
+800.1 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+800.7 Item: 0 team_CTF_blueflag
+800.7 Flag_Pickup: 0
+801.0 Kill: 4 2 10: Xaero killed ^3beza^71^3e^71 by MOD_RAILGUN 7
+801.8 Item: 3 weapon_railgun
+802.8 Item: 2 weapon_railgun
+803.8 Item: 4 weapon_railgun
+804.3 Kill: 1 3 10: Xaero killed ^2Snake by MOD_RAILGUN 7
+804.3 Defend_Carrier: 1
+805.3 Item: 1 item_health
+806.1 Item: 3 weapon_railgun
+806.5 Item: 1 weapon_railgun
+807.4 Item: 0 team_CTF_redflag
+807.4 Flag_Capture: 0
+807.4 TeamScore: 1 7 RED
+807.4 TeamScore: 2 6 BLUE
+807.4 Game_End: Timelimit
+807.4 Exit: Timelimit hit.
+807.4 red:7  blue:6
+807.4 score: 97  ping: 6  client: 2 ^3beza^71^3e^71
+807.4 score: 95  ping: 4  client: 3 ^2Snake
+807.4 score: 83  ping: 0  client: 0 Cici
+807.4 score: 36  ping: 0  client: 4 Xaero
+807.4 score: 29  ping: 0  client: 1 Xaero
+809.7 Weapon_Stats: 0 MachineGun:178:23:0:0 Railgun:141:32:70:44 Given:3361 Recvd:9197 Armor:1600 Health:300 TeamDmg:21
+809.7 Weapon_Stats: 1 MachineGun:16:10:0:0 Railgun:73:42:31:9 Given:4270 Recvd:1421 Armor:0 Health:125 TeamDmg:0
+809.7 Weapon_Stats: 2 MachineGun:67:10:0:0 Railgun:229:102:87:53 Given:10270 Recvd:10020 Armor:400 Health:175 TeamDmg:0
+809.7 Weapon_Stats: 3 Railgun:197:78:87:49 Given:7800 Recvd:8087 Armor:0 Health:0 TeamDmg:0
+809.7 Weapon_Stats: 4 MachineGun:57:50:0:0 Railgun:79:45:34:9 Given:4850 Recvd:1442 Armor:0 Health:25 TeamDmg:100
+816.8 ShutdownGame:
+816.8 ------------------------------------------------------------
