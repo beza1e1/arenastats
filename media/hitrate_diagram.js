@@ -1,4 +1,4 @@
-function draw_hitrate(hitrate_points, weapons) {
+draw_hitrate = function(hitrate_points, weapons) {
 	/* calculate line data. For 0.0 values use the value of the predecessor */
 	var n_weapons = hitrate_points.length;
 	var hitrate_lines = Array(n_weapons);
@@ -41,8 +41,8 @@ function draw_hitrate(hitrate_points, weapons) {
 		.left(100)
 		.data(hitrate_lines)
 		.add(pv.Line)
-			.strokeStyle(function(d) c(this.parent.index))
-			.data(function(a) a)
+			.strokeStyle(function() c(this.parent.index))
+			.data(function(d) d)
 			.bottom(function(d) d * 140)
 			.left(function() this.index * 30)
 			.visible(function() visible[this.parent.index])
