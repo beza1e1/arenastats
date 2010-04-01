@@ -12,6 +12,32 @@ def _player_overview(player):
 	html += '</table>\n'
 	return html
 
+def _average_weapon_row(row):
+	"""Interpolate value series by replaceing zeros with average values"""
+	i = 0
+	while i < len(row):
+		if row[i] > 0.0:
+			i += 1
+			continue
+		print "first zero value at", i
+		j = i+1
+		while j < len(row): # search end of zero series
+			if row[j] > 0.0:
+				break
+			j += 1
+		if j == len(row): # edge case: end reached
+			break
+		if i == 0: # edge case: started with zeros
+			i = j
+			continue
+		diff = (row[j] - row[i-1]) / (1+j-i)
+		plus = row[i-1]
+		for k in xrange(i, j):
+			plus += diff
+			row[k] = plus
+		i = j
+	return row
+
 def _hitrate_data(player_timeline):
 	data = []
 	for p in player_timeline:
@@ -21,7 +47,8 @@ def _hitrate_data(player_timeline):
 			datapoint.append(wdata.get('hitrate', 0))
 		data.append(datapoint)
 	data = map(list, zip(*data))
-	return str(data)
+	avg_data = map(_average_weapon_row, data)
+	return data, avg_data
 
 def merge(player_into, player_from):
 	for key in _ZERO_PROPERTIES:
@@ -68,7 +95,9 @@ _HTML= """\
 """
 def player_profile(player_timeline):
 	player = reduce(merge, player_timeline)
-	data = "var hitrate_data = %s;\n" % _hitrate_data(player_timeline)
+	data, avg_data = _hitrate_data(player_timeline)
+	data = "var hitrate_data = %s;\n" % (str(data))
+	data += "var hitrate_data_interpolated = %s;\n" % (str(avg_data))
 	html = ""
 	html += _player_overview(player)
 	html += '\n<table style="font-size: 0.8em; float: right;">'
