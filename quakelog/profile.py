@@ -1,4 +1,5 @@
 from replay import _ZERO_PROPERTIES, _STAT_WEAPONS
+from report import _WEAPON_NAMES
 from utils import Toggler
 
 def _player_overview(player):
@@ -19,7 +20,6 @@ def _average_weapon_row(row):
 		if row[i] > 0.0:
 			i += 1
 			continue
-		print "first zero value at", i
 		j = i+1
 		while j < len(row): # search end of zero series
 			if row[j] > 0.0:
@@ -74,20 +74,10 @@ _HTML= """\
 <body>
 	<h1>%s profile</h1>
 	<script type="text/javascript" src="media/protovis-3.1/protovis-d3.1.js"></script>
+	<script type="text/javascript" src="media/hitrate_diagram.js"></script>
 	<script type="text/javascript+protovis">
 	%s
-	var vis = new pv.Panel()
-		.width(350)
-		.height(150);
-		
-	vis.add(pv.Panel)
-		.data(hitrate_data)
-		.add(pv.Line)
-			.data(function(a) a)
-			.bottom(function(d) d * 140)
-			.left(function() this.index * 30 + 5)
-		.add(pv.Dot)
-		.root.render();
+	draw_hitrate(hitrate_points, weapons);
 	</script>
 	%s
 </body>
@@ -95,9 +85,11 @@ _HTML= """\
 """
 def player_profile(player_timeline):
 	player = reduce(merge, player_timeline)
+	weapon_list = _STAT_WEAPONS.values()
 	data, avg_data = _hitrate_data(player_timeline)
-	data = "var hitrate_data = %s;\n" % (str(data))
-	data += "var hitrate_data_interpolated = %s;\n" % (str(avg_data))
+	data = "var hitrate_points = %s;\n" % (str(data))
+	data += "var hitrate_points_interpolated = %s;\n" % (str(avg_data))
+	data += "var weapons = %s;\n" % weapon_list
 	html = ""
 	html += _player_overview(player)
 	html += '\n<table style="font-size: 0.8em; float: right;">'
