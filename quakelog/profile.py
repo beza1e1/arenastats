@@ -47,7 +47,7 @@ def _hitrate_data(player_timeline):
 			datapoint.append(wdata.get('hitrate', 0))
 		data.append(datapoint)
 	data = map(list, zip(*data))
-	avg_data = map(_average_weapon_row, data[:])
+	avg_data = [_average_weapon_row(lst[:]) for lst in data]
 	return data, avg_data
 
 def merge(player_into, player_from):
