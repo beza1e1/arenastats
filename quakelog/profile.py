@@ -1,5 +1,5 @@
-from replay import _ZERO_PROPERTIES, _STAT_WEAPONS
-from report import _WEAPON_NAMES
+from replay import _ZERO_PROPERTIES
+from report import _WEAPON_NAMES, _WEAPONS
 from utils import Toggler
 
 def _player_overview(player):
@@ -42,7 +42,7 @@ def _hitrate_data(player_timeline):
 	data = []
 	for p in player_timeline:
 		datapoint = []
-		for weapon in _STAT_WEAPONS.values():
+		for weapon,x,y in _WEAPONS:
 			wdata = getattr(p, weapon, {}) 
 			datapoint.append(wdata.get('hitrate', 0))
 		data.append(datapoint)
@@ -55,7 +55,7 @@ def merge(player_into, player_from):
 		val = getattr(player_from, key)
 		val_old = getattr(player_into, key)
 		setattr(player_into, key, val + val_old)
-	for w in _STAT_WEAPONS.values():
+	for w,x,y in _WEAPONS:
 		wstats = getattr(player_into, w)
 		for attr in ['shots', 'hits', 'kills', 'deaths']:
 			wstats[attr] = getattr(player_from, w)[attr]
@@ -85,7 +85,7 @@ _HTML= """\
 """
 def player_profile(player_timeline):
 	player = reduce(merge, player_timeline)
-	weapon_list = _STAT_WEAPONS.values()
+	weapon_list = [_WEAPON_NAMES[w].replace("&nbsp;", " ") for (w,y,z) in _WEAPONS]
 	data, avg_data = _hitrate_data(player_timeline)
 	data = "var hitrate_points = %s;\n" % (str(data))
 	data += "var hitrate_points_interpolated = %s;\n" % (str(avg_data))
@@ -97,7 +97,7 @@ def player_profile(player_timeline):
 	for prop in _ZERO_PROPERTIES:
 		html += '<tr class="%s"><th>%s</th><td>%d</td></tr>\n' % (_ODD_CLASS[odd], prop, getattr(player, prop))
 		odd = not odd
-	for weapon in _STAT_WEAPONS.values():
+	for weapon,x,y in _WEAPONS:
 		for key, val in getattr(player, weapon).items():
 			html += '<tr class="%s"><th>%s %s</th><td>%d</td></tr>\n' % (_ODD_CLASS[odd], weapon, key, val)
 	html += "</table>\n"
