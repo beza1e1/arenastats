@@ -1,8 +1,11 @@
  
- * hitrate graph does not make sense, because of map differences
  * player overview page
  * display elo rating in reports
- * use score for elo rating?
+ * profile should display kill/death/cap/... diagram
+ * Player.serialize should be in profile.py
+ * nick.log should use max instead of sum for attributes like streaks
+ * Store elo in nicklog
+ * interpolation should remove zeros
 
 == Maybe sometimes ==
 
@@ -10,4 +13,7 @@
  * support other game types than CTF
  * player achievements
  * award images
+ * interactive profile diagrams (display value and map at mouseover dot)
+ * dark color scheme?
+ * better elo calculation
 
