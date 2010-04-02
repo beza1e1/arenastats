@@ -16,7 +16,18 @@ draw_hitrate = function(hitrate_points, hitrate_lines, weapons) {
 	var datapoints_h = hitrate_points[0].length;
 
 	/* color scale */
-	var c = pv.Colors.category20();
+	var c = pv.colors(
+		"#3cf", // gauntlet
+		"#ff0", // machine gun
+		"orange", // shotgun
+		"#d00", // rocket launcher
+		"#c09", // plasma gun
+		"#390", // grenade launcher
+		"#fc0", // lighning gun
+		"#5d0", // railgun
+		"lightblue", // bfg
+		"black" // teleport
+	);
 
 	var vis = new pv.Panel()
 		.width(100 + datapoints_h * 30)
@@ -31,7 +42,6 @@ draw_hitrate = function(hitrate_points, hitrate_lines, weapons) {
 			.data(function(d) d)
 			.bottom(function(d) d * 140)
 			.left(function() this.index * 30)
-			.visible(function() visible[this.parent.index])
 		.add(pv.Dot)
 			.data(function() hitrate_points[this.parent.index])
 			.visible(function(d) d > 0);
