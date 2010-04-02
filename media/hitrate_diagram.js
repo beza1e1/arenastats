@@ -14,34 +14,36 @@ draw_hitrate = function(hitrate_points, hitrate_lines, weapons) {
 	}
 
 	var datapoints_h = hitrate_points[0].length;
+	var diagram_width = 600;
+	var point_gap = diagram_width / datapoints_h;
 
 	/* color scale */
 	var c = pv.colors(
 		"#3cf", // gauntlet
 		"#ff0", // machine gun
 		"orange", // shotgun
-		"#d00", // rocket launcher
+		"#e00", // rocket launcher
 		"#c09", // plasma gun
 		"#390", // grenade launcher
-		"#fc0", // lighning gun
+		"#cc3", // lighning gun
 		"#5d0", // railgun
-		"lightblue", // bfg
+		"#0ff", // bfg
 		"black" // teleport
 	);
 
 	var vis = new pv.Panel()
-		.width(100 + datapoints_h * 30)
+		.width(diagram_width + 120) // plus legend
 		.height(150)
 		.bottom(20);
 		
 	vis.add(pv.Panel)
-		.left(100)
+		.left(110)
 		.data(hitrate_lines)
 		.add(pv.Line)
 			.strokeStyle(function() c(this.parent.index))
 			.data(function(d) d)
 			.bottom(function(d) d * 140)
-			.left(function() this.index * 30)
+			.left(function() this.index * point_gap)
 		.add(pv.Dot)
 			.data(function() hitrate_points[this.parent.index])
 			.visible(function(d) d > 0);
