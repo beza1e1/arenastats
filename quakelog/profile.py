@@ -4,12 +4,15 @@ from utils import Toggler
 
 def _player_overview(player):
 	odd = Toggler("even", "odd")
-	html = '<table class="overview">'
+	html = "<h2>Totals</h2>"
+	html += '<table class="overview">'
 	html += '<tr class="%s"><th>Kills</th><td>%d</td></tr>\n' % (odd, player.kill_count)
 	html += '<tr class="%s"><th>Deaths</th><td>%d</td></tr>\n' % (odd, player.death_count)
 	html += '<tr class="%s"><th>Caps</th><td>%d</td></tr>\n' % (odd, player.flag_caps)
 	html += '<tr class="%s"><th>Suicides</th><td>%d</td></tr>\n' % (odd, player.suicides)
 	html += '<tr class="%s"><th>Team Kills</th><td>%d</td></tr>\n' % (odd, player.team_kills)
+	html += '<tr class="%s"><th>Health</th><td>%d</td></tr>\n' % (odd, player.health)
+	html += '<tr class="%s"><th>Armor</th><td>%d</td></tr>\n' % (odd, player.armor)
 	html += '</table>\n'
 	return html
 
@@ -73,6 +76,7 @@ _HTML= """\
 </head>
 <body>
 	<h1>%s profile</h1>
+	<h2>Hitrate development</h2>
 	<script type="text/javascript" src="media/protovis-3.1/protovis-d3.1.js"></script>
 	<script type="text/javascript" src="media/hitrate_diagram.js"></script>
 	<script type="text/javascript+protovis">
