@@ -29,10 +29,13 @@ def _average_weapon_row(row):
 				break
 			j += 1
 		if j == len(row): # edge case: end reached
-			break
+			if j > i+1:
+				j -= 1
+				row[j] = row[i]
+			else:
+				break
 		if i == 0: # edge case: started with zeros
-			i = j
-			continue
+			row[i-1] = row[j]
 		diff = (row[j] - row[i-1]) / (1+j-i)
 		plus = row[i-1]
 		for k in xrange(i, j):

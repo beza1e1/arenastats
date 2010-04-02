@@ -5,7 +5,7 @@
  * Player.serialize should be in profile.py
  * nick.log should use max instead of sum for attributes like streaks
  * Store elo in nicklog
- * interpolation should remove zeros
+ * Do not show gauntlet in profile hitrate diagram
 
 == Maybe sometimes ==
 
