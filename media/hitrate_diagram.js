@@ -1,31 +1,17 @@
-draw_hitrate = function(hitrate_points, weapons) {
+draw_hitrate = function(hitrate_points, hitrate_lines, weapons) {
 	/* calculate line data. For 0.0 values use the value of the predecessor */
 	var n_weapons = hitrate_points.length;
-	var hitrate_lines = Array(n_weapons);
 	var visible = Array(n_weapons);
 	for (w = 0; w < n_weapons; ++w) {
-		var weapon_data = hitrate_points[w];
-		var length = weapon_data.length;
-		var new_data = Array(length);
-		var last = 0.0;
+		var data = hitrate_points[w];
 		var allZero = true;
-		for (d = 0; d < length; ++d) {
-			var datum = weapon_data[d];
-			if (datum == 0.0) {
-				datum = last;
-			} else {
+		for (d = 0; d < data.length; ++d) {
+			if (data[d] > 0.0) {
 				allZero = false;
 			}
-			new_data[d] = datum;
-			last = weapon_data[d];
 		}
 		visible[w] = !allZero;
-		hitrate_lines[w] = new_data;
 	}
-
-	Array.max = function(array) {
-		return Math.max.apply(Math, array);
-	};
 
 	var datapoints_h = hitrate_points[0].length;
 
@@ -50,7 +36,7 @@ draw_hitrate = function(hitrate_points, weapons) {
 			.data(function() hitrate_points[this.parent.index])
 			.visible(function(d) d > 0);
 
-	/* Legende */
+	/* Legend */
 	legende = vis.add(pv.Panel);
 
 	legende.add(pv.Dot)

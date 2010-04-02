@@ -77,7 +77,7 @@ _HTML= """\
 	<script type="text/javascript" src="media/hitrate_diagram.js"></script>
 	<script type="text/javascript+protovis">
 	%s
-	draw_hitrate(hitrate_points, weapons);
+	draw_hitrate(hitrate_points, hitrate_points_interpolated, weapons);
 	</script>
 	%s
 </body>
