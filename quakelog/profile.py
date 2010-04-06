@@ -56,6 +56,17 @@ def _hitrate_data(player_timeline):
 	avg_data = [_average_weapon_row(lst[:]) for lst in data]
 	return data, avg_data
 
+def _stat_development(player_timeline):
+	html = "<h2>Stat Development</h2>\n"
+	data = "|".join([
+		",".join(str(p.kill_count) for p in player_timeline),
+		",".join(str(p.death_count) for p in player_timeline),
+		",".join(str(p.flag_caps) for p in player_timeline),
+		])
+	url="http://chart.apis.google.com/chart?cht=lc&chs=450x150&chd=t:%s&chdl=Frags|Deaths|Caps&chco=FF0000,00FF00,0000FF" % data
+	html += '<img src="%s" />\n' % url
+	return html
+
 def merge(player_into, player_from):
 	for key in _ZERO_PROPERTIES:
 		val = getattr(player_from, key)
@@ -98,6 +109,7 @@ def player_profile(player_timeline):
 	data += "var hitrate_points_interpolated = %s;\n" % (str(avg_data))
 	data += "var weapons = %s;\n" % weapon_list
 	html = ""
+	html += _stat_development(player_timeline)
 	html += _player_overview(player)
 	html += '\n<table style="font-size: 0.8em; float: right;">'
 	odd = False
