@@ -6,6 +6,7 @@
  * nick.log should use max instead of sum for attributes like streaks
  * Store elo in nicklog
  * Do not show gauntlet in profile hitrate diagram
+ * try http://code.google.com/intl/de-DE/apis/charttools/index.html for charts
 
 == Maybe sometimes ==
 
