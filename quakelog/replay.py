@@ -268,15 +268,6 @@ class Player:
 					sattr[key] = val
 				else:
 					print "ignore weapon stats", key, val
-	def serialize(self):
-		strings = list()
-		strings.append('"%s"' % self.nick)
-		for prop in _ZERO_PROPERTIES:
-			strings.append("%s:%d" % (prop, getattr(self, prop)))
-		for weapon in _STAT_WEAPONS.values():
-			w = getattr(self, weapon)
-			strings.append("%s:%s:%s:%s:%s" % (weapon, w.get('shots',0), w.get('hits',0), w['kills'], w['deaths']))
-		return " ".join(strings)
 	def _get_caprate(self):
 		if self.flag_touches == 0:
 			return infinity

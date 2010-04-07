@@ -2,13 +2,23 @@ from datetime import datetime
 from utils import slugify
 from replay import Player, _ZERO_PROPERTIES, _STAT_WEAPONS
 
+def _str_player_line(player):
+	strings = list()
+	strings.append('"%s"' % player.nick)
+	for prop in _ZERO_PROPERTIES:
+		strings.append("%s:%d" % (prop, getattr(player, prop)))
+	for weapon in _STAT_WEAPONS.values():
+		w = getattr(player, weapon)
+		strings.append("%s:%s:%s:%s:%s" % (weapon, w.get('shots',0), w.get('hits',0), w['kills'], w['deaths']))
+	return " ".join(strings)
+
 _COUNT = 1
 def player_line(player):
 	global _COUNT
 	out = datetime.now().strftime("%Y.%m.%d-%H:%M:%S-")
 	out += "%05d " % _COUNT
 	_COUNT += 1
-	out += player.serialize()
+	out += _str_player_line(player)
 	return out
 
 def read_player_line(line):
