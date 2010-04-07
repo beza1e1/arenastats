@@ -2,10 +2,13 @@ from datetime import datetime
 from utils import slugify
 from replay import Player, _ZERO_PROPERTIES, _STAT_WEAPONS
 
+_LOG_PROPERTIES = _ZERO_PROPERTIES[:]
+_LOG_PROPERTIES.append("elo")
+
 def _str_player_line(player):
 	strings = list()
 	strings.append('"%s"' % player.nick)
-	for prop in _ZERO_PROPERTIES:
+	for prop in _LOG_PROPERTIES:
 		strings.append("%s:%d" % (prop, getattr(player, prop)))
 	for weapon in _STAT_WEAPONS.values():
 		w = getattr(player, weapon)
@@ -43,7 +46,7 @@ def read_player_line(line):
 			setattr(p, weapon, dict(shots=int(shots), hits=int(hits), kills=int(kills), deaths=int(deaths), hitrate=hitrate))
 		else:
 			print attr
-	for prop in _ZERO_PROPERTIES:
+	for prop in _LOG_PROPERTIES:
 		if not hasattr(p, prop):
 			setattr(p, prop, 0)
 	return p

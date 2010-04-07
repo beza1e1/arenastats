@@ -1,7 +1,7 @@
 from replay import _ZERO_PROPERTIES
 from report import _WEAPON_NAMES, _WEAPONS
 from nicklog import merge_player_lines
-from utils import Toggler
+from utils import Toggler, googlechart_url
 
 import os
 
@@ -130,6 +130,13 @@ def _player_overview_item(player_timeline):
 	nick = player_timeline[0].nick
 	return '<p><a href="p_%s.html">%s</a></p>' % (slug_nick, nick)
 
+def _player_elos(timelines):
+	elos = [[p.elo for p in line] for line in timelines]
+	nicks = [p[0].nick for p in timelines]
+	url = googlechart_url(data=elos, legend=nicks)
+	print url
+	return '<img src="%s" alt="player ELO ratings" />\n' % url
+
 _OVERVIEW_FILE = "players.html"
 _OVERVIEW_HTML= """\
 <html>
@@ -144,12 +151,12 @@ _OVERVIEW_HTML= """\
 """
 def player_overview(timelines):
 	html = ""
+	html += _player_elos(timelines)
 	for player_timeline in timelines:
 		html += _player_overview_item(player_timeline)
 	fh = open(_OVERVIEW_FILE, 'w')
 	fh.write(_OVERVIEW_HTML % html)
 	fh.close()
-
 
 def write_profiles(options):
 	fh = open(options.nicklog)
