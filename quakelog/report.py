@@ -85,7 +85,7 @@ def player_info(player):
 	html = '<div class="player_stats" id="%s">\n' % player.slug_nick
 	html += '<table class="player_info">\n'
 	odd = Toggler("even", "odd")
-	html += '<tr><td colspan="2" class="name team_%s"><strong>%s</strong></td></tr>\n' % (player.team_color, player.nick)
+	html += '<tr><td colspan="2" class="name team_%s"><strong>%s</strong> (<span class="elo" title="ELO Rating by frags">%d</span>)</td></tr>\n' % (player.team_color, player.nick, player.elo)
 	html += '<tr class="%s"><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
 			(odd, _WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
 	html += '<tr class="%s"><th>Player mostly</th><td>fragged by %s / fragging %s </td></tr>\n' % (odd, player.worst_enemy.nick, player.easiest_prey.nick)
