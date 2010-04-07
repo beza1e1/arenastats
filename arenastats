@@ -2,8 +2,8 @@
 from quakelog.tokenizer import tokenize
 from quakelog.replay import replay_games
 from quakelog.report import html_report
-from quakelog.nicklog import player_line, merge_player_lines, append_nicklog
-from quakelog.profile import player_profile
+from quakelog.nicklog import append_nicklog
+from quakelog.profile import write_profiles
 from quakelog.elo import rate, persistent_rating
 import sys
 import os
@@ -63,13 +63,7 @@ def main(options, args):
 		fh = open(options.nicklog, "a")
 		append_nicklog(fh, games)
 		fh.close()
-		fh = open(options.nicklog)
-		for player in merge_player_lines(fh):
-			fname = os.path.join(options.directory, "p_"+player[0].slug_nick+".html")
-			pfh = open(fname, 'w')
-			pfh.write(player_profile(player))
-			pfh.close()
-		fh.close()
+		write_profiles(options)
 	for g in games:
 		rate(g)
 		fname = os.path.join(options.directory, g.name+".html")

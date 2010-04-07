@@ -1,6 +1,9 @@
 from replay import _ZERO_PROPERTIES
 from report import _WEAPON_NAMES, _WEAPONS
+from nicklog import merge_player_lines
 from utils import Toggler
+
+import os
 
 def _player_overview(player):
 	odd = Toggler("even", "odd")
@@ -121,3 +124,12 @@ def player_profile(player_timeline):
 			html += '<tr class="%s"><th>%s %s</th><td>%d</td></tr>\n' % (_ODD_CLASS[odd], weapon, key, val)
 	html += "</table>\n"
 	return _HTML % (player.nick, player.nick, data, html)
+
+def write_profiles(options):
+	fh = open(options.nicklog)
+	for player_timeline in merge_player_lines(fh):
+		fname = os.path.join(options.directory, "p_"+player_timeline[0].slug_nick+".html")
+		pfh = open(fname, 'w')
+		pfh.write(player_profile(player_timeline))
+		pfh.close()
+	fh.close()
