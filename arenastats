@@ -61,11 +61,15 @@ def main(options, args):
 			games = games[-options.game_count:]
 	if options.nicklog:
 		fh = open(options.nicklog, "a")
-		append_nicklog(fh, games)
+		for g in games:
+			rate(g) # rating must be right before nicklogging
+			append_nicklog(fh, g)
 		fh.close()
 		write_profiles(options)
+	else: # do just the rating
+		for g in games:
+			rate(g)
 	for g in games:
-		rate(g)
 		fname = os.path.join(options.directory, g.name+".html")
 		fh = open(fname, 'w')
 		fh.write(html_report(g, options.level_shots))

@@ -60,10 +60,9 @@ def merge_player_lines(lines):
 	for nick, player_timeline in players.items():
 		yield player_timeline
 
-def append_nicklog(fh, games):
-	for game in games:
-		for player in game.players.values():
-			if not hasattr(player, 'team_id'):
-				continue
-			fh.write("%s\n" % player_line(player))
+def append_nicklog(fh, game):
+	for player in game.players.values():
+		if not hasattr(player, 'team_id'):
+			continue
+		fh.write("%s\n" % player_line(player))
 
