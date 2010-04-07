@@ -125,11 +125,39 @@ def player_profile(player_timeline):
 	html += "</table>\n"
 	return _HTML % (player.nick, player.nick, data, html)
 
+def _player_overview_item(player_timeline):
+	slug_nick = player_timeline[0].slug_nick
+	nick = player_timeline[0].nick
+	return '<p><a href="p_%s.html">%s</a></p>' % (slug_nick, nick)
+
+_OVERVIEW_FILE = "players.html"
+_OVERVIEW_HTML= """\
+<html>
+<head>
+	<title>Player Overview</title>
+</head>
+<body>
+	<h1>Player Overview</h1>
+	%s
+</body>
+</html>
+"""
+def player_overview(timelines):
+	html = ""
+	for player_timeline in timelines:
+		html += _player_overview_item(player_timeline)
+	fh = open(_OVERVIEW_FILE, 'w')
+	fh.write(_OVERVIEW_HTML % html)
+	fh.close()
+
+
 def write_profiles(options):
 	fh = open(options.nicklog)
-	for player_timeline in merge_player_lines(fh):
+	timelines = list(merge_player_lines(fh))
+	fh.close()
+	for player_timeline in timelines:
 		fname = os.path.join(options.directory, "p_"+player_timeline[0].slug_nick+".html")
 		pfh = open(fname, 'w')
 		pfh.write(player_profile(player_timeline))
 		pfh.close()
-	fh.close()
+	player_overview(timelines)
