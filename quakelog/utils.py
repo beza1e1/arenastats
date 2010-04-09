@@ -36,7 +36,7 @@ def googlechart_url(**kwargs):
 	args.append('chd=t:' + data)
 	legend = kwargs.pop('legend', ['red', 'blue'])
 	args.append('chdl=' + "|".join(legend))
-	colors = kwargs.pop('colors', "FF0000 00FF00 0000FF FFFF00 FF00FF 00FFFF FF8888 88FF88 8888FF 880000 008800 000088".split(" "))
+	colors = kwargs.pop('colors', "FF0000 00FF00 0000CC FF00FF 00FFFF 8888FF 880000 008800 000088 888888 339999 3399FF 9933CC FF6633 996600 880088".split(" "))
 	args.append('chco=' + ",".join(colors))
 
 	for k,v in kwargs.items():
