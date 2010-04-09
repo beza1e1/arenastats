@@ -2,7 +2,6 @@
  * better player overview page
  * nick.log should use max instead of sum for attributes like streaks
  * Do not show gauntlet in profile hitrate diagram
- * save player.html into correct directory
  * reuse nicklog as ratings file
 
 == Maybe sometimes ==

@@ -149,12 +149,12 @@ _OVERVIEW_HTML= """\
 </body>
 </html>
 """
-def player_overview(timelines):
+def player_overview(timelines, fname):
 	html = ""
 	html += _player_elos(timelines)
 	for player_timeline in timelines:
 		html += _player_overview_item(player_timeline)
-	fh = open(_OVERVIEW_FILE, 'w')
+	fh = open(fname, 'w')
 	fh.write(_OVERVIEW_HTML % html)
 	fh.close()
 
@@ -167,4 +167,5 @@ def write_profiles(options):
 		pfh = open(fname, 'w')
 		pfh.write(player_profile(player_timeline))
 		pfh.close()
-	player_overview(timelines)
+	fname = os.path.join(options.directory, _OVERVIEW_FILE)
+	player_overview(timelines, fname)
