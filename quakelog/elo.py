@@ -1,7 +1,6 @@
 """
 A rating system for player performance
 """
-import shelve
 
 _RATINGS = dict()
 _DEFAULT_RATING = 1.0
@@ -9,14 +8,17 @@ _MINIMUM_RATING = 0.001
 _FRAGS_PER_SECOND = 0.01
 _ABSORBER = 0.3
 
-def persistent_rating(filename):
-	global _RATINGS
-	_RATINGS = shelve.open(filename)
-
 def get_rating(nick):
 	if not nick in _RATINGS:
 		_RATINGS[nick] = _DEFAULT_RATING
 	return _RATINGS[nick]
+
+def set_ratings(timelines):
+	for timeline in timelines:
+		for i in xrange(len(timeline)):
+			p = timeline[i]
+			if p.elo > 0:
+				_RATINGS[p.nick] = p.elo
 
 def team_average(game, team_id):
 	avg = (0.0, 0)
@@ -53,12 +55,9 @@ def adapt_ratings(game):
 	for pid, p in game.players.items():
 		if not hasattr(p, 'team_id'):
 			continue
-		adaptions[p.nick] = rating_adaption(p, game)
-	for nick, adapt in adaptions.items():
-		_RATINGS[nick] += adapt
+		p.elo = get_rating(p.nick) + rating_adaption(p, game)
+		_RATINGS[p.nick] = p.elo
 
 def rate(game):
 	adapt_ratings(game)
-	if hasattr(_RATINGS, 'sync'):
-		_RATINGS.sync() # ensure persistence
 

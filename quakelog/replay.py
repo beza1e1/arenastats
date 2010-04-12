@@ -162,7 +162,7 @@ _ZERO_PROPERTIES = [
 	'chat_length', 'kill_streak', 'current_kill_streak', 'death_streak',
 	'current_death_streak', 'cap_streak', 'current_cap_streak', 'score',
 	'health', 'armor', 'sudden_death_decider', 'flight_count',
-	'damage_given', 'damage_received', 'team_damage_given',
+	'damage_given', 'damage_received', 'team_damage_given', 'elo',
 	'hand_teleporter_count', 'battle_suit_count'
 ]
 class Player:
@@ -295,9 +295,6 @@ class Player:
 	def _get_slug_nick(self):
 		return slugify(self.nick)
 	slug_nick = property(_get_slug_nick)
-	def _get_elo_rating(self):
-		return int(get_rating(self.nick) * 1000)
-	elo = property(_get_elo_rating)
 
 class World(Player):
 	def __init__(self):
