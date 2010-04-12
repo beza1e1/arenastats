@@ -7,7 +7,7 @@ from quakelog.profile import write_profiles
 from quakelog.elo import rate
 import sys
 import os
-from optparse import OptionParser
+from optparse import OptionParser, SUPPRESS_HELP
 from datetime import datetime
 
 _CURDIR = os.path.abspath(os.curdir)
@@ -17,8 +17,7 @@ _OPTS.add_option("-l", "--logfile", dest="logfile",
                   help="read quake 3 log file from FILE", metavar="FILE")
 _OPTS.add_option("-n", "--nicklog", dest="nicklog",
                   help="use FILE as the nick log", metavar="FILE")
-_OPTS.add_option("-r", "--ratings", dest="ratings_fname",
-                  help="use persistent player ratings in FILE", metavar="FILE")
+_OPTS.add_option("-r", "--ratings", dest="ratings_fname", help=SUPPRESS_HELP)
 _OPTS.add_option("-c", "--game-count", dest="game_count", default=10, type="int",
                   help="Generate game reports for the last COUNT games", metavar="COUNT")
 _OPTS.add_option("-d", "--directory", dest="directory", default=_CURDIR,
@@ -49,7 +48,7 @@ def timedelta_checker(string):
 def main(options, args):
 	games = list()
 	if options.ratings_fname:
-		print "ratings file is obsolete"
+		print "ratings file is obsolete and will not be used"
 	if options.logfile:
 		for game in replay_games(tokenize(open(options.logfile))):
 			if options.max_age:
