@@ -3,7 +3,6 @@ from utils import slugify
 from replay import Player, _ZERO_PROPERTIES, _STAT_WEAPONS
 
 _LOG_PROPERTIES = _ZERO_PROPERTIES[:]
-_LOG_PROPERTIES.append("elo")
 
 def _str_player_line(player):
 	strings = list()

@@ -4,7 +4,7 @@ from quakelog.replay import replay_games
 from quakelog.report import html_report
 from quakelog.nicklog import append_nicklog
 from quakelog.profile import write_profiles
-from quakelog.elo import rate, persistent_rating
+from quakelog.elo import rate
 import sys
 import os
 from optparse import OptionParser
@@ -49,7 +49,7 @@ def timedelta_checker(string):
 def main(options, args):
 	games = list()
 	if options.ratings_fname:
-		persistent_rating(options.ratings_fname)
+		print "ratings file is obsolete"
 	if options.logfile:
 		for game in replay_games(tokenize(open(options.logfile))):
 			if options.max_age:

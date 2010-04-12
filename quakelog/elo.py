@@ -1,17 +1,12 @@
 """
 A rating system for player performance
 """
-import shelve
 
 _RATINGS = dict()
 _DEFAULT_RATING = 1.0
 _MINIMUM_RATING = 0.001
 _FRAGS_PER_SECOND = 0.01
 _ABSORBER = 0.3
-
-def persistent_rating(filename):
-	global _RATINGS
-	_RATINGS = shelve.open(filename)
 
 def get_rating(nick):
 	if not nick in _RATINGS:
