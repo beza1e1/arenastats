@@ -15,8 +15,10 @@ def get_rating(nick):
 
 def set_ratings(timelines):
 	for timeline in timelines:
-		last = timeline[-1]
-		_RATINGS[last.nick] = last.elo
+		for i in xrange(len(timeline)):
+			p = timeline[i]
+			if p.elo > 0:
+				_RATINGS[p.nick] = p.elo
 
 def team_average(game, team_id):
 	avg = (0.0, 0)
@@ -53,12 +55,9 @@ def adapt_ratings(game):
 	for pid, p in game.players.items():
 		if not hasattr(p, 'team_id'):
 			continue
-		adaptions[p.nick] = rating_adaption(p, game)
-	for nick, adapt in adaptions.items():
-		_RATINGS[nick] += adapt
+		p.elo = get_rating(p.nick) + rating_adaption(p, game)
+		_RATINGS[p.nick] = p.elo
 
 def rate(game):
 	adapt_ratings(game)
-	if hasattr(_RATINGS, 'sync'):
-		_RATINGS.sync() # ensure persistence
 

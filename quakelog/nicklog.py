@@ -2,13 +2,17 @@ from datetime import datetime
 from utils import slugify
 from replay import Player, _ZERO_PROPERTIES, _STAT_WEAPONS
 
-_LOG_PROPERTIES = _ZERO_PROPERTIES[:]
+_LOG_INT_PROPERTIES = _ZERO_PROPERTIES[:]
+_LOG_INT_PROPERTIES.remove('elo')
+_LOG_FLOAT_PROPERTIES = ['elo']
 
 def _str_player_line(player):
 	strings = list()
 	strings.append('"%s"' % player.nick)
-	for prop in _LOG_PROPERTIES:
+	for prop in _LOG_INT_PROPERTIES:
 		strings.append("%s:%d" % (prop, getattr(player, prop)))
+	for prop in _LOG_FLOAT_PROPERTIES:
+		strings.append("%s:%.5f" % (prop, getattr(player, prop)))
 	for weapon in _STAT_WEAPONS.values():
 		w = getattr(player, weapon)
 		strings.append("%s:%s:%s:%s:%s" % (weapon, w.get('shots',0), w.get('hits',0), w['kills'], w['deaths']))
@@ -35,7 +39,11 @@ def read_player_line(line):
 		attr = attr.split(":")
 		if len(attr) == 2:
 			key, val = attr
-			setattr(p, key, int(val))
+			if key in _LOG_FLOAT_PROPERTIES:
+				setattr(p, key, float(val))
+			else:
+				assert key in _LOG_INT_PROPERTIES
+				setattr(p, key, int(val))
 		elif len(attr) == 5:
 			weapon, shots, hits, kills, deaths = attr
 			try:
@@ -45,9 +53,12 @@ def read_player_line(line):
 			setattr(p, weapon, dict(shots=int(shots), hits=int(hits), kills=int(kills), deaths=int(deaths), hitrate=hitrate))
 		else:
 			print attr
-	for prop in _LOG_PROPERTIES:
+	for prop in _LOG_INT_PROPERTIES:
 		if not hasattr(p, prop):
 			setattr(p, prop, 0)
+	for prop in _LOG_FLOAT_PROPERTIES:
+		if not hasattr(p, prop):
+			setattr(p, prop, 0.0)
 	return p
 
 
