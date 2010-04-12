@@ -1,6 +1,6 @@
 from replay import _ZERO_PROPERTIES
 from report import _WEAPON_NAMES, _WEAPONS
-from nicklog import merge_player_lines
+from nicklog import load_timelines
 from utils import Toggler, googlechart_url
 
 import os
@@ -159,9 +159,7 @@ def player_overview(timelines, fname):
 	fh.close()
 
 def write_profiles(options):
-	fh = open(options.nicklog)
-	timelines = list(merge_player_lines(fh))
-	fh.close()
+	timelines = load_timelines(options)
 	for player_timeline in timelines:
 		fname = os.path.join(options.directory, "p_"+player_timeline[0].slug_nick+".html")
 		pfh = open(fname, 'w')

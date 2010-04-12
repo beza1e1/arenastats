@@ -68,3 +68,9 @@ def append_nicklog(fh, game):
 			continue
 		fh.write("%s\n" % player_line(player))
 
+def load_timelines(options):
+	fh = open(options.nicklog)
+	timelines = list(merge_player_lines(fh))
+	fh.close()
+	return timelines
+
