@@ -134,7 +134,6 @@ def _player_elos(timelines):
 	elos = [[p.elo for p in line] for line in timelines]
 	nicks = [p[0].nick for p in timelines]
 	url = googlechart_url(data=elos, legend=nicks)
-	print url
 	return '<img src="%s" alt="player ELO ratings" />\n' % url
 
 _OVERVIEW_FILE = "players.html"
