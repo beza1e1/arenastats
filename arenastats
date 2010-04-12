@@ -2,9 +2,9 @@
 from quakelog.tokenizer import tokenize
 from quakelog.replay import replay_games
 from quakelog.report import html_report
-from quakelog.nicklog import append_nicklog
+from quakelog.nicklog import append_nicklog, load_timelines
 from quakelog.profile import write_profiles
-from quakelog.elo import rate
+from quakelog.elo import rate, set_ratings
 import sys
 import os
 from optparse import OptionParser, SUPPRESS_HELP
@@ -59,6 +59,8 @@ def main(options, args):
 			games.append(game)
 			games = games[-options.game_count:]
 	if options.nicklog:
+		timelines = load_timelines(options.nicklog)
+		set_ratings(timelines)
 		fh = open(options.nicklog, "a")
 		for g in games:
 			rate(g) # rating must be right before nicklogging

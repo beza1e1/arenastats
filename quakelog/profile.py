@@ -159,7 +159,7 @@ def player_overview(timelines, fname):
 	fh.close()
 
 def write_profiles(options):
-	timelines = load_timelines(options)
+	timelines = load_timelines(options.nicklog)
 	for player_timeline in timelines:
 		fname = os.path.join(options.directory, "p_"+player_timeline[0].slug_nick+".html")
 		pfh = open(fname, 'w')

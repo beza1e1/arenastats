@@ -13,6 +13,11 @@ def get_rating(nick):
 		_RATINGS[nick] = _DEFAULT_RATING
 	return _RATINGS[nick]
 
+def set_ratings(timelines):
+	for timeline in timelines:
+		last = timeline[-1]
+		_RATINGS[last.nick] = last.elo
+
 def team_average(game, team_id):
 	avg = (0.0, 0)
 	for pid, p in game.players.items():
