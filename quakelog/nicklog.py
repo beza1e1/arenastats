@@ -69,7 +69,10 @@ def append_nicklog(fh, game):
 		fh.write("%s\n" % player_line(player))
 
 def load_timelines(fname):
-	fh = open(fname)
+	try:
+		fh = open(fname)
+	except IOError:
+		return []
 	timelines = list(merge_player_lines(fh))
 	fh.close()
 	return timelines
