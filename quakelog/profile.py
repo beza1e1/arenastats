@@ -69,12 +69,11 @@ def _hitrate_data(player_timeline):
 
 def _stat_development(player_timeline):
 	html = "<h2>Stat Development</h2>\n"
-	data = "|".join([
-		",".join(str(p.kill_count) for p in player_timeline),
-		",".join(str(p.death_count) for p in player_timeline),
-		",".join(str(p.flag_caps) for p in player_timeline),
-		])
-	url="http://chart.apis.google.com/chart?cht=lc&chs=450x150&chd=t:%s&chdl=Frags|Deaths|Caps&chco=FF0000,00FF00,0000FF" % data
+	data = [
+		[p.kill_count for p in player_timeline],
+		[p.death_count for p in player_timeline],
+		[p.flag_caps for p in player_timeline]]
+	url = googlechart_url(data=data, legend=['frags','deaths','caps'])
 	html += '<img src="%s" />\n' % url
 	return html
 
