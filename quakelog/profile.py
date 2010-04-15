@@ -5,6 +5,11 @@ from utils import Toggler, googlechart_url
 
 import os
 
+_LOG_SUM_PROPERTIES = _ZERO_PROPERTIES[:]
+_LOG_MAX_PROPERTIES = "kill_streak death_streak cap_streak chat_length".split(" ")
+for p in _LOG_MAX_PROPERTIES:
+	_LOG_SUM_PROPERTIES.remove(p)
+
 def _player_overview(player):
 	odd = Toggler("even", "odd")
 	html = "<h2>Totals</h2>"
@@ -71,10 +76,14 @@ def _stat_development(player_timeline):
 	return html
 
 def merge(player_into, player_from):
-	for key in _ZERO_PROPERTIES:
+	for key in _LOG_SUM_PROPERTIES
 		val = getattr(player_from, key)
 		val_old = getattr(player_into, key)
 		setattr(player_into, key, val + val_old)
+	for key in _LOG_MAX_PROPERTIES:
+		val = getattr(player_from, key)
+		val_old = getattr(player_into, key)
+		setattr(player_into, key, max(val, val_old))
 	for w,x,y in _WEAPONS:
 		wstats = getattr(player_into, w)
 		for attr in ['shots', 'hits', 'kills', 'deaths']:
