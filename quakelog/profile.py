@@ -14,13 +14,16 @@ def _player_overview(player):
 	odd = Toggler("even", "odd")
 	html = "<h2>Totals</h2>"
 	html += '<table class="overview">'
-	html += '<tr class="%s"><th>Kills</th><td>%d</td></tr>\n' % (odd, player.kill_count)
+	html += '<tr class="%s"><th>Frags</th><td>%d</td></tr>\n' % (odd, player.kill_count)
 	html += '<tr class="%s"><th>Deaths</th><td>%d</td></tr>\n' % (odd, player.death_count)
 	html += '<tr class="%s"><th>Caps</th><td>%d</td></tr>\n' % (odd, player.flag_caps)
 	html += '<tr class="%s"><th>Suicides</th><td>%d</td></tr>\n' % (odd, player.suicides)
 	html += '<tr class="%s"><th>Team Kills</th><td>%d</td></tr>\n' % (odd, player.team_kills)
 	html += '<tr class="%s"><th>Health</th><td>%d</td></tr>\n' % (odd, player.health)
 	html += '<tr class="%s"><th>Armor</th><td>%d</td></tr>\n' % (odd, player.armor)
+	html += '<tr class="%s"><th>Best Frag Streak</th><td>%d</td></tr>\n' % (odd, player.kill_streak)
+	html += '<tr class="%s"><th>Worst Death Streak</th><td>%d</td></tr>\n' % (odd, player.death_streak)
+	html += '<tr class="%s"><th>Best Cap Streak</th><td>%d</td></tr>\n' % (odd, player.cap_streak)
 	html += '</table>\n'
 	return html
 
