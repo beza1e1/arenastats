@@ -5,7 +5,7 @@ A rating system for player performance
 _RATINGS = dict()
 _DEFAULT_RATING = 1.0
 _MINIMUM_RATING = 0.001
-_FRAGS_PER_SECOND = 0.02
+_FRAGS_PER_SECOND = 0.016
 _ABSORBER = 0.3
 
 def get_rating(nick):
