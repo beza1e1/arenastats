@@ -4,7 +4,7 @@
 body { padding: 10px; }
 a,
 a:visited,
-a:active { color: black; text-decoration: none; border-bottom: 1px solid #555; }
+a:active { color: black; border-bottom: 1px solid #555; }
 div.blue_players,
 div.red_players { float: left; }
 #kill_matrix,
@@ -12,20 +12,15 @@ div.red_players { float: left; }
 div.red_players { clear: left; }
 table td { padding: 1px 10px; }
 table tr.odd { background-color: #ddd; }
-td.elo,
-td.rate { text-align: right; }
 div.game_stats img { max-width: 200px; }
 div.player_stats { clear: left; padding-top: 1em; }
-div.game_stats .game_result { font-size: 4em; }
-div.game_stats .game_result .team_red { text-align: right; }
 div.game_stats img,
 div.game_stats table,
 div.player_stats table { float: left; margin-left: 1em; }
 #kill_matrix table,
 div.player_stats table { border: 1px solid black; border-width: 1px 0; }
 div.player_stats .player_info { width: 400px; }
-div.player_stats .player_info th { font-weight: normal; text-align: left; width: 8em; }
-div.player_stats .player_info .name { font-size: 1.3em; font-family: sans-serif; }
+div.player_stats .player_info th { width: 8em; }
 .team_red { background-color: #fbb; }
 .team_blue { background-color: #bbf; }
 div.player_stats .weapon_info { width: 450px; }
@@ -35,10 +30,8 @@ div.player_stats .aside { float: right; }
 #award_table table,
 #kill_matrix table { margin: 0 auto; }
 #kill_matrix .teamkill { color: #a00; }
-#kill_matrix td.kill_count { text-align: right; }
 #kill_matrix .team_red,
 #kill_matrix .team_blue { padding: 1px 2px; }
-#award_table { text-align: center; }
 #award_table div.award {
 	display: inline-block;
 	padding: 0.5em;
@@ -54,16 +47,43 @@ div.player_stats .aside { float: right; }
 	background-image: url(award.png); 
 }
 #award_table .name,
-#award_table .winner { width: 100%%; text-align: center; }
+#award_table .winner { width: 100%%; }
 #award_table .winner a { padding: 1px 0.2em; }
-#award_table .name { font-size: 1.2em; }
 #footer { clear: both; padding: 4em; }
 
 /* TEXT */
 
 div.debug_stats { font-size: 0.8em; }
 
+#award_table .name { font-size: 1.2em; }
+
+div.player_stats .player_info .name { font-size: 1.3em; }
+
+div.game_stats .game_result { font-size: 4em; }
+
+td.elo,
+td.rate,
+#kill_matrix td.kill_count,
+div.game_stats .game_result .team_red { text-align: right; }
+
+div.player_stats .player_info th { text-align: left; }
+
+#award_table,
+#award_table .name,
+#award_table .winner { text-align: center; }
+
 /* FONTS */
+
 body { font-family: Baskerville, "Times New Roman", Times, serif; }
+
 h1,
 #award_table .name { font-family: Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif;  }
+
+div.player_stats .player_info th { font-weight: normal; }
+
+div.player_stats .player_info .name { font-family: sans-serif; }
+
+a,
+a:visited,
+a:active { text-decoration: none; }
+
