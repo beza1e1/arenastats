@@ -5,7 +5,7 @@ A rating system for player performance
 _RATINGS = dict()
 _DEFAULT_RATING = 1.0
 _MINIMUM_RATING = 0.001
-_FRAGS_PER_SECOND = 0.01
+_FRAGS_PER_SECOND = 0.02
 _ABSORBER = 0.3
 
 def get_rating(nick):
@@ -41,7 +41,7 @@ def predict_player(player, game):
 	avg = team_average(game, other_team(player.team_id))
 	rel_frags = (avg + get_rating(player.nick)) / avg
 	# TODO time could be wrong if the player joined later
-	return game.game_duration *_FRAGS_PER_SECOND * rel_frags
+	return game.game_duration * _FRAGS_PER_SECOND * rel_frags
 	
 def rating_adaption(player, game):
 	pred = predict_player(player, game)
