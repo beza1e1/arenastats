@@ -104,6 +104,7 @@ _HTML= """\
 	</style>
 </head>
 <body>
+	<p>View <a href="players.html">Overview of all players</a>.</p>
 	<h1>%s profile</h1>
 	<h2>Hitrate Development</h2>
 	<script type="text/javascript" src="media/protovis-3.1/protovis-d3.1.js"></script>
