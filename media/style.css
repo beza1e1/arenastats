@@ -1,42 +1,52 @@
+/* COLOR */
+
+a,
+a:visited,
+a:active { color: black; border-bottom: 1px solid #555; }
+
+table tr.odd { background-color: #ddd; }
+
+div.player_stats table { border: 1px solid black; }
+
+.team_red { background-color: #fbb; }
+.team_blue { background-color: #bbf; }
+
+#kill_matrix .teamkill { color: #a00; }
+
+#award_table div.award { background-color: #eee; }
+
+#award_table img { background-image: url(award.png); }
 
 /* POSITION */
 
 body { padding: 10px; }
-a,
-a:visited,
-a:active { color: black; border-bottom: 1px solid #555; }
 div.blue_players,
 div.red_players { float: left; }
 #kill_matrix,
 #award_table,
 div.red_players { clear: left; }
 table td { padding: 1px 10px; }
-table tr.odd { background-color: #ddd; }
 div.game_stats img { max-width: 200px; }
 div.player_stats { clear: left; padding-top: 1em; }
 div.game_stats img,
 div.game_stats table,
 div.player_stats table { float: left; margin-left: 1em; }
 #kill_matrix table,
-div.player_stats table { border: 1px solid black; border-width: 1px 0; }
+div.player_stats table { border-width: 1px 0; }
 div.player_stats .player_info { width: 400px; }
 div.player_stats .player_info th { width: 8em; }
-.team_red { background-color: #fbb; }
-.team_blue { background-color: #bbf; }
 div.player_stats .weapon_info { width: 450px; }
 div.player_stats .aside { float: right; }
 #award_table,
 #kill_matrix { width: 98%%; padding: 2em; }
 #award_table table,
 #kill_matrix table { margin: 0 auto; }
-#kill_matrix .teamkill { color: #a00; }
 #kill_matrix .team_red,
 #kill_matrix .team_blue { padding: 1px 2px; }
 #award_table div.award {
 	display: inline-block;
 	padding: 0.5em;
 	margin: 1em; 
-	background-color: #eee; 
 	border-radius: 1em; 
 	-webkit-border-radius: 1em; 
 	-moz-border-radius: 1em; 
@@ -44,7 +54,6 @@ div.player_stats .aside { float: right; }
 #award_table img { 
 	width: 150px;
 	height: 150px;
-	background-image: url(award.png); 
 }
 #award_table .name,
 #award_table .winner { width: 100%%; }
