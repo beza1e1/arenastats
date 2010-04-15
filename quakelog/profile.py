@@ -76,7 +76,7 @@ def _stat_development(player_timeline):
 	return html
 
 def merge(player_into, player_from):
-	for key in _LOG_SUM_PROPERTIES
+	for key in _LOG_SUM_PROPERTIES:
 		val = getattr(player_from, key)
 		val_old = getattr(player_into, key)
 		setattr(player_into, key, val + val_old)
