@@ -141,7 +141,7 @@ def _player_overview_item(player_timeline):
 	current = player_timeline[-1]
 	slug_nick = player_timeline[0].slug_nick
 	nick = player_timeline[0].nick
-	return '<p><a href="p_%s.html">%s</a> (%d)</p>' % (slug_nick, nick, current.elo*1000)
+	return '<li><a href="p_%s.html">%s</a> (%d)</li>' % (slug_nick, nick, current.elo*1000)
 
 def _player_elos(timelines):
 	elos = [[p.elo for p in line] for line in timelines]
@@ -162,10 +162,17 @@ _OVERVIEW_HTML= """\
 </html>
 """
 def player_overview(timelines, fname):
+	def cmp_timeline(t1, t2):
+		return -cmp(t1[-1].elo, t2[-1].elo)
+	timelines.sort(cmp=cmp_timeline)
 	html = ""
+	html += '<h2>Elo Development</h2>'
 	html += _player_elos(timelines)
+	html += '<h2>Elo Ranking</h2>'
+	html += '<ol class="ranking">\n'
 	for player_timeline in timelines:
 		html += _player_overview_item(player_timeline)
+	html += '</ol>\n'
 	fh = open(fname, 'w')
 	fh.write(_OVERVIEW_HTML % html)
 	fh.close()
