@@ -93,6 +93,15 @@ def merge(player_into, player_from):
 			wstats[attr] = getattr(player_from, w)[attr]
 	return player_into
 
+class Player:
+	def __init__(self, **inits):
+		for a,v in inits.items():
+			setattr(self, a, v)
+		for a in _ZERO_PROPERTIES:
+			setattr(self, a, 0)
+		for w,x,y in _WEAPONS:
+			setattr(self, w, {})
+
 _ODD_CLASS = {True: 'odd', False: 'even'}
 _HTML= """\
 <html>
@@ -119,7 +128,9 @@ _HTML= """\
 </html>
 """
 def player_profile(player_timeline):
-	player = reduce(merge, player_timeline)
+	last = player_timeline[-1]
+	P = Player(nick=last.nick)
+	player = reduce(merge, player_timeline, P)
 	weapon_list = [_WEAPON_NAMES[w].replace("&nbsp;", " ") for (w,y,z) in _WEAPONS]
 	data, avg_data = _hitrate_data(player_timeline)
 	data = "var hitrate_points = %s;\n" % (str(data))
