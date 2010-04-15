@@ -72,7 +72,7 @@ def _stat_development(player_timeline):
 	data = [
 		[p.kill_count for p in player_timeline],
 		[p.death_count for p in player_timeline],
-		[p.flag_caps for p in player_timeline]]
+		[p.flag_caps *10 for p in player_timeline]]
 	url = googlechart_url(data=data, legend=['frags','deaths','caps'])
 	html += '<img src="%s" />\n' % url
 	return html
