@@ -12,6 +12,7 @@ div.red_players { float: left; }
 div.red_players { clear: left; }
 table td { padding: 1px 10px; }
 table tr.odd { background-color: #ddd; }
+td.elo,
 td.rate { text-align: right; }
 div.game_stats img { max-width: 200px; }
 div.player_stats { clear: left; padding-top: 1em; }

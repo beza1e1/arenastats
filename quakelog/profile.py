@@ -98,6 +98,7 @@ _HTML= """\
 <html>
 <head>
 	<title>%s</title>
+	<link rel="stylesheet" type="text/css" href="media/style.css" /
 	<style>
 	tr.odd { background-color: #ddd; }
 	th { font-weight: normal; text-align: left; }
@@ -138,11 +139,12 @@ def player_profile(player_timeline):
 	html += "</table>\n"
 	return _HTML % (player.nick, player.nick, data, html)
 
-def _player_overview_item(player_timeline):
+def _player_overview_item(odd, player_timeline):
 	current = player_timeline[-1]
 	slug_nick = player_timeline[0].slug_nick
 	nick = player_timeline[0].nick
-	return '<li><a href="p_%s.html">%s</a> (%d)</li>' % (slug_nick, nick, current.elo*1000)
+	return '<tr class="%s"><td class="elo">%d</td><td><a href="p_%s.html">%s</a></td></tr>\n' %\
+			 (odd, current.elo*1000, slug_nick, nick)
 
 def _player_elos(timelines):
 	elos = [[p.elo for p in line] for line in timelines]
@@ -155,6 +157,7 @@ _OVERVIEW_HTML= """\
 <html>
 <head>
 	<title>Player Overview</title>
+	<link rel="stylesheet" type="text/css" href="media/style.css" /
 </head>
 <body>
 	<h1>Player Overview</h1>
@@ -170,10 +173,12 @@ def player_overview(timelines, fname):
 	html += '<h2>Elo Development</h2>'
 	html += _player_elos(timelines)
 	html += '<h2>Elo Ranking</h2>'
-	html += '<ol class="ranking">\n'
+	html += '<table class="ranking">\n'
+	html += '<tr><th>Elo</th><th>Player</th>\n'
+	odd = Toggler("even", "odd")
 	for player_timeline in timelines:
-		html += _player_overview_item(player_timeline)
-	html += '</ol>\n'
+		html += _player_overview_item(odd, player_timeline)
+	html += '</table>\n'
 	fh = open(fname, 'w')
 	fh.write(_OVERVIEW_HTML % html)
 	fh.close()
