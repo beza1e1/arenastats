@@ -135,9 +135,10 @@ def player_profile(player_timeline):
 	return _HTML % (player.nick, player.nick, data, html)
 
 def _player_overview_item(player_timeline):
+	current = player_timeline[-1]
 	slug_nick = player_timeline[0].slug_nick
 	nick = player_timeline[0].nick
-	return '<p><a href="p_%s.html">%s</a></p>' % (slug_nick, nick)
+	return '<p><a href="p_%s.html">%s</a> (%d)</p>' % (slug_nick, nick, current.elo*1000)
 
 def _player_elos(timelines):
 	elos = [[p.elo for p in line] for line in timelines]
