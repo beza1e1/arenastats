@@ -62,11 +62,11 @@ def main(options, args):
 		set_ratings(load_timelines(options.nicklog))
 	for g in games:
 		rate(g) # rating must be right before nicklogging
-	if options.nicklog:
-		fh = open(options.nicklog, "a")
-		append_nicklog(fh, g)
-		fh.close()
-		write_profiles(options)
+		if options.nicklog:
+			fh = open(options.nicklog, "a")
+			append_nicklog(fh, g)
+			fh.close()
+	write_profiles(options)
 	for g in games:
 		fname = os.path.join(options.directory, g.name+".html")
 		fh = open(fname, 'w')
