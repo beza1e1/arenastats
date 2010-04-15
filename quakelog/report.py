@@ -187,7 +187,7 @@ _HTML = """\
 	<h1>ArenaStats Game Report</h1>
 	%s
 	<div id="footer">
-		This space intentionally left blank.
+		Also view the <a href="players.html">Player Overview</a>!
 	</div>
 </body></html>
 """
