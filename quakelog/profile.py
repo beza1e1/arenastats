@@ -157,7 +157,7 @@ def _player_overview_item(odd, player_timeline):
 			 (odd, current.elo*1000, slug_nick, nick)
 
 def _player_elos(timelines):
-	elos = [[p.elo for p in line] for line in timelines]
+	elos = [[int(p.elo*1000) for p in line] for line in timelines]
 	nicks = [p[0].nick for p in timelines]
 	url = googlechart_url(data=elos, legend=nicks)
 	return '<img src="%s" alt="player ELO ratings" />\n' % url
