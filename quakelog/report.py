@@ -13,7 +13,7 @@ def pluralize(number, unit, emph_bound=0):
 	if 1 == number:
 		return "%d %s" % (number, unit)
 	else: # plural
-		if emph_bound > 0 and number > emph_bound:
+		if emph_bound > 0 and number >= emph_bound:
 			return "<strong>%d %ss</strong>" % (number, unit)
 		else:
 			return "%d %ss" % (number, unit)
@@ -81,7 +81,9 @@ for w, name, x in _WEAPONS:
 	_WEAPON_NAMES[w] = name
 _WEAPON_NAMES[None] = 'None'
 _BORING_STATS = "elo team_damage_given team_kills flag_returns score suicides dmg_kill_ratio health armor".split(" ")
-def player_info(player, weapon_maxima):
+def player_info(player, weapon_maxima, attr_maxima):
+	def max(key):
+		return attr_maxima.get(key, infinity)
 	html = '<div class="player_stats" id="%s">\n' % player.slug_nick
 	html += '<table class="player_info">\n'
 	odd = Toggler("even", "odd")
@@ -89,11 +91,24 @@ def player_info(player, weapon_maxima):
 	html += '<tr class="%s"><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
 			(odd, _WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
 	html += '<tr class="%s"><th>Player mostly</th><td>fragged by %s / fragging %s </td></tr>\n' % (odd, player.worst_enemy.nick, player.easiest_prey.nick)
-	html += '<tr class="%s"><th>Frag rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd, emph_percentage(player.fragrate, 1.0), emph_int(player.kill_count, 30), emph_int(player.death_count, 30))
-	html += '<tr class="%s"><th>Damage rate</th><td>%s <span class="aside">(%d / %d)</span></td></tr>\n' % (odd, emph_percentage(player.damage_rate, 1.10), player.damage_given, player.damage_received)
-	html += '<tr class="%s"><th>Cap rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd, emph_percentage(player.caprate, 0.4), emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2))
+	html += '<tr class="%s"><th>Frag rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' %\
+					(odd,\
+					 emph_percentage(player.fragrate, max('fragrate')),\
+					 emph_int(player.kill_count, max('kill_count')),\
+					 emph_int(player.death_count, max('death_count')))
+	html += '<tr class="%s"><th>Damage rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd,\
+					emph_percentage(player.damage_rate, max('damage_rate')),\
+					emph_int(player.damage_given, max('damage_given')),\
+					emph_int(player.damage_received, max('damage_received')))
+	html += '<tr class="%s"><th>Cap rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd,\
+			emph_percentage(player.caprate, max('caprate')),\
+			emph_int(player.flag_caps, max('flag_caps')),\
+			emph_int(player.flag_touches, max('flag_touches')))
 	html += '<tr class="%s"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' %\
-		(odd, pluralize(player.kill_streak, "frag", 6), pluralize(player.death_streak, "death", 6), pluralize(player.cap_streak, "cap", 6))
+		(odd,\
+		 pluralize(player.kill_streak, "frag", max('kill_streak')),\
+		 pluralize(player.death_streak, "death", max('death_streak')),\
+		 pluralize(player.cap_streak, "cap", max('cap_streak')))
 	awards = ", ".join(_award_html(a) for a in player.awards)
 	html += '<tr class="%s"><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n' % (odd, len(player.awards), awards)
 	html += '<tr><td colspan="2">'
@@ -210,12 +225,12 @@ def html_report(game, levelshots):
 	html += '<div id="red_team" class="red_players">\n'
 	for p in game.sortedPlayers():
 		if hasattr(p, 'team_id') and p.team_id == 1:
-			html += player_info(p, game.weapon_maxima)
+			html += player_info(p, game.weapon_maxima, game.attr_maxima)
 	html += '</div>\n'
 	html += '<div id="blue_team" class="blue_players">\n'
 	for p in game.players.values():
 		if hasattr(p, 'team_id') and p.team_id == 2:
-			html += player_info(p, game.weapon_maxima)
+			html += player_info(p, game.weapon_maxima, game.attr_maxima)
 	html += '</div>\n'
 	return _HTML % (game.title, html)
 

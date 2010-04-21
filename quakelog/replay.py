@@ -165,6 +165,13 @@ _ZERO_PROPERTIES = [
 	'damage_given', 'damage_received', 'team_damage_given', 'elo',
 	'hand_teleporter_count', 'battle_suit_count'
 ]
+_MAX_ATTR = [
+	'damage_given', 'damage_received',
+	'kill_count', 'death_count',
+	'death_streak', 'cap_streak', 'kill_streak',
+	'fragrate', 'damage_rate',
+	'caprate', 'flag_caps', 'flag_touches',
+]
 class Player:
 	def initFromToken(self, tok):
 		assert isinstance(tok, NewClient), tok
@@ -445,6 +452,7 @@ class Game:
 		return sorted(filter(include, self.players.values()), compare)
 	def finalize(self):
 		self.weapon_maxima = dict()
+		self.attr_maxima = dict()
 		for p in self.players.values():
 			if hasattr(p, 'team_id'): # finalize player
 				p.finalize()
@@ -455,7 +463,11 @@ class Game:
 						self.weapon_maxima[w] = dict(shots=0, hits=0, kills=0, deaths=0, hitrate=0, killrate=0)
 					for attr in self.weapon_maxima[w].keys():
 						self.weapon_maxima[w][attr] = max(self.weapon_maxima[w][attr], stats.get(attr, 0))
-						
+			for attr in _MAX_ATTR:
+				if not attr in self.attr_maxima:
+					self.attr_maxima[attr] = 0
+				if hasattr(p, attr):
+					self.attr_maxima[attr] = max(self.attr_maxima[attr], getattr(p, attr))
 
 def replay_games(game_events):
 	g = None
