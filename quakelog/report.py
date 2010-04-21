@@ -52,13 +52,13 @@ def _player_html(player):
 def emph_percentage(hitrate, lower_bound, text=""):
 	if hitrate == infinity:
 		return "-"
-	elif hitrate > lower_bound and hitrate != infinity:
-		return "<strong>%.1f%%%s</strong>" % (hitrate, text)
+	elif hitrate >= lower_bound and hitrate != infinity:
+		return "<strong>%.1f%%%s</strong>" % (hitrate*100, text)
 	else:
-		return "%.1f%%%s" % (hitrate, text)
+		return "%.1f%%%s" % (hitrate*100, text)
 
 def emph_int(value, lower_bound, text=""):
-	if value > lower_bound:
+	if value >= lower_bound:
 		return "<strong>%d%s</strong>" % (value, text)
 	else:
 		return "%d%s" % (value, text)
@@ -81,7 +81,7 @@ for w, name, x in _WEAPONS:
 	_WEAPON_NAMES[w] = name
 _WEAPON_NAMES[None] = 'None'
 _BORING_STATS = "elo team_damage_given team_kills flag_returns score suicides dmg_kill_ratio health armor".split(" ")
-def player_info(player):
+def player_info(player, weapon_maxima):
 	html = '<div class="player_stats" id="%s">\n' % player.slug_nick
 	html += '<table class="player_info">\n'
 	odd = Toggler("even", "odd")
@@ -89,9 +89,9 @@ def player_info(player):
 	html += '<tr class="%s"><th>Weapons</th><td><span title="Most shots (normalized by reload times)">%s</span> / <span title="Most kills">%s</span></td></tr>\n' %\
 			(odd, _WEAPON_NAMES[player.weapon_most_shots], _WEAPON_NAMES[player.weapon_most_kills])
 	html += '<tr class="%s"><th>Player mostly</th><td>fragged by %s / fragging %s </td></tr>\n' % (odd, player.worst_enemy.nick, player.easiest_prey.nick)
-	html += '<tr class="%s"><th>Frag rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd, emph_percentage(player.fragrate*101.0, 100.0), emph_int(player.kill_count, 30), emph_int(player.death_count, 30))
-	html += '<tr class="%s"><th>Damage rate</th><td>%s <span class="aside">(%d / %d)</span></td></tr>\n' % (odd, emph_percentage(player.damage_rate * 100.0, 110), player.damage_given, player.damage_received)
-	html += '<tr class="%s"><th>Cap rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd, emph_percentage(player.caprate * 100, 40), emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2))
+	html += '<tr class="%s"><th>Frag rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd, emph_percentage(player.fragrate, 1.0), emph_int(player.kill_count, 30), emph_int(player.death_count, 30))
+	html += '<tr class="%s"><th>Damage rate</th><td>%s <span class="aside">(%d / %d)</span></td></tr>\n' % (odd, emph_percentage(player.damage_rate, 1.10), player.damage_given, player.damage_received)
+	html += '<tr class="%s"><th>Cap rate</th><td>%s <span class="aside">(%s / %s)</span></td></tr>\n' % (odd, emph_percentage(player.caprate, 0.4), emph_int(player.flag_caps, 5), emph_int(player.flag_touches, player.flag_caps * 2))
 	html += '<tr class="%s"><th>Streaks</th><td>%s &nbsp; %s &nbsp; %s</td></tr>\n' %\
 		(odd, pluralize(player.kill_streak, "frag", 6), pluralize(player.death_streak, "death", 6), pluralize(player.cap_streak, "cap", 6))
 	awards = ", ".join(_award_html(a) for a in player.awards)
@@ -112,11 +112,18 @@ def player_info(player):
 			continue
 		if int(stats['shots']) < 1:
 			continue
+		def max(key):
+			return weapon_maxima.get(w, dict()).get(key, infinity)
+		print "hitrate", max('hitrate'), 
 		html += '<tr class="%s"><td>%s</td>' % (odd, wname)
 		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
-						(stats['hits'], stats['shots'], emph_percentage(stats['hitrate']*100, emph_rate))
+						(emph_int(stats['hits'], max('hits')),\
+						 emph_int(stats['shots'], max('shots')),\
+						 emph_percentage(stats['hitrate'], max('hitrate')))
 		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
-						(stats['kills'], stats['deaths'], emph_percentage(stats['killrate']*100, 200))
+						(emph_int(stats['kills'], max('kills')),\
+						 emph_int(stats['deaths'], max('deaths')),\
+						 emph_percentage(stats['killrate'], max('killrate')))
 		html += "</tr>\n"
 	html += "</table>\n"
 	html += "</div>\n"
@@ -204,12 +211,12 @@ def html_report(game, levelshots):
 	html += '<div id="red_team" class="red_players">\n'
 	for p in game.sortedPlayers():
 		if hasattr(p, 'team_id') and p.team_id == 1:
-			html += player_info(p)
+			html += player_info(p, game.weapon_maxima)
 	html += '</div>\n'
 	html += '<div id="blue_team" class="blue_players">\n'
 	for p in game.players.values():
 		if hasattr(p, 'team_id') and p.team_id == 2:
-			html += player_info(p)
+			html += player_info(p, game.weapon_maxima)
 	html += '</div>\n'
 	return _HTML % (game.title, html)
 

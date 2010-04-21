@@ -444,9 +444,18 @@ class Game:
 			compare = lambda x,y: cmp(x.nick.lower(), y.nick.lower())
 		return sorted(filter(include, self.players.values()), compare)
 	def finalize(self):
+		self.weapon_maxima = dict()
 		for p in self.players.values():
-			if hasattr(p, 'team_id'):
+			if hasattr(p, 'team_id'): # finalize player
 				p.finalize()
+			for w in _STAT_WEAPONS.values(): # find weapon maxima
+				if hasattr(p, w):
+					stats = getattr(p, w)
+					if not w in self.weapon_maxima:
+						self.weapon_maxima[w] = dict(shots=0, hits=0, kills=0, deaths=0, hitrate=0, killrate=0)
+					for attr in self.weapon_maxima[w].keys():
+						self.weapon_maxima[w][attr] = max(self.weapon_maxima[w][attr], stats.get(attr, 0))
+						
 
 def replay_games(game_events):
 	g = None

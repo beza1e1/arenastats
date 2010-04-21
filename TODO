@@ -2,8 +2,7 @@
  * better player overview page
  * Do not show gauntlet in profile hitrate diagram
  * Show axis values in plots
- * reduce number of awards, so an award becomes more valuable
- * Show best hitrate etc via boldness instead of awards
+ * reduce number of awards, so an award becomes more valuable (best hitrate etc. can be seen by boldness in the player info anyways)
  * hitrate plot of all players
 
 == Maybe sometimes ==
