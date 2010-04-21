@@ -42,8 +42,8 @@ def general_game_info(game, levelshots):
 	return html
 
 def _award_html(award):
-	return '<span class="award" title="%s (%s)">%s</span>' %\
-			(award.description, award.value, award.name)
+	return '<span class="award" title="%s">%s</span>' %\
+			(award.description, award.name)
 
 def _player_html(player):
 	return '<a class="team_%s" href="#%s">%s</a>' %\
@@ -80,7 +80,7 @@ _WEAPON_NAMES = dict()
 for w, name, x in _WEAPONS:
 	_WEAPON_NAMES[w] = name
 _WEAPON_NAMES[None] = 'None'
-_BORING_STATS = "elo team_damage_given team_kills flag_returns score suicides dmg_kill_ratio health armor".split(" ")
+_BORING_STATS = "chat_length elo team_damage_given team_kills flag_returns score suicides dmg_kill_ratio health armor".split(" ")
 def player_info(player, weapon_maxima, attr_maxima):
 	def max(key):
 		return attr_maxima.get(key, infinity)
@@ -109,8 +109,6 @@ def player_info(player, weapon_maxima, attr_maxima):
 		 pluralize(player.kill_streak, "frag", max('kill_streak')),\
 		 pluralize(player.death_streak, "death", max('death_streak')),\
 		 pluralize(player.cap_streak, "cap", max('cap_streak')))
-	awards = ", ".join(_award_html(a) for a in player.awards)
-	html += '<tr class="%s"><th>Awards&nbsp;(%d)</th><td>%s</td></tr>\n' % (odd, len(player.awards), awards)
 	html += '<tr><td colspan="2">'
 	html += '<div class="debug_stats">\n'
 	for attr in _BORING_STATS:

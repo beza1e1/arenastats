@@ -87,19 +87,53 @@ class combine(Condition):
 		return x.intersection(y)
 
 _AWARDS = [
-	(max('armor') + max('health'),\
-	 		Award("Collector", None, "Most armor and health")),
-	(max('damage_given') + min('damage_received'),\
-	 		Award("Ninja", None, "Most damage given and least received")),
-	(max('railgun-hitrate') + max('railgun-kills'),\
-	 		Award("Sniper", None, "Best hitrate and most frags with Railgun")),
+		(Award("Collector", None, "Most armor and health collected"),
+				max('armor') + max('health')),
+		(Award("Power Up", None, "Most Regen, Mega Health, Quad, Haste, MedKit, Teleporter, Flight and Battle Suit collected"),
+		 		max('invis_count')+max('regen_count')+max('mega_health_count')+max('quad_count')+max('haste_count')+max('medkit_count')+max('teleporter_count')+max('flight_count')+max('battle_suit_count')),
+		(Award("The Tank", None, "Most armor and least deaths"),
+				max('armor') + min('death_count')),
+		(Award("Ninja", None, "Most damage given and least received"),
+				max('damage_given') + min('damage_received')),
+		(Award("Punching Bag", None, "Most damage received and least given"),
+				max('damage_received') + min('damage_given')),
+		(Award("Flag Runner", None, "Most flag caps and returns"),
+				max('flag_caps',1) + max('flag_returns',1)),
+		(Award("Who needs enemies?", None, "Most suicides and team damage"),
+				max('suicides',1) + max('team_damage_given') + max('team_kills',1)),
+		(Award("Mole", None, "Most team damage and team frags"),
+				max('team_kills',1) + max('team_damage_given',1)),
+		(Award("Defender", None, "Most base, flag and carrier defends"),
+				max('base_defends',1) + max('flag_defends',1) + max('carrier_defends',1)),
+		(Award("Lucky Bastard", None, "Least damage per kill ratio and deaths"),
+				min('dmg_kill_ratio') + min('death_count')),
+		(Award("Berserker", None, "Highest kill streak and most frags"),
+				max('kill_count') + max('kill_streak')),
+		(Award("Streaker", None, "Highest kill, death and cap streak"),
+				max('kill_streak') + max('death_streak') + max('cap_streak')),
+		(Award("Clucking Hen", None, "Most flag carrier frags and flag returns"),
+				max('flag_carrier_kills',1) + max('flag_returns',1)),
+		(Award("Sniper", None, "Best hitrate and most frags with Railgun"),
+				max('railgun-hitrate') + max('railgun-kills',1)),
+		(Award("Bomber", None, "Most shots with rocket and grenade launcher"),
+				max('rocketlauncher-shots',1) + max('grenadelauncher-shots',1)),
+		(Award("Pummel King", None, "Most shots and frags with Gauntlet"),
+				max('gauntlet-shots') + max('gauntlet-kills',1)),
+		(Award("Telefragger", None, "Most telefrags"),
+				max('teleport-kills',1)),
+		(Award("Hot Shot", None, "Most shots with machine, lightning and plasma gun"),
+				max('machinegun-shots',1) + max('lightninggun-shots',1) + max('plasmagun-shots',1)),
+		(Award("Sudden Death Decider", None, "Final cap in sudden death overtime"),
+				max('sudden_death_decider',1)),
+		(Award("Chatterbox", None, "Most chatted characters"),
+				max('chat_length',40)),
 ]
 
 def give_awards(players):
 	maxima = dict()
-	for condition, award in _AWARDS:
+	for award, condition in _AWARDS:
 		condition.findValue(players, maxima)
-	for condition, award in _AWARDS:
+	for award, condition in _AWARDS:
 		best = condition.bestPlayers(players, maxima)
 		for p in best:
 			p.awards.append(award)

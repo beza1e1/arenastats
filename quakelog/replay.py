@@ -1,5 +1,5 @@
 from tokenizer import GameEvent, NewClient, PlayerinfoChange, KillClient, ItemPickup, Kill, InitGame, TeamName, Chat, WeaponStats, EndGame, ServerTime, TeamScore, FlagCapture, FlagReturn, FlagAssistReturn, FlagCarrierKill, FlagDefend, BaseDefend, FlagAssistFrag, CarrierDefend, Score
-from awards import give_awards
+from awards2 import give_awards
 from utils import slugify, infinity
 from elo import get_rating
 
