@@ -163,6 +163,22 @@ def _player_elos(timelines):
 	url = googlechart_url(data=elos, legend=nicks, chxt="y", chxr="0,0,%d,200" % max_elo)
 	return '<img src="%s" alt="player ELO ratings" />\n' % url
 
+def _hitrate_comparison(weapon, timelines):
+	nicks = list()
+	hitrates = list()
+	for line in timelines:
+		d = [getattr(x, weapon)['hitrate'] for x in line][-50:]
+		if sum(d) == 0:
+			continue
+		_average_weapon_row(d)
+		nicks.append( line[0].nick )
+		hitrates.append( d )
+	scales = ",".join(["0.0,1.0"]*len(nicks))
+	url = googlechart_url(data=hitrates, legend=nicks, chds=scales)
+	html = '<h3>Hitrate with %s</h3>' % (_WEAPON_NAMES[weapon])
+	html += '<img src="%s" alt="hitrates with %s" />' % (url, weapon)
+	return html
+
 _OVERVIEW_FILE = "players.html"
 _OVERVIEW_HTML= """\
 <html>
@@ -190,6 +206,10 @@ def player_overview(timelines, fname):
 	for player_timeline in timelines:
 		html += _player_overview_item(odd, player_timeline)
 	html += '</table>\n'
+	for weapon,x,y in _WEAPONS:
+		if weapon in ('gauntlet', 'bfg', 'teleport'):
+			continue
+		html += _hitrate_comparison(weapon, timelines)
 	fh = open(fname, 'w')
 	fh.write(_OVERVIEW_HTML % html)
 	fh.close()
