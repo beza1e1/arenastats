@@ -114,7 +114,6 @@ def player_info(player, weapon_maxima):
 			continue
 		def max(key):
 			return weapon_maxima.get(w, dict()).get(key, infinity)
-		print "hitrate", max('hitrate'), 
 		html += '<tr class="%s"><td>%s</td>' % (odd, wname)
 		html += '<td class="rate">%s&nbsp;/&nbsp;%s = &nbsp; %s</td>' %\
 						(emph_int(stats['hits'], max('hits')),\
