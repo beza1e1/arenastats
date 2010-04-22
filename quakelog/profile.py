@@ -167,7 +167,7 @@ def _hitrate_comparison(weapon, timelines):
 	nicks = list()
 	hitrates = list()
 	for line in timelines:
-		d = [getattr(x, weapon)['hitrate'] for x in line][-50:]
+		d = [getattr(x, weapon)['hitrate'] for x in line][-40:]
 		if sum(d) == 0:
 			continue
 		_average_weapon_row(d)
