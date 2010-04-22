@@ -199,7 +199,7 @@ def award_table(players):
 _HTML = """\
 <html>
 <head>
-	<title>ArenaStats Game Report - %s</title>
+	<title>%s - ArenaStats Game Report</title>
 	<link rel="stylesheet" type="text/css" href="media/style.css" /
 </head>
 <body>
@@ -230,5 +230,5 @@ def html_report(game, levelshots):
 		if hasattr(p, 'team_id') and p.team_id == 2:
 			html += player_info(p, game.weapon_maxima, game.attr_maxima)
 	html += '</div>\n'
-	return _HTML % (game.title, html)
+	return _HTML % (game.mapname, html)
 
