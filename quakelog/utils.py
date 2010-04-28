@@ -48,6 +48,9 @@ def googlechart_url(**kwargs):
 			maxd = max(maxd, d)
 			mind = min(mind, d)
 	args.append('chds=%d,%d' % (mind, maxd))
+	steps = maxd / 10
+	args.append('chxt=y')
+	args.append('chxr=0,0,%.3f,%.3f' % (maxd, steps))
 	def _data_line(lst):
 		return ",".join(map(str, lst))
 	data = "|".join(map(_data_line, data))

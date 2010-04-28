@@ -160,7 +160,7 @@ def _player_elos(timelines):
 	elos = [[int(p.elo*1000) for p in line] for line in timelines]
 	max_elo = max(max(row) for row in elos)
 	nicks = [p[0].nick for p in timelines]
-	url = googlechart_url(data=elos, legend=nicks, chxt="y", chxr="0,0,%d,200" % max_elo)
+	url = googlechart_url(data=elos, legend=nicks)
 	return '<img src="%s" alt="player ELO ratings" />\n' % url
 
 def _hitrate_comparison(weapon, timelines):
