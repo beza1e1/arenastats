@@ -40,10 +40,11 @@ def _average_weapon_row(row):
 				break
 			j += 1
 		if j == len(row): # edge case: end reached
-			if j > i+1:
+			if j > i+1: # multiple trailing zeros
 				j -= 1
-				row[j] = row[i]
-			else:
+				row[j] = row[i-1]
+			else: # just one trailing zero
+				row[j-1] = row[i-1]
 				break
 		if i == 0: # edge case: started with zeros
 			row[i-1] = row[j]
