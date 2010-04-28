@@ -14,6 +14,23 @@ class Toggler:
 		self.items.append(i) # move to the back
 		return i
 
+def reduce_len(lst, new_len=10):
+	group_len = max(1, len(lst) / new_len)
+	res = list()
+	i = 0
+	sum = 0
+	for e in lst:
+		if i == group_len:
+			res.append(sum / group_len)
+			sum = 0
+			i = 0
+		else:
+			sum += e
+			i += 1
+	if i > 0:
+		res.append(sum / i)
+	return res
+
 def googlechart_url(**kwargs):
 	url = "http://chart.apis.google.com/chart?"
 	args = list()
@@ -23,6 +40,7 @@ def googlechart_url(**kwargs):
 	width  = kwargs.pop('width', 400)
 	args.append('chs=%dx%d' % (width, height))
 	data = kwargs.pop('data', [[1,2,3,4,3], [2,4,3,1,2]])
+	data = [reduce_len(d, 10) for d in data]
 	maxd = 0
 	mind = 0
 	for line in data:
