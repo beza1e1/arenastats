@@ -6,7 +6,7 @@ _RATINGS = dict()
 _DEFAULT_RATING = 1.0
 _MINIMUM_RATING = 0.001
 _FRAGS_PER_SECOND = 0.016
-_ABSORBER = 0.3
+_ABSORBER = 0.2
 
 def get_rating(nick):
 	if not nick in _RATINGS:
@@ -20,42 +20,37 @@ def set_ratings(timelines):
 			if p.elo > 0:
 				_RATINGS[p.nick] = p.elo
 
-def team_average(game, team_id):
-	avg = (0.0, 0)
-	for pid, p in game.players.items():
+def elo_sum(game):
+	elo_sum = 0
+	for p in game.players.values():
 		if not hasattr(p, 'team_id'):
 			continue
-		elif p.team_id == team_id:
-			avg = (avg[0] + get_rating(p.nick), avg[1]+1)
-	return avg[0] / avg[1]
+		elo_sum += get_rating(p.nick)
+	assert (elo_sum > 0), elo_sum
+	return elo_sum
 
-def other_team(team_id):
-	if team_id == 1:
-		return 2
-	elif team_id == 2:
-		return 1
-	else:
-		return team_id
-
-def predict_player(player, game):
-	avg = team_average(game, other_team(player.team_id))
-	rel_frags = (avg + get_rating(player.nick)) / avg
-	# TODO time could be wrong if the player joined later
-	return game.game_duration * _FRAGS_PER_SECOND * rel_frags
+def predict_player(player, game, R):
+	return get_rating(player.nick) / R
 	
-def rating_adaption(player, game):
-	pred = predict_player(player, game)
-	adapt = _ABSORBER * ((player.kill_count - pred) / game.frag_count)
-	if get_rating(player.nick) - adapt < _MINIMUM_RATING:
-		adapt = _MINIMUM_RATING - get_rating(player.nick)
+def rating_adaption(player, game, R):
+	pred = predict_player(player, game, R)
+	actual = float(player.kill_count) / game.frag_count
+	d = actual - pred
+	n = len(game.players) - 1 # subtract <world>
+	adapt = d * _ABSORBER * n
+	print "adapt %s %df %.3f %.3f %.3f" % (player.nick, player.kill_count, d, pred, actual)
 	return adapt
 
 def adapt_ratings(game):
+	R = elo_sum(game)
+	print "-"*20
+	if game.frag_count == 0:
+		return # nothing to adapt
 	adaptions = dict()
 	for pid, p in game.players.items():
 		if not hasattr(p, 'team_id'):
 			continue
-		p.elo = get_rating(p.nick) + rating_adaption(p, game)
+		p.elo = get_rating(p.nick) + rating_adaption(p, game, R)
 		_RATINGS[p.nick] = p.elo
 
 def rate(game):
