@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<title>ArenaELO</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style>
+			body { width: 40em; margin: 1em auto; }
+			td { padding: 2px 4px; }
+			tr.total td { border-top: 1px solid black; }
+		</style>
+	</head>
+	</body>
+		<h1>ArenaELO</h1>
+		<p>The <a href="http://en.wikipedia.org/wiki/Elo_rating_system">ELO rating system</a>
+		is the most prominent system to rank players relatively to each other.
+		This document describes, how ArenaStats does it (Currently: will do it!).</p>
+
+		<p>The rough idea of ELO is this:
+		For every game the result is predicted from the participating players ranking.
+		Using the difference between the actual game result and the prediction,
+		the player ratings are adapted.</p>
+
+		<h2>Inspirations</h2>
+
+		<h3>Microsoft TrueSkill™</h3>
+		<p>The <a href="http://research.microsoft.com/en-us/projects/trueskill/details.aspx">TrueSkill™</a>
+		system is one of the most advanced ELO variations
+		and is used for example to rank online XBoX Live games.
+		Instead of a simple rating value a gaussian distribution is used,
+		so the certainty of rating is included in the calculations.
+		For reasons of simplicity,
+		ArenaELO uses a single value for now.</p>
+
+		<h2>Prethinking</h2>
+		
+		<p>The requirements:</p>
+		<ul>
+			<li>The system must handle team games (CTF)</li>
+			<li>The sum must be constant. So rating points can only be redistributed.</li>
+			<li>For a constant group of players, the ratings should reach a fixed point,
+			which corresponds to the skill of the players.</li>
+		</ul>
+
+		<p>Values like flag captures are highly dependent on team combinations and strategy,
+		while the frag count is relatively stable.
+		The basic value for prediction and rating is thus
+		the <em>frag quotient</em>,
+		which is the sum of all frags divided by the players frags.
+		This means that there is no difference in calculation
+		between the deathmatch, team deathmatch and CTF game modes.
+		</p>
+
+		<h2>The math</h2>
+		
+		<p>Every player p has a rating r, where r is the current skill rating.
+		For a new player the rating 1.</p>
+
+		<p>To predict the frag quotients fq of a game,
+		the rating quotient rq<sub>p</sub> of each player is calculated via
+		rq<sub>p</sub> = R/r<sub>p</sub>,
+		where R is the sum of all ratings of the participating players.
+		Finally, for every player p the predicted frag quotient 
+		fq<sub>p</sub>=rq<sub>p</sub>.
+		</p>
+
+		<p>The actual game results yields frag quotients fq'<sub>p</sub>,
+		which differ from the prediction by d<sub>p</sub>=fq'<sub>p</sub>-fq<sub>p</sub>.
+		The sum of all quotients is 1 of course,
+		so the sum of all d<sub>p</sub> is 0.
+		Since the quotient depends on the number of players n,
+		d<sub>p</sub> is multiplied by n.
+		Also an absorption factor a is included to stabilize the ratings.
+		Finally, the new rating of a player can be calculated via the product
+		r'<sub>p</sub>&nbsp;=&nbsp;r<sub>p</sub>+d<sub>p</sub>na.
+		</p>
+
+		<h2>Examples</h2>
+
+		<p>For the examples we assume the absorption factor a=0.1.</p>
+
+		<h3>1 on 1</h3>
+
+		<p>Consider a 1on1 game Sarge vs Major.
+		Since both players are unrated,
+		they get an initial rating of 1.
+		Therefore the predicted frag quotients are 0.5 each.
+		</p>
+
+		<p>Sarge wins the game with 13:7 frags.
+		Thus, the actual frag quotients are 13/20=0.65 and 7/20=0.35
+		and the differences +0.15 and -0.15.
+		Sarges rating after game is
+		1+0.15⋅2⋅0.1=1.03.
+		Majors rating accordingly is
+		1+(-0.15)⋅2⋅0.1=0.97.
+		</p>
+
+		<h3>Three players</h3>
+
+		<p>For a more complex scenario consider a match of three players
+		with different ratings.</p>
+
+		<table>
+			<tr><th>Player</th><th>r</th>   <th>rq = fq</th><th>fq'</th> <th>d</th>
+			                   <th>r'</th></tr>
+			<tr><td>Sarge</td> <td>1.03</td><td>0.29</td>   <td>0.32</td><td>+0.03</td>
+			                   <td>1.04 = 1.03+0.03⋅3⋅0.1</td></tr>
+			<tr><td>Major</td> <td>0.97</td><td>0.28</td>   <td>0.23</td><td>-0.05</td>
+			                   <td>0.95 = 0.97+(-0.05)⋅3⋅0.1</td></tr>
+			<tr><td>Xaero</td> <td>1.50</td><td>0.43</td>   <td>0.45</td><td>+0.02</td>
+			                   <td>1.51 = 1.50+0.02⋅3⋅0.1</td></tr>
+			<tr class="total"><td></td>
+			                   <td>3.50</td>  <td>1.00</td>   <td>1.00</td><td>+0.0</td>
+												 <td>3.50</td></tr>
+		</table>
+
+		<p>In this scenario you can see that the sum is constant.
+		Also the predicted outcome matched the actual game results quite well,
+		so the ratings stay relatively stable.
+		</p>
+
+		<h3>Misprediction</h3>
+
+		<p>Here is what happens,
+		if the previous game would have had a surprising result.
+		</p>
+
+		<table>
+			<tr><th>Player</th><th>r</th>   <th>rq = fq</th><th>fq'</th> <th>d</th>
+			                   <th>r'</th></tr>
+			<tr><td>Sarge</td> <td>1.03</td><td>0.29</td>   <td>0.32</td><td>+0.03</td>
+			                   <td>1.04 = 1.03+0.03⋅3⋅0.1</td></tr>
+			<tr><td>Major</td> <td>0.97</td><td>0.28</td>   <td>0.43</td><td>+0.15</td>
+			                   <td>1.01 = 0.97+0.15⋅3⋅0.1</td></tr>
+			<tr><td>Xaero</td> <td>1.50</td><td>0.43</td>   <td>0.25</td><td>-0.18</td>
+			                   <td>1.45 = 1.50+(-0.18)⋅3⋅0.1</td></tr>
+			<tr class="total"><td></td>
+			                   <td>3.50</td>  <td>1.00</td>   <td>1.00</td><td>+0.0</td>
+												 <td>3.50</td></tr>
+		</table>
+
+	<body>
+</html>
