@@ -174,8 +174,7 @@ def _hitrate_comparison(weapon, timelines):
 		_average_weapon_row(d)
 		nicks.append( line[0].nick )
 		hitrates.append( d )
-	scales = ",".join(["0.0,1.0"]*len(nicks))
-	url = googlechart_url(data=hitrates, legend=nicks, chds=scales)
+	url = googlechart_url(data=hitrates, legend=nicks)
 	html = '<h3>Hitrate with %s</h3>' % (_WEAPON_NAMES[weapon])
 	html += '<img src="%s" alt="hitrates with %s" />' % (url, weapon)
 	return html
