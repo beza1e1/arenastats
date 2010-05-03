@@ -38,12 +38,10 @@ def rating_adaption(player, game, R):
 	d = actual - pred
 	n = len(game.players) - 1 # subtract <world>
 	adapt = d * _ABSORBER * n
-	print "adapt %s %df %.3f %.3f %.3f" % (player.nick, player.kill_count, d, pred, actual)
 	return adapt
 
 def adapt_ratings(game):
 	R = elo_sum(game)
-	print "-"*20
 	if game.frag_count == 0:
 		return # nothing to adapt
 	adaptions = dict()

@@ -31,8 +31,6 @@ def reduce_len(lst, new_len):
 		res.append(sum / i)
 	return res
 
-print reduce_len([1,2,3], 10)
-
 def normalize(lst, max):
 	def norm(e):
 		return int(100 * (e / max))
