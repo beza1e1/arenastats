@@ -33,7 +33,7 @@ def reduce_len(lst, new_len):
 
 def normalize(lst, max):
 	def norm(e):
-		return int(100 * (e / max))
+		return int(100 * (float(e) / max))
 	return [norm(e) for e in lst]
 
 def googlechart_url(**kwargs):
