@@ -53,9 +53,8 @@ def googlechart_url(**kwargs):
 			maxd = max(maxd, d)
 			mind = min(mind, d)
 	data = [normalize(d, maxd) for d in data]
-	steps = maxd / 10
 	args.append('chxt=y')
-	args.append('chxr=0,0,%.3f,%.3f' % (maxd, steps))
+	args.append('chxr=0,0,%.3f,0' % (maxd))
 	colors = kwargs.pop('colors', "FF0000 00FF00 0000CC FF00FF 00FFFF 8888FF 880000 008800 000088 888888 339999 3399FF 9933CC FF6633 996600 880088".split(" "))
 	colors = colors[:len(data)]
 	def _data_line(lst):
