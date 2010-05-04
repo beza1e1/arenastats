@@ -5,6 +5,7 @@
 
 == Maybe sometimes ==
 
+ * fast log processor (log -> xml reports)
  * better player profiles
  * support other game types than CTF
  * player achievements
