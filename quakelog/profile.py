@@ -4,6 +4,7 @@ from nicklog import load_timelines
 from utils import Toggler, googlechart_url
 
 import os
+from math import log
 
 _LOG_SUM_PROPERTIES = _ZERO_PROPERTIES[:]
 _LOG_MAX_PROPERTIES = "kill_streak death_streak cap_streak chat_length".split(" ")
@@ -24,6 +25,22 @@ def _player_overview(player):
 	html += '<tr class="%s"><th>Best Frag Streak</th><td>%d</td></tr>\n' % (odd, player.kill_streak)
 	html += '<tr class="%s"><th>Worst Death Streak</th><td>%d</td></tr>\n' % (odd, player.death_streak)
 	html += '<tr class="%s"><th>Best Cap Streak</th><td>%d</td></tr>\n' % (odd, player.cap_streak)
+	html += '</table>\n'
+	return html
+
+def to_level(base, value):
+	return int(log(2+(float(value)/base)))
+
+def _player_levels(player):
+	odd = Toggler("even", "odd")
+	html = "<h2>Levels</h2>"
+	html += '<table class="levels">'
+	html += '<tr class="%s"><th>Fragger</th><td>Level %d</td></tr>\n' %\
+					(odd, to_level(2, player.kill_count))
+	html += '<tr class="%s"><th>Capper</th><td>Level %d</td></tr>\n' %\
+					(odd, to_level(0.7, player.flag_caps))
+	html += '<tr class="%s"><th>Scorer</th><td>Level %d</td></tr>\n' %\
+					(odd, to_level(3, player.score))
 	html += '</table>\n'
 	return html
 
@@ -139,6 +156,7 @@ def player_profile(player_timeline):
 	html = ""
 	html += _stat_development(player_timeline)
 	html += _player_overview(player)
+	html += _player_levels(player)
 	html += '\n<table style="font-size: 0.8em; float: right;">'
 	odd = False
 	for prop in _ZERO_PROPERTIES:
