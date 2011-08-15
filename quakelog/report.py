@@ -75,6 +75,7 @@ _WEAPONS = [
 	('railgun', 'Railgun', 40),
 	('bfg', 'Big&nbsp;F***ing&nbsp;Gun', 1),
 	('teleport', 'Teleport', 100.0),
+	('environment', 'Environment', 1),
 ]
 _WEAPON_NAMES = dict()
 for w, name, x in _WEAPONS:
