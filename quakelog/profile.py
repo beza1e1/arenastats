@@ -125,7 +125,7 @@ _HTML= """\
 <head>
 	<title>%s</title>
 	<link rel="stylesheet" type="text/css" href="media/style.css" /
-	<style>
+	<style type="text/css">
 	tr.odd { background-color: #ddd; }
 	th { font-weight: normal; text-align: left; }
 	</style>
