@@ -1,19 +1,21 @@
 /* COLOR */
 
+body { background: #000; color: #fc9; }
+
 a,
 a:visited,
-a:active { color: black; border-bottom: 1px solid #555; }
+a:active { color: #fff; border-bottom: 1px solid #555; }
 
-table tr.odd { background-color: #ddd; }
+table tr.odd { background-color: #222; }
 
 div.player_stats table { border: 1px solid black; }
 
-.team_red { background-color: #fbb; }
-.team_blue { background-color: #bbf; }
+.team_red { background-color: #700; }
+.team_blue { background-color: #007; }
 
-#kill_matrix .teamkill { color: #a00; }
+#kill_matrix .teamkill { color: #f00; }
 
-#award_table div.award { background-color: #eee; }
+#award_table div.award { background-color: #303; }
 
 #award_table img { background-image: url(award.png); }
 
@@ -83,10 +85,8 @@ div.player_stats .player_info th { text-align: left; }
 
 /* FONTS */
 
-body { font-family: Baskerville, "Times New Roman", Times, serif; }
-
-h1,
-#award_table .name { font-family: Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif;  }
+table,
+body { font-size:10pt; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; }
 
 div.player_stats .player_info th { font-weight: normal; }
 
