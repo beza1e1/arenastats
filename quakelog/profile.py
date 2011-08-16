@@ -125,10 +125,6 @@ _HTML= """\
 <head>
 	<title>%s</title>
 	<link rel="stylesheet" type="text/css" href="media/style.css" /
-	<style type="text/css">
-	tr.odd { background-color: #ddd; }
-	th { font-weight: normal; text-align: left; }
-	</style>
 </head>
 <body>
 	<p>View <a href="players.html">Overview of all players</a>.</p>
