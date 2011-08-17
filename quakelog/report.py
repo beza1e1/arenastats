@@ -19,7 +19,7 @@ def pluralize(number, unit, emph_bound=0):
 			return "%d %ss" % (number, unit)
 
 def general_game_info(game, levelshots):
-	html = '<div class="game_stats"\n'
+	html = '<div class="game_stats">\n'
 	html += '<img src="%s/%s.jpg" />' % (levelshots, game.mapname)
 	html += '<table class="game_info">\n'
 	html += "<tr><td>Map</td><td>%s</td></tr>\n" % (game.mapname)
